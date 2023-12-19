@@ -1,0 +1,516 @@
+<div class="card mb-2 tabcontent" id="demographics">
+    <div class="card-header text-center bg-dark">
+        <h2 class="gh text-slate-800 text-white">Demographics</h2>
+    </div>
+    <div class="card-body row">
+        <div class="row">
+            <div class="col-md-3">
+                <label for="last_name"><span class="text-green">(M0040)</span> Last Name: <span
+                        class="text-red">*</span></label>
+                <input id="last_name" type="text" class="form-control s ou" name="last_name"
+                       value="{{ old('last_name') }}">
+            </div>
+            <div class="col-md-3">
+                <label for="first_name"><span class="text-green">(M0040)</span> First Name: <span
+                        class="text-red">*</span></label>
+                <input id="first_name" type="text" class="form-control s ou" name="first_name"
+                       value="{{ old('first_name') }}">
+            </div>
+            <div class="col-md-3">
+                <label for="middle_name"><span class="text-green">(M0040)</span> MI:</label>
+                <input id="middle_name" type="text" class="form-control s ou" name="middle_name"
+                       value="{{ old('middle_name') }}">
+            </div>
+            <div class="col-md-3">
+                <label for="referral_date">Referral Date: <span class="text-red">*</span></label>
+                <input id="referral_date" type="date" class="form-control s ou" name="referral_date"
+                       value="{{ old('referral_date') }}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <label for="gender"><span class="text-green">(M0069)</span>Gender: <span
+                        class="text-red">*</span></label>
+                <select name="gender" id="gender" class="form-control s ou">
+                    <option value="">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label for="marital_status">Marital Status: </label>
+                <select name="marital_status" id="marital_status" class="form-control s ou">
+                    <option value="">Select</option>
+                    <option value="married">Married</option>
+                    <option value="single">Single</option>
+                    <option value="single">Divorce</option>
+                    <option value="single">Seperated</option>
+                    <option value="single">Widower</option>
+                    <option value="single">Widow</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label for="date_of_birth">Date of Birth: <span class="text-red">*</span></label>
+                <input id="date_of_birth" type="date" class="form-control s ou" name="date_of_birth"
+                       value="{{ old('date_of_birth') }}">
+            </div>
+            <div class="col-md-3">
+                <label for="patient_mr_number">Patient ID/ MR Number: <span class="text-red">*</span></label>
+                <input id="patient_mr_number" type="text" class="form-control s ou" name="patient_mr_number"
+                       value="{{ old('patient_mr_number') }}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="s_s_number"><span class="text-green">(M0064)</span> Social Security Number: <span
+                        class="text-red">*</span></label>
+                <input id="s_s_number" type="text" class="form-control s ou" name="s_s_number"
+                       value="{{ old('s_s_number') }}">
+            </div>
+            <div class="col">
+                <label for="insurance_type">Insurance Type: <span class="text-red">*</span></label>
+                <input id="insurance_type" type="text" class="form-control s ou" name="insurance_type"
+                       value="{{ old('insurance_type') }}">
+            </div>
+            <div class="col">
+                <label for="patient_admission_status">Status: <span class="text-red">*</span></label>
+                <select name="patient_admission_status" id="patient_admission_status" class="form-control s ou">
+                    <option value="">Select</option>
+                    <option value="M">Admit</option>
+                    <option value="F">Non-Admit</option>
+                    <option value="F">Pending</option>
+                    <option value="F">Discharge</option>
+
+                </select>
+            </div>
+        </div>
+        <hr class="hr-st"/>
+
+        <div class="col">
+            <div class="col-md-12">
+                <label>Patient Home Address: <span class="text-red">*</span></label>
+                <hr class="hr-st"/>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="p_h_address_line_1">Address Line 1: <span class="text-red">*</span></label>
+                    </div>
+                    <div class="col-md-8 relative">
+                        <input id="p_h_address_line_1" type="text" class="form-control s ou" name="p_h_address_line_1"
+                               value="{{ old('p_h_address_line_1') }}">
+                        <input id="p_h_lat" type="hidden" name="p_h_lat"/>
+                        <input id="p_h_lon" type="hidden" name="p_h_lon"/>
+
+                        <div id="p_h_results" class="absolute top-[65px] bg-white"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="p_h_address_line_2">Address Line 2: </label>
+                    </div>
+                    <div class="col-md-8">
+                        <input id="p_h_address_line_2" type="text" class="form-control s ou" name="p_h_address_line_2"
+                               value="{{ old('p_h_address_line_2') }}">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="p_h_zip">Zip: <span class="text-red">*</span></label>
+                        <input id="p_h_zip" type="text" placeholder="Enter Zipcode" class="form-control s ou"
+                               name="p_h_zip" value="{{ old('p_h_zip') }}">
+                    </div>
+                    <div class="form-group col">
+                        <label for="p_h_country">County: <span class="text-red">*</span></label>
+                        <input type="text" name="p_h_country" class="form-control s ou" id="p_h_country"
+                               placeholder="Enter country"/>
+                    </div>
+                    <div class="form-group col">
+                        <label for="p_h_state">State: <span class="text-red">*</span></label>
+                        <input type="text" name="p_h_state" id="p_h_state" class="form-control s ou"
+                               placeholder="Enter state"/>
+                    </div>
+                </div>
+                <div class="row mt-2">
+
+                    <div class="form-group col">
+                        <label for="p_h_phone">Phone: <span class="text-red">*</span></label>
+                        <input id="p_h_phone" type="text" placeholder="Enter Phone" class="form-control s ou"
+                               name="p_h_phone" value="{{ old('p_h_phone') }}">
+                    </div>
+                    <div class="form-group col">
+                        <label for="p_h_alternate_phone">Alternate Phone: </label>
+                        <input id="p_h_alternate_phone" type="text" placeholder="Enter Alternate Phone"
+                               class="form-control s ou" name="p_h_alternate_phone"
+                               value="{{ old('p_h_alternate_phone') }}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 mt-4">
+                <div class="form-group">
+                    <label for="patient_language_spoken">Patient Language Spoken: <span
+                            class="text-red">*</span></label>
+
+                    <select name="patient_language_spoken" id="patient_language_spoken"
+                            class="form-control s ou language-drop-down">
+                        <option value="">--- Select ---</option>
+                        <option value="english">English</option>
+                        <option value="spanish">Spanish</option>
+                        <option value="french">French</option>
+                        <option value="german">German</option>
+                        <option value="chinese">Chinese</option>
+                        <option value="filipino">Filipino</option>
+                        <option value="arabic">Arabic</option>
+                        <option value="korean">Korean</option>
+                        <option value="russian">Russian</option>
+                        <option value="somali">Somali</option>
+                        <option value="twi">Twi</option>
+                    </select>
+                    <label class="mt-4 mr-3" for="use_of_interpreter">Use of Interpreter: </label>
+
+                    <input type="radio" name="use_of_interpreter" id="use_of_interpreter" class="form-control">
+                    <span for="needs_interpreter">Yes</span>
+                    <input type="radio" name="use_of_interpreter" id="needs_interpreter" class="form-control">
+                    <span for="needs_interpreter">No</span>
+                </div>
+            </div>
+            <hr class="hr-st"/>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="race_ethnicity">Race/Ethnicity <span class="text-red">*</span>(mark all that apply):
+                    </label>
+
+                    <div class="row mt-2">
+                        <div class="col">
+                            <label class="font-normal" for="needs_interpreter_american">American Indian/ Alaskan</label>
+                            <input type="checkbox" name="race_ethnicity" id="needs_interpreter_american"
+                                   class="form-control">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <label class="font-normal" for="asian_race_ethnicity">Asian</label>
+                            <input type="checkbox" name="race_ethnicity" id="asian_race_ethnicity" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <label class="font-normal" for="needs_interpreter_black">Black or African American</label>
+                            <input type="checkbox" name="race_ethnicity" id="needs_interpreter_black"
+                                   class="form-control">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <label class="font-normal" for="needs_interpreter_hispanic">Hispanic or Latino</label>
+                            <input type="checkbox" name="race_ethnicity" id="needs_interpreter_hispanic"
+                                   class="form-control">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <label class="font-normal" for="needs_interpreter_native">Native Hawaiian or Pacific
+                                Islander</label>
+                            <input type="checkbox" name="race_ethnicity" id="needs_interpreter_native"
+                                   class="form-control">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <label class="font-normal" for="needs_interpreter_white">White</label>
+                            <input type="checkbox" name="race_ethnicity" id="needs_interpreter_white"
+                                   class="form-control">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <label class="font-normal" for="needs_interpreter_unknown">Unknown</label>
+                            <input type="checkbox" name="race_ethnicity" id="needs_interpreter_unknown"
+                                   class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="hr-st"/>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="middle_name">Case Managers: </label>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <label class="font-normal" for="middle_name">Clinical Care Manager: </label>
+                        </div>
+                        <div class="col">
+                            <select name="clinical_manager" id="clinical_manager"
+                                    class="form-control s ou clinician-drop-down">
+                                <option value="">--- Select ---</option>
+                                <option value="M">clinical manager</option>
+                                <option value="F">clinical manager</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <span for="middle_name">Case Manager: </span>
+                        </div>
+                        <div class="col">
+                            <select name="case_manager" id="case_manager"
+                                    class="form-control s ou case-manager-drop-down">
+                                <option value="">--- Select ---</option>
+                                <option value="M">case manager</option>
+                                <option value="F">case manager</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <span for="middle_name">OASIS Assigned to: </span>
+                        </div>
+                        <div class="col">
+                            <select name="oasis_assigned_manager" id="oasis_assigned_manager"
+                                    class="form-control s ou oasis-assign-drop-down">
+                                <option value="">--- Select ---</option>
+                                <option value="M">clinical_manager</option>
+                                <option value="F">clinical_manager</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <span for="middle_name">OT Assigned to: </span>
+                        </div>
+                        <div class="col">
+                            <select name="ot_assigned_manager" id="ot_assigned_manager"
+                                    class="form-control s ou ot-assign-drop-down">
+                                <option value="">--- Select ---</option>
+                                <option value="M">clinical_manager</option>
+                                <option value="F">clinical_manager</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <span for="middle_name">PT Assigned to: </span>
+                        </div>
+                        <div class="col">
+                            <select name="pt_assigned_manager" id="pt_assigned_manager"
+                                    class="form-control s ou pt-assign-drop-down">
+                                <option value="">--- Select ---</option>
+                                <option value="M">clinical_manager</option>
+                                <option value="F">clinical_manager</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <span for="middle_name">ST Assigned to: </span>
+                        </div>
+                        <div class="col">
+                            <select name="st_assigned_manager" id="st_assigned_manager"
+                                    class="form-control s ou st-assign-drop-down">
+                                <option value="">--- Select ---</option>
+                                <option value="M">clinical_manager</option>
+                                <option value="F">clinical_manager</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{-- Right Side --}}
+        <div class="col">
+            <div class="col-md-12">
+                <div class="flex items-center flex-wrap justify-between">
+                    <label>Patient Service Address: <span class="text-red">*</span></label>
+                    <label>Same as Home Address <input type="checkbox" id="same_home_address"/> </label>
+                </div>
+                <hr class="hr-st"/>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="p_s_address_line_1">Address Line 1: <span class="text-red">*</span></label>
+                    </div>
+                    <div class="col-md-8 relative">
+                        <input id="p_s_address_line_1" type="text" class="form-control s ou" name="p_s_address_line_1"
+                               value="{{ old('p_s_address_line_1') }}">
+                        <input id="p_s_lat" type="hidden" name="p_s_lat"/>
+                        <input id="p_s_lon" type="hidden" name="p_s_lon"/>
+
+                        <div id="p_s_results" class="absolute top-[65px] bg-white"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="p_s_address_line_2"></label>
+                    </div>
+                    <div class="col-md-8">
+                        <input id="p_s_address_line_2" type="text" class="form-control s ou" name="p_s_address_line_2"
+                               value="{{ old('p_s_address_line_2') }}">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="p_s_zip">Zip: </span></label>
+                        <input id="p_s_zip" type="text" placeholder="Enter Zipcode" class="form-control s ou"
+                               name="p_s_zip" value="{{ old('p_s_zip') }}">
+                    </div>
+                    <div class="form-group col">
+                        <div class="form-group">
+                            <label for="p_s_country">County: </label>
+                            <input id="p_s_country" type="text" placeholder="Enter Country" class="form-control s ou"
+                                   name="p_s_country" value="{{ old('p_s_country') }}">
+                        </div>
+                    </div>
+                    <div class="form-group col">
+                        <div class="form-group">
+                            <label for="p_s_state">State: </label>
+                            <input id="p_s_state" type="text" placeholder="Enter State" class="form-control s ou"
+                                   name="p_s_state" value="{{ old('p_s_state') }}">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+
+                    <div class="form-group col">
+                        <label for="p_s_phone">Phone: <span class="text-red">*</span></label>
+                        <input id="p_s_phone" type="text" placeholder="Enter Phone number" class="form-control s ou"
+                               name="p_s_phone" value="{{ old('p_s_phone') }}">
+                    </div>
+                    <div class="form-group col">
+                        <label for="p_s_alternate_phone">Alternate Phone: </label>
+                        <input id="p_s_alternate_phone" type="text" placeholder="Enter Alternate Phone"
+                               class="form-control s ou" name="p_s_alternate_phone"
+                               value="{{ old('p_s_alternate_phone') }}">
+                    </div>
+                </div>
+            </div>
+            <hr class="hr-st"/>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="middle_name">Patient History (Source of Admission): <span
+                            class="text-red">*</span></label>
+                    <label for="middle_name"><i>From which of the following inpatient facilities was the patient
+                            discharged withing
+                            the past 14 days?</i> (Mark all that apply): </label>
+
+                    <div class="row mt-2">
+                        <div class="col">
+                            <label class="font-normal" for="long_term_nursing_facility">Long-term nursing facility
+                                (NF)</label>
+                            <input type="checkbox" name="patient_admission_history" id="long_term_nursing_facility"
+                                   class="form-control">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <label class="font-normal" for="skilled_nursing_facility">Skilled nursing facility
+                                (SNF/TCU)</label>
+                            <input type="checkbox" name="patient_admission_history" id="skilled_nursing_facility"
+                                   class="form-control">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <label class="font-normal" for="short_stay_acute">Short-stay acute hospital (IPPS)</label>
+                            <input type="checkbox" name="patient_admission_history" id="short_stay_acute"
+                                   class="form-control">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <label class="font-normal" for="long_term_care">Long-term care hospital (LTCH)</label>
+                            <input type="checkbox" name="patient_admission_history" id="long_term_care"
+                                   class="form-control">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <label class="font-normal" for="inpatient_rehailitation">Inpatient rehabilitation hospital
+                                or unit (IRF)</label>
+                            <input type="checkbox" name="patient_admission_history" id="inpatient_rehailitation"
+                                   class="form-control">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <label class="font-normal" for="phyciatric_hospital">Phychiatric hospital or unit</label>
+                            <input type="checkbox" name="patient_admission_history" id="phyciatric_hospital"
+                                   class="form-control">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <label for="patient_admission_history_other">Other</label>
+                            <input type="text" name="patient_admission_history" id="patient_admission_history_other"
+                                   class="form-control">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <label class="font-normal" for="patient_discharged">N/A Patient was not discharged from any
+                                inpatient facility</label>
+                            <input type="checkbox" name="patient_admission_history" id="patient_discharged"
+                                   class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="hr-st"/>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="middle_name">Services Requested (Mark all that apply):</label>
+
+                    <div class="row mt-2">
+                        <div class="col">
+                            <input type="checkbox" name="services_requested" id="hha" class="form-control">
+                            <label class="font-normal" for="hha">HHA</label>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <input type="checkbox" name="services_requested" id="sn" class="form-control">
+                            <label class="font-normal" for="sn">SN</label>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <input type="checkbox" name="services_requested" id="pt" class="form-control">
+                            <label class="font-normal" for="pt">PT</label>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <input type="checkbox" name="services_requested" id="ot" class="form-control">
+                            <label class="font-normal" for="ot">OT</label>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <input type="checkbox" name="services_requested" id="st" class="form-control">
+                            <label class="font-normal" for="st">ST</label>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <input type="checkbox" name="services_requested" id="msw" class="form-control">
+                            <label class="font-normal" for="msw">MSW</label>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <input type="checkbox" name="services_requested" id="no_ancillary_services"
+                                   class="form-control">
+                            <label class="font-normal" for="no_ancillary_services">No ancillary services needed at this
+                                time</label>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col">
+                            <input type="checkbox" name="services_requested" id="referral_completed"
+                                   class="form-control">
+                            <label class="font-normal" for="referral_completed">Referrals dCompleted</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

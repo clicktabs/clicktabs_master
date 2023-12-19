@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Nursing Visit Form</title>
+   <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+   <div class="container">
+      <div class="form-holder pt-5 pb-5">
+         <form action="" method="post" id="hcavr-form">
+            <div class="row row-flex flex-md-row-reverse align-items-center">
+               <div class="col-lg-6">
+                  <h1 class="text-lg-end text-uppercase">HOME CARE AIDE VISIT RECORD</h1>
+               </div>
+               <div class="col-lg-6">
+                  <table class="table table-borderless align-middle default-td mb-0">
+                     <tr>
+                        <td class="ps-0">
+                           <div class="input-group clean-input-group">
+                              <label class="input-group-text m-0">Date:</label>
+                              <input type="date" id="" class="form-control">
+                           </div>
+                        </td>
+                        <td class="ps-0">
+                           <div class="input-group clean-input-group">
+                              <label class="input-group-text m-0">Time In:</label>
+                              <input type="time" id="" class="form-control">
+                           </div>
+                        </td>
+                        <td class="ps-0">
+                           <div class="input-group clean-input-group">
+                              <label class="input-group-text m-0">Time Out:</label>
+                              <input type="time" id="" class="form-control">
+                           </div>
+                        </td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+
+            <div class="request-data border border-2 rounded-4 overflow-hidden">
+               <table class="table table-bordered default-td mb-0">
+                  <tr>
+                     <td class="text-center" colspan="2"><h4>Check each activity completed during visit, refer to Aide Care Plan.</h4></td>
+                  </tr>
+                  <tr>
+                     <td class="p-0 md-w-60">
+                        <table class="table table-bordered align-middle default-td">
+                           <tr class="text-center">
+                              <th>ACTIVITIES</th>
+                              <th><small>REFUSED</small></th>
+                              <th>COMMENTS</th>
+                           </tr>
+
+                           <!-- VITALS/RESULTS -->
+                           <tr>
+                              <td colspan="3" class="bg-black text-white pt-1 pb-1"><b>VITALS/RESULTS</b></td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <div class="row row-flex align-items-center">
+                                    <div class="col">
+                                       <div class="input-group clean-input-group">
+                                          <label class="input-group-text m-0"><b>T</b></label>
+                                          <input type="text" id="" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col">
+                                       <div class="input-group clean-input-group">
+                                          <label class="input-group-text m-0"><b>P</b></label>
+                                          <input type="text" id="" class="form-control">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <div class="row row-flex align-items-center">
+                                    <div class="col">
+                                       <div class="input-group clean-input-group">
+                                          <label class="input-group-text m-0"><b>R</b></label>
+                                          <input type="text" id="" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col">
+                                       <div class="input-group clean-input-group">
+                                          <label class="input-group-text m-0"><b>B/P</b></label>
+                                          <input type="text" id="" class="form-control">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <div class="row row-flex align-items-center">
+                                    <div class="col">
+                                       <div class="input-group clean-input-group">
+                                          <label class="input-group-text m-0"><b>Weight</b></label>
+                                          <input type="text" id="" class="form-control">
+                                       </div>
+                                    </div>
+                                    <div class="col">
+                                       <div class="input-group clean-input-group">
+                                          <label class="input-group-text m-0"><b>Pain rating</b></label>
+                                          <input type="text" id="" class="form-control">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr><td colspan="4" class="p-0"></td></tr>
+
+                           <!-- BATH -->
+                           <tr>
+                              <td colspan="3" class="bg-black text-white pt-1 pb-1"><b>BATH</b></td>
+                           </tr>
+                           <tr>
+                              <td class="labels-group">
+                                 <label class="form-check-label"><input type="radio" name="bath" class="form-check-input"> Tube</label>
+                                 <label class="form-check-label"><input type="radio" name="bath" class="form-check-input"> Shower</label>
+                              </td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td class="labels-group">
+                                 <span><b>Bed Batch:</b>&nbsp;&nbsp;</span>
+                                 <label class="form-check-label"><input type="radio" name="bed_bath" class="form-check-input"> Partial</label>
+                                 <label class="form-check-label"><input type="radio" name="bed_bath" class="form-check-input"> Complete</label>
+                              </td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td class="labels-group">
+                                 <label class="form-check-label"><input type="radio" name="bed_bath" class="form-check-input"> 
+                                 Assist Bath - Chair</label>
+                              </td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td class="labels-group">
+                                 <div class="input-group clean-input-group">
+                                    <label class="input-group-text"><b>Other (specify):</b></label>
+                                    <input type="text" id="" class="form-control">
+                                 </div>
+                              </td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+
+                           <!-- HYGIENE/GROOMING -->
+                           <tr>
+                              <td colspan="3" class="bg-black text-white pt-1 pb-1"><b>HYGIENE/GROOMING</b></td>
+                           </tr>
+                           <tr>
+                              <td><label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Personal Care</label></td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td><label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Assist with Dressing</label></td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td><label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Hair Care</label></td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td><label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Shampoo</label></td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td><label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Skin Care</label></td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td><label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Moisturizer</label></td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td><label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Foot Care</label></td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td><label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Check Pressure Areas</label></td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td><label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Nail Care</label></td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td><label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Oral Care</label></td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td><label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Clean Dentures</label></td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td><label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Shave</label></td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <div class="input-group clean-input-group">
+                                    <label class="input-group-text"><b>Other (specify):</b></label>
+                                    <input type="text" id="" class="form-control">
+                                 </div>
+                              </td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+
+                           <tr>
+                              <td colspan="3" class="bg-black text-white pt-1 pb-1"><b>PROCEDURES</b></td>
+                           </tr>
+                           <tr>
+                              <td><label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Perineal Care</label></td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td><label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Assist with Elimination</label></td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td><label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Catheter Care</label></td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td><label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Ostomy Care</label></td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td class="labels-group">
+                                 <span><b>Record:</b>&nbsp;&nbsp;</span>
+                                 <label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Intake</label>
+                                 <label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Output</label>
+                              </td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td><label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Inspect/Reinforce Dressing</label></td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td><label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Medication Reminder</label></td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td><label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Medication Assistance</label></td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <div class="input-group clean-input-group">
+                                    <label class="input-group-text"><b>Other (specify):</b></label>
+                                    <input type="text" id="" class="form-control">
+                                 </div>
+                              </td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                        </table>
+                     </td>
+                     <td class="p-0">
+                        <table class="table table-bordered align-middle default-td">
+                           <tr class="text-center">
+                              <th>ACTIVITIES</th>
+                              <th><small>REFUSED</small></th>
+                              <th>COMMENTS</th>
+                           </tr>
+
+                           <!-- ACTIVIY -->
+                           <tr>
+                              <td colspan="3" class="bg-black text-white pt-1 pb-1"><b>ACTIVIY</b></td>
+                           </tr>
+                           <tr>
+                              <td class="labels-group">
+                                 <span><b>Assist with:</b>&nbsp;&nbsp;</span>
+                                 <label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Ambulation</label>
+                                 <label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> W/C</label>
+                                 <label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Walker</label>
+                                 <label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Cane</label>
+                              </td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td class="labels-group">
+                                 <span><b>Assist with Mobility:</b>&nbsp;&nbsp;</span>
+                                 <label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Gait Belt</label>
+                                 <label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Chair</label>
+                                 <label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Bed</label>
+                                 <label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Dangle</label>
+                                 <label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Commode</label>
+                                 <label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Shower</label>
+                                 <label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Tub</label>
+                              </td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td class="labels-group">
+                                 <span><b>ROM:</b>&nbsp;&nbsp;</span>
+                                 <label class="form-check-label"><input type="radio" name="ROM" class="form-check-input"> Active</label>
+                                 <label class="form-check-label"><input type="radio" name="ROM" class="form-check-input"> Passive</label>
+                                 <br>
+                                 <span><b>Arm:</b>&nbsp;&nbsp;</span>
+                                 <label class="form-check-label"><input type="radio" name="Arm" class="form-check-input"> R</label>
+                                 <label class="form-check-label"><input type="radio" name="Arm" class="form-check-input"> L</label>
+                                 <br>
+                                 <span><b>Leg:</b>&nbsp;&nbsp;</span>
+                                 <label class="form-check-label"><input type="radio" name="Leg" class="form-check-input"> R</label>
+                                 <label class="form-check-label"><input type="radio" name="Leg" class="form-check-input"> L</label>
+                              </td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <div class="d-block"><label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Reposition</label></div>
+                                 <div class="d-block"><label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Encourage Position Change</label></div>
+                                 <div class="input-group clean-input-group">
+                                    <label class="input-group-text m-0">Every</label>
+                                    <input type="number" id="" class="form-control">
+                                    <label class="input-group-text m-0">hrs</label>
+                                 </div>
+                              </td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td class="labels-group">
+                                 <span><b>Exercise - Per:</b>&nbsp;&nbsp;</span>
+                                 <label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> PT</label>
+                                 <label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> OT</label>
+                                 <label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> SLP Care Plan</label>
+                              </td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <div class="input-group clean-input-group">
+                                    <label class="input-group-text fw-semibold">Other (specify):</label>
+                                    <input type="text" id="" class="form-control">
+                                 </div>
+                              </td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+
+                           <!-- NUTRITION -->
+                           <tr>
+                              <td colspan="3" class="bg-black text-white pt-1 pb-1"><b>NUTRITION</b></td>
+                           </tr>
+                           <tr>
+                              <td><label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Meal Preparation</label></td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td><label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Assist with Feeding</label></td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td class="labels-group">
+                                 <label class="form-check-label"><input type="radio" name="radio_1" class="form-check-input"> Limit</label>
+                                 <label class="form-check-label"><input type="radio" name="radio_1" class="form-check-input"> Encourage Fluides</label>
+                              </td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td><label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Grocery Shopping</label></td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <div class="input-group clean-input-group">
+                                    <label class="input-group-text fw-semibold">Other (specify):</label>
+                                    <input type="text" id="" class="form-control">
+                                 </div>
+                              </td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+
+                           <!-- OTHER -->
+                           <tr>
+                              <td colspan="3" class="bg-black text-white pt-1 pb-1"><b>OTHER</b></td>
+                           </tr>
+                           <tr>
+                              <td><label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Wash Clothes</label></td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td class="labels-group">
+                                 <span><b>Light Housekeeping:</b>&nbsp;&nbsp;</span>
+                                 <label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Bedroom</label>
+                                 <label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Bathroom</label>
+                                 <label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Kitchen</label>
+                                 <label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Change Bed Linen</label>
+                              </td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td><label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Equipment Care</label></td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr>
+                              <td>
+                                 <div class="input-group clean-input-group">
+                                    <label class="input-group-text fw-semibold">Other (specify):</label>
+                                    <input type="text" id="" class="form-control">
+                                 </div>
+                              </td>
+                              <td class="text-center"><input type="checkbox" class="form-check-input"></td>
+                              <td><input type="text" class="form-control"></td>
+                           </tr>
+                           <tr><td class="p-3"></td><td></td><td></td></tr>
+                           <tr><td class="p-3"></td><td></td><td></td></tr>
+                           <tr><td class="p-3"></td><td></td><td></td></tr>
+                           <tr><td class="p-3"></td><td></td><td></td></tr>
+                           <tr><td class="p-3"></td><td></td><td></td></tr>
+                           <tr><td class="p-3"></td><td></td><td></td></tr>
+                           <tr><td class="p-3"></td><td></td><td></td></tr>
+                           <tr><td class="p-3"></td><td></td><td></td></tr>
+                           <tr><td class="p-3"></td><td></td><td></td></tr>
+                           <tr><td class="p-3"></td><td></td><td></td></tr>
+                           <tr><td class="p-3"></td><td></td><td></td></tr>
+                           <tr><td class="p-3"></td><td></td><td></td></tr>
+                           <tr><td class="p-3"></td><td></td><td></td></tr>
+                           <tr><td class="p-3"></td><td></td><td></td></tr>
+                           <tr><td class="p-3"></td><td></td><td></td></tr>
+                           <tr><td class="p-3"></td><td></td><td></td></tr>
+                           <tr><td class="p-3"></td><td></td><td></td></tr>
+                        </table>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td colspan="2">
+                        <label for=""><b>Comments/Notes:</b></label>
+                        <textarea name="" id="" cols="30" rows="6" class="form-control"></textarea>
+                     </td>
+                  </tr>
+                  <tr><td colspan="2" class="p-0"></td></tr>
+                  <tr>
+                     <td colspan="2" class="text-center labels-group">
+                        <span><b>Coordination of Care with:</b></span>
+                        <label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> SN</label>
+                        <label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Therapy</label>
+                        <label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> PT</label>
+                        <label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> OT</label>
+                        <label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> SLP</label>
+                        <label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Family</label>
+                        <label class="form-check-label"><input type="checkbox" name="" class="form-check-input"> Patient</label>
+                     </td>
+                  </tr>
+                  <tr><td colspan="2" class="p-0"></td></tr>
+                  <tr>
+                     <td colspan="2">
+                        <span><b>SIGNATURE/DATE</b></span>
+                        <br>
+                        <div class="row row-flex align-items-center gy-3">
+                           <div class="col-lg-4 col-md-8">
+                              <div class="input-group clean-input-group">
+                                 <label class="input-group-text m-0"><b>Employee</b></label>
+                                 <input type="text" id="" class="form-control">
+                              </div>
+                           </div>
+                           <div class="col-lg-2 col-md-4">
+                              <div class="input-group clean-input-group input-group-block">
+                                 <input type="text" id="" class="form-control">
+                                 <label class="input-group-text"><i>Date</i></label>
+                              </div>
+                           </div>
+                           <div class="col-lg-4 col-md-8">
+                              <div class="input-group clean-input-group">
+                                 <label class="input-group-text m-0"><b>Patient</b></label>
+                                 <input type="text" id="" class="form-control">
+                              </div>
+                           </div>
+                           <div class="col-lg-2 col-md-4">
+                              <div class="input-group clean-input-group">
+                                 <input type="text" id="" class="form-control">
+                                 <label class="input-group-text m-0"><i>Date</i></label>
+                              </div>
+                           </div>
+                        </div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td><small>PATIENT NAME- Last, First, Middle Initial</small></td>
+                     <td>ID#</td>
+                  </tr>
+               </table>
+            </div>
+         </form>
+      </div>
+   </div>
+
+   <script src="bs/js/bootstrap.min.js"></script>
+</body>
+</html>

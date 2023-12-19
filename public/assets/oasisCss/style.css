@@ -1,0 +1,233 @@
+body {
+  background-color: #fef7f5;
+}
+.page-worapp {
+  margin: 20px 0px;
+}
+
+h3 {
+  font-size: 25px;
+}
+hr:not([size]) {
+  height: 1.2px;
+}
+/* form-header */
+.form-header {
+  border-bottom: 2px solid #888;
+}
+.form-wrapp {
+  border: 2px solid #888;
+  border-radius: 5px;
+}
+.border-line {
+  border-right: 2px solid #888;
+}
+.form-header-left-contnet,
+.form-header-right-contnet {
+  padding: 20px;
+}
+
+.form-header-right-contnet h1 {
+  font-weight: 800;
+  font-size: 40px;
+  margin-top: 35px;
+}
+
+/* visit css */
+.visit {
+  /*! background-color: #c6d9f1; */
+  padding: 20px;
+}
+.vigit-title {
+  text-align: center;
+}
+.vigit-title h2 {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* patient */
+.patient {
+  padding: 20px;
+}
+
+.patient-title {
+  text-align: center;
+}
+.patient-title h2 {
+  font-weight: 600;
+}
+
+/* race */
+.race {
+  padding: 20px;
+}
+.race-title h2 {
+  font-weight: 600;
+}
+.reac-sub-title h2 {
+  font-weight: 600;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+/* current-payment */
+.current-payment {
+  padding: 20px;
+}
+.current-payment-title h2 {
+  font-weight: 600;
+}
+.current-payment-sub-title h2 {
+  font-weight: 600;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+/* patient-history */
+.patient-history {
+  padding: 20px;
+}
+.patient-history-content form label {
+  margin-bottom: 10px;
+}
+
+/* vital-sign-payment */
+.vital-sign-payment-title h2 {
+  font-weight: 600;
+}
+.vital-sign-payment {
+  padding: 20px;
+}
+.vital-sign-payment label {
+  margin-bottom: 10px;
+}
+
+/* Page-2 CSS Start */
+
+.page-2,
+.page-3,
+.page-4,
+.page-5,
+.page-6,
+.page-7,
+.page-8,
+.page-9 .page-10 {
+  margin-top: 100px;
+}
+
+/* patient-history-content */
+.patient-history-content h2 {
+  text-align: center;
+  font-weight: 600;
+  margin-top: -30px;
+  padding: 16px;
+}
+.vital-signs {
+  padding: 20px;
+}
+
+.immunizations-title h2 {
+  text-align: center;
+  font-weight: 600;
+}
+
+.form-whice-title h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.discharge-area {
+  padding: 20px 20px;
+}
+.border {
+  width: 100%;
+  height: 2px;
+  margin: 10px 0;
+}
+.discharge-area h3 {
+  margin-top: 30px;
+  font-size: 25px;
+}
+.uk {
+  padding-top: 40px;
+}
+.a {
+  margin-top: 38px;
+}
+.diagnoses {
+  padding: 20px 40px;
+}
+.condiation-prior {
+  padding: 20px 20px;
+}
+.symptom,
+.surgical,
+.porgnosis,
+.limitation,
+.directives,
+.comments-area,
+.supportive,
+.community,
+.culture,
+.homebound,
+.safety,
+.eyes,
+.nose,
+.mouth,
+.thoart,
+.pain,
+.integumentary,
+.status,
+.iv_access,
+.assesment,
+.patinet_info,
+.episode,
+.ethnicity,
+.payment_source,
+.patient_history,
+.integumentary_area,
+.respiratory,
+.endocrine,
+.cardiac,
+.elimination,
+.dialysis,
+.gi,
+.nutrition,
+.nutritional_health,
+.physicion,
+.meals,
+.neurological,
+.mental,
+.behavior,
+.psychosocial,
+.strengths {
+  padding: 20px 20px;
+}
+.mtop-4 {
+  margin-top: 38px;
+}
+.pr {
+  position: relative;
+}
+.pr input {
+  position: absolute;
+  left: -10px;
+  top: 0px;
+}
+.pr label {
+  position: relative;
+  left: 10px;
+}
+.integumentary_h3 {
+  font-size: 20px;
+}
+.iput_sodium {
+  border: 1px solid gray;
+  border-radius: 3px;
+}
+.iput_sodium:focus {
+  outline: none;
+  border: 1px solid rgb(103, 103, 212, 0.7);
+}

@@ -1,0 +1,251 @@
+
+:root {
+    --bs-border-color: #000;
+ }
+
+ .navbar-expand-lg .navbar-nav {
+    flex-direction: row;
+    column-gap: 20px;
+ }
+
+ body {
+    background-color: #fff;
+ }
+
+ label, .input-group-text {
+    font-weight: 500;
+ }
+
+ .nm-3 {
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+ }
+
+ .nmt-1 {
+    margin-top: -1px !important;
+ }
+
+ .nmb-1 {
+    margin-bottom: -1px !important;
+ }
+
+ @media (min-width: 992px) {
+    .nmt-lg-1 {
+       margin-top: -1px !important;
+    }
+ }
+
+ #hhcapoc-form table tr th, #hhcapoc-form table tr td {
+     text-wrap: wrap;
+ }
+
+
+ #hhcapoc-form .form-check-input {
+     margin-top: 0;
+ }
+
+ #hhcapoc-form .form-check-label, #hhcapoc-form .input-group-text {
+     margin-bottom: 0;
+ }
+
+ .labels-mt-1 label {
+    margin-top: 5px;
+ }
+
+ .clean-input-group {
+    align-items: flex-end;
+    column-gap: 10px;
+ }
+
+ .clean-input-group .input-group-text, .clean-input-group .form-control {
+    border-radius: 0;
+    border: 0 none;
+    padding: 0;
+ }
+
+ .clean-input-group .form-control {
+    border-bottom: var(--bs-border-width) solid var(--bs-border-color);
+ }
+
+ .clean-input-group .form-control:focus {
+    border-color: transparent;
+    box-shadow: none;
+    border-bottom: var(--bs-border-width) solid #000;
+ }
+
+ @media (max-width: 767px) {
+    .input-group-md-block .input-group-text, .input-group-md-block .form-control {
+       width: 100%;
+    }
+ }
+
+ #hhcapoc-form img {
+    max-width: 100%;
+ }
+
+ #hhcapoc-form p:last-child {
+    margin-bottom: 0;
+ }
+
+ #hhcapoc-form .form-fields-wrapper {
+    border: 2px solid var(--bs-border-color);
+    border-radius: 15px;
+    overflow: hidden;
+ }
+
+ #hhcapoc-form .table td {
+    padding-left: 1rem;
+    padding-right: 1rem;
+ }
+
+ @media (max-width: 991px) {
+    #hhcapoc-form .table td[data-title]::before {
+       content: attr(data-title);
+       display: block;
+       font-weight: 700;
+       text-align: center;
+    }
+ }
+
+ #hhcapoc-form .table td>.d-block {
+    margin: 5px 0;
+ }
+
+ #hhcapoc-form .table td>.d-block .form-check-input,
+ #hhcapoc-form td table td .form-check-input {
+    margin-right: 5px;
+ }
+
+ #hhcapoc-form .table:not(.default-td)>:not(caption)>*>* {
+    background-color: transparent;
+    padding: 1rem;
+ }
+
+ #hhcapoc-form h3 {
+    font-size: 1.4em;
+    font-weight: 700;
+ }
+
+ #hhcapoc-form h4 {
+    font-weight: 700;
+    margin: 0;
+    font-size: 1.2em;
+ }
+
+ #hhcapoc-form h5 {
+    font-size: 1em;
+    font-weight: 700;
+ }
+
+ #hhcapoc-form table h5 {
+    margin: 0;
+ }
+
+ #hhcapoc-form label.form-check-label {
+    font-weight: 500;
+ }
+
+ #hhcapoc-form label.form-check-label .num {
+    min-width: 16px;
+    display: inline-block;
+ }
+
+ #hhcapoc-form .labels-group label {
+    margin-right: 10px;
+ }
+
+ @media (max-width: 991px) {
+    #hhcapoc-form .labels-group {
+       margin-top: 5px;
+    }
+ }
+
+ #hhcapoc-form td table {
+    margin: 0;
+ }
+
+ @media (max-width: 1199px) {
+    #hhcapoc-form td table:not(.default-td) td {
+       display: block;
+       padding-left: 0;
+       padding-right: 0;
+    }
+
+    #hhcapoc-form td table.table-bordered td {
+       display: table-cell;
+    }
+
+    #hhcapoc-form td table.stack-padding td {
+       padding-left: 10px;
+       padding-right: 10px;
+    }
+ }
+
+ @media (max-width: 991px) {
+    #hhcapoc-form table:not(.not-responsive) td {
+       display: block;
+    }
+
+    .mt-md-2 {
+       margin-top: 10px !important;
+    }
+ }
+
+ @media (min-width: 992px) {
+    .border-lg-end-2 {
+       border-right: 2px var(--bs-border-style) var(--bs-border-color)!important;
+    }
+    .md-lg-40 {
+       width: 40%;
+    }
+ }
+
+ @media (min-width: 768px) {
+    .border-md-end-2 {
+       border-right: 2px var(--bs-border-style) var(--bs-border-color)!important;
+    }
+    .border-md-end-1 {
+       border-right: 1px var(--bs-border-style) var(--bs-border-color)!important;
+    }
+    .md-w-40 {
+       width: 40%;
+    }
+    .md-w-50 {
+       width: 50%;
+    }
+    .md-w-60 {
+       width: 60%;
+    }
+ }
+
+ .form-holder h2>span {
+    padding: 5px 15px;
+ }
+
+ @media (max-width: 767px) {
+    .form-holder h2>span {
+       display: block;
+    }
+ }
+
+ @media (max-width: 767px) {
+    #hhcapoc-form .table-responsive {
+       max-width: calc(540px - var(--bs-gutter-x));
+    }
+ }
+
+ @media (max-width: 575px) {
+    #hhcapoc-form .table-responsive {
+       max-width: calc(100vw - var(--bs-gutter-x));
+    }
+ }
+
+ #hhcapoc-form .flip-90 {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: rotate(-90deg);
+    line-height: 1.2em;
+    width: 100%;
+    text-align: center;
+ }

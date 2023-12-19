@@ -1,0 +1,143 @@
+:root {
+   --bs-border-color: #bbb;
+}
+
+.navbar-expand-lg .navbar-nav {
+   flex-direction: row;
+   column-gap: 20px;
+}
+
+body {
+   background-color: #fff7f5;
+}
+
+.nm-3 {
+   margin-left: -15px !important;
+   margin-right: -15px !important;
+}
+
+.labels-mt-1 label {
+   margin-top: 5px;
+}
+
+.clean-input-group {
+   align-items: flex-end;
+   column-gap: 10px;
+}
+
+.clean-input-group .input-group-text, .clean-input-group .form-control {
+   border-radius: 0;
+   border: 0 none;
+   padding: 0;
+}
+
+.clean-input-group .form-control {
+   border-bottom: var(--bs-border-width) solid var(--bs-border-color);
+}
+
+.clean-input-group .form-control:focus {
+   border-color: transparent;
+   box-shadow: none;
+   border-bottom: var(--bs-border-width) solid #000;
+}
+
+#nursing-visit-form img {
+   max-width: 100%;
+}
+
+#nursing-visit-form h3 {
+   font-size: 1.4em;
+   font-weight: 700;
+}
+
+#nursing-visit-form h4 {
+   font-weight: 700;
+   margin: 0;
+   font-size: 1.2em;
+}
+
+#nursing-visit-form h5 {
+   font-size: 1em;
+   font-weight: 700;
+}
+
+#nursing-visit-form table h5 {
+   margin: 0;
+}
+
+#nursing-visit-form label,
+#nursing-visit-form label.form-check-label {
+   font-size: 15px;
+   font-weight: 500;
+}
+
+#nursing-visit-form .labels-group label {
+   margin-right: 10px;
+}
+
+#nursing-visit-form table tr th, #nursing-visit-form table tr td {
+    text-wrap: wrap;
+}
+
+
+#nursing-visit-form .form-check-input {
+    margin-top: 0;
+}
+
+#nursing-visit-form .form-check-label, #nursing-visit-form .input-group-text {
+    margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+   #nursing-visit-form .labels-group {
+      margin-top: 5px;
+   }
+}
+
+#nursing-visit-form td table {
+   margin: 0;
+}
+
+#nursing-visit-form table {
+   margin-left: -10px;
+   margin-right: -10px;
+}
+
+@media (max-width: 1199px) {
+   #nursing-visit-form td table td {
+      display: block;
+      padding-left: 0;
+      padding-right: 0;
+   }
+
+   #nursing-visit-form td table.table-bordered td {
+      display: table-cell;
+   }
+
+   #nursing-visit-form td table.stack-padding td {
+      padding-left: 10px;
+      padding-right: 10px;
+   }
+}
+
+@media (max-width: 991px) {
+   #nursing-visit-form td {
+      display: block;
+   }
+
+   .mt-md-2 {
+      margin-top: 10px !important;
+   }
+}
+
+
+@media (min-width: 992px) {
+   .border-lg-end-2 {
+      border-right: 2px var(--bs-border-style) var(--bs-border-color)!important   }
+}
+
+@media (min-width: 768px) {
+   .border-md-end-2 {
+      border-right: 2px var(--bs-border-style) var(--bs-border-color)!important;
+   }
+}

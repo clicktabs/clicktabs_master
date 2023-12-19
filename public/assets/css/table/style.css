@@ -1,0 +1,131 @@
+table.client_table {
+    border: 1px solid #f5f5f5;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table.client_table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+}
+
+table.client_table th,
+table.client_table td {
+    padding: .625em;
+    text-align: center;
+}
+
+table.client_table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+table.client_table .action button {
+    margin: 5px;
+}
+.client_table_title {
+    margin: 15px 0;
+}
+.client_table_title h3{
+    font-size: 20px;
+}
+
+.client_table_header_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.client_table_header_wrapper .filter_tab h5{
+    font-size: 20px;
+    font-weight: 600;
+}
+.client_table_header_wrapper .filter_tab .filter_tab_wrapper {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.client_table_header_wrapper .filter_tab #filter_client {
+    margin-right: 20px;
+}
+.client_table_header_wrapper .add_more_schedule {
+    margin-top: 20px;
+}
+.show_field {
+    display: none;
+    width: 100%;
+}
+
+table.client_table th.action {
+    width: 300px;
+}
+
+@media screen and (max-width: 992px) {
+    table.client_table {
+        border: 0;
+    }
+
+    table.client_table caption {
+        font-size: 1.3em;
+    }
+
+    table.client_table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    table.client_table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+
+    table.client_table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+
+    table.client_table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    table.client_table td:last-child {
+        border-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .client_table_header_wrapper {
+        flex-direction: column;
+    }
+    .client_table_header_wrapper .add_more_schedule {
+        margin-top: 0;
+    }
+    .client_table_header_wrapper label,
+    .client_table_header_wrapper select {
+        width: 100%;
+    }
+    .client_table_header_wrapper label {
+        margin: 20px 0 15px;
+        display: inline-block;
+    }
+    .client_table_header_wrapper .filter_tab .filter_tab_wrapper {
+        margin-top: 0;
+    }
+}

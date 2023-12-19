@@ -1,0 +1,141 @@
+:root {
+   --bs-border-color: #999;
+}
+
+.navbar-expand-lg .navbar-nav {
+   flex-direction: row;
+   column-gap: 20px;
+}
+
+body {
+   background-color: #fff7f5;
+}
+
+.nm-3 {
+   margin-left: -15px !important;
+   margin-right: -15px !important;
+}
+
+.labels-mt-1 label {
+   margin-top: 5px;
+}
+
+.clean-input-group {
+   align-items: flex-end;
+   column-gap: 10px;
+}
+
+.clean-input-group .input-group-text, .clean-input-group .form-control {
+   border-radius: 0;
+   border: 0 none;
+   padding: 0;
+}
+
+.clean-input-group .form-control {
+   border-bottom: var(--bs-border-width) solid var(--bs-border-color);
+}
+
+.clean-input-group .form-control:focus {
+   border-color: transparent;
+   box-shadow: none;
+   border-bottom: var(--bs-border-width) solid #000;
+}
+
+#health-service-request-form img {
+   max-width: 100%;
+}
+
+#health-service-request-form .form-fields-wrapper {
+   border: 2px solid var(--bs-border-color);
+   border-radius: 15px;
+   overflow: hidden;
+}
+
+#health-service-request-form .table>:not(caption)>*>* {
+   background-color: transparent;
+   padding: 1rem;
+}
+
+#health-service-request-form h3 {
+   font-size: 1.4em;
+   font-weight: 700;
+}
+
+#health-service-request-form h4 {
+   font-weight: 700;
+   margin: 0;
+   font-size: 1.2em;
+}
+
+#health-service-request-form h5 {
+   font-size: 1em;
+   font-weight: 700;
+}
+
+#health-service-request-form table h5 {
+   margin: 0;
+}
+
+#health-service-request-form label,
+#health-service-request-form label.form-check-label {
+   font-size: 15px;
+   font-weight: 500;
+}
+
+#health-service-request-form .labels-group label {
+   margin-right: 10px;
+}
+
+@media (max-width: 991px) {
+   #health-service-request-form .labels-group {
+      margin-top: 5px;
+   }
+}
+
+#health-service-request-form td table {
+   margin: 0;
+}
+
+#health-service-request-form table {
+   margin-left: -10px;
+   margin-right: -10px;
+}
+
+@media (max-width: 1199px) {
+   #health-service-request-form td table td {
+      display: block;
+      padding-left: 0;
+      padding-right: 0;
+   }
+
+   #health-service-request-form td table.table-bordered td {
+      display: table-cell;
+   }
+
+   #health-service-request-form td table.stack-padding td {
+      padding-left: 10px;
+      padding-right: 10px;
+   }
+}
+
+@media (max-width: 991px) {
+   #health-service-request-form td {
+      display: block;
+   }
+
+   .mt-md-2 {
+      margin-top: 10px !important;
+   }
+}
+
+@media (min-width: 992px) {
+   .border-lg-end-2 {
+      border-right: 2px var(--bs-border-style) var(--bs-border-color)!important;
+   }
+}
+
+@media (min-width: 768px) {
+   .border-md-end-2 {
+      border-right: 2px var(--bs-border-style) var(--bs-border-color)!important;
+   }
+}

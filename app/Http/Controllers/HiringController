@@ -1,0 +1,348 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Hiring;
+use App\Models\Application;
+use App\Models\Formi9;
+use App\Models\Formit4;
+use App\Models\Formw4;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
+use App\Traits\ApiService;
+use Dompdf\Dompdf;
+
+class HiringController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+       
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create() 
+    {
+        return view('hiring.create');
+    } 
+    
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+
+     //Application
+    public function store(Request $request)
+    {
+        // return $request->input();
+        // $request->validate([
+        //     'appl_position'=>'required',
+        // ]);
+
+        $query = DB::table('applications')->insert([
+            'appl_position'=>$request->input('appl_position'),
+            'appl_lastName'=>$request->input('appl_lastName'),
+            'appl_firstName'=>$request->input('appl_firstName'),
+            'appl_middleName'=>$request->input('appl_middleName'),
+            'appl_otherLastName'=>$request->input('appl_otherLastName'),
+            'appl_address'=>$request->input('appl_address'),
+            'appl_city'=>$request->input('appl_city'),
+            'appl_state'=>$request->input('appl_state'),
+            'appl_zip'=>$request->input('appl_zip'),
+            'appl_homephone'=>$request->input('appl_homephone'),
+            'appl_cellphone'=>$request->input('appl_cellphone'),
+            'appl_email'=>$request->input('appl_email'),
+            'appl_dateyoucanwork'=>$request->input('appl_dateyoucanwork'),
+            'appl_salarydesire'=>$request->input('appl_salarydesire'),
+            'appl_Diplomaradio_btn'=>$request->input('appl_Diplomaradio_btn'),
+            'appl_Hoursradio_btn'=>$request->input('appl_Hoursradio_btn'),
+            'appl_Daysradio_btn'=>$request->input('appl_Daysradio_btn'),
+            'appl_Answerradio_btn'=>$request->input('appl_Answerradio_btn'),
+            'appl_Statusradio_btn'=>$request->input('appl_Statusradio_btn'),
+            'appl_authorizedradio_btn'=>$request->input('appl_authorizedradio_btn'),
+            'appl_appl_convited'=>$request->input('appl_convictedradio_btn'),
+            'appl_essentialradio_btn'=>$request->input('appl_essentialradio_btn'),
+            'appl_functionsradio_btn'=>$request->input('appl_functionsradio_btn'),
+            'appl_school_name'=>$request->input('appl_school_name'),
+            'appl_school_degree'=>$request->input('appl_school_degree'),
+            'appl_school_address'=>$request->input('appl_school_address'),
+            'appl_school_1'=>$request->input('appl_school_1'),
+            'appl_school_2'=>$request->input('appl_school_2'),
+            'appl_school_3'=>$request->input('appl_school_3'),
+            'appl_other_1'=>$request->input('appl_other_1'),
+            'appl_other_1'=>$request->input('appl_other_2'),
+            'appl_other_3'=>$request->input('appl_other_3'),
+            'appl_proName'=>$request->input('appl_proName'),
+            'appl_proAddress'=>$request->input('appl_proAddress'),
+            'appl_proPhone'=>$request->input('appl_proPhone'),
+            'appl_proRelationship'=>$request->input('appl_proRelationship'),
+            'appl_proName1'=>$request->input('appl_proName1'),
+            'appl_proAddress1'=>$request->input('appl_proAddress1'),
+            'appl_proPhone1'=>$request->input('appl_proPhone1'),
+            'appl_proRelationship1'=>$request->input('appl_proRelationship1'),
+            'appl_proName2'=>$request->input('appl_proName2'),
+            'appl_proAddress2'=>$request->input('appl_proAddress2'),
+            'appl_proPhone2'=>$request->input('appl_proPhone2'),
+            'appl_proRelationship2'=>$request->input('appl_proRelationship2'),
+            'appl_Example6'=>$request->input('appl_Example6'),
+            'appl_Job'=>$request->input('appl_contactradio_btn'),
+            'appl_Job'=>$request->input('appl_Job'),
+            'appl_startDate'=>$request->input('appl_startDate'),
+            'appl_endDate'=>$request->input('appl_endDate'),
+            'appl_companyName'=>$request->input('appl_companyName'),
+            'appl_supervisorsName'=>$request->input('appl_supervisorsName'),
+            'appl_supervisorsNumber'=>$request->input('appl_supervisorsNumber'),
+            'appl_employorCity'=>$request->input('appl_employorCity'),
+            'appl_employorState'=>$request->input('appl_employorState'),
+            'appl_employorZip'=>$request->input('appl_employorZip'),
+            'appl_duties'=>$request->input('appl_duties'),
+            'appl_reasonforleaving'=>$request->input('appl_startingSalary'),
+            'appl_startingSalary'=>$request->input('appl_startingSalary'),
+            'appl_endinfSalary'=>$request->input('appl_endinfSalary'),
+            'appl_Job1'=>$request->input('appl_Job1'),
+            'appl_startDate1'=>$request->input('appl_startDate1'),
+            'appl_endDate1'=>$request->input('appl_endDate1'),
+            'appl_companyName1'=>$request->input('appl_companyName1'),
+            'appl_supervisorsName1'=>$request->input('appl_supervisorsName1'),
+            'appl_supervisorPhone1'=>$request->input('appl_supervisorPhone1'),
+            'appl_City1'=>$request->input('appl_City1'),
+            'appl_State1'=>$request->input('appl_State1'),
+            'appl_Zip1'=>$request->input('appl_Zip1'),
+            'appl_duties1'=>$request->input('appl_duties1'),
+            'appl_reasonforleaving1'=>$request->input('appl_reasonforleaving1'),
+            'appl_Startingsalary1'=>$request->input('appl_Startingsalary1'),
+            'appl_endingSalary1'=>$request->input('appl_endingSalary1'),
+            'appl-signature_10'=>$request->input('appl-signature_10'),
+        ]);
+
+        if($query){
+            return back()->with('success', 'Data successfully inserted');
+        }
+        else{
+            return back()->with('fail', 'something went wrong');
+        }
+    }  
+
+     // form I-9
+    public function addformI9(Request $request)
+    {
+        $query = DB::table('formi9s')->insert([
+           
+            'formi9_lName'=>$request->input('formi9_lName'),
+            'formi9_fName'=>$request->input('formi9_fName'),
+            'formi9_mName'=>$request->input('formi9_mName'),
+            'formi9_oLastName'=>$request->input('formi9_oLastName'),
+            'formi9_address'=>$request->input('formi9_address'),
+            'formi9_aptNumber'=>$request->input('formi9_aptNumber'),
+            'formi9_city'=>$request->input('formi9_city'),
+            'formi9_state'=>$request->input('formi9_state'),
+            'formi9_zip'=>$request->input('formi9_zip'),
+            'formi9_dob'=>$request->input('formi9_dob'),
+            'formi9_ssn'=>$request->input('formi9_ssn'),
+            'formi9_email'=>$request->input('formi9_email'),
+            'formi9_employeePhone'=>$request->input('formi9_employeePhone'),
+            'formi9_ctizen'=>$request->input('formi9_ctizen'),
+            'formi9_permtDate'=>$request->input('formi9_permtDate'),
+            'formi9_lawful'=>$request->input('formi9_lawful'),
+            'formi9_lawful_1'=>$request->input('formi9_lawful_1'),
+            'formi9_alien'=>$request->input('formi9_alien'),
+            'formi9_alien_1'=>$request->input('formi9_alien_1'),
+            'formi9_alienNumber'=>$request->input('formi9_alienNumber'),
+            'formi9_admissionNo'=>$request->input('formi9_admissionNo'),
+            'formi9_PassportNo'=>$request->input('formi9_PassportNo'),
+            'formi9_cuntry'=>$request->input('formi9_cuntry'),
+            'formi9_signature_1'=>$request->input('formi9_signature_1'),
+            'formi9_signatur_2'=>$request->input('formi9_signatur_2'),
+            'formi9_translator'=>$request->input('formi9_translator'),
+            'formi9_preparer'=>$request->input('formi9_preparer'),
+            'formi9_signature_3'=>$request->input('formi9_signature_3'),
+            'formi9_signature_4'=>$request->input('formi9_signature_4'),
+            'formi9_LName_1'=>$request->input('formi9_LName_1'),
+            'formi9_FName_1'=>$request->input('formi9_FName_1'),
+            'formi9_Address_1'=>$request->input('formi9_Address_1'),
+            'formi9_City_1'=>$request->input('formi9_City_1'),
+            'formi9_State_1'=>$request->input('formi9_State_1'),
+            'formi9_Zip_1'=>$request->input('formi9_Zip_1'),
+            'formi9_employor_auth'=>$request->input('formi9_employor_auth'),
+            'formi9_employorLname'=>$request->input('formi9_employorLname'),
+            'formi9_employorFname'=>$request->input('formi9_employorFname'),
+            'formi9_employorMI'=>$request->input('formi9_employorMI'),
+            'formi9_citizenship'=>$request->input('formi9_citizenship'),
+            'formi9_docTitle1'=>$request->input('formi9_docTitle1'),
+            'formi9_docTitle2'=>$request->input('formi9_docTitle2'),
+            'formi9_docTitle3'=>$request->input('formi9_docTitle3'),
+            'formi9_issuing_1'=>$request->input('formi9_issuing_1'),
+            'formi9_issuing_2'=>$request->input('formi9_issuing_2'),
+            'formi9_issuing_3'=>$request->input('formi9_issuing_3'),
+            'formi9_docNumber_1'=>$request->input('formi9_docNumber_1'),
+            'formi9_docNumber_2'=>$request->input('formi9_docNumber_2'),
+            'formi9_docNumber_3'=>$request->input('formi9_docNumber_3'),
+            'formi9_expir_1'=>$request->input('formi9_expir_1'),
+            'formi9_expir_2'=>$request->input('formi9_expir_2'),
+            'formi9_expir_3'=>$request->input('formi9_expir_3'),
+            'formi9_docTitle1_4'=>$request->input('formi9_docTitle1_4'),
+            'formi9_additional'=>$request->input('formi9_additional'),
+            'formi9_Issuing_4'=>$request->input('formi9_Issuing_4'),
+            'formi9_docNumber_4'=>$request->input('formi9_docNumber_4'),
+            'formi9_expir_4'=>$request->input('formi9_expir_4'),
+            'formi9_docTitle1_5'=>$request->input('formi9_docTitle1_5'),
+            'formi9_issuin_5'=>$request->input('formi9_issuin_5'),
+            'formi9_docNumber_5'=>$request->input('formi9_docNumber_5'),
+            'formi9_expir_5'=>$request->input('formi9_expir_5'),
+            'formi9_firstDay'=>$request->input('formi9_firstDay'),
+            'formi9_Authorized_1'=>$request->input('formi9_Authorized_1'),
+            'formi9_Employer_authLname'=>$request->input('formi9_Employer_authLnam'),
+            'formi9_Employer_authFname'=>$request->input('formi9_Employer_authFname'),
+            'formi9_employerOrg'=>$request->input('formi9_employerOrg'),
+            'formi9_oemployerorgAddress'=>$request->input('formi9_oemployerorgAddress'),
+            'formi9_employercity'=>$request->input('formi9_employercity'),
+            'formi9_employororgState'=>$request->input('formi9_employororgState'),
+            'formi9_employororgZip'=>$request->input('formi9_employororgZip'),
+            'formi9_LName_3'=>$request->input('formi9_LName_3'),
+            'formi9_FName_3'=>$request->input('formi9_FName_3'),
+            'formi9_MName_3'=>$request->input('formi9_MName_3'),
+            'formi9_Date'=>$request->input('formi9_Date'),
+            'formi9_DocumentTitle_5'=>$request->input('formi9_DocumentTitle_5'),
+            'formi9_DocumentNumber'=>$request->input('formi9_DocumentNumber'),
+            'formi9_expir_6'=>$request->input('formi9_expir_6'),
+            'formi9-signature_5'=>$request->input('formi9-signature_5'),
+            'formi9_Authorized_4'=>$request->input('formi9_Authorized_4'),
+        ]);
+
+        if($query){
+            return back()->with('success', 'Data successfully inserted');
+        }
+        else{
+            return back()->with('fail', 'something went wrong');
+        }
+    } 
+    
+    public function addformIT4(Request $request)
+    {
+        $query = DB::table('formw4s')->insert([
+             //form IT-4
+            'formit4_fullname'=>$request->input('formit4_fullname'),
+            'formit4_ssn'=>$request->input('formit4_ssn'),
+            'formit4_ZipCode'=>$request->input('formit4_ZipCode'),
+            'formit4_schoolDistrict'=>$request->input('formit4_schoolDistrict'),
+            'formit4_schoolDistrictNo'=>$request->input('formit4_schoolDistrictNo'),
+            'formit4_personalExemption'=>$request->input('formit4_personalExemption'),
+            'formit4_marriedPersonalExemption'=>$request->input('formit4_marriedPersonalExemption'),
+            'formit4_exemptionsDepndents'=>$request->input('formit4_exemptionsDepndents'),
+            'formit4_exemptionsTotal'=>$request->input('formit4_exemptionsTotal'),
+            'formit4_additionalWithholding'=>$request->input('formit4_additionalWithholding'),
+            'formit4-signature1'=>$request->input('formit4-signature1'),
+        ]);
+
+        if($query){
+            return back()->with('success', 'Data successfully inserted');
+        }
+        else{
+            return back()->with('fail', 'something went wrong');
+        }
+    } 
+    
+    public function addformw4(Request $request)
+    {
+        $query = DB::table('formi9s')->insert([
+            //form w4
+            'w4_first_and_middle_name'=>$request->input('w4_first_and_middle_name'),
+            'w4_last_name'=>$request->input('w4_last_name'),
+            'w4_social_number'=>$request->input('w4_social_number'),
+            'w4_address'=>$request->input('w4_address'),
+            'w4_city_town_state_zip'=>$request->input('w4_city_town_state_zip'),
+            'w4_single_or_married'=>$request->input('w4_single_or_married'),
+            'w4_married_filing'=>$request->input('w4_married_filing'),
+            'w4_head_of_household'=>$request->input('w4_head_of_household'),
+            'w4_under_age'=>$request->input('w4_under_age'),
+            'w4_dependents'=>$request->input('w4_dependents'),
+            'w4_total'=>$request->input('w4_total'),
+            'w4_four_a'=>$request->input('w4_four_a'),
+            'w4_four_b'=>$request->input('w4_four_b'),
+            'w4_four_c'=>$request->input('w4_four_c'),
+            'w4_employee_signature'=>$request->input('w4_employee_signature'),
+            'w4_signature_date'=>$request->input('w4_signature_date'),
+            'w4_employersAddress'=>$request->input('w4_employersAddress'),
+            'w4_employee_first_date'=>$request->input('w4_employee_first_date'),
+            'w4_employee_id_number'=>$request->input('w4_employee_id_number'),
+            'w4_marriedfilingjointly'=>$request->input('w4_marriedfilingjointly'),
+            'w4_yourspousehavethreejobs'=>$request->input('w4_yourspousehavethreejobs'),
+            'w4_ofthetwohighestpayingjobs'=>$request->input('w4_ofthetwohighestpayingjobs'),
+            'w4_Addtheamountsfromlines2a'=>$request->input('w4_Addtheamountsfromlines2a'),
+            'w4_Enterthenumberofpayperiodsperyear'=>$request->input('w4_Enterthenumberofpayperiodsperyear'),
+            'w4_theannualamountonline1orline2c'=>$request->input('w4_theannualamountonline1orline2c'),
+            'w4_2023itemizeddeductions'=>$request->input('w4_2023itemizeddeductions'),
+            'w4_qualifyingsurvivingspouse'=>$request->input('w4_qualifyingsurvivingspouse'),
+            'w4_subtractline2fromline1'=>$request->input('w4_subtractline2fromline1'),
+            'w4_studentloaninterest'=>$request->input('w4_studentloaninterest'),
+            'w4_Entertheresulthere'=>$request->input('w4_Entertheresulthere'),
+            'w4-signature'=>$request->input('w4-signature'),
+        ]);
+
+        if($query){
+            return back()->with('success', 'Data successfully inserted');
+        }
+        else{
+            return back()->with('fail', 'something went wrong');
+        }
+    } 
+    
+
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\HiringController  $hiringController
+     * @return \Illuminate\Http\Response
+     */
+    public function show()
+    {
+        $hiring = Hiring::latest()->first();
+        return view('hiring.view', compact('hiring'));
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\HiringController  $hiringController
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(HiringController $hiringController)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\HiringController  $hiringController
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, HiringController $hiringController)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\HiringController  $hiringController
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(HiringController $hiringController)
+    {
+        //
+    }
+}

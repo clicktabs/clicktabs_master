@@ -1,0 +1,514 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('patient_oasis_demograhics', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->integer('patient_oasis_id')->nullable();
+
+               //demographic 
+            $table->text('patient_id_no')->nullable();
+            $table->text('patient_name')->nullable();
+            $table->text('mi')->nullable();
+            $table->text('patient_last_name')->nullable();
+            $table->text('Suffix')->nullable();
+            $table->text('p_h_address_line_1')->nullable();
+            $table->text('p_h_address_line_2')->nullable();
+            $table->text('p_h_county')->nullable();
+            $table->text('p_h_city')->nullable();
+            $table->text('p_h_phone')->nullable();
+            $table->text('p_h_alternate_phone')->nullable();
+            $table->text('p_s_address_line_1')->nullable();
+            $table->text('p_s_address_line_2')->nullable();
+            $table->text('p_s_zip')->nullable();
+            $table->text('p_s_county')->nullable();
+            $table->text('p_s_city')->nullable();
+            $table->text('p_s_state')->nullable();
+            $table->text('p_s_phone')->nullable();
+            $table->text('p_s_alternate_phone')->nullable();
+            $table->text('patient_state')->nullable();
+            $table->text('patient_zip')->nullable();
+            $table->text('social_security_number')->nullable();
+            $table->text('s_s_uk_unknown')->nullable();
+            $table->text('medicare_number')->nullable();
+            $table->text('medicare_unknown')->nullable();
+            $table->text('medicaid_number')->nullable();
+            $table->text('medicare_unknown')->nullable();
+            $table->text('gender')->nullable();
+            $table->text('dateofbirth')->nullable();
+            $table->text('referral_date')->nullable();
+            $table->text('marital_status')->nullable();
+            $table->text('insurance_type')->nullable();
+            $table->text('patient_admission_status')->nullable();
+            
+          
+            $table->text('Hispanic_Latino')->nullable();
+            $table->text('Native_Hawaiian_PacificIslander')->nullable();
+            $table->text('payemtsource')->nullable();
+            $table->text('preferred_language')->nullable();
+            $table->text('interpater_use')->nullable();
+            $table->text('communicate_with_doctor')->nullable();
+
+
+            $table->text('white')->nullable();
+            $table->text('black')->nullable();
+            $table->text('american_indian')->nullable();
+            $table->text('asian_indian')->nullable();
+            $table->text('chines')->nullable();
+            $table->text('fillipino')->nullable();
+            $table->text('japanes')->nullable();
+            $table->text('korean')->nullable();
+            $table->text('vietnamese')->nullable();
+            $table->text('other_asian')->nullable();
+            $table->text('native_hawaiian')->nullable();
+            $table->text('guamanian')->nullable();
+            $table->text('samoa')->nullable();
+            $table->text('other_pacific_island')->nullable();
+            $table->text('patient_unable_to_respond')->nullable();
+            $table->text('patient_declines')->nullable();
+            $table->text('z_Noneoftheabove')->nullable();
+            
+            $table->text('NotofHispanic')->nullable();
+            $table->text('YesofMexican')->nullable();
+            $table->text('YesPuertoRican')->nullable();
+            $table->text('Yes_Cuban')->nullable();
+
+
+            $table->text('YesanotherHispanic')->nullable();
+            $table->text('Patientunabletorespond')->nullable();
+            $table->text('Patientdeclinetorespond')->nullable();
+            
+            $table->text('clinical_manager')->nullable();
+            $table->text('case_manager')->nullable();
+            $table->text('oasis_assigned_manager')->nullable();
+            $table->text('ot_approved')->nullable();
+            $table->text('pt_approved')->nullable();
+            $table->text('st_approved')->nullable();
+            $table->text('long_term_nursing_facility')->nullable();
+            
+            $table->text('skilled_nursing_facility')->nullable();
+            $table->text('short_stay_acute')->nullable();
+            $table->text('long_term_care')->nullable();
+            $table->text('inpatient_rehailitation')->nullable();
+            $table->text('phyciatric_hospital')->nullable();
+            $table->text('patient_admission_other')->nullable();
+            $table->text('services_requested')->nullable();
+
+
+            $table->text('services_HHA')->nullable();
+            $table->text('services_SN')->nullable();
+            $table->text('services_PT')->nullable();
+            $table->text('services_OT')->nullable();
+            $table->text('services_ST')->nullable();
+            $table->text('services_MSW')->nullable();
+            $table->text('no_ancillary_services')->nullable();
+            $table->text('referral_completed')->nullable();
+            $table->text('medical_appointment')->nullable();
+            $table->text('non_medical_appointment')->nullable();
+            $table->text('lack_transportation')->nullable();
+            $table->text('patient_unable_respond')->nullable();
+            $table->text('patient_declines')->nullable();
+
+            //Current Payment Source
+            $table->text('nochargeforcurrentservices')->nullable();
+            $table->text('Medicare_traditional')->nullable();
+            $table->text('Medicare_hmo')->nullable();
+            $table->text('Medicaid_traditional')->nullable();
+            $table->text('Medicaid_hmo')->nullable();
+            $table->text('Workers_compensation')->nullable();
+            $table->text('Title_programs')->nullable();
+            $table->text('Other_government')->nullable();
+            $table->text('Private_insurance')->nullable();
+            $table->text('Private_HMO')->nullable();
+            $table->text('Self_pay')->nullable();
+            $table->text('Other_specify')->nullable();
+            $table->text('UK_Unknown')->nullable();
+
+            //Payors
+            $table->text('co_pay_money')->nullable();
+            $table->text('private_pay')->nullable();
+            $table->text('private_pay_na')->nullable();
+            $table->text('insurance_medicaid_member_id')->nullable();
+            $table->text('insurance_medicaid_member_id_na')->nullable();
+            $table->text('insurance_medicare_member_id')->nullable();
+            $table->text('insurance_medicare_member_id_na')->nullable();
+            $table->text('insurance_nic_member_id')->nullable();
+            $table->text('insurance_nic_member_id_na')->nullable();
+
+            
+            //episode timing
+            $table->text('start_care_date')->nullable();
+            $table->text('episode_timing')->nullable();
+            $table->text('episode_start_care')->nullable();
+            $table->text('oasis_start_care')->nullable();
+            $table->text('episode_timing_oasis_start_care')->nullable();
+            $table->text('schedule_therapy')->nullable();
+            $table->text('episode_timing_therapy_evaluation')->nullable();
+            $table->text('non_oasis_start_care')->nullable();
+            $table->text('episode_timing_non_oasis_start')->nullable();
+            $table->text('initial_oasis_recert')->nullable();
+            $table->text('episode_timing_oasis_recert')->nullable();
+            $table->text('initial_non_oasis_recert')->nullable();
+            $table->text('non_oasis_recert')->nullable();
+            $table->text('episode_timing_recertification_date')->nullable();
+            
+            //M0032 section M
+            $table->text('resumption_of_care_date')->nullable();
+            $table->text('RN')->nullable();
+            $table->text('PT')->nullable();
+            $table->text('SLP/ST')->nullable();
+            $table->text('OT')->nullable();
+            $table->text('date_assessment_completed')->nullable();
+            $table->text('completed_reason')->nullable();
+            $table->text('discharged_date')->nullable();
+            $table->text('physician_ordered_date')->nullable();
+            $table->text('specific_soc_roc')->nullable();
+            $table->text('transportation')->nullable();
+            $table->text('inpatientFacilities')->nullable();
+            $table->text('inpatientDischargeDate')->nullable();
+            $table->text('NotAvailable')->nullable();
+            $table->text('emergentCare')->nullable();
+            $table->text('emergentCareReason')->nullable();
+
+            //M2410
+            $table->text('Hospital')->nullable();
+            $table->text('Rehabilitation_facility')->nullable();
+            $table->text('Nursing_home')->nullable();
+            $table->text('Hospice')->nullable();
+            $table->text('inpatient_facility')->nullable();
+            $table->text('Patient_remained')->nullable();
+            $table->text('the_community')->nullable();
+            $table->text('non-institutional')->nullable();
+            $table->text('Unknown_because')->nullable();
+            $table->text('Other_unknownA21123')->nullable();
+            $table->text('Current_reconciled')->nullable();
+            $table->text('medication_list')->nullable();
+            $table->text('transfer_timely')->nullable();
+            $table->text('SubsequentProvider')->nullable();
+            $table->text('providersubsequent')->nullable();
+            $table->text('')->nullable();
+            $table->text('')->nullable();
+            $table->text('')->nullable();
+
+            $table->text('dischargeDisposition')->nullable();
+            $table->text('listSubsequentProvider')->nullable();
+            $table->text('currentReconciledMedication')->nullable();
+            $table->text('reconciled_medication_list')->nullable();
+            $table->text('routeCurrentReconciled')->nullable();
+
+            //Section B
+            $table->text('hearing')->nullable();
+            $table->text('vision')->nullable();
+            $table->text('healthLiteracy')->nullable();
+
+            //Section C
+            $table->text('MentalStatus')->nullable();
+            $table->text('RepetitionofThreeWords')->nullable();
+            $table->text('TemporalOrientation')->nullable();
+            $table->text('what_month')->nullable();
+            $table->text('what_day')->nullable();
+            $table->text('able_to_recall')->nullable();
+            $table->text('able_to_recall_blue')->nullable();
+            $table->text('able_to_recall_bed')->nullable();
+            $table->text('addScore')->nullable();
+            $table->text('evidence_of_acute_change')->nullable();
+            $table->text('behaviorPresent')->nullable();
+            $table->text('behaviorContinuePresent')->nullable();
+            $table->text('behaviorFluctuatePresent')->nullable();
+            $table->text('cognitiveFunctioning')->nullable();
+            $table->text('WhenConfused')->nullable();
+            $table->text('WhenAnxious')->nullable();
+
+            //Section D Mood
+            $table->text('SymptomPresence')->nullable();
+            $table->text('SymptomFrequency')->nullable();
+            $table->text('littleInterest')->nullable();
+            $table->text('phqInterview')->nullable();
+            $table->text('totalScore')->nullable();
+            $table->text('SocialIsolation')->nullable();
+
+            //Section E
+            $table->text('psychiatricSymptoms')->nullable();
+            $table->text('behaviorSymptoms')->nullable();
+
+            //Section F
+            $table->text('lives_alone')->nullable();
+            $table->text('lives_with_others')->nullable();
+            $table->text('grooming')->nullable();
+            $table->text('dressing_upper')->nullable();
+            $table->text('dressing_lower')->nullable();
+            $table->text('bathing')->nullable();
+            $table->text('toilet_transferring')->nullable();
+            $table->text('supervision_and_safety')->nullable();
+            $table->text('adl_assistance')->nullable();
+            $table->text('medication_administration')->nullable();
+            $table->text('medical_procedures')->nullable();
+            $table->text('supervision_and_safety')->nullable();
+            $table->text('measurable_goal_writer')->nullable();
+            $table->text('ccptihhsp')->nullable();
+            $table->text('personal_goal_communication')->nullable();
+            $table->text('patient_goal_communication_status')->nullable();
+            $table->text('personal_goal_discussed')->nullable();
+            $table->text('other_personal_goal_discussed')->nullable();
+            $table->text('goal_agreement_status')->nullable();
+            $table->text('goal_written_by')->nullable();
+            $table->text('goal_agreement_by')->nullable();
+            $table->text('other_field_1')->nullable();
+            $table->text('other_field_2')->nullable();
+            $table->text('ResumptionofCare')->nullable();
+            $table->text('platsp')->nullable();
+            $table->text('ifhha')->nullable();
+            $table->text('ifhha_oo')->nullable();
+            $table->text('precautions')->nullable();
+            $table->text('itanffrp')->nullable();
+            $table->text('spi')->nullable();
+            $table->text('materials')->nullable();
+            $table->text('other_materials')->nullable();
+          
+          //Sction G
+            $table->text('safeCare')->nullable();
+            $table->text('indoorMobility')->nullable();
+            $table->text('stairs')->nullable();
+            $table->text('functionalCognition')->nullable();
+            $table->text('priorDevice')->nullable();
+            $table->text('Eating1')->nullable();
+            $table->text('Eating2')->nullable();
+            $table->text('oralHygiene1')->nullable();
+            $table->text('oralHygiene2')->nullable();
+            $table->text('toiletingHygiene1')->nullable();
+            $table->text('toiletingHygiene2')->nullable();
+            $table->text('batheself1')->nullable();
+            $table->text('batheself2')->nullable();
+            $table->text('bodyDressing1')->nullable();
+            $table->text('bodyDressing2')->nullable();
+            $table->text('footwear1')->nullable();
+            $table->text('footwear2')->nullable();
+
+            //Section GG
+            $table->text('followEat')->nullable();
+            $table->text('followHygiene')->nullable();
+            $table->text('followToileting')->nullable();
+            $table->text('followshower')->nullable();
+            $table->text('followUpperBodyDressing')->nullable();
+            $table->text('followLowerBodyDressing')->nullable();
+            $table->text('followFootwear')->nullable();
+            $table->text('dischargeEating')->nullable();
+            $table->text('dischargeOralHygiene')->nullable();
+            $table->text('dischargeToileting')->nullable();
+            $table->text('dischargebatheself')->nullable();
+            $table->text('dischargeUpperbodyDressing')->nullable();
+            $table->text('dischargeLowerbodyDressing')->nullable();
+            $table->text('dischargeFootware')->nullable();
+            $table->text('rollleft1')->nullable();
+            $table->text('rollleft2')->nullable();
+            $table->text('sitToLying1')->nullable();
+            $table->text('sitToLying2')->nullable();
+            $table->text('lyingtoSitting1')->nullable();
+            $table->text('lyingtoSitting2')->nullable();
+            $table->text('sittoStand1')->nullable();
+            $table->text('sittoStand2')->nullable();
+            $table->text('charToBad1')->nullable();
+            $table->text('charToBad2')->nullable();
+            $table->text('toiletTransfer1')->nullable();
+            $table->text('toiletTransfer2')->nullable();
+            $table->text('carTransfer1')->nullable();
+            $table->text('carTransfer2')->nullable();
+            $table->text('walk50feet1')->nullable();
+            $table->text('walk50feet2')->nullable();
+            $table->text('walk150feet1')->nullable();
+            $table->text('walk150feet2')->nullable();
+            $table->text('walk10uneven1')->nullable();
+            $table->text('walk10uneven2')->nullable();
+            $table->text('curbstep1')->nullable();
+            $table->text('curbstep2')->nullable();
+            $table->text('setp41')->nullable();
+            $table->text('step42')->nullable();
+            $table->text('step121')->nullable();
+            $table->text('step122')->nullable();
+            $table->text('picking1')->nullable();
+            $table->text('picking2')->nullable();
+            $table->text('patient_use_wheelchair')->nullable();
+            $table->text('type_of_wheelchair')->nullable();
+            $table->text('while1501')->nullable();
+            $table->text('while1502')->nullable();
+            $table->text('type_of_wheelchair_150')->nullable();
+            $table->text('roleLeftRight')->nullable();
+            $table->text('siteToLying17')->nullable();
+            $table->text('lyingtosit17')->nullable();
+            $table->text('sitToStand17')->nullable();
+            $table->text('chairToBad17')->nullable();
+            $table->text('toiletTranfer17')->nullable();
+            $table->text('carTransfer17')->nullable();
+            $table->text('walk10feet17')->nullable();
+            $table->text('walk50feet17')->nullable();
+            $table->text('walk10feetuneven17')->nullable();
+            $table->text('step1curb17')->nullable();
+            $table->text('step417')->nullable();
+            $table->text('step1217')->nullable();
+            $table->text('patient_use_wheelchair')->nullable();
+            $table->text('wheelchair5017')->nullable();
+            $table->text('wheelchair15017')->nullable();
+            $table->text('roleLeftRight')->nullable();
+            $table->text('siteToLying17')->nullable();
+            $table->text('lyingtosit17')->nullable();
+            $table->text('sitToStand17')->nullable();
+            $table->text('chairToBad17')->nullable();
+            $table->text('toiletTranfer17')->nullable();
+            $table->text('carTransfer17')->nullable();
+            $table->text('walk10feet17')->nullable();
+            $table->text('walk50feet17')->nullable();
+            $table->text('walk150feet17')->nullable();
+            $table->text('walk10feetuneven17')->nullable();
+            $table->text('step1curb17')->nullable();
+            $table->text('step417')->nullable();
+            $table->text('step1217')->nullable();
+            $table->text('patient_use_wheelchair')->nullable();
+            $table->text('wheelchair5017')->nullable();
+            $table->text('wheelchair15017')->nullable();
+            $table->text('roleLeftRight18')->nullable();
+            $table->text('sitlying18')->nullable();
+            $table->text('lyingToStting18')->nullable();
+            $table->text('sitToStand18')->nullable();
+            $table->text('chairtobed18')->nullable();
+            $table->text('toiletTranfer18')->nullable();
+            $table->text('carTransfer18')->nullable();
+            $table->text('walk10feet18')->nullable();
+            $table->text('walk50feet18')->nullable();
+            $table->text('walk150feet18')->nullable();
+            $table->text('walk10uneven18')->nullable();
+            $table->text('setpcurb18')->nullable();
+            $table->text('step418')->nullable();
+            $table->text('steps500')->nullable();
+            $table->text('patient_use_wheelchair18')->nullable();
+            $table->text('walk50feettwo18')->nullable();
+            $table->text('type_of_wheelchair18')->nullable();
+            $table->text('while5018')->nullable();
+            $table->text('type_of_wheelchair_15018')->nullable();
+
+            //Section H
+            $table->text('urinaryTractInfection')->nullable();
+            $table->text('urinaryCatheterPresence')->nullable();
+            $table->text('bowelIncontinenceFrequency')->nullable();
+            $table->text('ostomyforBowelElimination')->nullable();
+
+            //Section I
+            $table->text('parimaryOne')->nullable();
+            $table->text('primaryAllowValue')->nullable();
+            $table->text('otherdig')->nullable();
+            $table->text('otherDiagnosisOne')->nullable();
+            $table->text('otherDiagnosisTwo')->nullable();
+            $table->text('otherDiagnosisThree')->nullable();
+            $table->text('otherDiagnosisFour')->nullable();
+            $table->text('otherDiagnosisFive')->nullable();
+            $table->text('activeDiogonisis')->nullable();
+
+            //Section J
+            $table->text('"riskHospitalization')->nullable();
+            $table->text('pain_effect_on_sleep')->nullable();
+            $table->text('participation_in_rehabilitation')->nullable();
+            $table->text('dayDayActivities')->nullable();
+            $table->text('had_any_falls_since')->nullable();
+            $table->text('noInjury21')->nullable();
+            $table->text('injurySkin21')->nullable();
+            $table->text('majorInjury21')->nullable();
+            $table->text('patient_dyspneic')->nullable();
+
+            //Section K
+            $table->text('height')->nullable();
+            $table->text('weight')->nullable();
+            $table->text('nutritionalApproache')->nullable();
+            $table->text('parenteralFeeding')->nullable();
+            $table->text('feedingTube')->nullable();
+            $table->text('mechanicallyAltered')->nullable();
+            $table->text('therapeuticDiet')->nullable();
+            $table->text('noneofAbobe')->nullable();
+            $table->text('feedingEating')->nullable();
+
+            //Section M
+            $table->text('patientUnhealedPressureUlcer')->nullable();
+            $table->text('patientUnhealedPressureUlcercheck')->nullable();
+            $table->text('socstage223')->nullable();
+            $table->text('socstage323')->nullable();
+            $table->text('socstage423')->nullable();
+            $table->text('socstage424')->nullable();
+            $table->text('socstage425')->nullable();
+            $table->text('unstageable1')->nullable();
+            $table->text('unstageable223')->nullable();
+            $table->text('unstageablea223')->nullable();
+            $table->text('unstageable323')->nullable();
+            $table->text('unstageableb223')->nullable();
+            $table->text('unstageablea423')->nullable();
+            $table->text('unstageablec223')->nullable();
+            $table->text('unstageabled223')->nullable();
+            $table->text('unstageabled2223')->nullable();
+            $table->text('unstageablee223')->nullable();
+            $table->text('unstageablee2223')->nullable();
+            $table->text('unstageablef223')->nullable();
+            $table->text('unstageablef2223')->nullable();
+
+            //M1322
+            $table->text('StageofUnhealedPressure')->nullable();
+            $table->text('PatientStasisUlcer')->nullable();
+            $table->text('StatusofStasisUlcer')->nullable();
+            $table->text('Patient_have_Surgical_Wound')->nullable();
+            $table->text('StatusSurgicalWound')->nullable();
+
+            //Section N
+            $table->text('antipsychotic')->nullable();
+            $table->text('anticoagulant')->nullable();
+            $table->text('antibiotic')->nullable();
+            $table->text('opioid')->nullable();
+            $table->text('antiplatelet')->nullable();
+            $table->text('hypoglycemic')->nullable();
+            $table->text('noneofAbobe25')->nullable();
+            $table->text('drug_regimen_review')->nullable();
+            $table->text('agency_contact_physician')->nullable();
+            $table->text('agency_contact_complete_physician')->nullable();
+            $table->text('patient_received_instruction_special_precautions')->nullable();
+            $table->text('managementOralMedication')->nullable();
+            $table->text('managInjeMedi')->nullable();
+
+            //Section O
+            $table->text('cancerTreatments')->nullable();
+            $table->text('respiratoryTherapies')->nullable();
+            $table->text('other26')->nullable();
+            $table->text('cancerTreatments27')->nullable();
+            $table->text('respiratoryTherapies27')->nullable();
+            $table->text('other27')->nullable();
+            $table->text('include_any_dates')->nullable();
+            $table->text('influenzaVaccineReceived')->nullable();
+            $table->text('numberOfTherapy')->nullable();
+            $table->text('notappli27')->nullable();
+
+            //Section Q
+            $table->text('interventions')->nullable();
+            $table->text('Depression')->nullable();
+            $table->text('preventpressure')->nullable();
+            $table->text('wound_healing')->nullable();
+
+      
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('patient_oasis_demograhics');
+    }
+};

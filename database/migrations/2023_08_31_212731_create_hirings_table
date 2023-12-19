@@ -1,0 +1,154 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('hirings', function (Blueprint $table) {
+
+            // //Application
+            $table->id();
+            $table->unsignedBigInteger('organization_id')->nullable();
+            $table->index(['organization_id'])->nullable();
+            $table->string('appl_position')->nullable();
+            $table->string('appl_lastName')->nullable();
+            $table->string('appl_firstName')->nullable();
+            $table->string('appl_middleName')->nullable();
+            $table->string('appl_otherLastName')->nullable();
+            $table->string('appl_address')->nullable();
+            $table->string('appl_city')->nullable();
+            $table->string('appl_state')->nullable();
+            $table->char('appl_zip')->nullable();
+            $table->string('appl_homephone')->nullable();
+            $table->string('appl_cellphone')->nullable();
+            $table->string('appl_email')->nullable();
+            $table->string('appl_dateyoucanwork')->nullable();
+            $table->string('appl_salarydesire')->nullable();
+            $table->string('appl_Diplomaradio_btn')->nullable();
+            $table->string('appl_Hoursradio_btn')->nullable();
+            $table->string('appl_Daysradio_btn')->nullable();
+            $table->string('appl_Answerradio_btn')->nullable();
+            $table->string('appl_Statusradio_btn')->nullable();
+            $table->string('appl_authorizedradio_btn')->nullable();
+            $table->string('appl_appl_convited')->nullable();
+            $table->string('appl_essentialradio_btn')->nullable();
+            $table->string('appl_functionsradio_btn')->nullable();
+            $table->string('appl_school_name')->nullable();
+            $table->string('appl_school_degree')->nullable();
+            $table->string('appl_school_address')->nullable();
+            $table->string('appl_school_1')->nullable();
+            $table->string('appl_school_2')->nullable();
+            $table->string('appl_school_3')->nullable();
+            $table->string('appl_other_1')->nullable();
+            $table->string('appl_other_2')->nullable();
+            $table->string('appl_other_3')->nullable();
+            $table->string('appl_proName')->nullable();
+            $table->string('appl_proAddress')->nullable();
+            $table->string('appl_proPhone')->nullable();
+            $table->string('appl_proRelationship')->nullable();
+            $table->string('appl_proName1')->nullable();
+            $table->string('appl_proAddress1')->nullable();
+            $table->string('appl_proPhone1')->nullable();
+            $table->string('appl_proRelationship1')->nullable();
+            $table->string('appl_proName2')->nullable();
+            $table->string('appl_proAddress2')->nullable();
+            $table->string('appl_proPhone2')->nullable();
+            $table->string('appl_proRelationship2')->nullable();
+            $table->string('appl_Example6')->nullable();
+            $table->string('appl_Job')->nullable();
+            $table->string('appl_startDate')->nullable();
+            $table->string('appl_endDate')->nullable();
+            $table->string('appl_companyName')->nullable();
+            $table->string('appl_supervisorsName')->nullable();
+            $table->string('appl_supervisorsNumber', 12)->nullable();
+            $table->string('appl_employorCity')->nullable();
+            $table->string('appl_employorState')->nullable();
+            $table->string('appl_employorZip')->nullable();
+            $table->string('appl_duties')->nullable();      
+            $table->string('appl_reasonforleaving')->nullable();
+            $table->string('appl_startingSalary')->nullable();
+            $table->string('appl_endinfSalary')->nullable(); 
+            $table->string('appl_Job1')->nullable();
+            $table->string('appl_startDate1')->nullable();
+            $table->string('appl_endDate1')->nullable();
+            $table->string('appl_companyName1')->nullable();
+            $table->string('appl_supervisorsName1')->nullable();
+            $table->string('appl_supervisorPhone1')->nullable();
+            $table->string('appl_City1')->nullable();
+            $table->string('appl_State1')->nullable();
+            $table->string('appl_Zip1')->nullable();
+            $table->string('appl_duties1')->nullable();
+            $table->string('appl_reasonforleaving1')->nullable();
+            $table->string('appl_Startingsalary1')->nullable();
+            $table->string('appl_endingSalary1')->nullable();
+            $table->string('appl-signature_10')->nullable();
+           
+
+
+            //FormIT4
+            $table->string('formit4_fullname')->nullable();
+            $table->string('formit4_ssn')->nullable();
+            $table->string('formit4_ZipCode')->nullable();
+            $table->string('formit4_schoolDistrict')->nullable();
+            $table->string('formit4_schoolDistrictNo')->nullable();
+            $table->string('formit4_personalExemption')->nullable();
+            $table->string('formit4_marriedPersonalExemption')->nullable();
+            $table->string('formit4_exemptionsDepndents')->nullable();
+            $table->string('formit4_exemptionsTotal')->nullable();
+            $table->string('formit4_additionalWithholding')->nullable();
+            $table->string('formit4-signature1')->nullable();
+
+            //FormW4
+            $table->string('w4_last_name')->nullable();
+            $table->string('w4_social_number')->nullable();
+            $table->string('w4_address')->nullable();
+            $table->string('w4_city_town_state_zip')->nullable();
+            $table->string('w4_single_or_married')->nullable();
+            $table->string('w4_married_filing')->nullable();
+            $table->string('w4_head_of_household')->nullable();
+            $table->string('w4_under_age')->nullable();
+            $table->string('w4_dependents')->nullable();
+            $table->string('w4_total')->nullable();
+            $table->string('w4_four_a')->nullable();
+            $table->string('w4_four_b')->nullable();
+            $table->string('w4_four_c')->nullable();
+            $table->string('w4_employee_signature')->nullable();
+            $table->string('w4_signature_date')->nullable();
+            $table->string('w4_employersAddress')->nullable();
+            $table->string('w4_employee_first_date')->nullable();
+            $table->string('w4_employee_id_number')->nullable();
+            $table->string('w4_marriedfilingjointly')->nullable();
+            $table->string('w4_yourspousehavethreejobs')->nullable();
+            $table->string('w4_ofthetwohighestpayingjobs')->nullable();
+            $table->string('w4_Addtheamountsfromlines2a')->nullable();
+            $table->string('w4_Enterthenumberofpayperiodsperyear')->nullable();
+            $table->string('w4_theannualamountonline1orline2c')->nullable();
+            $table->string('w4_2023itemizeddeductions')->nullable();
+            $table->string('w4_qualifyingsurvivingspouse')->nullable();
+            $table->string('w4_subtractline2fromline1')->nullable();
+            $table->string('w4_studentloaninterest')->nullable();
+            $table->string('w4_Entertheresulthere')->nullable();
+            $table->string('w4-signature')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('hirings');
+    }
+};

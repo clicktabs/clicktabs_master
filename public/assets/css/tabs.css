@@ -1,0 +1,23 @@
+#tabs {
+    width: 100%;
+}
+
+#tabs .ui-tabs-nav {
+    display: flex;
+    align-content: center;
+    padding: 15px 20px;
+    overflow: hidden;
+    overflow-x: auto;
+    white-space: pre;
+}
+
+#tabs .ui-tabs-nav li a {
+    padding: 15px 20px;
+    background: #fff;
+    border: 1px solid #f5f5f5;
+}
+
+#tabs .ui-tabs-nav li.ui-tabs-active a {
+    background: #3788d8;
+    color: #fff;
+}

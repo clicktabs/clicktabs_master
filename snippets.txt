@@ -1,0 +1,115 @@
+####################### BUTTONS
+<!-- Primary -->
+<button class="btn ho xi ye">Primary</button>
+
+<!-- Secondary -->
+<button class="btn border-slate-200 hover--border-slate-300 text-indigo-500">Secondary</button>
+
+<!-- Tertiary -->
+<button class="btn border-slate-200 hover--border-slate-300 g_">Tertiary</button>
+
+<!-- Danger -->
+<button class="btn ha xo ye">Danger</button>
+
+<!-- Danger Outlined -->
+<button class="btn border-slate-200 hover--border-slate-300 yl">Danger</button>
+
+<!-- Success -->
+<button class="btn hd xu ye">Success</button>
+
+<!-- Success Outlined -->
+<button class="btn border-slate-200 hover--border-slate-300 yt">Success</button>
+
+####################### INPUT FIELD
+ <!-- Default -->
+<div>
+    <label class="block text-sm gp rt" for="normal">Default</label>
+    <input id="normal" class="s ou" type="text">
+</div>
+
+####################### RADIO BUTTONS
+Default
+<div class="ns">
+    <!-- Start -->
+    <label class="flex items-center">
+        <input type="radio" name="radio-buttons" class="u">
+        <span class="text-sm nq">Active</span>
+    </label>
+    <!-- End -->
+</div>
+
+Selected By Default
+<div class="ns">
+    <!-- Start -->
+    <label class="flex items-center">
+        <input type="radio" name="radio-buttons" class="u" checked="">
+        <span class="text-sm nq">Selected</span>
+    </label>
+    <!-- End -->
+</div>
+
+Dsiabled
+<div class="ns">
+    <!-- Start -->
+    <label class="flex items-center">
+        <input type="radio" name="radio-buttons" class="u kw" disabled="">
+        <span class="text-sm nq">Disabled</span>
+    </label>
+    <!-- End -->
+</div>
+
+####################### TOGGLE BUTTONS
+<div class="ns ob">
+    <!-- Start -->
+    <div class="flex items-center" x-data="{ checked: true }">
+        <div class="c">
+            <input type="checkbox" id="switch-1" class="d" x-model="checked">
+            <label class="h_" for="switch-1">
+                <span class="bg-white bv" aria-hidden="true"></span>
+                <span class="d">Switch label</span>
+            </label>
+        </div>
+        <div class="text-sm gq gm nq" x-text="checked ? 'On' : 'Off'"></div>
+    </div>
+    <!-- End -->
+</div>
+
+<div class="ns ob">
+    <!-- Start -->
+    <div class="flex items-center" x-data="{ checked: false }">
+        <div class="c">
+            <input type="checkbox" id="switch-2" class="d" x-model="checked">
+            <label class="h_" for="switch-2">
+                <span class="bg-white bv" aria-hidden="true"></span>
+                <span class="d">Switch label</span>
+            </label>
+        </div>
+        <div class="text-sm gq gm nq" x-text="checked ? 'On' : 'Off'"></div>
+    </div>
+    <!-- End -->
+</div>
+
+<div class="ns om">
+    <!-- Start -->
+    <div class="flex items-center" x-data="{ checked: false }">
+        <div class="c">
+            <input type="checkbox" id="switch-3" class="d" x-model="checked" disabled="">
+            <label class="h_" for="switch-3">
+                <span class="bg-white bv" aria-hidden="true"></span>
+                <span class="d">Switch label</span>
+            </label>
+        </div>
+        <div class="text-sm gq gm nq">Disabled</div>
+    </div>
+    <!-- End -->
+</div>
+
+
+################### ROLLBACK SPECIFIC MIGRATION
+php artisan migrate:rollback --path=/database/migrations/2022_11_16_171239_create_organization_address_table.php
+php artisan migrate:refresh --path=/database/migrations/2022_11_16_171239_create_organization_addresses_table.php
+
+
+################## DISPLAYING ERROR FROM CONTROLLER
+return redirect()->back()->with('error', 'Error. '. $org->name . ' was disabled successfully. ');
+return redirect()->back()->with('success', 'Success. '. $org->name . ' was disabled successfully. ');

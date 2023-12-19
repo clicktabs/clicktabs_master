@@ -1,0 +1,108 @@
+#communicationModal div label{
+    width: 160px;
+    margin-right: 15px;
+}
+
+/*#communicationModal div label{*/
+/*    width: 160px;*/
+/*    margin-right: 15px;*/
+/*}*/
+
+#communicationModal .action_btn{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#communicationModal h4 {
+    font-weight: 600;
+    font-size: 20px;
+    color: #000;
+}
+@media only screen and (max-width: 992px) {
+    #communicationModal .action_btn {
+        flex-direction: column;
+    }
+}
+
+.main_content_nav ul li.ui-tabs-active a {
+    color: #fff;
+    opacity: .7;
+}
+.btn-primary {
+    background-color: #0b5ed7;
+}
+.btn-danger {
+    background-color: #bb2d3b;
+}
+.list-title h4 {
+    font-weight: 500;
+    font-size: 20px;
+    color: #000;
+}
+table tr th,
+table tr td{
+    white-space: nowrap;
+}
+#discontinueModal {
+
+}
+.blocker.jquery-modal {
+    z-index: 99;
+}
+.jquery-modal .modal a.close-modal {
+    top: 15px;
+    right: 5px;
+}
+.main_content {
+    background: #fff;
+}
+#attachmentModal, #matchingModal {
+    display: none;
+}
+#immunizationModal .medication-content {
+    padding-top: 50px;
+}
+#immunizationType {
+    width: 100%;
+}
+.score input {
+    width: 50px;
+    padding: 5px 5px;
+}
+
+#accident_risk_assessment tr input.form-control{
+    width: 120px;
+}
+
+.save_btn {
+    display: inline-block;
+    width: auto;
+}
+.vital_signs.row>* {
+    width: auto !important;
+}
+.vital_signs .col{
+    flex: none !important;
+}
+
+.card form h1 {
+    font-size: 25px;
+    margin-top: 0 !important;
+}
+.dataTables_info {
+    display: none;
+}
+.dataTables_wrapper .dataTables_length, #employeeList_filter, #expirationsModal, #payRateModal, #billingModal, #matchingModal, #attachmentModal, #activitiesModal {
+    display: none;
+    height: max-content;
+}
+table.dataTable>tbody>tr.child ul.dtr-details {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.dataTables_scroll {
+    padding-top: 30px;
+}

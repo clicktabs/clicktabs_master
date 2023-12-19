@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+div.dataTables_wrapper {
+    padding: 0px 20px;
+}
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#matching {
+    margin-top: 20px;
+    padding: 0px 20px;
+}
+#matching div.dataTables_wrapper {
+    padding: 0px 0px;
+}
+
+#matching .dataTables_scrollHead {
+    padding-top: 0;
+}
+
+.scheduled {
+    background-color: blue !important;
+    border: none !important;
+}
+
+.started {
+    background-color: yellow !important;
+    border: none !important;
+}
+
+.open_shift {
+    background-color: #8A2BE2 !important;
+    border: none !important;
+}
+
+.no_show {
+    background-color: red !important;
+    border: none !important;
+}
+
+.on_hold {
+    background-color: orange !important;
+    border: none !important;
+}
+
+.hospitalization {
+    background-color: orange !important;
+    border: none !important;
+}
+
+.completed {
+    background-color: green !important;
+    border: none !important;
+}

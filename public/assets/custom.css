@@ -1,0 +1,405 @@
+body {
+    overflow-x: hidden;
+}
+
+form [class*="col-md-"] {
+    margin: 0.5rem 0;
+}
+
+form label {
+    /* font-weight:500; */
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input {
+    border-color: #80808078 !important;
+}
+
+.organization-padding-custom {
+    padding: 2rem;
+    min-width: 20rem !important;
+}
+
+.button-float-right {
+    float: right;
+}
+
+.underline {
+    text-decoration: underline black;
+}
+
+.text-green {
+    color: #0fae79;
+    font-weight: bold;
+}
+
+.text-red {
+    color: #8c0505;
+    font-weight: bold;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.label-font-size {
+    font-size: 12px;
+}
+
+.hr-st {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.select2-selection--single {
+    height: 38px !important;
+}
+
+.search-button {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+.select2-container {
+    width: 100% !important;
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    /* border: 1px solid #ccc; */
+    background-color: #4133BF;
+}
+#sidebar ul li a:hover {
+    background-color: red;
+}
+
+#sidebar ul li a:hover svg {
+    color: #fff !important;
+}
+#sidebar ul li {
+    padding: 0 !important;
+    border-radius: 5px;
+}
+#sidebar ul.nk {
+    padding-bottom: 30px !important;
+}
+#sidebar ul.nk li:last-child {
+    padding: 10px 10px !important;
+}
+
+#sidebar ul.nk li:last-child:hover {
+    background-color: red;
+}
+
+#sidebar ul.nk li:last-child:hover button {
+    color: #fff !important;
+}
+#sidebar ul.nk li ul li:last-child {
+    padding: 0 !important;
+}
+#sidebar ul li ul {
+    margin-right: 15px;
+}
+#sidebar ul li a {
+    padding: 10px 15px;
+}
+#sidebar ul li a:hover span {
+    color: #fff;
+}
+.rt.ww.active a span, .vn.vr.rounded-sm.n_.ww.active a span {
+    color: #fff !important;
+}
+
+.y.pr.dw.jk.rounded-sm.la.rc.mb-1 {
+    background-color: #4133BF;
+}
+.y.pr.dw.jk.rounded-sm.la.rc.mb-1 h1 {
+    margin: 0 !important;
+    color: #fff !important;
+}
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    color: #fff;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: red;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: red;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+/* form .col-md-3 {
+    margin-top: 50px;
+} */
+
+#startCare {
+    display: none;
+}
+
+#therapyEvaluation {
+    display: none;
+}
+
+#nonOasisStart {
+    display: none;
+}
+
+#oasisRecert {
+    display: none;
+}
+
+#nonOasisRecert {
+    display: none;
+}
+
+.add-button {
+    position: absolute;
+    right: 5%;
+    border: solid 2px;
+    padding: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    color: #0fae79;
+}
+
+.loader_wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 99999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+}
+
+.pre_loader {
+    transform: rotateZ(45deg);
+    perspective: 1000px;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    color: #fff;
+}
+
+.pre_loader:before,
+.pre_loader:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    transform: rotateX(70deg);
+    animation: 1s spin linear infinite;
+}
+
+.pre_loader:after {
+    color: #FF3D00;
+    transform: rotateY(70deg);
+    animation-delay: .4s;
+}
+
+input.error, select.error {
+    border-color: #FF3D00 !important;
+}
+
+label.error {
+    color: #FF3D00 !important;
+}
+
+#toast-container > div:hover {
+    box-shadow: none !important;
+    opacity: 0.9 !important;
+}
+
+.dataTables_scrollHead {
+    padding-top: 30px;
+}
+
+.dataTables_length label select {
+    width: 85px !important;
+}
+
+.jquery-modal.blocker {
+    z-index: 999;
+}
+
+.jquery-modal.blocker .close-modal {
+    top: 10px;
+    right: 10px;
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotateZ(360deg);
+    }
+}
+
+@keyframes rotateccw {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+
+@keyframes spin {
+    0%,
+    100% {
+        box-shadow: .2em 0px 0 0px currentcolor;
+    }
+    12% {
+        box-shadow: .2em .2em 0 0 currentcolor;
+    }
+    25% {
+        box-shadow: 0 .2em 0 0px currentcolor;
+    }
+    37% {
+        box-shadow: -.2em .2em 0 0 currentcolor;
+    }
+    50% {
+        box-shadow: -.2em 0 0 0 currentcolor;
+    }
+    62% {
+        box-shadow: -.2em -.2em 0 0 currentcolor;
+    }
+    75% {
+        box-shadow: 0px -.2em 0 0 currentcolor;
+    }
+    87% {
+        box-shadow: .2em -.2em 0 0 currentcolor;
+    }
+}
+
+.avatar-upload {
+    position: relative;
+    max-width: 205px;
+    margin: 50px auto;
+}
+
+.avatar-upload .avatar-edit {
+    position: absolute;
+    right: 12px;
+    z-index: 1;
+    top: 10px;
+}
+
+.avatar-upload .avatar-edit input {
+    display: none;
+}
+
+.avatar-upload .avatar-edit input + label {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    margin-bottom: 0;
+    border-radius: 100%;
+    background: #FFFFFF;
+    border: 1px solid transparent;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    font-weight: normal;
+    transition: all 0.2s ease-in-out;
+}
+
+.avatar-upload .avatar-edit input + label:hover {
+    background: #f1f1f1;
+    border-color: #d6d6d6;
+}
+
+
+.avatar-edit label {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-edit label svg {
+    width: 63px;
+    height: 25px;
+}
+
+.avatar-upload .avatar-preview {
+    width: 192px;
+    height: 192px;
+    position: relative;
+    border-radius: 100%;
+    border: 6px solid #F8F8F8;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-upload .avatar-preview > div {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+/* .addon-main {
+    position: relative;
+}
+
+.addon-button {
+    position: absolute;
+    margin-right: 1rem;
+    right: 0;
+    border: solid;
+    padding: 6px;
+    font-size: 12px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 4px 1px;
+}
+
+.gh {
+    display: inline-flex;
+}
+
+.addon-name {
+    color: #5046e5;
+} */

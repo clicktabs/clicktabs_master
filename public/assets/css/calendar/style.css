@@ -1,0 +1,5182 @@
+#kt_modal_add_event_form .form-text {
+    margin-top: 0.5rem;
+    font-size: 0.925rem;
+    color: #a1a5b7;
+}
+#kt_modal_add_event_form .form-control {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #181c32;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #e4e6ef;
+    appearance: none;
+    border-radius: 0.475rem;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+    #kt_modal_add_event_form .form-control {
+        transition: none;
+    }
+}
+#kt_modal_add_event_form .form-control[type="file"] {
+    overflow: hidden;
+}
+#kt_modal_add_event_form .form-control[type="file"]:not(:disabled):not([readonly]) {
+    cursor: pointer;
+}
+#kt_modal_add_event_form .form-control:focus {
+    color: #181c32;
+    background-color: #fff;
+    border-color: #b5b5c3;
+    outline: 0;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 0 0.25rem rgba(0, 158, 247, 0.25);
+}
+#kt_modal_add_event_form .form-control::-webkit-date-and-time-value {
+    height: 1.5em;
+}
+#kt_modal_add_event_form .form-control::placeholder {
+    color: #a1a5b7;
+    opacity: 1;
+}
+#kt_modal_add_event_form .form-control:disabled,
+#kt_modal_add_event_form .form-control[readonly] {
+    background-color: #eff2f5;
+    opacity: 1;
+}
+#kt_modal_add_event_form .form-control::file-selector-button {
+    padding: 0.75rem 1rem;
+    margin: -0.75rem -1rem;
+    margin-inline-end: 1rem;
+    color: #181c32;
+    background-color: #f5f8fa;
+    pointer-events: none;
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    border-inline-end-width: 1px;
+    border-radius: 0;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+    #kt_modal_add_event_form .form-control::file-selector-button {
+        transition: none;
+    }
+}
+#kt_modal_add_event_form .form-control:hover:not(:disabled):not([readonly])::file-selector-button {
+    background-color: #e9ecee;
+}
+#kt_modal_add_event_form .form-control::-webkit-file-upload-button {
+    padding: 0.75rem 1rem;
+    margin: -0.75rem -1rem;
+    margin-inline-end: 1rem;
+    color: #181c32;
+    background-color: #f5f8fa;
+    pointer-events: none;
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    border-inline-end-width: 1px;
+    border-radius: 0;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+    #kt_modal_add_event_form .form-control::-webkit-file-upload-button {
+        transition: none;
+    }
+}
+#kt_modal_add_event_form .form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+    background-color: #e9ecee;
+}
+#kt_modal_add_event_form .form-control-plaintext {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 0;
+    margin-bottom: 0;
+    line-height: 1.5;
+    color: #181c32;
+    background-color: transparent;
+    border: solid transparent;
+    border-width: 1px 0;
+}
+#kt_modal_add_event_form .form-control-plaintext #kt_modal_add_event_form .form-control-lg,
+#kt_modal_add_event_form .form-control-plaintext #kt_modal_add_event_form .form-control-sm {
+    padding-right: 0;
+    padding-left: 0;
+}
+#kt_modal_add_event_form .form-control-sm {
+    min-height: calc(1.5em + 1.1rem + 2px);
+    padding: 0.55rem 0.75rem;
+    font-size: 0.925rem;
+    border-radius: 0.475rem;
+}
+#kt_modal_add_event_form .form-control-sm::file-selector-button {
+    padding: 0.55rem 0.75rem;
+    margin: -0.55rem -0.75rem;
+    margin-inline-end: 0.75rem;
+}
+#kt_modal_add_event_form .form-control-sm::-webkit-file-upload-button {
+    padding: 0.55rem 0.75rem;
+    margin: -0.55rem -0.75rem;
+    margin-inline-end: 0.75rem;
+}
+#kt_modal_add_event_form .form-control-lg {
+    min-height: calc(1.5em + 1.65rem + 2px);
+    padding: 0.825rem 1.5rem;
+    font-size: 1.15rem;
+    border-radius: 0.475rem;
+}
+#kt_modal_add_event_form .form-control-lg::file-selector-button {
+    padding: 0.825rem 1.5rem;
+    margin: -0.825rem -1.5rem;
+    margin-inline-end: 1.5rem;
+}
+#kt_modal_add_event_form .form-control-lg::-webkit-file-upload-button {
+    padding: 0.825rem 1.5rem;
+    margin: -0.825rem -1.5rem;
+    margin-inline-end: 1.5rem;
+}
+#kt_modal_add_event_form textarea.form-control {
+    min-height: calc(1.5em + 1.5rem + 2px);
+}
+#kt_modal_add_event_form textarea.form-control-sm {
+    min-height: calc(1.5em + 1.1rem + 2px);
+}
+#kt_modal_add_event_form textarea.form-control-lg {
+    min-height: calc(1.5em + 1.65rem + 2px);
+}
+#kt_modal_add_event_form .form-control-color {
+    width: 3rem;
+    height: auto;
+    padding: 0.75rem;
+}
+#kt_modal_add_event_form .form-control-color:not(:disabled):not([readonly]) {
+    cursor: pointer;
+}
+#kt_modal_add_event_form .form-control-color::-moz-color-swatch {
+    height: 1.5em;
+    border-radius: 0.475rem;
+}
+#kt_modal_add_event_form .form-control-color::-webkit-color-swatch {
+    height: 1.5em;
+    border-radius: 0.475rem;
+}
+#kt_modal_add_event_form .form-select {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 3rem 0.75rem 1rem;
+    -moz-padding-start: calc(1rem - 3px);
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #181c32;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%237E8299' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 16px 12px;
+    border: 1px solid #e4e6ef;
+    border-radius: 0.475rem;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    appearance: none;
+}
+@media (prefers-reduced-motion: reduce) {
+    #kt_modal_add_event_form .form-select {
+        transition: none;
+    }
+}
+#kt_modal_add_event_form .form-select:focus {
+    border-color: #b5b5c3;
+    outline: 0;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 0 0.25rem rgba(0, 158, 247, 0.25);
+}
+#kt_modal_add_event_form .form-select[multiple],
+#kt_modal_add_event_form .form-select[size]:not([size="1"]) {
+    padding-right: 1rem;
+    background-image: none;
+}
+#kt_modal_add_event_form .form-select:disabled {
+    background-color: #eff2f5;
+}
+#kt_modal_add_event_form .form-select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #181c32;
+}
+#kt_modal_add_event_form .form-select-sm {
+    padding-top: 0.55rem;
+    padding-bottom: 0.55rem;
+    padding-left: 0.75rem;
+    font-size: 0.925rem;
+}
+#kt_modal_add_event_form .form-select-lg {
+    padding-top: 0.825rem;
+    padding-bottom: 0.825rem;
+    padding-left: 1.5rem;
+    font-size: 1.15rem;
+}
+#kt_modal_add_event_form .form-check {
+    display: block;
+    min-height: 1.5rem;
+    padding-left: 2.25rem;
+    margin-bottom: 0.125rem;
+}
+#kt_modal_add_event_form .form-check #kt_modal_add_event_form .form-check-input {
+    float: left;
+    margin-left: -2.25rem;
+}
+#kt_modal_add_event_form .form-check-input {
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-top: -0.125rem;
+    vertical-align: top;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    appearance: none;
+    color-adjust: exact;
+    transition: background-color 0.15s ease-in-out, background-position 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+    #kt_modal_add_event_form .form-check-input {
+        transition: none;
+    }
+}
+#kt_modal_add_event_form .form-check-input[type="checkbox"] {
+    border-radius: 0.45em;
+}
+#kt_modal_add_event_form .form-check-input[type="radio"] {
+    border-radius: 50%;
+}
+#kt_modal_add_event_form .form-check-input:active {
+    filter: brightness(90%);
+}
+#kt_modal_add_event_form .form-check-input:focus {
+    border-color: #b5b5c3;
+    outline: 0;
+    box-shadow: none;
+}
+#kt_modal_add_event_form .form-check-input:checked {
+    background-color: #009ef7;
+    border-color: #009ef7;
+}
+#kt_modal_add_event_form .form-check-input:checked[type="checkbox"] {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 11' width='13' height='11' fill='none'%3e%3cpath d='M11.0426 1.02893C11.3258 0.695792 11.8254 0.655283 12.1585 0.938451C12.4917 1.22162 12.5322 1.72124 12.249 2.05437L5.51985 9.97104C5.23224 10.3094 4.72261 10.3451 4.3907 10.05L0.828197 6.88335C0.50141 6.59288 0.471975 6.09249 0.762452 5.7657C1.05293 5.43891 1.55332 5.40948 1.88011 5.69995L4.83765 8.32889L11.0426 1.02893Z' fill='%23FFFFFF'/%3e%3c/svg%3e");
+}
+#kt_modal_add_event_form .form-check-input:checked[type="radio"] {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23FFFFFF'/%3e%3c/svg%3e");
+}
+#kt_modal_add_event_form .form-check-input[type="checkbox"]:indeterminate {
+    background-color: #009ef7;
+    border-color: #009ef7;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e");
+}
+#kt_modal_add_event_form .form-check-input:disabled {
+    pointer-events: none;
+    filter: none;
+    opacity: 0.5;
+}
+#kt_modal_add_event_form .form-check-input:disabled ~ #kt_modal_add_event_form .form-check-label,
+#kt_modal_add_event_form .form-check-input[disabled] ~ #kt_modal_add_event_form .form-check-label {
+    opacity: 0.5;
+}
+#kt_modal_add_event_form .form-switch {
+    padding-left: 3.75rem;
+}
+#kt_modal_add_event_form .form-switch #kt_modal_add_event_form .form-check-input {
+    width: 3.25rem;
+    margin-left: -3.75rem;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e");
+    background-position: left center;
+    border-radius: 3.25rem;
+    transition: background-position 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+    #kt_modal_add_event_form .form-switch #kt_modal_add_event_form .form-check-input {
+        transition: none;
+    }
+}
+#kt_modal_add_event_form .form-switch #kt_modal_add_event_form .form-check-input:focus {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23B5B5C3'/%3e%3c/svg%3e");
+}
+#kt_modal_add_event_form .form-switch #kt_modal_add_event_form .form-check-input:checked {
+    background-position: right center;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23FFFFFF'/%3e%3c/svg%3e");
+}
+#kt_modal_add_event_form .form-check-inline {
+    display: inline-block;
+    margin-right: 1rem;
+}
+#kt_modal_add_event_form .btn-check {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    pointer-events: none;
+}
+#kt_modal_add_event_form .btn-check:disabled + #kt_modal_add_event_form .btn,
+#kt_modal_add_event_form .btn-check[disabled] + #kt_modal_add_event_form .btn {
+    pointer-events: none;
+    filter: none;
+    opacity: 0.6;
+}
+#kt_modal_add_event_form .form-range {
+    width: 100%;
+    height: 1.5rem;
+    padding: 0;
+    background-color: transparent;
+    appearance: none;
+}
+#kt_modal_add_event_form .form-range:focus {
+    outline: 0;
+}
+#kt_modal_add_event_form .form-range:focus::-webkit-slider-thumb {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(0, 158, 247, 0.25);
+}
+#kt_modal_add_event_form .form-range:focus::-moz-range-thumb {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(0, 158, 247, 0.25);
+}
+#kt_modal_add_event_form .form-range::-moz-focus-outer {
+    border: 0;
+}
+#kt_modal_add_event_form .form-range::-webkit-slider-thumb {
+    width: 1rem;
+    height: 1rem;
+    margin-top: -0.25rem;
+    background-color: #009ef7;
+    border: 0;
+    border-radius: 1rem;
+    box-shadow: 0 0.1rem 0.25rem rgba(0, 0, 0, 0.1);
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    appearance: none;
+}
+.fade {
+    transition: opacity 0.15s linear;
+}
+@media (prefers-reduced-motion: reduce) {
+    .fade {
+        transition: none;
+    }
+}
+.fade:not(.show) {
+    opacity: 0;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid #eff2f5;
+    border-radius: 0.475rem;
+    box-shadow: 0 0 20px 0 rgba(76, 87, 125, 0.02);
+}
+
+.card-header {
+    /*display: none !important;*/
+    padding: 0.5rem 1rem;
+    margin-bottom: 0;
+    background-color: #fff;
+    border-bottom: 1px solid #eff2f5;
+}
+.card-header:first-child {
+    border-radius: calc(0.475rem - 1px) calc(0.475rem - 1px) 0 0;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.5em 0.85em;
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.475rem;
+}
+.modal {
+    /*position: fixed;*/
+    top: 0;
+    left: 0;
+    z-index: 1055;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+    margin: 0 auto !important;
+}
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 0.5rem;
+    pointer-events: none;
+}
+.modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out;
+    transform: translate(0, -50px);
+}
+@media (prefers-reduced-motion: reduce) {
+    .modal.fade .modal-dialog {
+        transition: none;
+    }
+}
+.modal.show .modal-dialog {
+    transform: none;
+}
+.modal.modal-static .modal-dialog {
+    transform: scale(1.02);
+}
+.modal-dialog-scrollable {
+    height: calc(100% - 1rem);
+}
+.modal-dialog-scrollable .modal-content {
+    max-height: 100%;
+    overflow: hidden;
+}
+.modal-dialog-scrollable .modal-body {
+    overflow-y: auto;
+}
+.modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 1rem);
+}
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0 solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.475rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    outline: 0;
+}
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+}
+.modal-backdrop.fade {
+    opacity: 0;
+}
+.modal-backdrop.show {
+    opacity: 0.3;
+}
+.modal-header {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.75rem 1.75rem;
+    border-bottom: 1px solid #eff2f5;
+    border-top-left-radius: 0.475rem;
+    border-top-right-radius: 0.475rem;
+}
+.modal-header .btn-close {
+    padding: 0.875rem 0.875rem;
+    margin: -0.875rem -0.875rem -0.875rem auto;
+}
+.modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+.modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1.75rem;
+}
+.modal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    border-top: 1px solid #eff2f5;
+    border-bottom-right-radius: 0.475rem;
+    border-bottom-left-radius: 0.475rem;
+}
+.modal-footer > * {
+    margin: 0.25rem;
+}
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 500px;
+        margin: 1.75rem auto;
+    }
+    .modal-dialog-scrollable {
+        height: calc(100% - 3.5rem);
+    }
+    .modal-dialog-centered {
+        min-height: calc(100% - 3.5rem);
+    }
+    .modal-content {
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    }
+    .modal-sm {
+        max-width: 300px;
+    }
+}
+@media (min-width: 992px) {
+    .modal-lg,
+    .modal-xl {
+        max-width: 800px;
+    }
+}
+@media (min-width: 1200px) {
+    .modal-xl {
+        max-width: 1140px;
+    }
+}
+
+.spinner-border {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: -0.125em;
+    border: 0.185em solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: 0.65s linear infinite spinner-border;
+}
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+    border-width: 0.145em;
+}
+@keyframes spinner-grow {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+:root {
+    --bs-light-primary: #f1faff;
+    --bs-active-primary: #0095e8;
+    --bs-light-success: #e8fff3;
+    --bs-active-success: #47be7d;
+    --bs-light-info: #f8f5ff;
+    --bs-active-info: #5014d0;
+    --bs-light-warning: #fff8dd;
+    --bs-active-warning: #f1bc00;
+    --bs-light-danger: #fff5f8;
+    --bs-active-danger: #d9214e;
+    --bs-light-dark: #eff2f5;
+    --bs-active-dark: #131628;
+    --bs-gray-100: #f5f8fa;
+    --bs-gray-200: #eff2f5;
+    --bs-gray-300: #e4e6ef;
+    --bs-gray-400: #b5b5c3;
+    --bs-gray-500: #a1a5b7;
+    --bs-gray-600: #7e8299;
+    --bs-gray-700: #5e6278;
+    --bs-gray-800: #3f4254;
+    --bs-gray-900: #181c32;
+    --bs-xs: 0;
+    --bs-sm: 576px;
+    --bs-md: 768px;
+    --bs-lg: 992px;
+    --bs-xl: 1200px;
+    --bs-xxl: 1400px;
+}
+.bg-white {
+    --bg-color: 255, 255, 255;
+}
+.bg-white.hoverable:hover {
+    background-color: #f5f8fa !important;
+}
+.bg-hover-white {
+    cursor: pointer;
+}
+.bg-hover-white:hover {
+    --bg-color: 255, 255, 255;
+    background-color: #fff !important;
+}
+.bg-active-white.active {
+    --bg-color: 255, 255, 255;
+    background-color: #fff !important;
+}
+.bg-state-white {
+    cursor: pointer;
+}
+.bg-state-white.active,
+.bg-state-white:hover {
+    --bg-color: 255, 255, 255;
+    background-color: #fff !important;
+}
+.bg-light {
+    --bg-color: 245, 248, 250;
+}
+.bg-light.hoverable:hover {
+    background-color: #e4e6ef !important;
+}
+.bg-hover-light {
+    cursor: pointer;
+}
+.bg-hover-light:hover {
+    --bg-color: 245, 248, 250;
+    background-color: #f5f8fa !important;
+}
+.bg-active-light.active {
+    --bg-color: 245, 248, 250;
+    background-color: #f5f8fa !important;
+}
+.bg-state-light {
+    cursor: pointer;
+}
+.bg-state-light.active,
+.bg-state-light:hover {
+    --bg-color: 245, 248, 250;
+    background-color: #f5f8fa !important;
+}
+.bg-light-primary {
+    background-color: #f1faff !important;
+}
+.bg-light-primary.hoverable:hover {
+    background-color: #d2efff !important;
+}
+.bg-primary {
+    --bg-color: 0, 158, 247;
+}
+.bg-primary.hoverable:hover {
+    background-color: #0095e8 !important;
+}
+.bg-hover-light-primary {
+    cursor: pointer;
+}
+.bg-hover-light-primary:hover {
+    background-color: #f1faff !important;
+}
+.bg-state-light-primary {
+    cursor: pointer;
+}
+.bg-state-light-primary.active,
+.bg-state-light-primary:hover {
+    background-color: #f1faff !important;
+}
+.bg-hover-primary {
+    cursor: pointer;
+}
+.bg-hover-primary:hover {
+    --bg-color: 0, 158, 247;
+    background-color: #009ef7 !important;
+}
+.bg-active-primary.active {
+    --bg-color: 0, 158, 247;
+    background-color: #009ef7 !important;
+}
+.bg-state-primary {
+    cursor: pointer;
+}
+.bg-state-primary.active,
+.bg-state-primary:hover {
+    --bg-color: 0, 158, 247;
+    background-color: #009ef7 !important;
+}
+.bg-secondary {
+    --bg-color: 228, 230, 239;
+}
+.bg-secondary.hoverable:hover {
+    background-color: #b5b5c3 !important;
+}
+.bg-hover-secondary {
+    cursor: pointer;
+}
+.bg-hover-secondary:hover {
+    --bg-color: 228, 230, 239;
+    background-color: #e4e6ef !important;
+}
+.bg-active-secondary.active {
+    --bg-color: 228, 230, 239;
+    background-color: #e4e6ef !important;
+}
+.bg-state-secondary {
+    cursor: pointer;
+}
+.bg-state-secondary.active,
+.bg-state-secondary:hover {
+    --bg-color: 228, 230, 239;
+    background-color: #e4e6ef !important;
+}
+.bg-light-success {
+    background-color: #e8fff3 !important;
+}
+.bg-light-success.hoverable:hover {
+    background-color: #c9ffe3 !important;
+}
+.bg-success {
+    --bg-color: 80, 205, 137;
+}
+.bg-success.hoverable:hover {
+    background-color: #47be7d !important;
+}
+.bg-hover-light-success {
+    cursor: pointer;
+}
+.bg-hover-light-success:hover {
+    background-color: #e8fff3 !important;
+}
+.bg-state-light-success {
+    cursor: pointer;
+}
+.bg-state-light-success.active,
+.bg-state-light-success:hover {
+    background-color: #e8fff3 !important;
+}
+.bg-hover-success {
+    cursor: pointer;
+}
+.bg-hover-success:hover {
+    --bg-color: 80, 205, 137;
+    background-color: #50cd89 !important;
+}
+.bg-active-success.active {
+    --bg-color: 80, 205, 137;
+    background-color: #50cd89 !important;
+}
+.bg-state-success {
+    cursor: pointer;
+}
+.bg-state-success.active,
+.bg-state-success:hover {
+    --bg-color: 80, 205, 137;
+    background-color: #50cd89 !important;
+}
+.bg-light-info {
+    background-color: #f8f5ff !important;
+}
+.bg-light-info.hoverable:hover {
+    background-color: #e3d6ff !important;
+}
+.bg-info {
+    --bg-color: 114, 57, 234;
+}
+.bg-info.hoverable:hover {
+    background-color: #5014d0 !important;
+}
+.bg-hover-light-info {
+    cursor: pointer;
+}
+.bg-hover-light-info:hover {
+    background-color: #f8f5ff !important;
+}
+.bg-state-light-info {
+    cursor: pointer;
+}
+.bg-state-light-info.active,
+.bg-state-light-info:hover {
+    background-color: #f8f5ff !important;
+}
+.bg-hover-info {
+    cursor: pointer;
+}
+.bg-hover-info:hover {
+    --bg-color: 114, 57, 234;
+    background-color: #7239ea !important;
+}
+.bg-active-info.active {
+    --bg-color: 114, 57, 234;
+    background-color: #7239ea !important;
+}
+.bg-state-info {
+    cursor: pointer;
+}
+.bg-state-info.active,
+.bg-state-info:hover {
+    --bg-color: 114, 57, 234;
+    background-color: #7239ea !important;
+}
+.bg-light-warning {
+    background-color: #fff8dd !important;
+}
+.bg-light-warning.hoverable:hover {
+    background-color: #fff2be !important;
+}
+.bg-warning {
+    --bg-color: 255, 199, 0;
+}
+.bg-warning.hoverable:hover {
+    background-color: #f1bc00 !important;
+}
+.bg-hover-light-warning {
+    cursor: pointer;
+}
+.bg-hover-light-warning:hover {
+    background-color: #fff8dd !important;
+}
+.bg-state-light-warning {
+    cursor: pointer;
+}
+.bg-state-light-warning.active,
+.bg-state-light-warning:hover {
+    background-color: #fff8dd !important;
+}
+.bg-hover-warning {
+    cursor: pointer;
+}
+.bg-hover-warning:hover {
+    --bg-color: 255, 199, 0;
+    background-color: #ffc700 !important;
+}
+.bg-active-warning.active {
+    --bg-color: 255, 199, 0;
+    background-color: #ffc700 !important;
+}
+.bg-state-warning {
+    cursor: pointer;
+}
+.bg-state-warning.active,
+.bg-state-warning:hover {
+    --bg-color: 255, 199, 0;
+    background-color: #ffc700 !important;
+}
+.bg-light-danger {
+    background-color: #fff5f8 !important;
+}
+.bg-light-danger.hoverable:hover {
+    background-color: #ffd6e3 !important;
+}
+.bg-danger {
+    --bg-color: 241, 65, 108;
+}
+.bg-danger.hoverable:hover {
+    background-color: #d9214e !important;
+}
+.bg-hover-light-danger {
+    cursor: pointer;
+}
+.bg-hover-light-danger:hover {
+    background-color: #fff5f8 !important;
+}
+.bg-state-light-danger {
+    cursor: pointer;
+}
+.bg-state-light-danger.active,
+.bg-state-light-danger:hover {
+    background-color: #fff5f8 !important;
+}
+.bg-hover-danger {
+    cursor: pointer;
+}
+.bg-hover-danger:hover {
+    --bg-color: 241, 65, 108;
+    background-color: #f1416c !important;
+}
+.bg-active-danger.active {
+    --bg-color: 241, 65, 108;
+    background-color: #f1416c !important;
+}
+.bg-state-danger {
+    cursor: pointer;
+}
+.bg-state-danger.active,
+.bg-state-danger:hover {
+    --bg-color: 241, 65, 108;
+    background-color: #f1416c !important;
+}
+.bg-light-dark {
+    background-color: #eff2f5 !important;
+}
+.bg-light-dark.hoverable:hover {
+    background-color: #dce3e9 !important;
+}
+.bg-dark {
+    --bg-color: 24, 28, 50;
+}
+.bg-dark.hoverable:hover {
+    background-color: #131628 !important;
+}
+.bg-hover-light-dark {
+    cursor: pointer;
+}
+.bg-hover-light-dark:hover {
+    background-color: #eff2f5 !important;
+}
+.bg-state-light-dark {
+    cursor: pointer;
+}
+.bg-state-light-dark.active,
+.bg-state-light-dark:hover {
+    background-color: #eff2f5 !important;
+}
+.bg-hover-dark {
+    cursor: pointer;
+}
+.bg-hover-dark:hover {
+    --bg-color: 24, 28, 50;
+    background-color: #181c32 !important;
+}
+.bg-active-dark.active {
+    --bg-color: 24, 28, 50;
+    background-color: #181c32 !important;
+}
+.bg-state-dark {
+    cursor: pointer;
+}
+.bg-state-dark.active,
+.bg-state-dark:hover {
+    --bg-color: 24, 28, 50;
+    background-color: #181c32 !important;
+}
+.bg-opacity-0 {
+    background-color: rgba(var(--bg-color), 0) !important;
+}
+.bg-hover-opacity-0:hover {
+    background-color: rgba(var(--bg-color), 0) !important;
+}
+.bg-active-opacity-0.active {
+    background-color: rgba(var(--bg-color), 0) !important;
+}
+.bg-state-opacity-0 .active,
+.bg-state-opacity-0:hover {
+    background-color: rgba(var(--bg-color), 0) !important;
+}
+.bg-opacity-5 {
+    background-color: rgba(var(--bg-color), 0.05) !important;
+}
+.bg-hover-opacity-5:hover {
+    background-color: rgba(var(--bg-color), 0.05) !important;
+}
+.bg-active-opacity-5.active {
+    background-color: rgba(var(--bg-color), 0.05) !important;
+}
+.bg-state-opacity-5 .active,
+.bg-state-opacity-5:hover {
+    background-color: rgba(var(--bg-color), 0.05) !important;
+}
+.bg-opacity-10 {
+    background-color: rgba(var(--bg-color), 0.1) !important;
+}
+.bg-hover-opacity-10:hover {
+    background-color: rgba(var(--bg-color), 0.1) !important;
+}
+.bg-active-opacity-10.active {
+    background-color: rgba(var(--bg-color), 0.1) !important;
+}
+.bg-state-opacity-10 .active,
+.bg-state-opacity-10:hover {
+    background-color: rgba(var(--bg-color), 0.1) !important;
+}
+.bg-opacity-15 {
+    background-color: rgba(var(--bg-color), 0.15) !important;
+}
+.bg-hover-opacity-15:hover {
+    background-color: rgba(var(--bg-color), 0.15) !important;
+}
+.bg-active-opacity-15.active {
+    background-color: rgba(var(--bg-color), 0.15) !important;
+}
+.bg-state-opacity-15 .active,
+.bg-state-opacity-15:hover {
+    background-color: rgba(var(--bg-color), 0.15) !important;
+}
+.bg-opacity-20 {
+    background-color: rgba(var(--bg-color), 0.2) !important;
+}
+.bg-hover-opacity-20:hover {
+    background-color: rgba(var(--bg-color), 0.2) !important;
+}
+.bg-active-opacity-20.active {
+    background-color: rgba(var(--bg-color), 0.2) !important;
+}
+.bg-state-opacity-20 .active,
+.bg-state-opacity-20:hover {
+    background-color: rgba(var(--bg-color), 0.2) !important;
+}
+.bg-opacity-25 {
+    background-color: rgba(var(--bg-color), 0.25) !important;
+}
+.bg-hover-opacity-25:hover {
+    background-color: rgba(var(--bg-color), 0.25) !important;
+}
+.bg-active-opacity-25.active {
+    background-color: rgba(var(--bg-color), 0.25) !important;
+}
+.bg-state-opacity-25 .active,
+.bg-state-opacity-25:hover {
+    background-color: rgba(var(--bg-color), 0.25) !important;
+}
+.bg-opacity-50 {
+    background-color: rgba(var(--bg-color), 0.5) !important;
+}
+.bg-hover-opacity-50:hover {
+    background-color: rgba(var(--bg-color), 0.5) !important;
+}
+.bg-active-opacity-50.active {
+    background-color: rgba(var(--bg-color), 0.5) !important;
+}
+.bg-state-opacity-50 .active,
+.bg-state-opacity-50:hover {
+    background-color: rgba(var(--bg-color), 0.5) !important;
+}
+.bg-opacity-75 {
+    background-color: rgba(var(--bg-color), 0.75) !important;
+}
+.bg-hover-opacity-75:hover {
+    background-color: rgba(var(--bg-color), 0.75) !important;
+}
+.bg-active-opacity-75.active {
+    background-color: rgba(var(--bg-color), 0.75) !important;
+}
+.bg-state-opacity-75 .active,
+.bg-state-opacity-75:hover {
+    background-color: rgba(var(--bg-color), 0.75) !important;
+}
+.bg-opacity-100 {
+    background-color: rgba(var(--bg-color), 1) !important;
+}
+.bg-hover-opacity-100:hover {
+    background-color: rgba(var(--bg-color), 1) !important;
+}
+.bg-active-opacity-100.active {
+    background-color: rgba(var(--bg-color), 1) !important;
+}
+.bg-state-opacity-100 .active,
+.bg-state-opacity-100:hover {
+    background-color: rgba(var(--bg-color), 1) !important;
+}
+.bg-black {
+    background-color: #000 !important;
+}
+.bg-body {
+    --bg-color: 255, 255, 255;
+    background-color: #fff !important;
+}
+.bg-lighten {
+    background-color: rgba(245, 248, 250, 0.5) !important;
+}
+.bg-hover-lighten {
+    cursor: pointer;
+}
+.bg-hover-lighten:hover {
+    background-color: rgba(245, 248, 250, 0.5) !important;
+}
+.bg-active-lighten.active {
+    background-color: rgba(245, 248, 250, 0.5) !important;
+}
+.bg-state-lighten {
+    cursor: pointer;
+}
+.bg-state-lighten.active,
+.bg-state-lighten:hover {
+    background-color: rgba(245, 248, 250, 0.5) !important;
+}
+.hoverable {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.hoverable:hover {
+    transition: all 0.2s ease;
+}
+.bgi-no-repeat {
+    background-repeat: no-repeat;
+}
+.bgi-position-y-top {
+    background-position-y: top;
+}
+.bgi-position-y-bottom {
+    background-position-y: bottom;
+}
+.bgi-position-y-center {
+    background-position-y: center;
+}
+.bgi-position-x-start {
+    background-position-x: left;
+}
+.bgi-position-x-end {
+    background-position-x: right;
+}
+.bgi-position-x-center {
+    background-position-x: center;
+}
+.bgi-position-top {
+    background-position: 0 top;
+}
+.bgi-position-bottom {
+    background-position: 0 bottom;
+}
+.bgi-position-center {
+    background-position: center;
+}
+.bgi-size-auto {
+    background-size: auto;
+}
+.bgi-size-cover {
+    background-size: cover;
+}
+.bgi-size-contain {
+    background-size: contain;
+}
+.bgi-attachment-fixed {
+    background-attachment: fixed;
+}
+.bgi-attachment-auto {
+    background-attachment: auto;
+}
+@media (min-width: 576px) {
+    .bgi-size-sm-auto {
+        background-size: auto;
+    }
+    .bgi-size-sm-cover {
+        background-size: cover;
+    }
+    .bgi-size-sm-contain {
+        background-size: contain;
+    }
+    .bgi-attachment-sm-fixed {
+        background-attachment: fixed;
+    }
+    .bgi-attachment-sm-auto {
+        background-attachment: auto;
+    }
+}
+@media (min-width: 768px) {
+    .bgi-size-md-auto {
+        background-size: auto;
+    }
+    .bgi-size-md-cover {
+        background-size: cover;
+    }
+    .bgi-size-md-contain {
+        background-size: contain;
+    }
+    .bgi-attachment-md-fixed {
+        background-attachment: fixed;
+    }
+    .bgi-attachment-md-auto {
+        background-attachment: auto;
+    }
+}
+@media (min-width: 992px) {
+    .bgi-size-lg-auto {
+        background-size: auto;
+    }
+    .bgi-size-lg-cover {
+        background-size: cover;
+    }
+    .bgi-size-lg-contain {
+        background-size: contain;
+    }
+    .bgi-attachment-lg-fixed {
+        background-attachment: fixed;
+    }
+    .bgi-attachment-lg-auto {
+        background-attachment: auto;
+    }
+}
+@media (min-width: 1200px) {
+    .bgi-size-xl-auto {
+        background-size: auto;
+    }
+    .bgi-size-xl-cover {
+        background-size: cover;
+    }
+    .bgi-size-xl-contain {
+        background-size: contain;
+    }
+    .bgi-attachment-xl-fixed {
+        background-attachment: fixed;
+    }
+    .bgi-attachment-xl-auto {
+        background-attachment: auto;
+    }
+}
+@media (min-width: 1400px) {
+    .bgi-size-xxl-auto {
+        background-size: auto;
+    }
+    .bgi-size-xxl-cover {
+        background-size: cover;
+    }
+    .bgi-size-xxl-contain {
+        background-size: contain;
+    }
+    .bgi-attachment-xxl-fixed {
+        background-attachment: fixed;
+    }
+    .bgi-attachment-xxl-auto {
+        background-attachment: auto;
+    }
+}
+.border-active:not(.active):not(:active):not(:hover):not(:focus) {
+    border-color: transparent !important;
+}
+.border-hover:not(:hover):not(:focus):not(.active):not(:active) {
+    cursor: pointer;
+    border-color: transparent !important;
+}
+.border-gray-100 {
+    border-color: #f5f8fa !important;
+}
+.border-gray-200 {
+    border-color: #eff2f5 !important;
+}
+.border-gray-300 {
+    border-color: #e4e6ef !important;
+}
+.border-gray-400 {
+    border-color: #b5b5c3 !important;
+}
+.border-gray-500 {
+    border-color: #a1a5b7 !important;
+}
+.border-gray-600 {
+    border-color: #7e8299 !important;
+}
+.border-gray-700 {
+    border-color: #5e6278 !important;
+}
+.border-gray-800 {
+    border-color: #3f4254 !important;
+}
+.border-gray-900 {
+    border-color: #181c32 !important;
+}
+.border-hover-white:hover {
+    border-color: #fff !important;
+}
+.border-active-white.active {
+    border-color: #fff !important;
+}
+.border-hover-light:hover {
+    border-color: #f5f8fa !important;
+}
+.border-active-light.active {
+    border-color: #f5f8fa !important;
+}
+.border-hover-primary:hover {
+    border-color: #009ef7 !important;
+}
+.border-active-primary.active {
+    border-color: #009ef7 !important;
+}
+.border-hover-secondary:hover {
+    border-color: #e4e6ef !important;
+}
+.border-active-secondary.active {
+    border-color: #e4e6ef !important;
+}
+.border-hover-success:hover {
+    border-color: #50cd89 !important;
+}
+.border-active-success.active {
+    border-color: #50cd89 !important;
+}
+.border-hover-info:hover {
+    border-color: #7239ea !important;
+}
+.border-active-info.active {
+    border-color: #7239ea !important;
+}
+.border-hover-warning:hover {
+    border-color: #ffc700 !important;
+}
+.border-active-warning.active {
+    border-color: #ffc700 !important;
+}
+.border-hover-danger:hover {
+    border-color: #f1416c !important;
+}
+.border-active-danger.active {
+    border-color: #f1416c !important;
+}
+.border-hover-dark:hover {
+    border-color: #181c32 !important;
+}
+.border-active-dark.active {
+    border-color: #181c32 !important;
+}
+.border-hover-transparent:hover {
+    border-color: transparent !important;
+}
+.border-dashed {
+    border-style: dashed !important;
+    border-color: #e4e6ef;
+}
+.border-top-dashed {
+    border-top-style: dashed !important;
+}
+.border-bottom-dashed {
+    border-bottom-style: dashed !important;
+}
+.border-start-dashed {
+    border-left-style: dashed !important;
+}
+.border-end-dashed {
+    border-right-style: dashed !important;
+}
+.border-dotted {
+    border-style: dotted !important;
+}
+.border-top-dotted {
+    border-top-style: dotted !important;
+}
+.border-bottom-dotted {
+    border-bottom-style: dotted !important;
+}
+.border-start-dotted {
+    border-left-style: dotted !important;
+}
+.border-end-dotted {
+    border-right-style: dotted !important;
+}
+.border-transparent {
+    border-color: transparent !important;
+}
+.rounded-top-0 {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+.rounded-bottom-0 {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+.rounded-start-0 {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+.rounded-end-0 {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+.rounded-circle {
+    border-radius: 50% !important;
+}
+.flex-root {
+    flex: 1;
+}
+.flex-column-auto {
+    flex: none;
+}
+.flex-column-fluid {
+    flex: 1 0 auto;
+}
+.flex-row-auto {
+    flex: 0 0 auto;
+}
+.flex-row-fluid {
+    flex: 1 auto;
+    min-width: 0;
+}
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+.flex-stack {
+    justify-content: space-between;
+    align-items: center;
+}
+@media (min-width: 576px) {
+    .flex-sm-root {
+        flex: 1;
+    }
+    .flex-sm-column-auto {
+        flex: none;
+    }
+    .flex-sm-column-fluid {
+        flex: 1 0 auto;
+    }
+    .flex-sm-row-auto {
+        flex: 0 0 auto;
+    }
+    .flex-sm-row-fluid {
+        flex: 1 auto;
+        min-width: 0;
+    }
+    .flex-sm-center {
+        justify-content: center;
+        align-items: center;
+    }
+    .flex-sm-stack {
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+@media (min-width: 768px) {
+    .flex-md-root {
+        flex: 1;
+    }
+    .flex-md-column-auto {
+        flex: none;
+    }
+    .flex-md-column-fluid {
+        flex: 1 0 auto;
+    }
+    .flex-md-row-auto {
+        flex: 0 0 auto;
+    }
+    .flex-md-row-fluid {
+        flex: 1 auto;
+        min-width: 0;
+    }
+    .flex-md-center {
+        justify-content: center;
+        align-items: center;
+    }
+    .flex-md-stack {
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+@media (min-width: 992px) {
+    .flex-lg-root {
+        flex: 1;
+    }
+    .flex-lg-column-auto {
+        flex: none;
+    }
+    .flex-lg-column-fluid {
+        flex: 1 0 auto;
+    }
+    .flex-lg-row-auto {
+        flex: 0 0 auto;
+    }
+    .flex-lg-row-fluid {
+        flex: 1 auto;
+        min-width: 0;
+    }
+    .flex-lg-center {
+        justify-content: center;
+        align-items: center;
+    }
+    .flex-lg-stack {
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+@media (min-width: 1200px) {
+    .flex-xl-root {
+        flex: 1;
+    }
+    .flex-xl-column-auto {
+        flex: none;
+    }
+    .flex-xl-column-fluid {
+        flex: 1 0 auto;
+    }
+    .flex-xl-row-auto {
+        flex: 0 0 auto;
+    }
+    .flex-xl-row-fluid {
+        flex: 1 auto;
+        min-width: 0;
+    }
+    .flex-xl-center {
+        justify-content: center;
+        align-items: center;
+    }
+    .flex-xl-stack {
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+@media (min-width: 1400px) {
+    .flex-xxl-root {
+        flex: 1;
+    }
+    .flex-xxl-column-auto {
+        flex: none;
+    }
+    .flex-xxl-column-fluid {
+        flex: 1 0 auto;
+    }
+    .flex-xxl-row-auto {
+        flex: 0 0 auto;
+    }
+    .flex-xxl-row-fluid {
+        flex: 1 auto;
+        min-width: 0;
+    }
+    .flex-xxl-center {
+        justify-content: center;
+        align-items: center;
+    }
+    .flex-xxl-stack {
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.flex-equal {
+    flex-grow: 1;
+    flex-basis: 0;
+    flex-shrink: 0;
+}
+.shadow-xs {
+    box-shadow: 0 0.1rem 0.75rem 0.25rem rgba(0, 0, 0, 0.05);
+}
+.text-white {
+    color: #fff !important;
+}
+.text-inverse-white {
+    color: #7e8299 !important;
+}
+.text-hover-white {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-white i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-white:hover {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #fff !important;
+}
+.text-hover-white:hover i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #fff !important;
+}
+.text-hover-white:hover .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #fff;
+}
+.text-hover-white:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-hover-inverse-white {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-inverse-white i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-inverse-white:hover {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #7e8299 !important;
+}
+.text-hover-inverse-white:hover i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #7e8299 !important;
+}
+.text-hover-inverse-white:hover .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #7e8299;
+}
+.text-hover-inverse-white:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-active-white {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-white i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-white.active {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #fff !important;
+}
+.text-active-white.active i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #fff !important;
+}
+.text-active-white.active .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #fff;
+}
+.text-active-white.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-active-inverse-white {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-inverse-white i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-inverse-white.active {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #7e8299 !important;
+}
+.text-active-inverse-white.active i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #7e8299 !important;
+}
+.text-active-inverse-white.active .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #7e8299;
+}
+.text-active-inverse-white.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-primary {
+    color: #009ef7 !important;
+}
+.text-inverse-primary {
+    color: #fff !important;
+}
+.text-light-primary {
+    color: #f1faff !important;
+}
+.text-hover-primary {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-primary i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-primary:hover {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #009ef7 !important;
+}
+.text-hover-primary:hover i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #009ef7 !important;
+}
+.text-hover-primary:hover .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #009ef7;
+}
+.text-hover-primary:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-hover-inverse-primary {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-inverse-primary i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-inverse-primary:hover {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #fff !important;
+}
+.text-hover-inverse-primary:hover i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #fff !important;
+}
+.text-hover-inverse-primary:hover .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #fff;
+}
+.text-hover-inverse-primary:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-active-primary {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-primary i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-primary.active {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #009ef7 !important;
+}
+.text-active-primary.active i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #009ef7 !important;
+}
+.text-active-primary.active .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #009ef7;
+}
+.text-active-primary.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-active-inverse-primary {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-inverse-primary i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-inverse-primary.active {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #fff !important;
+}
+.text-active-inverse-primary.active i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #fff !important;
+}
+.text-active-inverse-primary.active .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #fff;
+}
+.text-active-inverse-primary.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-secondary {
+    color: #e4e6ef !important;
+}
+.text-inverse-secondary {
+    color: #3f4254 !important;
+}
+.text-hover-secondary {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-secondary i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-secondary:hover {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #e4e6ef !important;
+}
+.text-hover-secondary:hover i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #e4e6ef !important;
+}
+.text-hover-secondary:hover .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #e4e6ef;
+}
+.text-hover-secondary:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-hover-inverse-secondary {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-inverse-secondary i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-inverse-secondary:hover {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #3f4254 !important;
+}
+.text-hover-inverse-secondary:hover i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #3f4254 !important;
+}
+.text-hover-inverse-secondary:hover .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #3f4254;
+}
+.text-hover-inverse-secondary:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-active-secondary {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-secondary i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-secondary.active {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #e4e6ef !important;
+}
+.text-active-secondary.active i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #e4e6ef !important;
+}
+.text-active-secondary.active .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #e4e6ef;
+}
+.text-active-secondary.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-active-inverse-secondary {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-inverse-secondary i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-inverse-secondary.active {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #3f4254 !important;
+}
+.text-active-inverse-secondary.active i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #3f4254 !important;
+}
+.text-active-inverse-secondary.active .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #3f4254;
+}
+.text-active-inverse-secondary.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-light {
+    color: #f5f8fa !important;
+}
+.text-inverse-light {
+    color: #7e8299 !important;
+}
+.text-hover-light {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-light i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-light:hover {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #f5f8fa !important;
+}
+.text-hover-light:hover i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #f5f8fa !important;
+}
+.text-hover-light:hover .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #f5f8fa;
+}
+.text-hover-light:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-hover-inverse-light {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-inverse-light i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-inverse-light:hover {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #7e8299 !important;
+}
+.text-hover-inverse-light:hover i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #7e8299 !important;
+}
+.text-hover-inverse-light:hover .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #7e8299;
+}
+.text-hover-inverse-light:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-active-light {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-light i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-light.active {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #f5f8fa !important;
+}
+.text-active-light.active i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #f5f8fa !important;
+}
+.text-active-light.active .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #f5f8fa;
+}
+.text-active-light.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-active-inverse-light {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-inverse-light i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-inverse-light.active {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #7e8299 !important;
+}
+.text-active-inverse-light.active i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #7e8299 !important;
+}
+.text-active-inverse-light.active .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #7e8299;
+}
+.text-active-inverse-light.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-success {
+    color: #50cd89 !important;
+}
+.text-inverse-success {
+    color: #fff !important;
+}
+.text-light-success {
+    color: #e8fff3 !important;
+}
+.text-hover-success {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-success i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-success:hover {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #50cd89 !important;
+}
+.text-hover-success:hover i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #50cd89 !important;
+}
+.text-hover-success:hover .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #50cd89;
+}
+.text-hover-success:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-hover-inverse-success {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-inverse-success i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-inverse-success:hover {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #fff !important;
+}
+.text-hover-inverse-success:hover i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #fff !important;
+}
+.text-hover-inverse-success:hover .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #fff;
+}
+.text-hover-inverse-success:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-active-success {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-success i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-success.active {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #50cd89 !important;
+}
+.text-active-success.active i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #50cd89 !important;
+}
+.text-active-success.active .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #50cd89;
+}
+.text-active-success.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-active-inverse-success {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-inverse-success i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-inverse-success.active {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #fff !important;
+}
+.text-active-inverse-success.active i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #fff !important;
+}
+.text-active-inverse-success.active .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #fff;
+}
+.text-active-inverse-success.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-info {
+    color: #7239ea !important;
+}
+.text-inverse-info {
+    color: #fff !important;
+}
+.text-light-info {
+    color: #f8f5ff !important;
+}
+.text-hover-info {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-info i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-info:hover {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #7239ea !important;
+}
+.text-hover-info:hover i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #7239ea !important;
+}
+.text-hover-info:hover .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #7239ea;
+}
+.text-hover-info:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-hover-inverse-info {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-inverse-info i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-inverse-info:hover {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #fff !important;
+}
+.text-hover-inverse-info:hover i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #fff !important;
+}
+.text-hover-inverse-info:hover .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #fff;
+}
+.text-hover-inverse-info:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-active-info {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-info i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-info.active {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #7239ea !important;
+}
+.text-active-info.active i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #7239ea !important;
+}
+.text-active-info.active .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #7239ea;
+}
+.text-active-info.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-active-inverse-info {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-inverse-info i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-inverse-info.active {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #fff !important;
+}
+.text-active-inverse-info.active i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #fff !important;
+}
+.text-active-inverse-info.active .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #fff;
+}
+.text-active-inverse-info.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-warning {
+    color: #ffc700 !important;
+}
+.text-inverse-warning {
+    color: #fff !important;
+}
+.text-light-warning {
+    color: #fff8dd !important;
+}
+.text-hover-warning {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-warning i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-warning:hover {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #ffc700 !important;
+}
+.text-hover-warning:hover i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #ffc700 !important;
+}
+.text-hover-warning:hover .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #ffc700;
+}
+.text-hover-warning:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-hover-inverse-warning {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-inverse-warning i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-inverse-warning:hover {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #fff !important;
+}
+.text-hover-inverse-warning:hover i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #fff !important;
+}
+.text-hover-inverse-warning:hover .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #fff;
+}
+.text-hover-inverse-warning:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-active-warning {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-warning i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-warning.active {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #ffc700 !important;
+}
+.text-active-warning.active i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #ffc700 !important;
+}
+.text-active-warning.active .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #ffc700;
+}
+.text-active-warning.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-active-inverse-warning {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-inverse-warning i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-inverse-warning.active {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #fff !important;
+}
+.text-active-inverse-warning.active i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #fff !important;
+}
+.text-active-inverse-warning.active .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #fff;
+}
+.text-active-inverse-warning.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-danger {
+    color: #f1416c !important;
+}
+.text-inverse-danger {
+    color: #fff !important;
+}
+.text-light-danger {
+    color: #fff5f8 !important;
+}
+.text-hover-danger {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-danger i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-danger:hover {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #f1416c !important;
+}
+.text-hover-danger:hover i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #f1416c !important;
+}
+.text-hover-danger:hover .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #f1416c;
+}
+.text-hover-danger:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-hover-inverse-danger {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-inverse-danger i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-inverse-danger:hover {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #fff !important;
+}
+.text-hover-inverse-danger:hover i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #fff !important;
+}
+.text-hover-inverse-danger:hover .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #fff;
+}
+.text-hover-inverse-danger:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-active-danger {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-danger i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-danger.active {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #f1416c !important;
+}
+.text-active-danger.active i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #f1416c !important;
+}
+.text-active-danger.active .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #f1416c;
+}
+.text-active-danger.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-active-inverse-danger {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-inverse-danger i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-inverse-danger.active {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #fff !important;
+}
+.text-active-inverse-danger.active i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #fff !important;
+}
+.text-active-inverse-danger.active .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #fff;
+}
+.text-active-inverse-danger.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-dark {
+    color: #181c32 !important;
+}
+.text-inverse-dark {
+    color: #fff !important;
+}
+.text-light-dark {
+    color: #eff2f5 !important;
+}
+.text-hover-dark {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-dark i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-dark:hover {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #181c32 !important;
+}
+.text-hover-dark:hover i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #181c32 !important;
+}
+.text-hover-dark:hover .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #181c32;
+}
+.text-hover-dark:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-hover-inverse-dark {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-inverse-dark i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-inverse-dark:hover {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #fff !important;
+}
+.text-hover-inverse-dark:hover i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #fff !important;
+}
+.text-hover-inverse-dark:hover .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #fff;
+}
+.text-hover-inverse-dark:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-active-dark {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-dark i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-dark.active {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #181c32 !important;
+}
+.text-active-dark.active i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #181c32 !important;
+}
+.text-active-dark.active .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #181c32;
+}
+.text-active-dark.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-active-inverse-dark {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-inverse-dark i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-inverse-dark.active {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #fff !important;
+}
+.text-active-inverse-dark.active i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #fff !important;
+}
+.text-active-inverse-dark.active .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #fff;
+}
+.text-active-inverse-dark.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-muted {
+    color: #a1a5b7 !important;
+}
+.text-hover-muted {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-muted i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-muted:hover {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #a1a5b7 !important;
+}
+.text-hover-muted:hover i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #a1a5b7 !important;
+}
+.text-hover-muted:hover .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #a1a5b7;
+}
+.text-hover-muted:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-active-muted {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-muted i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-muted.active {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #a1a5b7 !important;
+}
+.text-active-muted.active i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #a1a5b7 !important;
+}
+.text-active-muted.active .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #a1a5b7;
+}
+.text-active-muted.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-gray-100 {
+    color: #f5f8fa !important;
+}
+.text-hover-gray-100 {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-gray-100 i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-gray-100:hover {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #f5f8fa !important;
+}
+.text-hover-gray-100:hover i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #f5f8fa !important;
+}
+.text-hover-gray-100:hover .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #f5f8fa;
+}
+.text-hover-gray-100:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-active-gray-100 {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-gray-100 i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-gray-100.active {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #f5f8fa !important;
+}
+.text-active-gray-100.active i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #f5f8fa !important;
+}
+.text-active-gray-100.active .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #f5f8fa;
+}
+.text-active-gray-100.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-gray-200 {
+    color: #eff2f5 !important;
+}
+.text-hover-gray-200 {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-gray-200 i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-gray-200:hover {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #eff2f5 !important;
+}
+.text-hover-gray-200:hover i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #eff2f5 !important;
+}
+.text-hover-gray-200:hover .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #eff2f5;
+}
+.text-hover-gray-200:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-active-gray-200 {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-gray-200 i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-gray-200.active {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #eff2f5 !important;
+}
+.text-active-gray-200.active i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #eff2f5 !important;
+}
+.text-active-gray-200.active .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #eff2f5;
+}
+.text-active-gray-200.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-gray-300 {
+    color: #e4e6ef !important;
+}
+.text-hover-gray-300 {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-gray-300 i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-gray-300:hover {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #e4e6ef !important;
+}
+.text-hover-gray-300:hover i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #e4e6ef !important;
+}
+.text-hover-gray-300:hover .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #e4e6ef;
+}
+.text-hover-gray-300:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-active-gray-300 {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-gray-300 i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-gray-300.active {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #e4e6ef !important;
+}
+.text-active-gray-300.active i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #e4e6ef !important;
+}
+.text-active-gray-300.active .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #e4e6ef;
+}
+.text-active-gray-300.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-gray-400 {
+    color: #b5b5c3 !important;
+}
+.text-hover-gray-400 {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-gray-400 i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-gray-400:hover {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #b5b5c3 !important;
+}
+.text-hover-gray-400:hover i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #b5b5c3 !important;
+}
+.text-hover-gray-400:hover .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #b5b5c3;
+}
+.text-hover-gray-400:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-active-gray-400 {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-gray-400 i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-gray-400.active {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #b5b5c3 !important;
+}
+.text-active-gray-400.active i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #b5b5c3 !important;
+}
+.text-active-gray-400.active .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #b5b5c3;
+}
+.text-active-gray-400.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-gray-500 {
+    color: #a1a5b7 !important;
+}
+.text-hover-gray-500 {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-gray-500 i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-gray-500:hover {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #a1a5b7 !important;
+}
+.text-hover-gray-500:hover i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #a1a5b7 !important;
+}
+.text-hover-gray-500:hover .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #a1a5b7;
+}
+.text-hover-gray-500:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-active-gray-500 {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-gray-500 i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-gray-500.active {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #a1a5b7 !important;
+}
+.text-active-gray-500.active i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #a1a5b7 !important;
+}
+.text-active-gray-500.active .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #a1a5b7;
+}
+.text-active-gray-500.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-gray-600 {
+    color: #7e8299 !important;
+}
+.text-hover-gray-600 {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-gray-600 i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-gray-600:hover {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #7e8299 !important;
+}
+.text-hover-gray-600:hover i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #7e8299 !important;
+}
+.text-hover-gray-600:hover .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #7e8299;
+}
+.text-hover-gray-600:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-active-gray-600 {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-gray-600 i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-gray-600.active {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #7e8299 !important;
+}
+.text-active-gray-600.active i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #7e8299 !important;
+}
+.text-active-gray-600.active .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #7e8299;
+}
+.text-active-gray-600.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-gray-700 {
+    color: #5e6278 !important;
+}
+.text-hover-gray-700 {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-gray-700 i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-gray-700:hover {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #5e6278 !important;
+}
+.text-hover-gray-700:hover i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #5e6278 !important;
+}
+.text-hover-gray-700:hover .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #5e6278;
+}
+.text-hover-gray-700:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-active-gray-700 {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-gray-700 i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-gray-700.active {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #5e6278 !important;
+}
+.text-active-gray-700.active i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #5e6278 !important;
+}
+.text-active-gray-700.active .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #5e6278;
+}
+.text-active-gray-700.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-gray-800 {
+    color: #3f4254 !important;
+}
+.text-hover-gray-800 {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-gray-800 i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-gray-800:hover {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #3f4254 !important;
+}
+.text-hover-gray-800:hover i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #3f4254 !important;
+}
+.text-hover-gray-800:hover .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #3f4254;
+}
+.text-hover-gray-800:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-active-gray-800 {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-gray-800 i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-gray-800.active {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #3f4254 !important;
+}
+.text-active-gray-800.active i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #3f4254 !important;
+}
+.text-active-gray-800.active .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #3f4254;
+}
+.text-active-gray-800.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-gray-900 {
+    color: #181c32 !important;
+}
+.text-hover-gray-900 {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-gray-900 i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-hover-gray-900:hover {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #181c32 !important;
+}
+.text-hover-gray-900:hover i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #181c32 !important;
+}
+.text-hover-gray-900:hover .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #181c32;
+}
+.text-hover-gray-900:hover .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.text-active-gray-900 {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-gray-900 i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.text-active-gray-900.active {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #181c32 !important;
+}
+.text-active-gray-900.active i {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    color: #181c32 !important;
+}
+.text-active-gray-900.active .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #181c32;
+}
+.text-active-gray-900.active .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.fw-boldest {
+    font-weight: 700 !important;
+}
+.text-transparent {
+    color: transparent;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+.cursor-default {
+    cursor: default;
+}
+.cursor-move {
+    cursor: move;
+}
+i {
+    line-height: 1;
+    font-size: 1rem;
+    color: #a1a5b7;
+}
+a {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+a:hover {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.opacity-active-0.active {
+    opacity: 0 !important;
+}
+.opacity-state-0.active,
+.opacity-state-0:hover {
+    opacity: 0 !important;
+}
+.opacity-active-5.active {
+    opacity: 0.05 !important;
+}
+.opacity-state-5.active,
+.opacity-state-5:hover {
+    opacity: 0.05 !important;
+}
+.opacity-active-10.active {
+    opacity: 0.1 !important;
+}
+.opacity-state-10.active,
+.opacity-state-10:hover {
+    opacity: 0.1 !important;
+}
+.opacity-active-15.active {
+    opacity: 0.15 !important;
+}
+.opacity-state-15.active,
+.opacity-state-15:hover {
+    opacity: 0.15 !important;
+}
+.opacity-active-20.active {
+    opacity: 0.2 !important;
+}
+.opacity-state-20.active,
+.opacity-state-20:hover {
+    opacity: 0.2 !important;
+}
+.opacity-active-25.active {
+    opacity: 0.25 !important;
+}
+.opacity-state-25.active,
+.opacity-state-25:hover {
+    opacity: 0.25 !important;
+}
+.opacity-active-50.active {
+    opacity: 0.5 !important;
+}
+.opacity-state-50.active,
+.opacity-state-50:hover {
+    opacity: 0.5 !important;
+}
+.opacity-active-75.active {
+    opacity: 0.75 !important;
+}
+.opacity-state-75.active,
+.opacity-state-75:hover {
+    opacity: 0.75 !important;
+}
+.opacity-active-100.active {
+    opacity: 1 !important;
+}
+.opacity-state-100.active,
+.opacity-state-100:hover {
+    opacity: 1 !important;
+}
+.transform-90 {
+    transform: rotate(90deg);
+    transform-origin: right top;
+}
+.animation {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@keyframes animationSlideInDown {
+    from {
+        transform: translate3d(0, -100%, 0);
+        visibility: visible;
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+.animation-slide-in-down {
+    animation-name: animationSlideInDown;
+}
+@keyframes animationSlideInUp {
+    from {
+        transform: translate3d(0, 100%, 0);
+        visibility: visible;
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+.animation-slide-in-up {
+    animation-name: animationSlideInUp;
+}
+@keyframes animationFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.animation-fade-in {
+    animation-name: animationFadeIn;
+}
+@keyframes animationFadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.animation-fade-out {
+    animation-name: animationFadeOut;
+}
+.animation-blink {
+    animation: animationBlink 1s steps(5, start) infinite;
+}
+@keyframes animationBlink {
+    to {
+        visibility: hidden;
+    }
+}
+.nav-line-tabs {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #eff2f5;
+}
+.nav-line-tabs .nav-item {
+    margin-bottom: -1px;
+}
+.nav-line-tabs .nav-item .nav-link {
+    color: #a1a5b7;
+    border: 0;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    padding: 0.5rem 0;
+    margin: 0 1rem;
+}
+.nav-line-tabs .nav-item:first-child .nav-link {
+    margin-left: 0;
+}
+.nav-line-tabs .nav-item:last-child .nav-link {
+    margin-right: 0;
+}
+.nav-line-tabs .nav-item .nav-link.active,
+.nav-line-tabs .nav-item .nav-link:hover:not(.disabled),
+.nav-line-tabs .nav-item.show .nav-link {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #009ef7;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.nav-line-tabs.nav-line-tabs-2x {
+    border-bottom-width: 2px;
+}
+.nav-line-tabs.nav-line-tabs-2x .nav-item {
+    margin-bottom: -2px;
+}
+.nav-line-tabs.nav-line-tabs-2x .nav-item .nav-link {
+    border-bottom-width: 2px;
+}
+.nav-line-tabs.nav-line-tabs-2x .nav-item .nav-link.active,
+.nav-line-tabs.nav-line-tabs-2x .nav-item .nav-link:hover:not(.disabled),
+.nav-line-tabs.nav-line-tabs-2x .nav-item.show .nav-link {
+    border-bottom-width: 2px;
+}
+.nav-pills .nav-item {
+    margin-right: 0.5rem;
+}
+.nav-pills .nav-item:last-child {
+    margin-right: 0;
+}
+.nav-stretch {
+    align-items: stretch;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+.nav-stretch .nav-item {
+    display: flex;
+    align-items: stretch;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+.nav-stretch .nav-link {
+    display: flex;
+    align-items: center;
+}
+.nav-group {
+    padding: 0.35rem;
+    border-radius: 0.475rem;
+    background-color: #f5f8fa;
+}
+.nav-group.nav-group-outline {
+    background-color: transparent;
+    border: 1px solid #eff2f5;
+}
+.nav-group.nav-group-fluid {
+    display: flex;
+}
+.nav-group.nav-group-fluid > .btn,
+.nav-group.nav-group-fluid > label {
+    position: relative;
+    flex-shrink: 0;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+.nav-group.nav-group-fluid > label {
+    margin-right: 0.1rem;
+}
+.nav-group.nav-group-fluid > label > .btn {
+    width: 100%;
+}
+.nav-group.nav-group-fluid > label:last-child {
+    margin-right: 0;
+}
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+}
+.pagination.pagination-circle .page-link {
+    border-radius: 50%;
+}
+.pagination.pagination-outline .page-link {
+    border: 1px solid #eff2f5;
+}
+.pagination.pagination-outline .page-item.active .page-link,
+.pagination.pagination-outline .page-item:hover .page-link {
+    border-color: #f1faff;
+}
+.page-item {
+    margin-right: 0.5rem;
+}
+.page-item:last-child {
+    margin-right: 0;
+}
+.page-item .page-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.475rem;
+    height: 2.5rem;
+    min-width: 2.5rem;
+    font-weight: 500;
+    font-size: 1.075rem;
+}
+.page-item .page-link i {
+    font-size: 0.85rem;
+}
+.page-item .page-link .next,
+.page-item .page-link .previous {
+    display: block;
+    height: 0.875rem;
+    width: 0.875rem;
+}
+.page-item.next:not(:hover):not(:focus):not(.disabled) .page-link,
+.page-item.previous:not(:hover):not(:focus):not(.disabled) .page-link {
+    background-color: #fff;
+}
+.page-item.next:not(:hover):not(:focus):not(.disabled) .page-link i,
+.page-item.previous:not(:hover):not(:focus):not(.disabled) .page-link i {
+    color: #5e6278;
+}
+.page-item.next:not(:hover):not(:focus):not(.disabled) .page-link .svg-icon svg [fill]:not(.permanent):not(g),
+.page-item.previous:not(:hover):not(:focus):not(.disabled) .page-link .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #5e6278;
+}
+.page-item.next:not(:hover):not(:focus):not(.disabled) .page-link .svg-icon svg:hover [fill]:not(.permanent):not(g),
+.page-item.previous:not(:hover):not(:focus):not(.disabled) .page-link .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.page-item.next:not(:hover):not(:focus):not(.disabled) .page-link .previous,
+.page-item.previous:not(:hover):not(:focus):not(.disabled) .page-link .previous {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%235E6278'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
+}
+.page-item.next:not(:hover):not(:focus):not(.disabled) .page-link .next,
+.page-item.previous:not(:hover):not(:focus):not(.disabled) .page-link .next {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%235E6278'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+}
+.page-item:focus:not(.disabled) .page-link i {
+    color: #009ef7;
+}
+.page-item:focus:not(.disabled) .page-link .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #009ef7;
+}
+.page-item:focus:not(.disabled) .page-link .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.page-item:focus:not(.disabled) .page-link .previous {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23009EF7'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
+}
+.page-item:focus:not(.disabled) .page-link .next {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23009EF7'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+}
+.page-item:hover:not(.disabled) .page-link i {
+    color: #009ef7;
+}
+.page-item:hover:not(.disabled) .page-link .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #009ef7;
+}
+.page-item:hover:not(.disabled) .page-link .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.page-item:hover:not(.disabled) .page-link .previous {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23009EF7'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
+}
+.page-item:hover:not(.disabled) .page-link .next {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23009EF7'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+}
+.page-item.active .page-link i {
+    color: #fff;
+}
+.page-item.active .page-link .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #fff;
+}
+.page-item.active .page-link .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.page-item.active .page-link .previous {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23FFFFFF'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
+}
+.page-item.active .page-link .next {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23FFFFFF'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+}
+.page-item.disabled .page-link i {
+    color: #b5b5c3;
+}
+.page-item.disabled .page-link .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #b5b5c3;
+}
+.page-item.disabled .page-link .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.page-item.disabled .page-link .previous {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23B5B5C3'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.06463 4.42111C1.96161 4.22088 1.9809 3.9637 2.12863 3.78597L5.12847 0.177181C5.31402 -0.046034 5.63049 -0.060261 5.83532 0.145404C6.04015 0.351069 6.05578 0.698744 5.87023 0.921959L3.19406 4.14137L5.84414 7.06417C6.03896 7.27904 6.03835 7.62686 5.84278 7.84105C5.64721 8.05524 5.33073 8.05469 5.13591 7.83982L2.14806 4.54449C2.1141 4.50704 2.08629 4.46541 2.06463 4.42111Z'/%3e%3c/svg%3e");
+}
+.page-item.disabled .page-link .next {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 9' fill='%23B5B5C3'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.93537 4.57889C6.03839 4.77912 6.0191 5.0363 5.87137 5.21403L2.87153 8.82282C2.68598 9.04603 2.36951 9.06026 2.16468 8.8546C1.95985 8.64893 1.94422 8.30126 2.12977 8.07804L4.80594 4.85863L2.15586 1.93583C1.96104 1.72096 1.96165 1.37314 2.15722 1.15895C2.35279 0.944757 2.66927 0.945311 2.86409 1.16018L5.85194 4.45551C5.8859 4.49296 5.91371 4.53459 5.93537 4.57889Z'/%3e%3c/svg%3e");
+}
+@media (max-width: 991.98px) {
+    .page-item {
+        margin-right: 0.25rem;
+    }
+    .page-item:last-child {
+        margin-right: 0;
+    }
+}
+.separator {
+    display: block;
+    height: 0;
+    border-bottom: 1px solid #eff2f5;
+}
+.separator.separator-dotted {
+    border-bottom-style: dotted;
+    border-bottom-color: #e4e6ef;
+}
+.separator.separator-dashed {
+    border-bottom-style: dashed;
+    border-bottom-color: #e4e6ef;
+}
+.anchor {
+    display: flex;
+    align-items: center;
+}
+.anchor a {
+    position: relative;
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+    height: 1em;
+    width: 1.25em;
+    margin-left: -1.25em;
+    font-weight: 500;
+    font-size: 0.8em;
+    color: #a1a5b7;
+    transition: all 0.2s ease;
+}
+.anchor a:before {
+    content: "#";
+}
+.anchor:hover a {
+    display: flex;
+}
+.anchor:hover a:hover {
+    color: #009ef7;
+    transition: all 0.2s ease;
+}
+.card {
+    border: 0;
+    box-shadow: 0 0 20px 0 rgba(76, 87, 125, 0.02);
+}
+.card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+    min-height: 70px;
+    padding: 0 2.25rem;
+    background-color: transparent;
+    border-bottom: 1px solid #eff2f5;
+}
+.card .card-header .card-title {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem;
+    margin-left: 0;
+}
+.card .card-header .card-title.flex-column {
+    align-items: flex-start;
+    justify-content: center;
+}
+.card .card-header .card-title .card-icon {
+    margin-right: 0.75rem;
+    line-height: 0;
+}
+.card .card-header .card-title .card-icon i {
+    font-size: 1.25rem;
+    color: #7e8299;
+    line-height: 0;
+}
+.card .card-header .card-title .card-icon i:after,
+.card .card-header .card-title .card-icon i:before {
+    line-height: 0;
+}
+.card .card-header .card-title .card-icon .svg-icon svg {
+    height: 24px;
+    width: 24px;
+}
+.card .card-header .card-title .card-icon .svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #7e8299;
+}
+.card .card-header .card-title .card-icon .svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.card .card-header .card-title,
+.card .card-header .card-title .card-label {
+    font-weight: 500;
+    font-size: 1.275rem;
+    color: #181c32;
+}
+.card .card-header .card-title .card-label {
+    margin: 0 0.75rem 0 0;
+    flex-wrap: wrap;
+}
+.card .card-header .card-title .small,
+.card .card-header .card-title small {
+    color: #a1a5b7;
+    font-size: 1rem;
+}
+.card .card-header .card-title .h1,
+.card .card-header .card-title .h2,
+.card .card-header .card-title .h3,
+.card .card-header .card-title .h4,
+.card .card-header .card-title .h5,
+.card .card-header .card-title .h6,
+.card .card-header .card-title h1,
+.card .card-header .card-title h2,
+.card .card-header .card-title h3,
+.card .card-header .card-title h4,
+.card .card-header .card-title h5,
+.card .card-header .card-title h6 {
+    margin-bottom: 0;
+}
+.card .card-header .card-toolbar {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+    flex-wrap: wrap;
+}
+.card .card-body {
+    padding: 2rem 2.25rem;
+}
+.card .card-footer {
+    padding: 2rem 2.25rem;
+    background-color: transparent;
+    border-top: 1px solid #eff2f5;
+}
+.card .card-scroll {
+    position: relative;
+    overflow: auto;
+}
+.card.card-px-0 .card-body,
+.card.card-px-0 .card-footer,
+.card.card-px-0 .card-header {
+    padding-left: 0;
+    padding-right: 0;
+}
+.card.card-py-0 .card-body,
+.card.card-py-0 .card-footer,
+.card.card-py-0 .card-header {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.card.card-p-0 .card-body,
+.card.card-p-0 .card-footer,
+.card.card-p-0 .card-header {
+    padding: 0;
+}
+.card.card-dashed {
+    box-shadow: none;
+    border: 1px dashed #e4e6ef;
+}
+.card.card-dashed > .card-header {
+    border-bottom: 1px dashed #e4e6ef;
+}
+.card.card-dashed > .card-footer {
+    border-top: 1px dashed #e4e6ef;
+}
+.card.card-bordered {
+    box-shadow: none;
+    border: 1px solid #eff2f5;
+}
+.card.card-flush > .card-header {
+    border-bottom: 0;
+}
+.card.card-flush > .card-footer {
+    border-top: 0;
+}
+.card.card-shadow {
+    box-shadow: 0 0 20px 0 rgba(76, 87, 125, 0.02);
+    border: 0;
+}
+.card.card-stretch {
+    height: calc(100% - var(--bs-gutter-y));
+}
+.card.card-stretch-75 {
+    height: calc(75% - var(--bs-gutter-y));
+}
+.card.card-stretch-50 {
+    height: calc(50% - var(--bs-gutter-y));
+}
+.card.card-stretch-33 {
+    height: calc(33.333% - var(--bs-gutter-y));
+}
+.card.card-stretch-25 {
+    height: calc(25% - var(--bs-gutter-y));
+}
+.card .card-header-stretch {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    align-items: stretch;
+}
+.card .card-header-stretch .card-toolbar {
+    margin: 0;
+    align-items: stretch;
+}
+@media (min-width: 576px) {
+    .card.card-sm-stretch {
+        height: calc(100% - var(--bs-gutter-y));
+    }
+    .card.card-sm-stretch-75 {
+        height: calc(75% - var(--bs-gutter-y));
+    }
+    .card.card-sm-stretch-50 {
+        height: calc(50% - var(--bs-gutter-y));
+    }
+    .card.card-sm-stretch-33 {
+        height: calc(33.333% - var(--bs-gutter-y));
+    }
+    .card.card-sm-stretch-25 {
+        height: calc(25% - var(--bs-gutter-y));
+    }
+    .card .card-header-sm-stretch {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        align-items: stretch;
+    }
+    .card .card-header-sm-stretch .card-toolbar {
+        margin: 0;
+        align-items: stretch;
+    }
+}
+@media (min-width: 768px) {
+    .card.card-md-stretch {
+        height: calc(100% - var(--bs-gutter-y));
+    }
+    .card.card-md-stretch-75 {
+        height: calc(75% - var(--bs-gutter-y));
+    }
+    .card.card-md-stretch-50 {
+        height: calc(50% - var(--bs-gutter-y));
+    }
+    .card.card-md-stretch-33 {
+        height: calc(33.333% - var(--bs-gutter-y));
+    }
+    .card.card-md-stretch-25 {
+        height: calc(25% - var(--bs-gutter-y));
+    }
+    .card .card-header-md-stretch {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        align-items: stretch;
+    }
+    .card .card-header-md-stretch .card-toolbar {
+        margin: 0;
+        align-items: stretch;
+    }
+}
+@media (min-width: 992px) {
+    .card.card-lg-stretch {
+        height: calc(100% - var(--bs-gutter-y));
+    }
+    .card.card-lg-stretch-75 {
+        height: calc(75% - var(--bs-gutter-y));
+    }
+    .card.card-lg-stretch-50 {
+        height: calc(50% - var(--bs-gutter-y));
+    }
+    .card.card-lg-stretch-33 {
+        height: calc(33.333% - var(--bs-gutter-y));
+    }
+    .card.card-lg-stretch-25 {
+        height: calc(25% - var(--bs-gutter-y));
+    }
+    .card .card-header-lg-stretch {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        align-items: stretch;
+    }
+    .card .card-header-lg-stretch .card-toolbar {
+        margin: 0;
+        align-items: stretch;
+    }
+}
+@media (min-width: 1200px) {
+    .card.card-xl-stretch {
+        height: calc(100% - var(--bs-gutter-y));
+    }
+    .card.card-xl-stretch-75 {
+        height: calc(75% - var(--bs-gutter-y));
+    }
+    .card.card-xl-stretch-50 {
+        height: calc(50% - var(--bs-gutter-y));
+    }
+    .card.card-xl-stretch-33 {
+        height: calc(33.333% - var(--bs-gutter-y));
+    }
+    .card.card-xl-stretch-25 {
+        height: calc(25% - var(--bs-gutter-y));
+    }
+    .card .card-header-xl-stretch {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        align-items: stretch;
+    }
+    .card .card-header-xl-stretch .card-toolbar {
+        margin: 0;
+        align-items: stretch;
+    }
+}
+@media (min-width: 1400px) {
+    .card.card-xxl-stretch {
+        height: calc(100% - var(--bs-gutter-y));
+    }
+    .card.card-xxl-stretch-75 {
+        height: calc(75% - var(--bs-gutter-y));
+    }
+    .card.card-xxl-stretch-50 {
+        height: calc(50% - var(--bs-gutter-y));
+    }
+    .card.card-xxl-stretch-33 {
+        height: calc(33.333% - var(--bs-gutter-y));
+    }
+    .card.card-xxl-stretch-25 {
+        height: calc(25% - var(--bs-gutter-y));
+    }
+    .card .card-header-xxl-stretch {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        align-items: stretch;
+    }
+    .card .card-header-xxl-stretch .card-toolbar {
+        margin: 0;
+        align-items: stretch;
+    }
+}
+.card-p {
+    padding: 2rem 2.25rem !important;
+}
+.card-px {
+    padding-left: 2.25rem !important;
+    padding-right: 2.25rem !important;
+}
+.card-shadow {
+    box-shadow: 0 0 20px 0 rgba(76, 87, 125, 0.02);
+}
+.card-py {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+}
+.card-rounded {
+    border-radius: 0.475rem;
+}
+.card-rounded-start {
+    border-top-left-radius: 0.475rem;
+    border-bottom-left-radius: 0.475rem;
+}
+.card-rounded-end {
+    border-top-right-radius: 0.475rem;
+    border-bottom-right-radius: 0.475rem;
+}
+.card-rounded-top {
+    border-top-left-radius: 0.475rem;
+    border-top-right-radius: 0.475rem;
+}
+.card-rounded-bottom {
+    border-bottom-left-radius: 0.475rem;
+    border-bottom-right-radius: 0.475rem;
+}
+@media (max-width: 767.98px) {
+    .card > .card-header:not(.flex-nowrap) {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+}
+#kt_modal_add_event_form .form-control {
+    box-shadow: none !important;
+}
+.dropdown.show > .form-control {
+    color: #181c32;
+    background-color: #fff;
+    border-color: #b5b5c3;
+}
+#kt_modal_add_event_form .form-control[readonly] {
+    background-color: #fff;
+}
+#kt_modal_add_event_form .form-control.form-control-solid {
+    background-color: #f5f8fa;
+    border-color: #f5f8fa;
+    color: #5e6278;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+#kt_modal_add_event_form .form-control.form-control-solid::placeholder {
+    color: #a1a5b7;
+}
+#kt_modal_add_event_form .form-control.form-control-solid::-moz-placeholder {
+    color: #a1a5b7;
+    opacity: 1;
+}
+.dropdown.show > .form-control.form-control-solid,
+.form-control.form-control-solid.active,
+.form-control.form-control-solid.focus,
+.form-control.form-control-solid:active,
+.form-control.form-control-solid:focus {
+    background-color: #eef3f7;
+    border-color: #eef3f7;
+    color: #5e6278;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.form-control.form-control-white {
+    background-color: #fff;
+    border-color: #fff;
+}
+.dropdown.show > .form-control.form-control-white,
+.form-control.form-control-white.active,
+.form-control.form-control-white.focus,
+.form-control.form-control-white:active,
+.form-control.form-control-white:focus {
+    background-color: #fff;
+    border-color: #fff;
+}
+.form-control.form-control-flush {
+    border: 0;
+    background-color: transparent;
+    outline: 0 !important;
+    box-shadow: none;
+    border-radius: 0;
+}
+.placeholder-gray-500::placeholder {
+    color: #a1a5b7;
+}
+.placeholder-gray-500::-moz-placeholder {
+    color: #a1a5b7;
+    opacity: 1;
+}
+.placeholder-white::placeholder {
+    color: #fff;
+}
+.placeholder-white::-moz-placeholder {
+    color: #fff;
+    opacity: 1;
+}
+.resize-none {
+    resize: none;
+}
+.form-select {
+    box-shadow: none !important;
+}
+.form-select.form-select-solid {
+    background-color: #f5f8fa;
+    border-color: #f5f8fa;
+    color: #5e6278;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.form-select.form-select-solid::placeholder {
+    color: #a1a5b7;
+}
+.form-select.form-select-solid::-moz-placeholder {
+    color: #a1a5b7;
+    opacity: 1;
+}
+.dropdown.show > .form-select.form-select-solid,
+.form-select.form-select-solid.active,
+.form-select.form-select-solid.focus,
+.form-select.form-select-solid:active,
+.form-select.form-select-solid:focus {
+    background-color: #eef3f7;
+    border-color: #eef3f7 !important;
+    color: #5e6278;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+.form-select.form-select-white {
+    background-color: #fff;
+    border-color: #fff;
+    color: #181c32;
+}
+.form-select.form-select-white::placeholder {
+    color: #a1a5b7;
+}
+.form-select.form-select-white::-moz-placeholder {
+    color: #a1a5b7;
+    opacity: 1;
+}
+.dropdown.show > .form-select.form-select-white,
+.form-select.form-select-white.active,
+.form-select.form-select-white.focus,
+.form-select.form-select-white:active,
+.form-select.form-select-white:focus {
+    background-color: #fff;
+    border-color: #fff !important;
+    color: #181c32;
+}
+.form-check .form-check-label {
+    cursor: pointer;
+}
+.form-check .form-check-input {
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.form-check.form-check-custom {
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    margin: 0;
+}
+.form-check.form-check-custom .form-check-input {
+    margin: 0;
+    float: none;
+    flex-shrink: 0;
+}
+.form-check.form-check-custom .form-check-label {
+    margin-left: 0.55rem;
+}
+.form-check:not(.form-switch) .form-check-input[type="checkbox"] {
+    background-size: 60% 60%;
+}
+.form-check.form-check-solid .form-check-input {
+    border: 0;
+    background-color: #eff2f5;
+}
+.form-check.form-check-solid .form-check-input:active,
+.form-check.form-check-solid .form-check-input:focus {
+    filter: none;
+    background-color: #eff2f5;
+}
+.form-check.form-check-solid .form-check-input:checked {
+    background-color: #009ef7;
+}
+.form-check.form-check-success .form-check-input:checked {
+    background-color: #50cd89;
+}
+.form-check.form-check-danger .form-check-input:checked {
+    background-color: #f1416c;
+}
+.form-check.form-check-warning .form-check-input:checked {
+    background-color: #ffc700;
+}
+.form-check.form-check-custom.form-check-sm .form-check-input {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.form-check.form-check-custom.form-check-lg .form-check-input {
+    height: 2.25rem;
+    width: 2.25rem;
+}
+.form-switch.form-check-solid .form-check-input {
+    height: 2.25rem;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ffffff'/%3e%3c/svg%3e");
+    border-radius: 3.25rem;
+}
+.form-switch.form-check-solid .form-check-input:checked {
+    filter: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23FFFFFF'/%3e%3c/svg%3e");
+}
+.form-switch.form-check-solid.form-switch-sm .form-check-input {
+    height: 1.5rem;
+    width: 2.5rem;
+}
+.form-switch.form-check-solid.form-switch-lg .form-check-input {
+    height: 2.75rem;
+    width: 3.75rem;
+}
+.input-group.input-group-solid {
+    background-color: #f5f8fa;
+    border-color: #f5f8fa;
+    border-radius: 0.475rem;
+}
+.input-group.input-group-solid.input-group-sm {
+    border-radius: 0.475rem;
+}
+.input-group.input-group-solid.input-group-lg {
+    border-radius: 0.475rem;
+}
+.input-group.input-group-solid .input-group-text {
+    background-color: transparent;
+    border-color: transparent;
+}
+.input-group.input-group-solid .form-control {
+    background-color: transparent;
+    border-color: transparent;
+}
+.required:after {
+    content: "*";
+    position: relative;
+    font-size: inherit;
+    color: #f1416c;
+    padding-left: 0.25rem;
+    font-weight: 700;
+}
+.modal .modal-header {
+    align-items: center;
+    justify-content: space-between;
+}
+.modal .modal-header .h1,
+.modal .modal-header .h2,
+.modal .modal-header .h3,
+.modal .modal-header .h4,
+.modal .modal-header .h5,
+.modal .modal-header .h6,
+.modal .modal-header h1,
+.modal .modal-header h2,
+.modal .modal-header h3,
+.modal .modal-header h4,
+.modal .modal-header h5,
+.modal .modal-header h6 {
+    margin-bottom: 0;
+}
+.modal .modal-dialog {
+    outline: 0 !important;
+}
+.modal.modal-sticky.modal-sticky-bottom-end {
+    padding: 0 !important;
+    max-width: 500px;
+    height: auto;
+    position: fixed;
+    left: auto;
+    top: auto;
+    bottom: 25px;
+    right: 25px;
+    margin: 0;
+    box-shadow: 0 0 60px -15px rgba(0, 0, 0, 0.2);
+    border-radius: 0.475rem;
+}
+.modal.modal-sticky.modal-sticky-bottom-end .modal-dialog {
+    position: static;
+    max-width: 500px;
+    width: auto;
+    margin: 0;
+    border-radius: 0.475rem;
+}
+.modal.modal-sticky.modal-sticky-bottom-end .modal-dialog .modal-content {
+    border: 0;
+    border-radius: 0.475rem;
+}
+.modal.modal-sticky.modal-sticky-bottom-end.modal-sticky-lg {
+    max-width: 600px;
+}
+.modal.modal-sticky.modal-sticky-bottom-end.modal-sticky-lg .modal-dialog {
+    max-width: 600px;
+}
+@media (max-width: 767.98px) {
+    .modal.modal-sticky.modal-sticky-bottom-end {
+        bottom: 10px;
+        right: 10px;
+        left: 10px;
+        width: auto;
+    }
+}
+.pulse {
+    position: relative;
+}
+.pulse.pulse-white .pulse-ring {
+    border-color: #fff;
+}
+.pulse.pulse-light .pulse-ring {
+    border-color: #f5f8fa;
+}
+.pulse.pulse-primary .pulse-ring {
+    border-color: #009ef7;
+}
+.pulse.pulse-secondary .pulse-ring {
+    border-color: #e4e6ef;
+}
+.pulse.pulse-success .pulse-ring {
+    border-color: #50cd89;
+}
+.pulse.pulse-info .pulse-ring {
+    border-color: #7239ea;
+}
+.pulse.pulse-warning .pulse-ring {
+    border-color: #ffc700;
+}
+.pulse.pulse-danger .pulse-ring {
+    border-color: #f1416c;
+}
+.pulse.pulse-dark .pulse-ring {
+    border-color: #181c32;
+}
+.pulse-ring {
+    display: block;
+    border-radius: 40px;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    animation: animation-pulse 3.5s ease-out;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #a1a5b7;
+}
+@keyframes animation-pulse {
+    0% {
+        -webkit-transform: scale(0.1, 0.1);
+        opacity: 0;
+    }
+    60% {
+        -webkit-transform: scale(0.1, 0.1);
+        opacity: 0;
+    }
+    65% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scale(1.2, 1.2);
+        opacity: 0;
+    }
+}
+
+.svg-icon {
+    line-height: 1;
+}
+.svg-icon svg {
+    height: 1.15rem;
+    width: 1.15rem;
+}
+.svg-icon svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #a1a5b7;
+}
+.svg-icon svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.svg-icon.svg-icon-white svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #fff;
+}
+.svg-icon.svg-icon-white svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.svg-icon.svg-icon-primary svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #009ef7;
+}
+.svg-icon.svg-icon-primary svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.svg-icon.svg-icon-secondary svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #e4e6ef;
+}
+.svg-icon.svg-icon-secondary svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.svg-icon.svg-icon-light svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #f5f8fa;
+}
+.svg-icon.svg-icon-light svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.svg-icon.svg-icon-success svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #50cd89;
+}
+.svg-icon.svg-icon-success svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.svg-icon.svg-icon-info svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #7239ea;
+}
+.svg-icon.svg-icon-info svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.svg-icon.svg-icon-warning svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #ffc700;
+}
+.svg-icon.svg-icon-warning svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.svg-icon.svg-icon-danger svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #f1416c;
+}
+.svg-icon.svg-icon-danger svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.svg-icon.svg-icon-dark svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #181c32;
+}
+.svg-icon.svg-icon-dark svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.svg-icon.svg-icon-muted svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #a1a5b7;
+}
+.svg-icon.svg-icon-muted svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.svg-icon.svg-icon-gray-100 svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #f5f8fa;
+}
+.svg-icon.svg-icon-gray-100 svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.svg-icon.svg-icon-gray-200 svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #eff2f5;
+}
+.svg-icon.svg-icon-gray-200 svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.svg-icon.svg-icon-gray-300 svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #e4e6ef;
+}
+.svg-icon.svg-icon-gray-300 svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.svg-icon.svg-icon-gray-400 svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #b5b5c3;
+}
+.svg-icon.svg-icon-gray-400 svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.svg-icon.svg-icon-gray-500 svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #a1a5b7;
+}
+.svg-icon.svg-icon-gray-500 svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.svg-icon.svg-icon-gray-600 svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #7e8299;
+}
+.svg-icon.svg-icon-gray-600 svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.svg-icon.svg-icon-gray-700 svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #5e6278;
+}
+.svg-icon.svg-icon-gray-700 svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.svg-icon.svg-icon-gray-800 svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #3f4254;
+}
+.svg-icon.svg-icon-gray-800 svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.svg-icon.svg-icon-gray-900 svg [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+    fill: #181c32;
+}
+.svg-icon.svg-icon-gray-900 svg:hover [fill]:not(.permanent):not(g) {
+    transition: fill 0.3s ease;
+}
+.svg-icon.svg-icon-1 svg {
+    height: 1.75rem !important;
+    width: 1.75rem !important;
+}
+.svg-icon.svg-icon-2 svg {
+    height: 1.5rem !important;
+    width: 1.5rem !important;
+}
+.svg-icon.svg-icon-3 svg {
+    height: 1.35rem !important;
+    width: 1.35rem !important;
+}
+.svg-icon.svg-icon-4 svg {
+    height: 1.25rem !important;
+    width: 1.25rem !important;
+}
+.svg-icon.svg-icon-5 svg {
+    height: 1.15rem !important;
+    width: 1.15rem !important;
+}
+.svg-icon.svg-icon-6 svg {
+    height: 1.075rem !important;
+    width: 1.075rem !important;
+}
+.svg-icon.svg-icon-7 svg {
+    height: 0.95rem !important;
+    width: 0.95rem !important;
+}
+.svg-icon.svg-icon-8 svg {
+    height: 0.85rem !important;
+    width: 0.85rem !important;
+}
+.svg-icon.svg-icon-9 svg {
+    height: 0.75rem !important;
+    width: 0.75rem !important;
+}
+.svg-icon.svg-icon-10 svg {
+    height: 0.5rem !important;
+    width: 0.5rem !important;
+}
+.svg-icon.svg-icon-base svg {
+    height: 1rem !important;
+    width: 1rem !important;
+}
+.svg-icon.svg-icon-fluid svg {
+    height: 100% !important;
+    width: 100% !important;
+}
+.svg-icon.svg-icon-2x svg {
+    height: 2rem !important;
+    width: 2rem !important;
+}
+.svg-icon.svg-icon-2qx svg {
+    height: 2.25rem !important;
+    width: 2.25rem !important;
+}
+.svg-icon.svg-icon-2hx svg {
+    height: 2.5rem !important;
+    width: 2.5rem !important;
+}
+.svg-icon.svg-icon-2tx svg {
+    height: 2.75rem !important;
+    width: 2.75rem !important;
+}
+.svg-icon.svg-icon-3x svg {
+    height: 3rem !important;
+    width: 3rem !important;
+}
+.svg-icon.svg-icon-3qx svg {
+    height: 3.25rem !important;
+    width: 3.25rem !important;
+}
+.svg-icon.svg-icon-3hx svg {
+    height: 3.5rem !important;
+    width: 3.5rem !important;
+}
+.svg-icon.svg-icon-3tx svg {
+    height: 3.75rem !important;
+    width: 3.75rem !important;
+}
+.svg-icon.svg-icon-4x svg {
+    height: 4rem !important;
+    width: 4rem !important;
+}
+.svg-icon.svg-icon-4qx svg {
+    height: 4.25rem !important;
+    width: 4.25rem !important;
+}
+.svg-icon.svg-icon-4hx svg {
+    height: 4.5rem !important;
+    width: 4.5rem !important;
+}
+.svg-icon.svg-icon-4tx svg {
+    height: 4.75rem !important;
+    width: 4.75rem !important;
+}
+.svg-icon.svg-icon-5x svg {
+    height: 5rem !important;
+    width: 5rem !important;
+}
+.svg-icon.svg-icon-5qx svg {
+    height: 5.25rem !important;
+    width: 5.25rem !important;
+}
+.svg-icon.svg-icon-5hx svg {
+    height: 5.5rem !important;
+    width: 5.5rem !important;
+}
+.svg-icon.svg-icon-5tx svg {
+    height: 5.75rem !important;
+    width: 5.75rem !important;
+}
+@media (min-width: 576px) {
+    .svg-icon.svg-icon-sm-1 svg {
+        height: 1.75rem !important;
+        width: 1.75rem !important;
+    }
+    .svg-icon.svg-icon-sm-2 svg {
+        height: 1.5rem !important;
+        width: 1.5rem !important;
+    }
+    .svg-icon.svg-icon-sm-3 svg {
+        height: 1.35rem !important;
+        width: 1.35rem !important;
+    }
+    .svg-icon.svg-icon-sm-4 svg {
+        height: 1.25rem !important;
+        width: 1.25rem !important;
+    }
+    .svg-icon.svg-icon-sm-5 svg {
+        height: 1.15rem !important;
+        width: 1.15rem !important;
+    }
+    .svg-icon.svg-icon-sm-6 svg {
+        height: 1.075rem !important;
+        width: 1.075rem !important;
+    }
+    .svg-icon.svg-icon-sm-7 svg {
+        height: 0.95rem !important;
+        width: 0.95rem !important;
+    }
+    .svg-icon.svg-icon-sm-8 svg {
+        height: 0.85rem !important;
+        width: 0.85rem !important;
+    }
+    .svg-icon.svg-icon-sm-9 svg {
+        height: 0.75rem !important;
+        width: 0.75rem !important;
+    }
+    .svg-icon.svg-icon-sm-10 svg {
+        height: 0.5rem !important;
+        width: 0.5rem !important;
+    }
+    .svg-icon.svg-icon-sm-base svg {
+        height: 1rem !important;
+        width: 1rem !important;
+    }
+    .svg-icon.svg-icon-sm-fluid svg {
+        height: 100% !important;
+        width: 100% !important;
+    }
+    .svg-icon.svg-icon-sm-2x svg {
+        height: 2rem !important;
+        width: 2rem !important;
+    }
+    .svg-icon.svg-icon-sm-2qx svg {
+        height: 2.25rem !important;
+        width: 2.25rem !important;
+    }
+    .svg-icon.svg-icon-sm-2hx svg {
+        height: 2.5rem !important;
+        width: 2.5rem !important;
+    }
+    .svg-icon.svg-icon-sm-2tx svg {
+        height: 2.75rem !important;
+        width: 2.75rem !important;
+    }
+    .svg-icon.svg-icon-sm-3x svg {
+        height: 3rem !important;
+        width: 3rem !important;
+    }
+    .svg-icon.svg-icon-sm-3qx svg {
+        height: 3.25rem !important;
+        width: 3.25rem !important;
+    }
+    .svg-icon.svg-icon-sm-3hx svg {
+        height: 3.5rem !important;
+        width: 3.5rem !important;
+    }
+    .svg-icon.svg-icon-sm-3tx svg {
+        height: 3.75rem !important;
+        width: 3.75rem !important;
+    }
+    .svg-icon.svg-icon-sm-4x svg {
+        height: 4rem !important;
+        width: 4rem !important;
+    }
+    .svg-icon.svg-icon-sm-4qx svg {
+        height: 4.25rem !important;
+        width: 4.25rem !important;
+    }
+    .svg-icon.svg-icon-sm-4hx svg {
+        height: 4.5rem !important;
+        width: 4.5rem !important;
+    }
+    .svg-icon.svg-icon-sm-4tx svg {
+        height: 4.75rem !important;
+        width: 4.75rem !important;
+    }
+    .svg-icon.svg-icon-sm-5x svg {
+        height: 5rem !important;
+        width: 5rem !important;
+    }
+    .svg-icon.svg-icon-sm-5qx svg {
+        height: 5.25rem !important;
+        width: 5.25rem !important;
+    }
+    .svg-icon.svg-icon-sm-5hx svg {
+        height: 5.5rem !important;
+        width: 5.5rem !important;
+    }
+    .svg-icon.svg-icon-sm-5tx svg {
+        height: 5.75rem !important;
+        width: 5.75rem !important;
+    }
+}
+@media (min-width: 768px) {
+    .svg-icon.svg-icon-md-1 svg {
+        height: 1.75rem !important;
+        width: 1.75rem !important;
+    }
+    .svg-icon.svg-icon-md-2 svg {
+        height: 1.5rem !important;
+        width: 1.5rem !important;
+    }
+    .svg-icon.svg-icon-md-3 svg {
+        height: 1.35rem !important;
+        width: 1.35rem !important;
+    }
+    .svg-icon.svg-icon-md-4 svg {
+        height: 1.25rem !important;
+        width: 1.25rem !important;
+    }
+    .svg-icon.svg-icon-md-5 svg {
+        height: 1.15rem !important;
+        width: 1.15rem !important;
+    }
+    .svg-icon.svg-icon-md-6 svg {
+        height: 1.075rem !important;
+        width: 1.075rem !important;
+    }
+    .svg-icon.svg-icon-md-7 svg {
+        height: 0.95rem !important;
+        width: 0.95rem !important;
+    }
+    .svg-icon.svg-icon-md-8 svg {
+        height: 0.85rem !important;
+        width: 0.85rem !important;
+    }
+    .svg-icon.svg-icon-md-9 svg {
+        height: 0.75rem !important;
+        width: 0.75rem !important;
+    }
+    .svg-icon.svg-icon-md-10 svg {
+        height: 0.5rem !important;
+        width: 0.5rem !important;
+    }
+    .svg-icon.svg-icon-md-base svg {
+        height: 1rem !important;
+        width: 1rem !important;
+    }
+    .svg-icon.svg-icon-md-fluid svg {
+        height: 100% !important;
+        width: 100% !important;
+    }
+    .svg-icon.svg-icon-md-2x svg {
+        height: 2rem !important;
+        width: 2rem !important;
+    }
+    .svg-icon.svg-icon-md-2qx svg {
+        height: 2.25rem !important;
+        width: 2.25rem !important;
+    }
+    .svg-icon.svg-icon-md-2hx svg {
+        height: 2.5rem !important;
+        width: 2.5rem !important;
+    }
+    .svg-icon.svg-icon-md-2tx svg {
+        height: 2.75rem !important;
+        width: 2.75rem !important;
+    }
+    .svg-icon.svg-icon-md-3x svg {
+        height: 3rem !important;
+        width: 3rem !important;
+    }
+    .svg-icon.svg-icon-md-3qx svg {
+        height: 3.25rem !important;
+        width: 3.25rem !important;
+    }
+    .svg-icon.svg-icon-md-3hx svg {
+        height: 3.5rem !important;
+        width: 3.5rem !important;
+    }
+    .svg-icon.svg-icon-md-3tx svg {
+        height: 3.75rem !important;
+        width: 3.75rem !important;
+    }
+    .svg-icon.svg-icon-md-4x svg {
+        height: 4rem !important;
+        width: 4rem !important;
+    }
+    .svg-icon.svg-icon-md-4qx svg {
+        height: 4.25rem !important;
+        width: 4.25rem !important;
+    }
+    .svg-icon.svg-icon-md-4hx svg {
+        height: 4.5rem !important;
+        width: 4.5rem !important;
+    }
+    .svg-icon.svg-icon-md-4tx svg {
+        height: 4.75rem !important;
+        width: 4.75rem !important;
+    }
+    .svg-icon.svg-icon-md-5x svg {
+        height: 5rem !important;
+        width: 5rem !important;
+    }
+    .svg-icon.svg-icon-md-5qx svg {
+        height: 5.25rem !important;
+        width: 5.25rem !important;
+    }
+    .svg-icon.svg-icon-md-5hx svg {
+        height: 5.5rem !important;
+        width: 5.5rem !important;
+    }
+    .svg-icon.svg-icon-md-5tx svg {
+        height: 5.75rem !important;
+        width: 5.75rem !important;
+    }
+}
+@media (min-width: 992px) {
+    .svg-icon.svg-icon-lg-1 svg {
+        height: 1.75rem !important;
+        width: 1.75rem !important;
+    }
+    .svg-icon.svg-icon-lg-2 svg {
+        height: 1.5rem !important;
+        width: 1.5rem !important;
+    }
+    .svg-icon.svg-icon-lg-3 svg {
+        height: 1.35rem !important;
+        width: 1.35rem !important;
+    }
+    .svg-icon.svg-icon-lg-4 svg {
+        height: 1.25rem !important;
+        width: 1.25rem !important;
+    }
+    .svg-icon.svg-icon-lg-5 svg {
+        height: 1.15rem !important;
+        width: 1.15rem !important;
+    }
+    .svg-icon.svg-icon-lg-6 svg {
+        height: 1.075rem !important;
+        width: 1.075rem !important;
+    }
+    .svg-icon.svg-icon-lg-7 svg {
+        height: 0.95rem !important;
+        width: 0.95rem !important;
+    }
+    .svg-icon.svg-icon-lg-8 svg {
+        height: 0.85rem !important;
+        width: 0.85rem !important;
+    }
+    .svg-icon.svg-icon-lg-9 svg {
+        height: 0.75rem !important;
+        width: 0.75rem !important;
+    }
+    .svg-icon.svg-icon-lg-10 svg {
+        height: 0.5rem !important;
+        width: 0.5rem !important;
+    }
+    .svg-icon.svg-icon-lg-base svg {
+        height: 1rem !important;
+        width: 1rem !important;
+    }
+    .svg-icon.svg-icon-lg-fluid svg {
+        height: 100% !important;
+        width: 100% !important;
+    }
+    .svg-icon.svg-icon-lg-2x svg {
+        height: 2rem !important;
+        width: 2rem !important;
+    }
+    .svg-icon.svg-icon-lg-2qx svg {
+        height: 2.25rem !important;
+        width: 2.25rem !important;
+    }
+    .svg-icon.svg-icon-lg-2hx svg {
+        height: 2.5rem !important;
+        width: 2.5rem !important;
+    }
+    .svg-icon.svg-icon-lg-2tx svg {
+        height: 2.75rem !important;
+        width: 2.75rem !important;
+    }
+    .svg-icon.svg-icon-lg-3x svg {
+        height: 3rem !important;
+        width: 3rem !important;
+    }
+    .svg-icon.svg-icon-lg-3qx svg {
+        height: 3.25rem !important;
+        width: 3.25rem !important;
+    }
+    .svg-icon.svg-icon-lg-3hx svg {
+        height: 3.5rem !important;
+        width: 3.5rem !important;
+    }
+    .svg-icon.svg-icon-lg-3tx svg {
+        height: 3.75rem !important;
+        width: 3.75rem !important;
+    }
+    .svg-icon.svg-icon-lg-4x svg {
+        height: 4rem !important;
+        width: 4rem !important;
+    }
+    .svg-icon.svg-icon-lg-4qx svg {
+        height: 4.25rem !important;
+        width: 4.25rem !important;
+    }
+    .svg-icon.svg-icon-lg-4hx svg {
+        height: 4.5rem !important;
+        width: 4.5rem !important;
+    }
+    .svg-icon.svg-icon-lg-4tx svg {
+        height: 4.75rem !important;
+        width: 4.75rem !important;
+    }
+    .svg-icon.svg-icon-lg-5x svg {
+        height: 5rem !important;
+        width: 5rem !important;
+    }
+    .svg-icon.svg-icon-lg-5qx svg {
+        height: 5.25rem !important;
+        width: 5.25rem !important;
+    }
+    .svg-icon.svg-icon-lg-5hx svg {
+        height: 5.5rem !important;
+        width: 5.5rem !important;
+    }
+    .svg-icon.svg-icon-lg-5tx svg {
+        height: 5.75rem !important;
+        width: 5.75rem !important;
+    }
+}
+@media (min-width: 1200px) {
+    .svg-icon.svg-icon-xl-1 svg {
+        height: 1.75rem !important;
+        width: 1.75rem !important;
+    }
+    .svg-icon.svg-icon-xl-2 svg {
+        height: 1.5rem !important;
+        width: 1.5rem !important;
+    }
+    .svg-icon.svg-icon-xl-3 svg {
+        height: 1.35rem !important;
+        width: 1.35rem !important;
+    }
+    .svg-icon.svg-icon-xl-4 svg {
+        height: 1.25rem !important;
+        width: 1.25rem !important;
+    }
+    .svg-icon.svg-icon-xl-5 svg {
+        height: 1.15rem !important;
+        width: 1.15rem !important;
+    }
+    .svg-icon.svg-icon-xl-6 svg {
+        height: 1.075rem !important;
+        width: 1.075rem !important;
+    }
+    .svg-icon.svg-icon-xl-7 svg {
+        height: 0.95rem !important;
+        width: 0.95rem !important;
+    }
+    .svg-icon.svg-icon-xl-8 svg {
+        height: 0.85rem !important;
+        width: 0.85rem !important;
+    }
+    .svg-icon.svg-icon-xl-9 svg {
+        height: 0.75rem !important;
+        width: 0.75rem !important;
+    }
+    .svg-icon.svg-icon-xl-10 svg {
+        height: 0.5rem !important;
+        width: 0.5rem !important;
+    }
+    .svg-icon.svg-icon-xl-base svg {
+        height: 1rem !important;
+        width: 1rem !important;
+    }
+    .svg-icon.svg-icon-xl-fluid svg {
+        height: 100% !important;
+        width: 100% !important;
+    }
+    .svg-icon.svg-icon-xl-2x svg {
+        height: 2rem !important;
+        width: 2rem !important;
+    }
+    .svg-icon.svg-icon-xl-2qx svg {
+        height: 2.25rem !important;
+        width: 2.25rem !important;
+    }
+    .svg-icon.svg-icon-xl-2hx svg {
+        height: 2.5rem !important;
+        width: 2.5rem !important;
+    }
+    .svg-icon.svg-icon-xl-2tx svg {
+        height: 2.75rem !important;
+        width: 2.75rem !important;
+    }
+    .svg-icon.svg-icon-xl-3x svg {
+        height: 3rem !important;
+        width: 3rem !important;
+    }
+    .svg-icon.svg-icon-xl-3qx svg {
+        height: 3.25rem !important;
+        width: 3.25rem !important;
+    }
+    .svg-icon.svg-icon-xl-3hx svg {
+        height: 3.5rem !important;
+        width: 3.5rem !important;
+    }
+    .svg-icon.svg-icon-xl-3tx svg {
+        height: 3.75rem !important;
+        width: 3.75rem !important;
+    }
+    .svg-icon.svg-icon-xl-4x svg {
+        height: 4rem !important;
+        width: 4rem !important;
+    }
+    .svg-icon.svg-icon-xl-4qx svg {
+        height: 4.25rem !important;
+        width: 4.25rem !important;
+    }
+    .svg-icon.svg-icon-xl-4hx svg {
+        height: 4.5rem !important;
+        width: 4.5rem !important;
+    }
+    .svg-icon.svg-icon-xl-4tx svg {
+        height: 4.75rem !important;
+        width: 4.75rem !important;
+    }
+    .svg-icon.svg-icon-xl-5x svg {
+        height: 5rem !important;
+        width: 5rem !important;
+    }
+    .svg-icon.svg-icon-xl-5qx svg {
+        height: 5.25rem !important;
+        width: 5.25rem !important;
+    }
+    .svg-icon.svg-icon-xl-5hx svg {
+        height: 5.5rem !important;
+        width: 5.5rem !important;
+    }
+    .svg-icon.svg-icon-xl-5tx svg {
+        height: 5.75rem !important;
+        width: 5.75rem !important;
+    }
+}
+@media (min-width: 1400px) {
+    .svg-icon.svg-icon-xxl-1 svg {
+        height: 1.75rem !important;
+        width: 1.75rem !important;
+    }
+    .svg-icon.svg-icon-xxl-2 svg {
+        height: 1.5rem !important;
+        width: 1.5rem !important;
+    }
+    .svg-icon.svg-icon-xxl-3 svg {
+        height: 1.35rem !important;
+        width: 1.35rem !important;
+    }
+    .svg-icon.svg-icon-xxl-4 svg {
+        height: 1.25rem !important;
+        width: 1.25rem !important;
+    }
+    .svg-icon.svg-icon-xxl-5 svg {
+        height: 1.15rem !important;
+        width: 1.15rem !important;
+    }
+    .svg-icon.svg-icon-xxl-6 svg {
+        height: 1.075rem !important;
+        width: 1.075rem !important;
+    }
+    .svg-icon.svg-icon-xxl-7 svg {
+        height: 0.95rem !important;
+        width: 0.95rem !important;
+    }
+    .svg-icon.svg-icon-xxl-8 svg {
+        height: 0.85rem !important;
+        width: 0.85rem !important;
+    }
+    .svg-icon.svg-icon-xxl-9 svg {
+        height: 0.75rem !important;
+        width: 0.75rem !important;
+    }
+    .svg-icon.svg-icon-xxl-10 svg {
+        height: 0.5rem !important;
+        width: 0.5rem !important;
+    }
+    .svg-icon.svg-icon-xxl-base svg {
+        height: 1rem !important;
+        width: 1rem !important;
+    }
+    .svg-icon.svg-icon-xxl-fluid svg {
+        height: 100% !important;
+        width: 100% !important;
+    }
+    .svg-icon.svg-icon-xxl-2x svg {
+        height: 2rem !important;
+        width: 2rem !important;
+    }
+    .svg-icon.svg-icon-xxl-2qx svg {
+        height: 2.25rem !important;
+        width: 2.25rem !important;
+    }
+    .svg-icon.svg-icon-xxl-2hx svg {
+        height: 2.5rem !important;
+        width: 2.5rem !important;
+    }
+    .svg-icon.svg-icon-xxl-2tx svg {
+        height: 2.75rem !important;
+        width: 2.75rem !important;
+    }
+    .svg-icon.svg-icon-xxl-3x svg {
+        height: 3rem !important;
+        width: 3rem !important;
+    }
+    .svg-icon.svg-icon-xxl-3qx svg {
+        height: 3.25rem !important;
+        width: 3.25rem !important;
+    }
+    .svg-icon.svg-icon-xxl-3hx svg {
+        height: 3.5rem !important;
+        width: 3.5rem !important;
+    }
+    .svg-icon.svg-icon-xxl-3tx svg {
+        height: 3.75rem !important;
+        width: 3.75rem !important;
+    }
+    .svg-icon.svg-icon-xxl-4x svg {
+        height: 4rem !important;
+        width: 4rem !important;
+    }
+    .svg-icon.svg-icon-xxl-4qx svg {
+        height: 4.25rem !important;
+        width: 4.25rem !important;
+    }
+    .svg-icon.svg-icon-xxl-4hx svg {
+        height: 4.5rem !important;
+        width: 4.5rem !important;
+    }
+    .svg-icon.svg-icon-xxl-4tx svg {
+        height: 4.75rem !important;
+        width: 4.75rem !important;
+    }
+    .svg-icon.svg-icon-xxl-5x svg {
+        height: 5rem !important;
+        width: 5rem !important;
+    }
+    .svg-icon.svg-icon-xxl-5qx svg {
+        height: 5.25rem !important;
+        width: 5.25rem !important;
+    }
+    .svg-icon.svg-icon-xxl-5hx svg {
+        height: 5.5rem !important;
+        width: 5.5rem !important;
+    }
+    .svg-icon.svg-icon-xxl-5tx svg {
+        height: 5.75rem !important;
+        width: 5.75rem !important;
+    }
+}
+.timeline .timeline-item {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: flex-start;
+}
+.timeline .timeline-item:last-child .timeline-line {
+    bottom: 100%;
+}
+.timeline .timeline-line {
+    display: block;
+    content: " ";
+    justify-content: center;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transform: translate(50%);
+    border-left-width: 1px;
+    border-left-style: dashed;
+    border-left-color: #e4e6ef;
+}
+.timeline .timeline-icon {
+    z-index: 1;
+    flex-shrink: 0;
+    margin-right: 1rem;
+}
+.timeline .timeline-content {
+    width: 100%;
+    overflow: auto;
+    margin-bottom: 1.5rem;
+}
+.timeline.timeline-center .timeline-item {
+    align-items: center;
+}
+.timeline.timeline-center .timeline-item:first-child .timeline-line {
+    top: 50%;
+}
+.timeline.timeline-center .timeline-item:last-child .timeline-line {
+    bottom: 50%;
+}
+.overlay {
+    position: relative;
+}
+.overlay .overlay-layer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+.overlay.overlay-block .overlay-layer,
+.overlay.overlay-show .overlay-layer,
+.overlay:hover .overlay-layer {
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+.overlay.overlay-block {
+    cursor: wait;
+}
+
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+.modal-footer {
+    display: none;
+}
+
+.prev_modal {
+    display: flex;
+}
+
+.prev_modal .select_box {
+    width: 100%;
+}
+
+.prev_modal .select_box > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.prev_modal .select_box div:last-child {
+    margin-bottom: 0;
+}
+
+.prev_modal .select_box div select {
+    width: 200px;
+    margin-bottom: 0px;
+    margin-left: auto;
+}
+
+.prev_modal .button_wrapper {
+    width: 100px;
+    flex-shrink: 0;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.prev_modal .button_wrapper button {
+    width: 100px;
+    padding: 7px;
+    border: 1px solid #A6C0E1;
+    background: #CFE1F9;
+    color: #000;
+    font-weight: 500;
+}
+
+.modal-header {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.modal-dialog-1110 {
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+.prev_modal_content {
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.prev_modal_content .fw-bolder {
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+.time_picker {
+    display: block !important;
+}
+
+.select_wrapper {
+    margin-top: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+    .select_wrapper {
+        margin-top: 20px;
+    }
+}
+
+.select_wrapper > div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.select_wrapper > div label {
+    width: 125px;
+    flex-shrink: 0;
+}
+
+.select_wrapper > div select {
+    /* max-width: 100%; */
+    flex-shrink: 0;
+}
+
+.next_modal_action_buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.next_modal_action_buttons button {
+}
+
+.next_modal_action_buttons button {
+    padding: 5px 10px;
+    background: #CFE1F9;
+    margin: 10px 0;
+    color: #000;
+    border-radius: 5px;
+    border: 1px solid #809CC7;
+}
+
+.goto_mongol {
+    position: absolute;
+    top: -9999999px;
+}
+
+.font-15 {
+    font-size: 15px !important;
+}
+/* .flatpickr-calendar {
+    left: 0 !important;
+} */
+#kt_modal_delete .modal-content{
+    padding: 20px;
+}
+#kt_modal_delete .modal-content .fw-bolder {
+    margin-bottom: 15px;
+}
+
+#kt_modal_delete .modal-content .delete_submit {
+    max-width: 102px;
+    margin-top: 20px;
+}
+div#event_lists {
+    margin-top: 17px;
+    height: 100px;
+    overflow: hidden;
+    overflow-y: scroll;
+    border: 1px solid #7f7c7c;
+    padding: 20px;
+}
+div#event_lists input {
+    margin-right: 10px;
+}
+div#event_lists br {
+    margin: 5px;
+}
+#kt_modal_add_event_prev .modal-content{
+    padding-top: 20px;
+}
+#kt_modal_add_event_prev .modal-content .fw-bolder {
+    padding-left: 30px;
+}
+.next_modal_content {
+    max-width: 100% !important;
+    width: 90% !important;
+    margin: 0 auto !important;
+}
+.modal-body .fv-row.mb-9 {
+    width: 100%;
+}
+.select_wrapper > div select {
+    flex-shrink: unset;
+    width: 100%;
+}
+
+.select_wrapper > div .select_group {
+    width: 100%;
+    display: flex;
+}
+
+.total_hrs {
+    border: 1px solid;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.week_lists {
+    display: none;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.week_lists div {
+    display: flex;
+    align-items: center;
+}
+
+.week_lists div label {
+    margin: 0 !important;
+    margin-left: 10px !important;
+    /*margin-top: 5px !important;*/
+}
+.hq_section {
+    display: none;
+}
+
+@media only screen and (max-width: 767px) {
+    .next_modal_action_buttons {
+        flex-direction: row;
+        gap: 15px;
+        justify-content: center;
+    }
+}
+
+.fc-h-event-started{
+    border: 1px solid #0762bb !important;
+    background-color: #0762bb !important;
+    color: #fff !important;
+}
+.fc-h-event-started:hover{
+    border: 1px solid #0762bb !important;
+    background-color: #0762bb !important;
+    color: #fff !important;
+}
+.fc-h-event-scheduled{
+    border: 1px solid #d9d907 !important;
+    background-color: #d9d907 !important;
+    color: #fff !important;
+}
+.fc-h-event-scheduled:hover{
+    border: 1px solid #d9d907 !important;
+    background-color: #d9d907 !important;
+    color: #fff !important;
+}
+.fc-h-event-open_shift{
+    border: 1px solid #4b7e4b !important;
+    background-color: #4b7e4b !important;
+    color: #fff !important;
+}
+.fc-h-event-open_shift:hover{
+    border: 1px solid #4b7e4b !important;
+    background-color: #4b7e4b !important;
+    color: #fff !important;
+}
+.fc-h-event-no_show{
+    border: 1px solid red !important;
+    background-color: red !important;
+    color: #fff !important;
+}
+.fc-h-event-no_show:hover{
+    border: 1px solid red !important;
+    background-color: red !important;
+    color: #fff !important;
+}
+.fc-h-event-on_hold{
+    border: 1px solid #ff10b6 !important;
+    background-color: #ff10b6 !important;
+    color: #fff !important;
+}
+.fc-h-event-on_hold:hover{
+    border: 1px solid #ff10b6 !important;
+    background-color: #ff10b6 !important;
+    color: #fff !important;
+}
+.fc-h-event-hospitalization{
+    border: 1px solid #7c78af !important;
+    background-color: #7c78af !important;
+    color: #fff !important;
+}
+.fc-h-event-hospitalization:hover{
+    border: 1px solid #7c78af !important;
+    background-color: #7c78af !important;
+    color: #fff !important;
+}
+.fc-h-event-completed{
+    border: 1px solid #bb08bb !important;
+    background-color: #bb08bb !important;
+    color: #fff !important;
+}
+.fc-h-event-completed:hover{
+    border: 1px solid #bb08bb !important;
+    background-color: #bb08bb !important;
+    color: #fff !important;
+}
+.notes-form {
+    border: 2px solid #888;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0px;
+  }
+  .notes h1 {
+    margin: 20px 0px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  .notes-form form input, select {
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  .notes-form form label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .notes-form h3 {
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+  .form-item [type="checkbox"] {
+    width: 10px;
+  }
+  .form-item [type="radio"] {
+    background-color: #eee;
+    width: 5px !important;
+    height: 5px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .details, .logos {
+    margin: 20px 0px;
+    padding: 20px;
+    background-color: #f8f6f0;
+    border-radius: 10px;
+  }
+
+  .activity-btn {
+    background-color: #fff;
+    margin-top: 20px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-weight: 800;
+  }
+  .notes-tab-btns{
+    text-align: center;
+  }
+
+  .notes-tab-btns .save-btn, .exit-btn{
+      margin-top: 20px;
+      padding: 15px 20px;
+      border-radius: 10px;
+      font-weight: 800;
+      background-color: #3788d8;
+      color: #fff;
+      margin-right: 20px;
+  }
+  .form-floating > .form-control {
+    padding: 4rem 1rem;
+  }

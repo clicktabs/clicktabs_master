@@ -1,0 +1,149 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('nursingassessments3', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('nursingassessments_id')->nullable();
+            $table->boolean('Continent_1')->nullable();
+            $table->boolean('Continent_2')->nullable();
+            $table->boolean('occasionallyIncontinen_1')->nullable();
+            $table->boolean('occasionallyIncontinen_2')->nullable();
+            $table->boolean('Incontinent_1')->nullable();
+            $table->boolean('Incontinent_2')->nullable();
+            $table->boolean('Decubitus')->nullable();
+            $table->boolean('Dressings')->nullable();
+            $table->boolean('dressingsSterile')->nullable();
+            $table->boolean('Enema')->nullable();
+            $table->boolean('Catheter')->nullable();
+            $table->boolean('Monitor')->nullable();
+            $table->boolean('tubeFeeding')->nullable();
+            $table->boolean('tubeIrrigation')->nullable();
+            $table->boolean('Suctioning')->nullable();
+            $table->boolean('Oxygen')->nullable();
+            $table->boolean('bloodTests')->nullable();
+            $table->boolean('Ambulation')->nullable();
+            $table->boolean('rehabilitativeTherapy')->nullable();
+            $table->boolean('physicalTherapy')->nullable();
+            $table->boolean('ambulateInside_1')->nullable();
+            $table->boolean('ambulateInside_2')->nullable();
+            $table->boolean('ambulateInside_3')->nullable();
+            $table->boolean('ambulateInside_4')->nullable();
+            $table->boolean('ambulateInside_5')->nullable();
+            $table->boolean('ambulateInside_6')->nullable();
+            $table->boolean('ambulateOutside_1')->nullable();
+            $table->boolean('ambulateOutside_2')->nullable();
+            $table->boolean('ambulateOutside_3')->nullable();
+            $table->boolean('ambulateOutside_4')->nullable();
+            $table->boolean('ambulateOutside_5')->nullable();
+            $table->boolean('ambulateOutside_6')->nullable();
+            $table->boolean('seatedPosition_1')->nullable();
+            $table->boolean('seatedPosition_2')->nullable();
+            $table->boolean('seatedPosition_3')->nullable();
+            $table->boolean('seatedPosition_4')->nullable();
+            $table->boolean('seatedPosition_5')->nullable();
+            $table->boolean('seatedPosition_6')->nullable();
+            $table->boolean('fromBed_1')->nullable();
+            $table->boolean('fromBed_2')->nullable();
+            $table->boolean('fromBed_3')->nullable();
+            $table->boolean('fromBed_4')->nullable();
+            $table->boolean('fromBed_5')->nullable();
+            $table->boolean('fromBed_6')->nullable();
+            $table->boolean('Commode_1')->nullable();
+            $table->boolean('Commode_2')->nullable();
+            $table->boolean('Commode_3')->nullable();
+            $table->boolean('Commode_4')->nullable();
+            $table->boolean('Commode_5')->nullable();
+            $table->boolean('Commode_6')->nullable();
+            $table->boolean('Wheelchair_1')->nullable();
+            $table->boolean('Wheelchair_2')->nullable();
+            $table->boolean('Wheelchair_3')->nullable();
+            $table->boolean('Wheelchair_4')->nullable();
+            $table->boolean('Wheelchair_5')->nullable();
+            $table->boolean('Wheelchair_6')->nullable();
+            $table->boolean('Grooming_1')->nullable();
+            $table->boolean('Grooming_2')->nullable();
+            $table->boolean('Grooming_3')->nullable();
+            $table->boolean('Dressing_1')->nullable();
+            $table->boolean('Dressing_2')->nullable();
+            $table->boolean('Dressing_3')->nullable();
+            $table->boolean('Washing_1')->nullable();
+            $table->boolean('Washing_2')->nullable();
+            $table->boolean('Washing_3')->nullable();
+            $table->boolean('Bathing_1')->nullable();
+            $table->boolean('Bathing_2')->nullable();
+            $table->boolean('Bathing_3')->nullable();
+            $table->boolean('Feeding_1')->nullable();
+            $table->boolean('Feeding_2')->nullable();
+            $table->boolean('Feeding_3')->nullable();
+            $table->boolean('mealPrep_1')->nullable();
+            $table->boolean('mealPrep_2')->nullable();
+            $table->boolean('mealPrep_3')->nullable();
+            $table->boolean('reheatMeals_1')->nullable();
+            $table->boolean('reheatMeals_2')->nullable();
+            $table->boolean('reheatMeals_3')->nullable();
+            $table->boolean('Bathroom_1')->nullable();
+            $table->boolean('Bathroom_2')->nullable();
+            $table->boolean('Bathroom_3')->nullable();
+            $table->boolean('bedpan_1')->nullable();
+            $table->boolean('bedpan_2')->nullable();
+            $table->boolean('bedpan_3')->nullable();
+            $table->boolean('Commode_11')->nullable();
+            $table->boolean('Commode_12')->nullable();
+            $table->boolean('Commode_13')->nullable();
+            $table->boolean('Catheter_1')->nullable();
+            $table->boolean('Catheter_2')->nullable();
+            $table->boolean('Catheter_3')->nullable();
+            $table->boolean('Laundry_1')->nullable();
+            $table->boolean('Laundry_2')->nullable();
+            $table->boolean('Laundry_3')->nullable();
+            $table->boolean('Shopping_1')->nullable();
+            $table->boolean('Shopping_2')->nullable();
+            $table->boolean('Shopping_3')->nullable();
+            $table->boolean('Housecleaning_1')->nullable();
+            $table->boolean('Housecleaning_2')->nullable();
+            $table->boolean('Housecleaning_3')->nullable();
+            $table->string('observationOfPatient')->nullable();
+            $table->string('relayed')->nullable();
+            $table->string('Prepared')->nullable();
+            $table->string('preparedPhone')->nullable();
+            $table->string('Affiliation')->nullable();
+            $table->string('fax')->nullable();
+            $table->string('Signature')->nullable();
+            $table->string('signatureDate')->nullable();
+            $table->string('agencyServicesToPatient')->nullable();
+            $table->string('agencyName')->nullable();
+            $table->string('Services2')->nullable();
+            $table->string('insuranceBenefits')->nullable();
+            $table->string('appliedToMedicaid')->nullable();
+            $table->boolean('Doctor')->nullable();
+            $table->boolean('socialWorker')->nullable();
+            $table->boolean('dischargePlanner')->nullable();
+            $table->string('Location')->nullable();
+            $table->string('otherlocation')->nullable();
+            $table->string('pleaseExplain')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('nursingassessments3');
+    }
+};
