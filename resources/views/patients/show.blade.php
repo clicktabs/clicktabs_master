@@ -13,7 +13,7 @@
         }
 
         .dataTables_length label select {
-            width: 100px;
+            width: 100px;  
         }
 
         table.dataTable > tbody > tr.child ul.dtr-details {

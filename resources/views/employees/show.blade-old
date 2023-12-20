@@ -48,217 +48,60 @@
                         <img src="{{asset('assets/images/logo.png')}}"/>
                     </div>
                     <div class="header_content">
-                        <p class="display-4 text-white text--certer" style="font-size: 1.2em;"> {{$employee->first_name}} {{$employee->last_name}} @ <span style="font-size: 1.6em;">{{ Auth::user()->organization->name }} </span> 
+                        <p class="display-4 text-white text--certer" style="font-size: 1.2em;"> {{$employee->first_name}} {{$employee->last_name}} @ <span style="font-size: 1.6em;">{{ Auth::user()->organization->name }} </span>
                     </div>
                 </div>
-                <div class="main_wrapper">  
+                <div class="main_wrapper">
                     <div class="container-full">
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="main_content">
                                     <div id="tabs">
                                         <div class="main_content_nav">
-                                            <ul>
-                                                <li><a href="#main">Main</a></li>
-{{--                                                <li><a href="#activities">Activities</a></li>--}}
-                                                <li><a href="#pay-rates">Pay Rates</a></li>
-                                                <li><a href="#billing-code">Billing Code</a></li>
-                                                <li><a href="#expirations">Expirations</a></li>
-{{--                                                <li><a href="#matching">Matching</a></li>--}}
-{{--                                                <li><a href="#attachment">Attachment</a></li>--}}
-{{--                                                <li><a href="#signature">Signature</a></li>--}}
-                                            </ul>
+                                            @include('employees.hrsection')
                                         </div>
                                         <div id="main">
-                                            <div class="patient_info">
-                                                <div class="patient_info_wrapper">
-                                                    <div class="container-fluid">
-                                                        <div class="row">
-                                                            <div class="col-lg-2 col-md-2">
-                                                                <div class="patient_image">
-                                                                    @if($employee->photo && file_exists(public_path('employee/' . $employee->photo)))
-                                                                        <img
-                                                                            src="{{ asset('employee/'.$employee->photo) }}">
-                                                                    @else
-                                                                        <img src="{{ asset('employee/avatar.svg') }}">
-                                                                    @endif
-                                                                </div>
+                                            @include('employees.employee-information')
+                                            @include('employees.tasksection')
+                                        </div>
+                                        @include('employees.signaturePad')
+                                        {{-- <div id="signature" class="mt-[30px]">
+                                            <div class="bg-white bd rounded-sm rc">
+                                                <div class="row p-3">
+                                                    <div class="col-md-6">
+                                                        <div class="signature-container">
+                                                            <div>
+                                                                <canvas id="signatureCanvas" width="400" height="200" style="border: 2px solid black"></canvas>
                                                             </div>
-                                                            <div class="col-lg-10 col-md-10">
-                                                                <div class="row h-full">
-                                                                    <div class="col-lg-6">
-                                                                        <div class="patient_info_content">
-                                                                            <div
-                                                                                class="patient_info_content_header d-flex align-items-center">
-                                                                                <h1>{{$employee->first_name}}
-                                                                                    , {{$employee->last_name}}</h1>
-                                                                            </div>
-                                                                            <div
-                                                                                class="patient_info_table table-responsive">
-                                                                                <table>
-                                                                                    <tbody>
-                                                                                    <tr>
-                                                                                        <td>Employee ID:</td>
-                                                                                        <td>{{$employee->employee_id}}</td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <td>Birthday:</td>
-                                                                                        <td>{{ \Carbon\Carbon::parse($employee->dob)->format('M d, Y') }}</td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <td>Hire Date:</td>
-                                                                                        <td>{{ \Carbon\Carbon::parse($employee->doh)->format('M d, Y') }}</td>
-                                                                                    </tr>
-                                                                                    <tr>
-                                                                                        <td>Employment Status:</td>
-                                                                                        <td>@if($employee->status == 1)
-                                                                                                employee
-                                                                                            @else
-                                                                                                ex employee
-                                                                                            @endif
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                    </tbody>
-                                                                                </table>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-lg-6">
-                                                                        <div class="map_wrapper">
-                                                                            <div id="map"></div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                            <br>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="password" class="label">Password:</label>
+                                                            <input type="password" class="form-control" id="passwordq" placeholder="Enter password">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="pin" class="label">PIN:</label>
+                                                            <input type="password" class="form-control" id="pin" placeholder="Enter PIN">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="confirmPin" class="label">Confirm PIN:</label>
+                                                            <input type="password" class="form-control" id="confirmPin" placeholder="Confirm PIN">
+                                                        </div>
+                                                        <div class="button-container mt-3">
+                                                            <button id="saveButton" data-signature-upload-route="{{ route('signatures.upload') }}" class="btn ho xi ye">Save</button>
+                                                            <button id="clearButton" class="btn btn-danger">Clear</button>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div> --}}
 
-                                            <div class="patient_status_table pb-5 !px-[15px]" style="margin-top: -4em;">
-                                                <div class="patient_table">
-                                                    <table class="table-responsive display nowrap" style="width:100%" id="taskTableList">
-                                                        <thead class=" text-[#fff] bg-[#4133BF]">
-                                                        <tr>
-                                                            <th>Task</th>
-                                                            <th>Schedule Date</th>
-                                                            <th>Assigned By</th>
-                                                            <th>Status</th>
-                                                            <th class="text-center">Actions</th>
-                                                        </tr>
-                                                        </thead>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-{{--                                        <div id="activities" class="mt-[30px]">--}}
-{{--                                            <table id="activities_table" class="pt-[30px]">--}}
-{{--                                                <thead class="bg-[#4133BF] text-[#fff]">--}}
-{{--                                                <tr>--}}
-{{--                                                    <th>Start Time</th>--}}
-{{--                                                    <th>Notes</th>--}}
-{{--                                                    <th>Type</th>--}}
-{{--                                                    <th>End Time</th>--}}
-{{--                                                    <th>Share Level</th>--}}
-{{--                                                    <th>Modified On</th>--}}
-{{--                                                    <th>Modified By</th>--}}
-{{--                                                    <th>Created On</th>--}}
-{{--                                                    <th>Created By</th>--}}
-{{--                                                    <th>Action</th>--}}
-{{--                                                </tr>--}}
-{{--                                                </thead>--}}
-{{--                                                <tbody>--}}
-{{--                                                @foreach($employee->activities as $activity)--}}
-{{--                                                    <tr>--}}
-{{--                                                        <td>--}}
-{{--                                                            10/04/23 7:22PM--}}
-{{--                                                        </td>--}}
-{{--                                                        <td>--}}
-{{--                                                            Notes--}}
-{{--                                                        </td>--}}
-{{--                                                        <td>--}}
-{{--                                                            Communication--}}
-{{--                                                        </td>--}}
-{{--                                                        <td>--}}
-{{--                                                            10/04/23 7:30PM--}}
-{{--                                                        </td>--}}
-{{--                                                        <td>--}}
-{{--                                                            Everyone--}}
-{{--                                                        </td>--}}
-{{--                                                        <td>--}}
-{{--                                                            {{$activity->created_at}}--}}
-{{--                                                        </td>--}}
-{{--                                                        <td>--}}
-{{--                                                            Nana--}}
-{{--                                                        </td>--}}
-{{--                                                        <td>--}}
-{{--                                                            {{$activity->updated_at}}--}}
-{{--                                                        </td>--}}
-{{--                                                        <td>--}}
-{{--                                                            Nana--}}
-{{--                                                        </td>--}}
-{{--                                                        <td>--}}
-{{--                                                            <a href="#" class="btn btn-primary">Edit</a>--}}
-{{--                                                            <form id="activity-form"--}}
-{{--                                                                  action="{{ route('employee-activities.destroy', $activity->id) }}"--}}
-{{--                                                                  method="POST">--}}
-{{--                                                                @csrf--}}
-{{--                                                                @method('DELETE')--}}
-{{--                                                                <button type="submit" class="btn btn-danger">Delete</button>--}}
-{{--                                                            </form>--}}
-{{--                                                        </td>--}}
-{{--                                                    </tr>--}}
-{{--                                                @endforeach--}}
-{{--                                                </tbody>--}}
-{{--                                            </table>--}}
-{{--                                        </div>--}}
-{{--                                        <div id="activitiesModal" class="max-w-[450px]">--}}
-{{--                                            <form>--}}
-{{--                                                <div class="row">--}}
-{{--                                                    <div class="col-md-6">--}}
-{{--                                                        <label for="start_time">Start Time</label>--}}
-{{--                                                        <input type="datetime-local" name="start_time" id="start_time"/>--}}
-{{--                                                    </div>--}}
-{{--                                                    <div class="col-md-6">--}}
-{{--                                                        <label for="activities_type">Type</label>--}}
-{{--                                                        <select class="form-control" id="activities_type"--}}
-{{--                                                                name="activities_type">--}}
-{{--                                                            <option>Communication</option>--}}
-{{--                                                            <option>Communication</option>--}}
-{{--                                                            <option>Communication</option>--}}
-{{--                                                        </select>--}}
-{{--                                                    </div>--}}
-{{--                                                </div>--}}
-{{--                                                <div class="row">--}}
-{{--                                                    <div class="col-md-6">--}}
-{{--                                                        <label for="end_time">End Time</label>--}}
-{{--                                                        <input type="datetime-local" name="end_time" id="end_time"/>--}}
-{{--                                                    </div>--}}
-{{--                                                    <div class="col-md-6">--}}
-{{--                                                        <label for="activities_share_level">Share level</label>--}}
-{{--                                                        <select class="form-control" id="activities_share_level"--}}
-{{--                                                                name="activities_share_level">--}}
-{{--                                                            <option>Client name</option>--}}
-{{--                                                            <option>Client name</option>--}}
-{{--                                                            <option>Client name</option>--}}
-{{--                                                        </select>--}}
-{{--                                                    </div>--}}
-{{--                                                </div>--}}
-{{--                                                <div class="row">--}}
-{{--                                                    <div class="col-md-12">--}}
-{{--                                                        <label for="activities_notes">Notes</label>--}}
-{{--                                                        <textarea id="activities_notes" name="activities_notes" cols="5"--}}
-{{--                                                                  class="form-control"></textarea>--}}
-{{--                                                    </div>--}}
-{{--                                                </div>--}}
-{{--                                                <button type="button" class="btn btn-primary">Save</button>--}}
-{{--                                            </form>--}}
-{{--                                        </div>--}}
-                                        @include('employees.components.pay_rate', ['employee' => $employee, 'pay_type' => $pay_type, 'billing_code' => $billing_code, 'employee_pays' => $employee_pays, 'service_code' => $service_code])
+                                        {{-- @include('employees.components.pay_rate', ['employee' => $employee, 'pay_type' => $pay_type, 'billing_code' => $billing_code, 'employee_pays' => $employee_pays, 'service_code' => $service_code])
                                         @include('employees.components.billing_code', ['billing_code' => $billing_code, 'employee_bills' => array()])
-                                        @include('employees.components.expiration', ['employee' => $employee, 'docs'=> $docs])
-{{--                                        @include('employees.components.matching', ['employee' => $employee, 'caregivers'=> $caregivers])--}}
-{{--                                        @include('employees.components.attachment', ['employee' => $employee, 'caregivers'=> $caregivers])--}}
+                                        @include('employees.components.expiration', ['employee' => $employee, 'docs'=> $docs]) --}}
+
                                     </div>
                                 </div>
                             </div>
@@ -283,6 +126,134 @@
     <script src="{{asset('assets/js/leaflet-maplibre-gl.js')}}"></script>
     <script src="{{asset('assets/js/dataTables.buttons.min.js')}}"></script>
     <script src="{{asset('assets/js/jquery-ui.js')}}"></script>
+    <script src="https://unpkg.com/signature_pad"></script>
+
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    jQuery('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
+                    jQuery('#imagePreview').hide();
+                    jQuery('#imagePreview').fadeIn(650);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        jQuery("#imageUpload").change(function () {
+            readURL(this);
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        var canvas = document.getElementById('signatureCanvas');
+        var signaturePad = new SignaturePad(canvas);
+
+        document.getElementById('saveButton').addEventListener('click', function () {
+            var signatureData = signaturePad.toDataURL();
+            var password = document.getElementById('passwordq').value;
+            var pin = document.getElementById('pin').value;
+            var confirmPin = document.getElementById('confirmPin').value;
+            var signatureUploadRoute = this.getAttribute('data-signature-upload-route');
+
+            // Send the signatureData, password, and pin to the server for saving to the database
+            fetch(signatureUploadRoute, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                },
+                body: JSON.stringify({
+                    signatureImage: signatureData,
+                    password: password,
+                    pin: pin,
+                    confirmPin: confirmPin
+                })
+            })
+                .then(function (response) {
+                    if (response.ok) {
+                        return response.json(); // Parse the response JSON
+                    } else {
+                        throw new Error('Failed to save the signature.');
+                    }
+                })
+                .then(function (data) {
+                if (data.success) {
+                    console.log('Signature saved successfully!');
+                    toastr.success(data.success);
+                    signaturePad.clear();
+                    document.getElementById('passwordq').value = '';
+                    document.getElementById('pin').value = ''; // Clear pin field
+                    document.getElementById('confirmPin').value = '';
+                } else if (data.danger) {
+                    console.error(data.danger);
+                    toastr.error(data.danger);
+                }
+            })
+                .catch(function (error) {
+                    console.error('Failed to save the signature:', error);
+                });
+        });
+
+        document.getElementById('clearButton').addEventListener('click', function () {
+            signaturePad.clear();
+        });
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        var dataForSchedulingList2 = [];
+
+        // Fetch the schedule data from the server
+        $.ajax({
+            url: "/schedule/employee-wise/get-schedule",
+            success: function (result) {
+                // Filter the data based on the 'task'
+                result.data.forEach(function(item) {
+                    if (item.task !== 'HHA Visit (Billable)' && item.task !== 'DSP (Billable)') {
+                        dataForSchedulingList2.push(item);
+                    }
+                });
+
+                // Initialize schedulingList2 DataTable
+                $('#schedulingList2').DataTable({
+                    scrollX: true,
+                    data: dataForSchedulingList2,
+                    searching: false,
+                    columns: [
+                        { data: 'patient_first_name', title: 'Patient First Name' },
+                        { data: 'task', title: 'Task' },
+                        { data: 'kt_calendar_datepicker_start_date', title: 'Schedule Date' },
+                        { data: 'first_name', title: 'Assigned To' },
+                        {
+                            data: 'scheduling_status',
+                            title: 'Scheduling Status',
+                            orderable: false,
+                            render: function (data, type, row) {
+                                return `<div class="rounded-[5px] ${data === 'scheduled' ? 'scheduled' : data === 'started' ? 'started' : data === 'open_shift' ? 'open_shift' : data === 'no_show' ? 'no_show' : data === 'on_hold' ? 'on_hold' : data === 'hospitalization' ? 'hospitalization' : 'completed'}">
+                                    <span class="text-white block text-center py-[5px] px-[10px] border-none">${data === 'scheduled' ? 'Scheduled' : data === 'started' ? 'Started' : data === 'open_shift' ? 'Open Shift' : data === 'no_show' ? 'No Show' : data === 'on_hold' ? 'On Hold' : data === 'hospitalization' ? 'Hospitalization' : 'Completed'}</span>
+                                </div>`;
+                            }
+                        },
+                        {
+                            data: 'id',
+                            title: 'Actions',
+                            className: "dt-center editor-delete",
+                            orderable: false,
+                            render: function (data, type, row) {
+                                // Removed permission-related code
+                                return `<a href="#" class="btn btn-primary" target="_blank">Open</a>`;
+                            }
+                        },
+                    ],
+                });
+            }
+        });
+    });
+</script>
+
 
     <script>
         let startlat = <?php echo $employee->lat ? $employee->lat : '40.4173'; ?>;
@@ -573,6 +544,9 @@
         });
         $(function () {
             $("#tabs").tabs();
+
+            $("#employee_info_tabs").tabs();
+
             $('.add_new_attachment').click(function () {
                 $('#attachmentModal').modal({
                     fadeDuration: 100
@@ -827,7 +801,7 @@
     <script>
         let b_id;
         jQuery(document).on('submit', '#billingForm', function (e) {
-            e.preventDefault();   
+            e.preventDefault();
             jQuery.ajax({
                 url: "{{ route('employee-bill.store') }}",
                 method: 'POST',
@@ -1126,5 +1100,7 @@
             });
         });
     </script>
+
+
 @endsection
 
