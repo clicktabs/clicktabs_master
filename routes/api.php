@@ -61,6 +61,7 @@ use App\Http\Controllers\API\InfectionController;
 Route::controller(RegisterController::class)->group(function(){
     Route::post('register', 'register');
     Route::post('login', 'login');
+    Route::post('/dashboard/update-password', 'updatePassword')->name('update.password');
 });
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
