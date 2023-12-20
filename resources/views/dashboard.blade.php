@@ -477,6 +477,9 @@ border-bottom: 3px double;
             <li class="flex-shrink-0">
                 <a href="#visit_note">Miss visit note</a>
             </li>
+            <li class="flex-shrink-0">
+                <a href="#updatePassword">Update password</a>
+            </li>
         </ul>
         {{-- <div id="employee_patient">
             <div class="bg-white bd rounded-sm border border-slate-200 mt-2">
@@ -714,6 +717,14 @@ border-bottom: 3px double;
                             </tr>
                         </thead>
                     </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="updatePassword">
+            <div class="bg-white bd rounded-sm border border-slate-200 mt-2">
+                <div class="dk">
+                    @include('auth.update-password')
                 </div>
             </div>
         </div>
