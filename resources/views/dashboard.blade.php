@@ -466,38 +466,7 @@ border-bottom: 3px double;
             </li>
         </ul>
 
-        {{-- <div id="employee_patient">
-            @if($employee_patients)
-                <table class=" ux ou display nowrap" style="width:100%" id="employee_patient_table">
-                    <thead class="bg-[#4133BF] text-[#fff]">
-                    <tr>
-                        <th>Patient</th>
-                        <th>MRN</th>
-                        <th>Episode</th>
-                        <th>Case Manager</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                        @foreach($employee_patients as $emp_patient)
-                            <tr>
-                                <td>{{$emp_patient->first_name}}</td>
-                                <td>{{$emp_patient->mi_no}}</td>
-                                <td>{{$emp_patient->mi_no}}</td>
-                                @php
-                                    $exists = App\Models\SocialWorker::select('first_name', 'last_name')->exists();
-                                    $case_manager = "";
-                                    if($exists) {
-                                        $case_manager =  App\Models\SocialWorker::select('first_name', 'last_name')->find($emp_patient->caseManage->case_managers)->first();
-                                    }
-                            @endphp
-                                <td>{{ $exists ? $case_manager->first_name. ' ' . $case_manager->last_name : ''}}</td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-            @endif
-        </div> --}}
-        <div id="employee_patient">
+              <div id="employee_patient">
             <div class="bg-white bd rounded-sm border border-slate-200 mt-2">
                 <div class="dk">
                     <table class="client_table ux ou display nowrap" style="width:100%" id="schedulingList">
