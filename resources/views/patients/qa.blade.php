@@ -40,7 +40,7 @@
                                     <select id="task" class="form-select" aria-label="All Tasks select">
                                         <option value="">All Tasks</option>
                                         {{-- <option value="PT Plan of Care">Plan of Care</option> --}}
-                                        {{-- <option value="Skilled Nurse Visit">Skilled Nurse Visit</option> --}}
+                                        <option value="Skilled Nurse Visit">Skilled Nurse Visit</option>
                                         <option value="Plan Of Care">Plan Of Care (485)</option>
                                         {{-- <option value="Open Oasis">Open Oasis</option> --}}
                                         <option value="Orders Not Sent">Orders Not Sent</option>
