@@ -6183,6 +6183,8 @@
             </td>
         </tr>
      </table>
+    @include('pdf.home-care.pagecounter')
+
 </body>
 
 </html>

@@ -358,7 +358,10 @@
         @page {
             margin: 0 0 0 0;
         }
-    </style>
+
+        
+    /* body { counter-increment: page; counter-reset: pageplus1 1; } */
+  </style>
 </head>
 
 <body style="padding: 50px;">
@@ -568,7 +571,7 @@
         </tr>
      </table>
 </div>
-
+    @include('pdf.home-care.pagecounter')
 </body>
 
 </html>

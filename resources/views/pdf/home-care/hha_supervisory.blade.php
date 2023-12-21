@@ -167,6 +167,6 @@
 </div>
 
 <script src="bs/js/bootstrap.min.js"></script>
-
+    @include('pdf.home-care.pagecounter')
 </body>
 </html>

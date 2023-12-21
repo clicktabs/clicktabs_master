@@ -4826,7 +4826,7 @@
                         </td>
                     </tr>
                 </table> --}}
-{{-- 
+    {{-- 
                 <table class="table table-borderless m-0">
                     <tr>
                         <td>{{$skinCondition->unstageablec2}}</td>
@@ -5886,6 +5886,10 @@
   {{-- Physician-ordered --}}
  
 
+    @include('pdf.home-care.pagecounter')
+    
+</body>
+</html>
   
 
   {{-- CMS 485 --}}
