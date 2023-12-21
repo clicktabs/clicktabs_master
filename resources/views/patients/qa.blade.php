@@ -42,12 +42,11 @@
                                         {{-- <option value="PT Plan of Care">Plan of Care</option> --}}
                                         <option value="Skilled Nurse Visit">Skilled Nurse Visit</option>
                                         <option value="Plan Of Care">Plan Of Care (485)</option>
-                                        {{-- <option value="Open Oasis">Open Oasis</option> --}}
                                         <option value="Orders Not Sent">Orders Not Sent</option>
                                         <option value="Pending Orders Signature">Pending Orders Signature</option>
                                         <option value="Assessment">Oasis-E-SOC-Assessment</option>
                                         <option value="Assessment">Oasis-E-Recertification-Assessment</option>
-                                        <option value="Supervisor Visit<">Supervisor Visit</option>
+                                        <option value="Supervisor Visit<">HHA Supervisor Visit</option>
                                     </select>
                                 </td>
                                 <td style="max-width: 200px">
