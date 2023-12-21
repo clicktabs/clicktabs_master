@@ -41,6 +41,7 @@
                                         <option value="">All Tasks</option>
                                         {{-- <option value="PT Plan of Care">Plan of Care</option> --}}
                                         <option value="Skilled Nurse Visit">Skilled Nurse Visit</option>
+                                        <option value="Skilled Nurse Visit">HHA Visit Note</option>
                                         <option value="Plan Of Care">Plan Of Care (485)</option>
                                         <option value="Orders Not Sent">Orders Not Sent</option>
                                         <option value="Pending Orders Signature">Pending Orders Signature</option>
@@ -55,13 +56,6 @@
                                         <option value="Pending">Pending</option>
                                         <option value="Review">Review</option>
                                         <option value="Submitted">Submitted</option>
-                                        <option value="Scheduled">Scheduled</option>
-                                        <option value="Missed Visits">Missed Visits</option>
-                                        <option value="Open Shift">Open Shift</option>
-                                        <option value="Started">Started</option>
-                                        <option value="On-hold">On-hold</option>
-                                        <option value="Hospitalization">Hospitalization</option>
-                                        <option value="Completed">Completed</option>
                                     </select>
                                 </td>
                             </tr>
