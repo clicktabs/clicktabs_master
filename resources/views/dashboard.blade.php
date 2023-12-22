@@ -303,7 +303,7 @@ border-bottom: 3px double;
 </div>
 <div class="container-full">
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-12">  
 
             @if($user->hasRole('super-admin'))
             @else
