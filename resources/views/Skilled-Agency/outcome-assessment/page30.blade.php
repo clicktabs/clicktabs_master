@@ -5,6 +5,7 @@
          margin-bottom: 20px;
       }
    </style>
+
    <div class="table-responsive">
       <div class="form-holder pt-5 pb-5">
          <h1 class="text-center heading_1">HOME HEALTH CERTIFICATION AND PLAN OF CARE</h1>
@@ -13,66 +14,104 @@
             <tr>
                <td>
                   <label for="hiClaimNo">Patients HI Claim No.</label>
-                  <input type="number" name="hiClaimNo" id="hiClaimNo" class="form-control" value="{{!empty($patient->cms->hiClaimNo)?$patient->cms->hiClaimNo:''}}">
-               </td>
+                  @if (!empty($patient->insurance->medicaid_id) && !empty($patient->insurance->medicare_id))
+                  <input type="number"
+                        name="hiClaimNo"
+                        id="hiClaimNo"
+                        class="form-control"
+                        value="{{ $patient->insurance->medicaid_id }}">
+                    <br>
+                    <input type="number"
+                        name="medicareId"
+                        id="medicareId"
+                        class="form-control"
+                        value="{{ $patient->insurance->medicare_id }}">
+                @elseif (!empty($patient->insurance->medicaid_id) )
+                <input type="number"
+                    name="hiClaimNo"
+                    id="hiClaimNo"
+                    class="form-control"
+                    value="{{ $patient->insurance->medicaid_id }}">
+                @else
+                    <input type="number"
+                        name="hiClaimNo"
+                        id="hiClaimNo"
+                        class="form-control"
+                        value="{{ !empty($patient->cms->hiClaimNo) ? $patient->cms->hiClaimNo : '' }}">
+                @endif
+                </td>
                <td>
                   <label for="startOfCareDate">Start Of Care Date</label>
-                  <input type="date" name="startOfCareDate" id="startOfCareDate" class="form-control" value="{{$patient?->cms?->startOfCareDate}}">
+                  <input type="date" name="startOfCareDate" id="startOfCareDate" class="form-control" value="{{$patient?->episode?->start_care_date}}">
                </td>
                <td>
                   <label for="certification_period">Certification Period</label>
+                  @php
+
+                  @endphp
                   <div class="row row-flex align-items-center gy-2">
                      <div class="col">
                         <div class="input-group clean-input-group">
                            <label class="input-group-text" for="certiPeriodFrom">From:</label>
-                           <input type="date" name="certiPeriodFrom" id="certiPeriodFrom" class="form-control" value="{{$patient?->cms?->certiPeriodFrom}}">
+                           <input type="date" name="certiPeriodFrom" id="certiPeriodFrom" class="form-control" value="{{$episodeDaterange?->episode_start_date}}">
                         </div>
                      </div>
                      <div class="col">
                         <div class="input-group clean-input-group">
                            <label class="input-group-text" for="certiPeriodTo">To:</label>
-                           <input type="date" name="certiPeriodTo" id="certiPeriodTo" class="form-control" value="{{$patient?->cms?->certiPeriodTo}}">
+                           <input type="date" name="certiPeriodTo" id="certiPeriodTo" class="form-control" value="{{$episodeDaterange?->episode_end_date}}">
                         </div>
                      </div>
                   </div>
                </td>
                <td colspan="2">
                   <label for="medicalRecordNo">Medical Record No.</label>
-                  <input type="number" name="medicalRecordNo" id="medicalRecordNo" class="form-control" value="{{$patient?->cms?->medicalRecordNo}}">
+                  <input type="text" name="medicalRecordNo" id="medicalRecordNo" class="form-control" value="{{$patient->patient_code}}">
                </td>
             </tr>
             <tr>
                <td colspan="2">
                      <label for="name">Patients Name and Address</label>
-                     <input type="text" name="name" id="name" class="form-control" placeholder="Name" value="{{$patient?->cms?->name}}">
+                     <input type="text" name="name" id="name" class="form-control" placeholder="Name" value="{{$patient?->first_name.' '.$patient?->last_name}}">
                   <div class="d-block">
                      <label for="address"></label>
-                     <textarea name="address" id="address" cols="30" rows="1" class="form-control" placeholder="Address">{{$patient?->cms?->address}}</textarea>
+                     <textarea name="address" id="address" cols="30" rows="1" class="form-control" placeholder="Address">{{$patient?->address?->address_line_1.' '.$patient?->address?->address_line_2}}</textarea>
                   </div>
                </td>
                <td class="labels-group">
                   <span class="fw-semibold d-block">Gender</span>
                   <label class="form-check-label" for="gender_male">
-                    <input type="radio" name="gender" id="gender_male" value="1" class="form-check-input" {{ $patient?->cms?->gender == 1 ? 'checked' : '' }}> Male
+                    <input type="radio" name="gender" id="gender_male" value="1" class="form-check-input" {{ $patient?->gender == 'male' ? 'checked' : '' }}> Male
                 </label>
                 <label class="form-check-label" for="gender_female">
-                    <input type="radio" name="gender" value="2" id="gender_female" class="form-check-input" {{ $patient?->cms?->gender == 2 ? 'checked' : '' }}> Female
+                    <input type="radio" name="gender" value="2" id="gender_female" class="form-check-input" {{ $patient?->gender == 'female' ? 'checked' : '' }}> Female
                 </label>
 
                </td>
                <td>
                   <label for="dateOfBirth">Date of Birth</label>
-                  <input type="date" name="dateOfBirth" id="dateOfBirth" class="form-control" value="{{$patient?->cms?->dateOfBirth}}">
+                  <input type="date" name="dateOfBirth" id="dateOfBirth" class="form-control" value="{{$patient?->date_of_birth}}">
                </td>
                <td>
                   <label for="phone">Phone Number</label>
-                  <input type="text" name="phone" id="phone" class="form-control" value="{{$patient?->cms?->phone}}">
+                  <input type="text" name="phone" id="phone" class="form-control" value="{{$patient?->address?->phone}}">
                </td>
             </tr>
             <tr>
                <td colspan="5">
                   <label for="riskProfile">Patient Risk Profile: N0415. High-Risk Drug Classes: Use and Indication</label>
-                  <textarea name="riskProfile" id="riskProfile" cols="30" rows="7" class="form-control">{{$patient?->cms?->riskProfile}}</textarea>
+                  <textarea name="riskProfile" id="riskProfile" cols="30" rows="7" class="form-control">
+                    @forelse($medications as $medication)
+                        @if ($medication->status == 1)
+                            (N) {{ $medication->medication_dosage }} - {{ $medication->frequency }} - {{ $medication->route }}
+                        @else
+                            (C) {{ $medication->medication_dosage }} - {{ $medication->frequency }} - {{ $medication->route }}
+                        @endif
+
+                    @empty
+                        No medications found.
+                    @endforelse
+                </textarea>
                </td>
             </tr>
          </table>
@@ -84,21 +123,21 @@
             <tr>
                <td>
                   <label for="clinicalManager">Clinical Manager</label>
-                  <input type="text" name="clinicalManager" id="clinicalManager" class="form-control" value="{{$patient?->cms?->clinicalManager}}">
+                  <input type="text" name="clinicalManager" id="clinicalManager" class="form-control" value="{{$schedule->employee->first_name.' '.$schedule->employee->last_name}}">
                </td>
                <td rowspan="2">
                   <div class="d-block">
                      <label for="branchInfo">Branch Name and Address</label>
-                     <input type="text" name="branchInfo" id="branchInfo" class="form-control" placeholder="Branch Name" value="{{$patient?->cms?->branchInfo}}">
+                     <input type="text" name="branchInfo" id="branchInfo" class="form-control" placeholder="Branch Name" value="{{$account?->company_name}}">
                   </div>
                   <div class="d-block">
                      <label for="branchAddress"></label>
-                     <textarea name="branchAddress" id="branchAddress" cols="30" rows="1" class="form-control" placeholder="Address">{{$patient?->cms?->branchAddress}}</textarea>
+                     <textarea name="branchAddress" id="branchAddress" cols="30" rows="1" class="form-control" placeholder="Address">{{$account?->address_line}} - {{$account?->zip}}</textarea>
                   </div>
                </td>
                <td>
                   <label for="clinicPhone">Phone Number</label>
-                  <input type="text" name="clinicPhone" id="clinicPhone" class="form-control" placeholder="(614) 762-8063" value="{{$patient?->cms?->clinicPhone}}">
+                  <input type="text" name="clinicPhone" id="clinicPhone" class="form-control" placeholder="(614) 762-8063" value="{{$account?->phone}}">
                </td>
             </tr>
             <tr>
@@ -106,16 +145,16 @@
                   <span class="fw-semibold">Provider Number - Medicare Number</span>
                   <div class="d-block">
                      <label for="providerNumber"></label>
-                     <input type="number" name="providerNumber" id="providerNumber" class="form-control" placeholder="Provider Number" value="{{$patient?->cms?->providerNumber}}">
+                     <input type="number" name="providerNumber" id="providerNumber" class="form-control" placeholder="Provider Number" value="{{$account?->medicare_p_n}}">
                   </div>
-                  <div class="d-block">
+                  {{-- <div class="d-block">
                      <label for="medicare"></label>
                      <input type="number" name="medicare" id="medicare" class="form-control" placeholder="Medicare Number" value="{{$patient?->cms?->medicare}}">
-                  </div>
+                  </div> --}}
                </td>
                <td>
                   <label for="fax">Fax Number</label>
-                  <input type="text" name="fax" id="fax" class="form-control" value="{{$patient?->cms?->fax}}">
+                  <input type="text" name="fax" id="fax" class="form-control" value="{{$account?->fax}}">
                </td>
             </tr>
             <tr>

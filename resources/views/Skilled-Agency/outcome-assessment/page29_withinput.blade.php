@@ -52,7 +52,7 @@ if(isset($patient->diagnosis->other_diagnosis_name)){
                                  <input type="text"  value="{{isset($patient->extra_info->physician->alternate_phone)?$patient->extra_info->physician->alternate_phone:''}}"  name="Tel_2" id="Tel_2" class="form-control">
                               </div>
                               <div class="col-md-3">
-                                 <label for="SSS" class="form-label"><b>SSS #:</b></label>
+                                 <label for="SSS" class="form-label"><b>(M0064) Social Security Number:</b></label>
                                  <input type="text" value="{{isset($patient->extra_info->physician->speciality)?$patient->extra_info->physician->speciality:''}}"  name="SSS" id="SSS" class="form-control">
                               </div>
                            </div>
@@ -63,7 +63,7 @@ if(isset($patient->diagnosis->other_diagnosis_name)){
                                  <input type="date"  value="{{isset($patient->date_of_birth)?$patient->date_of_birth:''}}" name="ClientDateOfBirth" id="ClientDateOfBirth" class="form-control">
                               </div>
                               <div class="col-md-3">
-                                 <label for="NPI" class="form-label"><b>NPI #:</b></label>
+                                 <label for="NPI" class="form-label"><b>Physician NPI Number:</b></label>
                                  <input type="text" value="{{isset($patient->social_security_no)?$patient->social_security_no:''}}" name="NPI" id="NPI" class="form-control">
                               </div>
                               <div class="col-md-3">
@@ -158,11 +158,13 @@ if(isset($patient->diagnosis->other_diagnosis_name)){
                            <div class="row row-flex align-items-center gy-3 mt-1">
                               <div class="col-md-6">
                                  <label for="NewMedicationDate" class="form-label"><b>New Medication Date:</b></label>
-                                 <input type="text" name="NewMedicationDate" id="NewMedicationDate" class="form-control">
+                                 {{-- <input type="text" name="NewMedicationDate" id="NewMedicationDate" class="form-control"> --}}
+                                 <textarea class="form-control" name="NewMedicationDate" id="NewMedicationDate" cols="30" rows="10"></textarea>
                               </div>
                               <div class="col-md-6">
                                  <label for="OldMedicationsDate" class="form-label"><b>Old Medications and Start Date:</b></label>
-                                 <input type="text" name="OldMedicationsDate" id="OldMedicationsDate" class="form-control">
+                                 {{-- <input type="text" name="OldMedicationsDate" id="OldMedicationsDate" class="form-control"> --}}
+                                 <textarea class="form-control" name="OldMedicationsDate" id="OldMedicationsDate" cols="30" rows="10"></textarea>
                               </div>
                            </div>
 
@@ -210,6 +212,19 @@ if(isset($patient->diagnosis->other_diagnosis_name)){
                                     <input type="text" value="{{date('m-d-Y')}}" name="NurseSignatureDate" id="NurseSignatureDate" class="form-control">
                                  </div>
                               </div>
+                              <div class="col-md-6">
+                                <!-- Your existing content goes here -->
+
+                                <!-- Signature area and date -->
+                                <span class="signature-area">
+                                    Signature: _______________________
+                                </span>
+                                <br>
+                                <br>
+                                <span class="date">
+                                    Date: ________________
+                                </span>
+                            </div>
                            </div>
                         </td>
                      </tr>
