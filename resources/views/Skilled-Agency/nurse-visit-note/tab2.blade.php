@@ -979,7 +979,8 @@ class="form-check-input"> Motivated</label>
                     </table>
                     </div>
                         <div class="pl-3 pb-3">
-                        <button type="submit" name="finalSubmit" value="final" class=" btn btn-primary btn-block active" >Save</button>
+                            <button type="submit" value="save_exit" class="!bg-[#4133BF] btn btn-primary" name="save_exit" data-next="cms-485">Save & Exit</button>
+                            <button type="submit" name="finalSubmit" value="final" class="btn btn-success btn-block active" >Save</button>
                         </div>
                     </div>
                 </div>

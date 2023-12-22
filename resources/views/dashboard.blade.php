@@ -244,6 +244,10 @@ border-bottom: 3px double;
     text-decoration: none;
 
 }
+.dataTables_scrollHead .dataTables_scrollHeadInner,
+.dataTables_scrollHead .dataTables_scrollHeadInner table {
+    width: 100% !important;
+}
 </style>
 @endsection
 @section('content')
