@@ -281,6 +281,9 @@
         </tr>
     </table>
 
-    <div class="mt-[20px]"><button type="submit" value="patientHistory" name="patientHistory" class="!bg-[#4133BF] btn btn-primary continue_next" data-next="patient-tracking">Save & Continue</button></div>
+    <div class="mt-[20px]">
+        <button type="submit" value="save_exit" class="!bg-[#4133BF] btn btn-primary" name="save_exit">Save & Exit</button>
+        <button type="submit" value="patientHistory" name="patientHistory" class="!bg-[#32CD32] btn btn-success continue_next" data-next="patient-tracking">Save & Continue</button>
+    </div>
 </form>
 </div>
