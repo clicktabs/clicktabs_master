@@ -538,7 +538,8 @@
                </table>
             </div>
             <div class=" mt-4">
-               <button type="submit" class=" btn btn-primary btn-block active" >Save</button>
+               {{-- <button type="submit" class=" btn btn-primary btn-block active" >Save</button> --}}
+               <button type="submit" value="hhasubmit" class="!bg-[#4133BF] btn btn-primary" name="cmssubmit" data-next="cms-485">Save & Exit</button>
            </div>
          </form>
       </div>

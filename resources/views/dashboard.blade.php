@@ -304,17 +304,15 @@ border-bottom: 3px double;
 <div class="container-full">
     <div class="row">
         <div class="col-lg-12">  
-
             @if($user->hasRole('super-admin'))
             @else
             @can('employee-dashboard')
             @endcan
-
             @can('admin-dashboard')
+            {{-- @can('employee-dashboard') --}}
             @endcan
             @endif
             @if ($user->hasRole('Employee'))
-
             @else
             <div class="main_content">
                 <div id="tabs">
