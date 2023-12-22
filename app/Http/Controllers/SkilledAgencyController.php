@@ -121,7 +121,7 @@ class SkilledAgencyController extends Controller
     }
 
     public function saveNursing(Request $request){
-        if(isset($request->next)){
+        if(isset($request->save_exit) || isset($request->next)){
             $nsf=new NurseSectionFirst;
             $nsf->visitDate=$request->visitDate;
             $nsf->timeIn=$request->timeIn;
@@ -341,6 +341,10 @@ class SkilledAgencyController extends Controller
             $nsf->managementInfusionVerbalizesProper=$request->managementInfusionVerbalizesProper;
             $nsf->comments=$request->comments;
             $nsf->save();
+
+            if (isset($request->save_exit)) {
+                return redirect(route('patients.qa'));
+            }
 
             return view('skilled-agency.nurse-visit-note.index')->with('active','final');
         }

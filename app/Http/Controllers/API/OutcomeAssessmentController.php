@@ -78,7 +78,7 @@ class OutcomeAssessmentController extends Controller
         // patinet history save
        // dd($request);
 
-        if(isset($request->save_exit) || isset($request->patientHistory)){
+        if(isset($request->patientHistory)){
             $patient_id = $request->patient_id;
             $data = [
                 'patient_id' => $patient_id,
@@ -145,14 +145,10 @@ class OutcomeAssessmentController extends Controller
             ];
             PatientHistory::updateOrInsert(['patient_id' => $patient_id], $data);
 
-            if( $request->save_exit ) {
-                return redirect()->back()->with(['active' => 'phistory', 'success' => 'Patient History data updated Successfully']);
-            }
-
             return redirect()->route('skilled-agency.get-oasis-e-start-of-care', ['id'=>$patient_id,'tab'=>'admin'])->with(['active' => 'admin', 'success' => 'Patient History data updated Successfully']);
 
         }
-        if( isset($request->save_exit) || isset($request->administrative)){
+        if(isset($request->administrative)){
             $patient_history_id = $request->patient_history_id;
             $data = [
                 'nipNumber' => $request->nipNumber,
@@ -182,10 +178,6 @@ class OutcomeAssessmentController extends Controller
             ];
 
             $administrative = Administrative::updateOrInsert(['patient_history_id' => $patient_history_id], $data);
-
-            if( $request->save_exit ) {
-                return redirect()->back()->with(['active' => 'phistory', 'success' => 'Administrative data updated Successfully']);
-            }
 
             return redirect()->route('skilled-agency.get-oasis-e-start-of-care', ['id'=>$patient_history_id,'tab'=>'demographic'])->with(['active' => 'demographic', 'success' => 'Administrative data updated Successfully']);
 
