@@ -280,7 +280,7 @@
                                                                     @endforeach
                                                                 </select>
                                                             </div>
-                                                            <div>
+                                                            {{-- <div>
                                                                 <label>Task: </label>
                                                                 <select id="task" name="task" required>
                                                                     <option value="">Select Visit</option>
@@ -296,7 +296,7 @@
                                                                     <option value="hha_care_plane">HHA Care Plane
                                                                     </option>
                                                                 </select>
-                                                            </div>
+                                                            </div> --}}
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-5 col-md-6">

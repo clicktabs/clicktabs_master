@@ -66,10 +66,10 @@
                                             <div>Patient MR#</div>
                                         </th>
                                         <th class="dx">
-                                            <div>Patient Security Number</div>
+                                            <div>SSN</div>
                                         </th>
                                         <th class="dx">
-                                            <div>Patient DOB</div>
+                                            <div>DOB</div>
                                         </th>
                                         <th class="dx">
                                             <div>Oasis-SOC Date</div>
@@ -101,7 +101,7 @@
                                         <td class="">
                                             <div></div>
                                         </td>
-                                         <td class=" flex flex-wrap gap-[10px]">
+                                         <td class=" flex flex-wrap gap-[10px] mt-2">
                                             <a href="#" class="btn ho xi ye">Generate Export</a>
                                         </td>
                                     </tr>

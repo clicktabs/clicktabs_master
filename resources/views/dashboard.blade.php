@@ -876,10 +876,10 @@ $('#mileage_rate').val(data.schedule.mileage_rate);
 $('#user_rate').val(data.schedule.user_rate);
 
 let originalDateTimeStart = data.schedule.kt_calendar_datepicker_start_date + " " + data.schedule.start_time;
-let startLocalDate = moment(originalDateTimeStart, "YYYY-MM-DD HH:mm:ss").format("YYYY-MM-DD[T]HH:mm");
+let startLocalDate = moment(originalDateTimeStart, "MM-DD-YYYY HH:mm:ss").format("MM-DD-YYYY[T]HH:mm");
 
 let originalDateTimeEnd = data.schedule.kt_calendar_datepicker_end_date + " " + data.schedule.end_time;
-let endLocalDate = moment(originalDateTimeEnd, "YYYY-MM-DD HH:mm:ss").format("YYYY-MM-DD[T]HH:mm");
+let endLocalDate = moment(originalDateTimeEnd, "MM-DD-YYYY HH:mm:ss").format("MM-DD-YYYY[T]HH:mm");
 
 let start_date = $('#kt_calendar_datepicker_start_date');
 let end_date = $('#kt_calendar_datepicker_end_date');
@@ -906,7 +906,7 @@ $('#schedulingList').DataTable({
         url: "/schedule/get-schedule",
     },
     columns: [
-        { data: 'patient_first_name', title: 'Patient First Name' },
+        { data: 'patient_first_name', title: 'Patient Name' },
         { data: 'kt_calendar_datepicker_start_date', title: 'Start Date' },
         { data: 'kt_calendar_datepicker_end_date', title: 'End Date' },
         { data: 'start_time', title: 'Start Time' },

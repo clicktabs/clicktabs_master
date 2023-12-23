@@ -1386,7 +1386,7 @@
                 month = '0' + month.toString();
             if (day < 10)
                 day = '0' + day.toString();
-            let maxDate = year + '-' + month + '-' + day;
+            let maxDate = month + '-' + day + '-' + year;
             $('#kt_calendar_datepicker_start_date').attr('min', maxDate);
 
             // End date

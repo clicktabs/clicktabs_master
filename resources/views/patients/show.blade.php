@@ -722,7 +722,7 @@
                 const month = String(newDate.getMonth() + 1).padStart(2, '0');
                 const day = String(newDate.getDate()).padStart(2, '0');
 
-                const result = `${year}-${month}-${day}`;
+                const result = `${month}-${day}-${year}`;
 
                 console.log(result);
                 $('#episode_end_date').val(result)
@@ -907,7 +907,7 @@
             // });
             $('.add_new_medication_continue').click(function () {
                 $('#continueModal').modal({
-                    fadeDuration: 100
+                    fadeDuration: 100  
                 });
             });
             $('.add_new_allergy').click(function () {
@@ -1786,5 +1786,7 @@
             }
         });
     });
+
+    
 </script>
 @endsection
