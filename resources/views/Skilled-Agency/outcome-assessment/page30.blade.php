@@ -13,7 +13,7 @@
             <table class="table table-bordered align-middle mb-0">
             <tr>
                <td>
-                  <label for="hiClaimNo">Patients HI Claim No.</label>
+                  <label for="hiClaimNo" class="px-3 py-2 bg-secondary-subtle fw-bolder">Patients HI Claim No.</label>
                   @if (!empty($patient->insurance->medicaid_id) && !empty($patient->insurance->medicare_id))
                   <input type="number"
                         name="hiClaimNo"
@@ -41,11 +41,11 @@
                 @endif
                 </td>
                <td>
-                  <label for="startOfCareDate">Start Of Care Date</label>
+                  <label for="startOfCareDate" class="px-3 py-2 bg-secondary-subtle fw-bolder">Start Of Care Date</label>
                   <input type="date" name="startOfCareDate" id="startOfCareDate" class="form-control" value="{{$patient?->episode?->start_care_date}}">
                </td>
                <td>
-                  <label for="certification_period">Certification Period</label>
+                  <label for="certification_period" class="px-3 py-2 bg-secondary-subtle fw-bolder">Certification Period</label>
                   @php
 
                   @endphp
@@ -61,17 +61,17 @@
                            <label class="input-group-text" for="certiPeriodTo">To:</label>
                            <input type="date" name="certiPeriodTo" id="certiPeriodTo" class="form-control" value="{{$episodeDaterange?->episode_end_date}}">
                         </div>
-                     </div>
-                  </div>
+                     </div> 
+                  </div>  
                </td>
                <td colspan="2">
-                  <label for="medicalRecordNo">Medical Record No.</label>
+                  <label for="medicalRecordNo" class="px-3 py-2 bg-secondary-subtle fw-bolder">Medical Record No.</label>
                   <input type="text" name="medicalRecordNo" id="medicalRecordNo" class="form-control" value="{{$patient->patient_code}}">
                </td>
             </tr>
             <tr>
                <td colspan="2">
-                     <label for="name">Patients Name and Address</label>
+                     <label for="name" class="px-3 py-2 bg-secondary-subtle fw-bolder">Patients Name and Address</label>
                      <input type="text" name="name" id="name" class="form-control" placeholder="Name" value="{{$patient?->first_name.' '.$patient?->last_name}}">
                   <div class="d-block">
                      <label for="address"></label>
@@ -79,7 +79,7 @@
                   </div>
                </td>
                <td class="labels-group">
-                  <span class="fw-semibold d-block">Gender</span>
+                  <span class="d-block px-3 py-2 bg-secondary-subtle fw-bolder" >Gender</span>
                   <label class="form-check-label" for="gender_male">
                     <input type="radio" name="gender" id="gender_male" value="1" class="form-check-input" {{ $patient?->gender == 'male' ? 'checked' : '' }}> Male
                 </label>
@@ -89,17 +89,19 @@
 
                </td>
                <td>
-                  <label for="dateOfBirth">Date of Birth</label>
+                  <label for="dateOfBirth" class="px-3 py-2 bg-secondary-subtle fw-bolder">Date of Birth</label>
                   <input type="date" name="dateOfBirth" id="dateOfBirth" class="form-control" value="{{$patient?->date_of_birth}}">
                </td>
                <td>
-                  <label for="phone">Phone Number</label>
+                  <label for="phone" class="px-3 py-2 bg-secondary-subtle fw-bolder">Phone Number</label>
                   <input type="text" name="phone" id="phone" class="form-control" value="{{$patient?->address?->phone}}">
                </td>
             </tr>
             <tr>
                <td colspan="5">
-                  <label for="riskProfile">Patient Risk Profile: N0415. High-Risk Drug Classes: Use and Indication</label>
+                  <label for="riskProfile" class="px-3 py-2 bg-secondary-subtle fw-bolder"> Enter all medications including over-the-counter drugs. 
+                     Note: (N) = new medication within last 30 days.(C) = changed medication (dosage, frequency, or 
+                     route of administration) within last 60 days.</label>
                   <textarea name="riskProfile" id="riskProfile" cols="30" rows="7" class="form-control">
                     @forelse($medications as $medication)
                         @if ($medication->status == 1)
@@ -118,16 +120,16 @@
 
          <table class="table table-bordered align-middle mb-0">
             <tr>
-               <td colspan="3"><b>Clinical Data</b></td>
+               <td colspan="3" class="px-3 py-2 bg-secondary-subtle fw-bolder"><b>Clinical Data</b></td>
             </tr>
             <tr>
                <td>
-                  <label for="clinicalManager">Clinical Manager</label>
+                  <label for="clinicalManager" class="px-3 py-2 bg-secondary-subtle fw-bolder">Clinical Manager</label>
                   <input type="text" name="clinicalManager" id="clinicalManager" class="form-control" value="{{$schedule->employee->first_name.' '.$schedule->employee->last_name}}">
                </td>
                <td rowspan="2">
                   <div class="d-block">
-                     <label for="branchInfo">Branch Name and Address</label>
+                     <label for="branchInfo" class="px-3 py-2 bg-secondary-subtle fw-bolder">Branch Name and Address</label>
                      <input type="text" name="branchInfo" id="branchInfo" class="form-control" placeholder="Branch Name" value="{{$account?->company_name}}">
                   </div>
                   <div class="d-block">
@@ -136,13 +138,13 @@
                   </div>
                </td>
                <td>
-                  <label for="clinicPhone">Phone Number</label>
+                  <label for="clinicPhone" class="px-3 py-2 bg-secondary-subtle fw-bolder">Phone Number</label>
                   <input type="text" name="clinicPhone" id="clinicPhone" class="form-control" placeholder="(614) 762-8063" value="{{$account?->phone}}">
                </td>
             </tr>
             <tr>
                <td>
-                  <span class="fw-semibold">Provider Number - Medicare Number</span>
+                  <span class="px-3 py-2 bg-secondary-subtle fw-bolder">Provider Number - Medicare Number</span>
                   <div class="d-block">
                      <label for="providerNumber"></label>
                      <input type="number" name="providerNumber" id="providerNumber" class="form-control" placeholder="Provider Number" value="{{$account?->medicare_p_n}}">
@@ -162,11 +164,11 @@
             </tr>
             <tr>
                <td>
-                  <label for="diagonsisCode">Code</label>
+                  <label for="diagonsisCode" class="px-3 py-2 bg-secondary-subtle fw-bolder">Code</label>
                   <textarea name="diagonsisCode" id="diagonsisCode"  cols="30" rows="2" class="form-control autolineinput">{{$patient?->cms?->diagonsisCode}}</textarea>
                </td>
                <td>
-                  <label for="description">Description</label>
+                  <label for="description" class="px-3 py-2 bg-secondary-subtle fw-bolder">Description</label>
                   <textarea name="description" id="description" cols="30" rows="2" class="form-control autolineinput">{{$patient?->cms?->description}}</textarea>
                </td>
                <td>
@@ -179,99 +181,103 @@
             </tr>
             <tr>
                <td>
-                  <label for="secDiagnosisCode">Code</label>
+                  <label for="secDiagnosisCode" class="px-3 py-2 bg-secondary-subtle fw-bolder">Code</label>
                   <textarea name="secDiagnosisCode" id="secDiagnosisCode" cols="30" rows="8" class="form-control autolineinput">{{$patient?->cms?->secDiagnosisCode}}</textarea>
                </td>
                <td colspan="2">
-                  <label for="secDescription">Description</label>
+                  <label for="secDescription" class="px-3 py-2 bg-secondary-subtle fw-bolder">Description</label>
                   <textarea name="secDescription" id="secDescription" cols="30" rows="8" class="form-control autolineinput">{{$patient?->cms?->secDescription}}</textarea>
-               </td>
-            </tr>
-            <tr>
-               <td colspan="3">
-                  <label for="mentalStatus">Mental Status</label>
-                  <textarea name="mentalStatus" id="mentalStatus" cols="30" rows="8" class="form-control">{{$patient?->cms?->mentalStatus}}</textarea>
                </td>
             </tr>
 
             <tr>
                <td colspan="3">
-                  <label for="supplies">DME and Supplies</label>
+                  <label for="supplies" class="px-3 py-2 bg-secondary-subtle fw-bolder">DME and Supplies</label>
                   <textarea name="supplies" id="supplies" cols="30" rows="2" class="form-control">{{$patient?->cms?->supplies}}</textarea>
                </td>
             </tr>
 
             <tr>
                <td colspan="3">
-                  <label for="prognosis">Prognosis</label>
-                  <textarea name="prognosis" id="prognosis" cols="30" rows="1" class="form-control">{{$patient?->cms?->prognosis}}</textarea>
-               </td>
-            </tr>
-
-            <tr>
-               <td colspan="3">
-                  <label for="safety">Safety Measures</label>
+                  <label for="safety" class="px-3 py-2 bg-secondary-subtle fw-bolder">Safety Measures</label>
                   <textarea name="safety" id="safety" cols="30" rows="2" class="form-control">{{$patient?->cms?->safety}}</textarea>
                </td>
             </tr>
 
             <tr>
                <td colspan="3">
-                  <label for="nutritional">Nutritional Requirements</label>
+                  <label for="nutritional" class="px-3 py-2 bg-secondary-subtle fw-bolder">Nutritional Requirements</label>
                   <textarea name="nutritional" id="nutritional" cols="30" rows="2" class="form-control">{{$patient?->cms?->nutritional}}</textarea>
                </td>
             </tr>
 
             <tr>
+               <td colspan="2" class="px-3 py-2 bg-secondary-subtle fw-bolder"><b>Allergies</b></td>
+            </tr>
+            <tr>
+               <td>
+                  <label for="substance" class="fw-bolder">Substance:- NKA (Food/ Drug/ Latex/ Environmental)</label>
+                  <textarea name="substance" id="substance" cols="30" rows="10" class="form-control">{{$patient?->cms?->substance}}</textarea>
+               </td>
+               <td>
+                  <label for="reaction" class="fw-bolder">Reaction</label>
+                  <textarea name="reaction" id="reaction" cols="30" rows="10" class="form-control">{{$patient?->cms?->reaction}}</textarea>
+               </td>
+            </tr>
+
+            <tr>
                <td colspan="3">
-                  <label for="limitations">Functional Limitations</label>
+                  <label for="limitations" class="px-3 py-2 bg-secondary-subtle fw-bolder">Functional Limitations</label>
                   <textarea name="limitations" id="limitations" cols="30" rows="2" class="form-control">{{$patient?->cms?->limitations}}</textarea>
                </td>
             </tr>
 
             <tr>
                <td colspan="3">
-                  <label for="other">Other</label>
+                  <label for="other" class="px-3 py-2 bg-secondary-subtle fw-bolder">Other</label>
                   <textarea name="other" id="other" cols="30" rows="2" class="form-control">{{$patient?->cms?->other}}</textarea>
+               </td>
+            </tr>
+
+            
+            <tr>
+               <td colspan="3">
+                  <label for="activities" class="px-3 py-2 bg-secondary-subtle fw-bolder">Activities Permitted</label>
+                  <textarea name="activities" id="activities" cols="30" rows="2" class="form-control">{{$patient?->cms?->activities}}</textarea>
                </td>
             </tr>
 
             <tr>
                <td colspan="3">
-                  <label for="activities">Activities Permitted</label>
-                  <textarea name="activities" id="activities" cols="30" rows="2" class="form-control">{{$patient?->cms?->activities}}</textarea>
+                  <label for="mentalStatus" class="px-3 py-2 bg-secondary-subtle fw-bolder">Mental Status</label>
+                  <textarea name="mentalStatus" id="mentalStatus" cols="30" rows="8" class="form-control">{{$patient?->cms?->mentalStatus}}</textarea>
                </td>
             </tr>
+
+            <tr>
+               <td colspan="3">
+                  <label for="prognosis" class="px-3 py-2 bg-secondary-subtle fw-bolder">Prognosis</label>
+                  <textarea name="prognosis" id="prognosis" cols="30" rows="1" class="form-control">{{$patient?->cms?->prognosis}}</textarea>
+               </td>
+            </tr>
+
          </table>
 
          <table class="table table-bordered mb-0">
-            <tr>
-               <td colspan="2"><b>Treatments</b></td>
-            </tr>
+            {{-- <tr>
+               <td colspan="2"><b>Orders for Discipline and Treatments (Specify Amount/Frequency/Duration)</b></td>
+            </tr> --}}
             <tr>
                <td colspan="2">
-                  <label for="medications">Medications</label>
+                  <label for="medications" class="px-3 py-2 bg-secondary-subtle fw-bolder">Orders for Discipline and Treatments (Specify Amount/Frequency/Duration)</label>
                   <textarea name="medications" id="medications" cols="30" rows="10" class="form-control">{{$patient?->cms?->medications}}</textarea>
                </td>
             </tr>
-            <tr>
-               <td colspan="2" class="px-3 py-2 bg-secondary-subtle"><b>Allergies</b></td>
-            </tr>
-            <tr>
-               <td>
-                  <label for="substance">Substance</label>
-                  <p class="m-0">NKA (Food/ Drug/ Latex/ Environmental)</p>
-                  <textarea name="substance" id="substance" cols="30" rows="1" class="form-control">{{$patient?->cms?->substance}}</textarea>
-               </td>
-               <td>
-                  <label for="reaction">Reaction</label>
-                  <textarea name="reaction" id="reaction" cols="30" rows="2" class="form-control">{{$patient?->cms?->reaction}}</textarea>
-               </td>
-            </tr>
+       
             <tr>
                <td colspan="2">
-                  <label for="treatments">Orders and Treatments</label>
-                  <textarea name="treatments" id="treatments" cols="30" rows="20" class="form-control">{{$patient?->cms?->treatments}}</textarea>
+                  <label for="treatments" class="px-3 py-2 bg-secondary-subtle fw-bolder">Goals/Rehabilitation Potential/Discharge Plans </label>
+                  <textarea name="treatments" id="treatments" cols="20" rows="10" class="form-control">{{$patient?->cms?->treatments}}</textarea>
                </td>
             </tr>
             <tr>
@@ -330,17 +336,11 @@
                <td colspan="2">
 
                   <div class="clean-input-group mt-2">
-                     <label for="physicianSign">Attending Physician's Signature and Date Signed</label>
-                     <input type="text" name="physicianSign" id="physicianSign" class="form-control" value="{{$patient?->cms?->physicianSign}}">
+                     <label for="physicianSign" class="fw-bolder">Attending Physician's Signature and Date Signed</label>
+                     <textarea name="physicianAddress" id="physicianAddress" cols="30" rows="3" class="form-control"></textarea>
                   </div>
                </td>
-               <td>
-                  <div class="clean-input-group">
-                     <label for="physicianSignDate">Date</label>
-                     <input type="date" name="physicianSignDate" id="physicianSignDate" class="form-control" value="{{$patient?->cms?->physicianSignDate}}">
-                  </div>
-               </td>
-            </tr>
+               </tr>
          </table>
       </div>
    </div>

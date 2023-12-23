@@ -91,7 +91,7 @@ if(isset($patient->diagnosis->other_diagnosis_name)){
                                  <input type="text" name="PrimaryDiagnosis"  value="{{isset($patient->diagnosis->primary_diagnosis_name)?$patient->diagnosis->primary_diagnosis_name:''}}" id="PrimaryDiagnosis" class="form-control">
                               </div>
                               <div class="col-md-6">
-                                 <label for="PD_ICD9" class="form-label"><b>ICD9:</b></label>
+                                 <label for="PD_ICD9" class="form-label"><b>ICD10:</b></label>
                                  <input type="text"  value="{{isset($patient->diagnosis->primary_diagnosis_code)?$patient->diagnosis->primary_diagnosis_code:''}}" name="PD_ICD9" id="PD_ICD9" class="form-control">
                               </div>
                            </div>
@@ -167,7 +167,7 @@ if(isset($patient->diagnosis->other_diagnosis_name)){
                                  <textarea class="form-control" name="OldMedicationsDate" id="OldMedicationsDate" cols="30" rows="10"></textarea>
                               </div>
                            </div>
-
+{{-- 
                            <div class="row row-flex align-items-center gy-3 mt-1">
                               <div class="col-md-12">
                                  <div class="input-group">
@@ -175,7 +175,7 @@ if(isset($patient->diagnosis->other_diagnosis_name)){
                                     <input type="date" id="" class="form-control">
                                  </div>
                               </div>
-                           </div>
+                           </div> --}}
 
                            <div class="row row-flex align-items-center gy-3 mt-1">
                                <!--  <div class="col-md-6">
@@ -217,12 +217,12 @@ if(isset($patient->diagnosis->other_diagnosis_name)){
 
                                 <!-- Signature area and date -->
                                 <span class="signature-area">
-                                    Signature: _______________________
+                                    Physician Signature: ______________________________________________
                                 </span>
                                 <br>
                                 <br>
                                 <span class="date">
-                                    Date: ________________
+                                    Date: ________________________________
                                 </span>
                             </div>
                            </div>
