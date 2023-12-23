@@ -42,6 +42,7 @@ use App\Models\AideSupervisoryVisit;
 use App\Models\NurseSectionSecondFour;
 use App\Models\NurseSectionSecondThree;
 use App\Models\OasisEDeath;
+use App\Models\QaList;
 
 class SkilledAgencyController extends Controller
 {
@@ -121,7 +122,7 @@ class SkilledAgencyController extends Controller
     }
 
     public function saveNursing(Request $request){
-        if(isset($request->save_exit) || isset($request->next)){
+        if(isset($request->next)){
             $nsf=new NurseSectionFirst;
             $nsf->visitDate=$request->visitDate;
             $nsf->timeIn=$request->timeIn;
@@ -342,13 +343,11 @@ class SkilledAgencyController extends Controller
             $nsf->comments=$request->comments;
             $nsf->save();
 
-            if (isset($request->save_exit)) {
-                return redirect(route('patients.qa'));
-            }
+            $patient_id = $request->patient_id;
 
-            return view('skilled-agency.nurse-visit-note.index')->with('active','final');
+            return view('skilled-agency.nurse-visit-note.index', compact('patient_id'))->with('active','final');
         }
-        if(isset($request->finalSubmit)){
+        if(isset($request->save_exit) || isset($request->finalSubmit)){
 
             $nss=new NurseSectionSecond;
             $nss->agitated=$request->agitated;
@@ -485,6 +484,14 @@ class SkilledAgencyController extends Controller
             $nss->nurseSignatureDate=$request->nurseSignatureDate;
             $nss->patientSignature=$request->patientSignature;
             $nss->save();
+
+            $qaList = new QaList();
+            $qaList->patient_id = $request->patient_id;
+            $qaList->save();
+
+            if (isset($request->save_exit)) {
+                return redirect(route('patients.qa'));
+            }
 
             return redirect(route('skilled-agency.nurse-visit-note.index'));
         }

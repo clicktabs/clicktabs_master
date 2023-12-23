@@ -1359,6 +1359,12 @@
 						</div>
 
 						<div class="p-4">
+                            @if(request()->route()->getName() === 'skilled-agency.saveNursing')
+                            <input type="hidden" name="patient_id" value="{{$patient_id}}">
+                            @else
+                            <input type="hidden" name="patient_id" value="{{$patient->id}}">
+                            @endif
+                            
 							<button type="submit" name="next" class=" btn btn-primary btn-block active"  value="Next Page!">Save & Continue</button>
 						</div>
 					</div>
