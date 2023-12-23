@@ -13,6 +13,7 @@ use App\Http\Controllers\EmployeesListController;
 use App\Http\Controllers\EVV_Controller;
 use App\Http\Controllers\NonAdmitPatients;
 use App\Http\Controllers\OrderManagement;
+use App\Http\Controllers\ExportOasis;
 use App\Http\Controllers\OrganizationController;
 use App\Http\Controllers\PatientAdmissionController;
 use App\Http\Controllers\PatientDischargeWebController;
@@ -158,6 +159,10 @@ use App\Http\Controllers\QaController;
 use App\Http\Controllers\InfectionController;
 use App\Http\Controllers\OasisEDealthController;
 use App\Http\Controllers\ResumptionOfCareController;
+
+
+
+
 
 Route::middleware(['check.expiration'])->group(function () {
 
@@ -480,7 +485,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/addon-physician-update', [PhysicianController::class, 'update'])->name('physician.update');
 
     // Reports
-    Route::get('/patient-reports/oasis-export', [OasisExportController::class, 'index'])->name('patient-reports.oasis-export');
+    
     Route::get('/patient-reports/open-oasis', [OpenOasisController::class, 'index'])->name('patient-reports.open-oasis');
     Route::get('/patient-reports/open-shift', [OpenShiftController::class, 'index'])->name('patient-reports.open-shift');
     Route::get('/patient-reports/active-allergy', [AllergyController::class, 'index'])->name('patient-reports.active-allergy');
@@ -561,10 +566,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::resource('/evv/resolution/center', EVV_controller::class);
     Route::resource('/order-management', OrderManagement::class);
-    Route::resource('/export-oasis', ExportOasisController::class);
+    Route::resource('/export-oasis', ExportOasis::class);
 
     Route::get('index','OrderManagement@order');
-    Route::get('index','ExportOasisController@export');
+    Route::get('index','ExportOasis@export');
 
     Route::resource('/addons-list', AddonsCategoryController::class);
     Route::resource('/sub-addon-list', AddonsSubCategoryController::class);
