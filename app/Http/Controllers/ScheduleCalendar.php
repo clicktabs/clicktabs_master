@@ -235,7 +235,8 @@ class ScheduleCalendar extends Controller
                 return view('Skilled-Agency.oasis-e-start-of-care', compact('patient','race_enc','ethnicities','source_of_add','patientInsurance','patientAddressInfo',
                 'patientEpisodeTiming','patientTransportation', 'episodeDaterange','medications','schedule','account'))->with('active', 'phistory');
             case 'Skilled Nurse Visit (Billable)':
-                return view('Skilled-Agency.nurse-visit-note.index');
+                $patient = Patient::where('id', $schedule->patient_id)->first();
+                return view('Skilled-Agency.nurse-visit-note.index', compact('patient'));
             case '60-day-summary':
                 return view('Skilled-Agency.60-day-summary');
             case 'Plan Of Care':

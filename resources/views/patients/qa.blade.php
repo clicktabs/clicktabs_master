@@ -109,6 +109,13 @@
             table.draw();
         });
 
+        // task
+        var taskName = '';
+        $("#task").change(function(){
+            taskName = $(this).children("option:selected").val();
+            table.draw();
+        });
+
         var table = $('#daterange_table').DataTable({
             processing : true,
             serverSide : true,
@@ -118,6 +125,9 @@
                     if( startDate && endDate ) {
                         data.from_date = $('#daterange').data('daterangepicker').startDate.format('MM/DD/YYYY');
                         data.to_date = $('#daterange').data('daterangepicker').endDate.format('MM/DD/YYYY');
+                    }
+                    if( taskName ) {
+                        data.search['value'] = taskName;
                     }
                 }
             },
