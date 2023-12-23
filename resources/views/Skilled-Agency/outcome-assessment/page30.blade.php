@@ -225,20 +225,21 @@
                 <td colspan="3">
                    <label for="limitations">Functional Limitations</label>
                    <textarea name="limitations" id="limitations" cols="30" rows="10" class="form-control">
-                    {{ $patient->functionalAbilitie->amputation == 1 ? 'Amputation' : '' }}
-                    {{ $patient->functionalAbilitie->paralysis == 1 ? 'Paralysis' : '' }}
-                    {{ $patient->functionalAbilitie->legallyBlind == 1 ? 'Legally blind' : '' }}
-                    {{ $patient->functionalAbilitie->bowelBladder == 1 ? 'Bowel/Bladder (Incontinence)' : '' }}
-                    {{ $patient->functionalAbilitie->endurance == 1 ? 'Endurance' : '' }}
-                    {{ $patient->functionalAbilitie->minimalExertion == 1 ? 'Dyspnea with minimal exertion' : '' }}
-                    {{ $patient->functionalAbilitie->contracture == 1 ? 'Contracture' : '' }}
-                    {{ $patient->functionalAbilitie->ambulation == 1 ? 'Ambulation' : '' }}
-                    {{ $patient->functionalAbilitie->hearing == 1 ? 'Hearing' : '' }}
-                    {{ $patient->functionalAbilitie->speech == 1 ? 'Speech' : '' }}
-                    {{ !empty($patient->functionalAbilitie->speechOther) ? trim($patient->functionalAbilitie->speechOther) : '' }}
-                    {{ !empty($patient->functionalAbilitie->functionalLimitationsOther) ? trim($patient->functionalAbilitie->functionalLimitationsOther) : '' }}
-                    {{ !empty($patient->functionalAbilitie->priorTransferAbility) ? trim($patient->functionalAbilitie->priorTransferAbility) : '' }}
-                    {{ !empty($patient->functionalAbilitie->priorSocialActivityLevel) ? trim($patient->functionalAbilitie->priorSocialActivityLevel) : '' }}
+                    {{ optional($patient->functionalAbilitie)->amputation == 1 ? 'Amputation' : '' }}
+                    {{ optional($patient->functionalAbilitie)->paralysis == 1 ? 'Paralysis' : '' }}
+                    {{ optional($patient->functionalAbilitie)->legallyBlind == 1 ? 'Legally blind' : '' }}
+                    {{ optional($patient->functionalAbilitie)->bowelBladder == 1 ? 'Bowel/Bladder (Incontinence)' : '' }}
+                    {{ optional($patient->functionalAbilitie)->endurance == 1 ? 'Endurance' : '' }}
+                    {{ optional($patient->functionalAbilitie)->minimalExertion == 1 ? 'Dyspnea with minimal exertion' : '' }}
+                    {{ optional($patient->functionalAbilitie)->contracture == 1 ? 'Contracture' : '' }}
+                    {{ optional($patient->functionalAbilitie)->ambulation == 1 ? 'Ambulation' : '' }}
+                    {{ optional($patient->functionalAbilitie)->hearing == 1 ? 'Hearing' : '' }}
+                    {{ optional($patient->functionalAbilitie)->speech == 1 ? 'Speech' : '' }}
+                    {{ !empty(optional($patient->functionalAbilitie)->speechOther) ? trim(optional($patient->functionalAbilitie)->speechOther) : '' }}
+                    {{ !empty(optional($patient->functionalAbilitie)->functionalLimitationsOther) ? trim(optional($patient->functionalAbilitie)->functionalLimitationsOther) : '' }}
+                    {{ !empty(optional($patient->functionalAbilitie)->priorTransferAbility) ? trim(optional($patient->functionalAbilitie)->priorTransferAbility) : '' }}
+                    {{ !empty(optional($patient->functionalAbilitie)->priorSocialActivityLevel) ? trim(optional($patient->functionalAbilitie)->priorSocialActivityLevel) : '' }}
+
                 </textarea>
 
                 </td>
