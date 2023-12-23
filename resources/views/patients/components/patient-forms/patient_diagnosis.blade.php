@@ -39,7 +39,7 @@
                                 <option value="">Select Serverity</option>
                                 @if($patient_severity_sub_addons)
                                     @foreach($patient_severity_sub_addons as $single_severity)
-                                        <option value="{{$single_severity->id}}">{{$single_severity->name}}</option>
+                                        <option value="{{$single_severity->name}}">{{$single_severity->name}}</option>
                                     @endforeach
                                 @endif
                             </select>
@@ -86,11 +86,11 @@
                             <div class="form-group">
                                 <label for="other_diagnosis_severity">Severity: </label>
                                 {{-- <select name="other_diagnosis_severity" class="form-control s ou other_diagnosis_severity"> --}}
-                                    <select name="severity" class="form-control s ou other_diagnosis_severity">  
+                                    <select name="severity" class="form-control s ou other_diagnosis_severity">
                                     <option value="">Select Serverity</option>
                                     @if($patient_severity_sub_addons)
                                         @foreach($patient_severity_sub_addons as $single_severity)
-                                            <option value="{{$single_severity->id}}">{{$single_severity->name}}</option>
+                                            <option value="{{$single_severity->name}}">{{$single_severity->name}}</option>
                                         @endforeach
                                     @endif
                                 </select>
@@ -104,6 +104,6 @@
                 <div class="col pb-4 pl-3">
                     <button type="submit" class="btn btn-primary !bg-[#6366f1] !text-white">Save and Continue</button>
                 </div>
-        
+
     </div>
 </form>

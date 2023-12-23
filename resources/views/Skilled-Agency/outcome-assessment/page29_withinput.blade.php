@@ -88,69 +88,73 @@ if(isset($patient->diagnosis->other_diagnosis_name)){
                            <div class="row row-flex align-items-center gy-3 mt-1">
                               <div class="col-md-6">
                                  <label for="PrimaryDiagnosis" class="form-label"><b>Primary Diagnosis:</b></label>
-                                 <input type="text" name="PrimaryDiagnosis"  value="{{isset($patient->diagnosis->primary_diagnosis_name)?$patient->diagnosis->primary_diagnosis_name:''}}" id="PrimaryDiagnosis" class="form-control">
+                                 <input type="text" name="PrimaryDiagnosis"  value="{{isset($patient->diagnosis->primary_diagnosis_code)?$patient->diagnosis->primary_diagnosis_code:''}}" id="PrimaryDiagnosis" class="form-control">
                               </div>
                               <div class="col-md-6">
-                                 <label for="PD_ICD9" class="form-label"><b>ICD10:</b></label>
-                                 <input type="text"  value="{{isset($patient->diagnosis->primary_diagnosis_code)?$patient->diagnosis->primary_diagnosis_code:''}}" name="PD_ICD9" id="PD_ICD9" class="form-control">
+                                 <label for="PD_ICD9" class="form-label"><b>ICD9:</b></label>
+                                 <input type="text"  value="{{isset($patient->diagnosis->primary_diagnosis_name)?$patient->diagnosis->primary_diagnosis_name:''}}" name="PD_ICD9" id="PD_ICD9" class="form-control">
                               </div>
                            </div>
+                           @php
+                               $dataArray = json_decode($patient->diagnosis->other_diagnosis_code, true);
+                               $dataNames = json_decode($patient->diagnosis->other_diagnosis_name, true);
+                           @endphp
 
                            <div class="row row-flex align-items-center gy-3 mt-1">
                               <div class="col-md-6">
                                  <label for="OtherDiagnosis" class="form-label"><b>Other Diagnosis:</b></label>
-                                 <input type="text"  value="{{$otherdig}}" name="OtherDiagnosis" id="OtherDiagnosis" class="form-control">
+                                 <input type="text"  value="{{isset($dataArray[0])?$dataArray[0]:''}}" name="OtherDiagnosis" id="OtherDiagnosis" class="form-control">
                               </div>
                               <div class="col-md-6">
                                  <label for="OD_ICD9" class="form-label"><b>ICD10:</b></label>
-                                 <input type="text"  value="{{$otherdigcode}}" name="OD_ICD9" id="OD_ICD9" class="form-control">
+                                 <input type="text"  value="{{isset($dataNames[0])?$dataNames[0]:''}}" name="OD_ICD9" id="OD_ICD9" class="form-control">
                               </div>
                            </div>
 
                            <div class="row row-flex align-items-center gy-3 mt-1">
                               <div class="col-md-6">
-                                 <input type="text" name="OtherDiagnosis" id="OtherDiagnosis" class="form-control">
+                                 <input type="text" name="OtherDiagnosis" value="{{isset($dataArray[1])?$dataArray[1]:''}}" id="OtherDiagnosis" class="form-control">
                               </div>
                               <div class="col-md-6">
                                  <div class="input-group">
                                     <label class="input-group-text">ICD10:</label>
-                                    <input type="text" id="" class="form-control">
+                                    <input type="text" id="" value="{{isset($dataNames[1])?$dataNames[1]:''}}" class="form-control">
                                  </div>
                               </div>
                            </div>
 
                            <div class="row row-flex align-items-center gy-3 mt-1">
                               <div class="col-md-6">
-                                 <input type="text" name="OtherDiagnosis" id="OtherDiagnosis" class="form-control">
+                                 <input type="text" name="OtherDiagnosis" value="{{isset($dataArray[2])?$dataArray[2]:''}}" id="OtherDiagnosis" class="form-control">
                               </div>
                               <div class="col-md-6">
                                  <div class="input-group">
                                     <label class="input-group-text">ICD10:</label>
-                                    <input type="text" id="" class="form-control">
+                                    <input type="text" id="" value="{{isset($dataNames[2])?$dataNames[2]:''}}" class="form-control">
                                  </div>
                               </div>
                            </div>
 
                            <div class="row row-flex align-items-center gy-3 mt-1">
                               <div class="col-md-6">
-                                 <input type="text" name="OtherDiagnosis" id="OtherDiagnosis" class="form-control">
+                                 <input type="text" name="OtherDiagnosis" value="{{isset($dataArray[3])?$dataArray[3]:''}}" id="OtherDiagnosis" class="form-control">
                               </div>
                               <div class="col-md-6">
                                  <div class="input-group">
                                     <label class="input-group-text">ICD10:</label>
-                                    <input type="text" id="" class="form-control">
+                                    <input type="text" id="" value="{{isset($dataNames[3])?$dataNames[3]:''}}" class="form-control">
                                  </div>
                               </div>
                            </div>
 
                            <div class="row row-flex align-items-center gy-3 mt-1">
                               <div class="col-md-6">
-                                 <input type="text" name="OtherDiagnosis" id="OtherDiagnosis" class="form-control">
+                                 <input type="text" name="OtherDiagnosis" value="{{isset($dataArray[4])?$dataArray[4]:''}}" id="OtherDiagnosis" class="form-control">
                               </div>
                               <div class="col-md-6">
                                  <div class="input-group">
                                     <label class="input-group-text">ICD10:</label>
-                                    <input type="text" id="" class="form-control">
+                                    <input type="text" id="" value="{{isset($dataNames[4])?$dataNames[4]:''}}" class="form-control">
                                  </div>
                               </div>
                            </div>
@@ -167,7 +171,7 @@ if(isset($patient->diagnosis->other_diagnosis_name)){
                                  <textarea class="form-control" name="OldMedicationsDate" id="OldMedicationsDate" cols="30" rows="10"></textarea>
                               </div>
                            </div>
-{{-- 
+
                            <div class="row row-flex align-items-center gy-3 mt-1">
                               <div class="col-md-12">
                                  <div class="input-group">
@@ -175,54 +179,30 @@ if(isset($patient->diagnosis->other_diagnosis_name)){
                                     <input type="date" id="" class="form-control">
                                  </div>
                               </div>
-                           </div> --}}
+                           </div>
 
                            <div class="row row-flex align-items-center gy-3 mt-1">
-                               <!--  <div class="col-md-6">
-                                 <label for="MdSignature" class="form-label"><b>M.D. Signature:</b></label>
-                                 {{-- <input type="text" name="MdSignature" id="MdSignature" class="form-control"> --}}
-
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#doctorFormModal">Add M.D. Signature</button>
-
-                                <div id="doctorSignatureImageContainer" style="display: none;">
-                                    <img id="doctorSignatureImage" src="" alt="Doctor's Signature">
-                                </div>
-
-
-                                 <div class="d-block mt-2">
-                                    <label for="MdSignatureDate" class="form-label"><b>Date:</b></label>
-                                    <input type="text" name="MdSignatureDate" value="{{date('m-d-Y')}}" id="MdSignatureDate" class="form-control">
-                                 </div>
-                              </div>-->
 
                               <div class="col-md-6">
                                  <label for="NurseSignature" class="form-label"><b>Nurse's Signature:</b></label>
-                                 {{-- <input type="text" name="NurseSignature" id="NurseSignature" class="form-control"> --}}
-
-                                 <!-- Nurse Signature Button -->
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#nurseFormModal">Add Signature</button>
-
-                                <!-- Nurse Signature image container initially hidden -->
                                 <div id="nurseSignatureImageContainer" style="display: none;">
                                     <img id="nurseSignatureImage" src="" alt="Nurse's Signature">
                                 </div>
-
                                  <div class="d-block mt-2">
                                     <label for="NurseSignatureDate" class="form-label"><b>Date:</b></label>
                                     <input type="text" value="{{date('m-d-Y')}}" name="NurseSignatureDate" id="NurseSignatureDate" class="form-control">
                                  </div>
                               </div>
                               <div class="col-md-6">
-                                <!-- Your existing content goes here -->
 
-                                <!-- Signature area and date -->
                                 <span class="signature-area">
-                                    Physician Signature: ______________________________________________
+                                    Signature: ___________________________________________
                                 </span>
                                 <br>
                                 <br>
                                 <span class="date">
-                                    Date: ________________________________
+                                    Date: ____________________________________
                                 </span>
                             </div>
                            </div>

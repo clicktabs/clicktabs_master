@@ -41,6 +41,7 @@ class PatientDiagnosisController extends Controller
         $patient_clinical_diagnosis->patient_id = $request->patient_id;
         $patient_clinical_diagnosis->primary_diagnosis_code = $request->icd_name_search;
         $patient_clinical_diagnosis->primary_diagnosis_name = $request->ic_code_name;
+        $patient_clinical_diagnosis->severity = $request->primary_diagnosis_severity;
         $patient_clinical_diagnosis->other_diagnosis_code = json_encode($request->other_diagnosis_code);
         $patient_clinical_diagnosis->other_diagnosis_name = json_encode($request->ic_another_code);
         $patient_clinical_diagnosis->save();

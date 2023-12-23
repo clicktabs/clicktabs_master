@@ -48,7 +48,7 @@
                 $('#ic_code_name').empty();
                 var $dropdown = $("#ic_code_name");
                 for (let i = 0; i < data[3].length; i++) {
-                    $dropdown.append($("<option />").val(data[3][i][0]).text(data[3][i][1]));
+                    $dropdown.append($("<option />").val(data[3][i][1]).text(data[3][i][1]));
                 }
             }
         });
@@ -196,7 +196,7 @@
             $('.pharmacySelector').change(function () {
                 var id = this.value;
                 $.ajax({
-                    url: "{{ route("pharmacy.details") }}",     
+                    url: "{{ route("pharmacy.details") }}",
                     data: {"id": id},
                     type: 'get',
                     success: function (result) {
@@ -228,7 +228,7 @@
 
                     const {data} = result
                     for (let i = 0; i < data[3].length; i++) {
-                        $dropdown.append($("<option />").val(data[3][i][0]).text(data[3][i][1]));
+                        $dropdown.append($("<option />").val(data[3][i][1]).text(data[3][i][1]));
                     }
                     jQuery('.loader_wrap').fadeOut();
                 }

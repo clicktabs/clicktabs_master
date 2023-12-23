@@ -2250,7 +2250,7 @@
                     $('#ic_code_name').empty();
                     var $dropdown = $("#ic_code_name");
                     for (let i = 0; i < data[3].length; i++) {
-                        $dropdown.append($("<option />").val(data[3][i][0]).text(data[3][i][1]));
+                        $dropdown.append($("<option />").val(data[3][i][1]).text(data[3][i][1]));
                     }
                 }
             });
