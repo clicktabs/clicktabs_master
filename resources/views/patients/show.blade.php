@@ -13,7 +13,7 @@
         }
 
         .dataTables_length label select {
-            width: 100px;  
+            width: 100px;
         }
 
         table.dataTable > tbody > tr.child ul.dtr-details {
@@ -907,7 +907,7 @@
             // });
             $('.add_new_medication_continue').click(function () {
                 $('#continueModal').modal({
-                    fadeDuration: 100  
+                    fadeDuration: 100
                 });
             });
             $('.add_new_allergy').click(function () {
@@ -1786,7 +1786,5 @@
             }
         });
     });
-
-    
 </script>
 @endsection
