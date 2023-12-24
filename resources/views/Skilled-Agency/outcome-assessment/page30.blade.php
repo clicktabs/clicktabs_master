@@ -1,107 +1,134 @@
-   <style>
-      .heading_1 {
-         font-size: 30px;
-         font-weight: 600;
-         margin-bottom: 20px;
-      }
-   </style>
 
-   <div class="table-responsive">
-      <div class="form-holder pt-5 pb-5">
-         <h1 class="text-center heading_1">HOME HEALTH CERTIFICATION AND PLAN OF CARE</h1>
+<div class="container">
+   <div class="d-flex flex-column" style="background: white;">
+       <div class="d-flex flex-row justify-content-between mx-3 " >
+           <div>Department of Health and Human Services Centers for Medicare & Medicaid Services</div>
+           <div>Form Approved OMB No. 0938-0357</div>
+       </div>
+       <div class="d-flex flex-column mt-2 border mx-3 mb-4">
 
-            <table class="table table-bordered align-middle mb-0">
-            <tr>
-               <td>
-                  <label for="hiClaimNo">Patients HI Claim No.</label>
-                  @if (!empty($patient->insurance->medicaid_id) && !empty($patient->insurance->medicare_id))
-                  <input type="number"
-                        name="hiClaimNo"
-                        id="hiClaimNo"
-                        class="form-control"
-                        value="{{ $patient->insurance->medicaid_id }}">
-                    <br>
-                    <input type="number"
-                        name="medicareId"
-                        id="medicareId"
-                        class="form-control"
-                        value="{{ $patient->insurance->medicare_id }}">
-                @elseif (!empty($patient->insurance->medicaid_id) )
-                <input type="number"
-                    name="hiClaimNo"
-                    id="hiClaimNo"
-                    class="form-control"
-                    value="{{ $patient->insurance->medicaid_id }}">
-                @else
-                    <input type="number"
-                        name="hiClaimNo"
-                        id="hiClaimNo"
-                        class="form-control"
-                        value="{{ !empty($patient->cms->hiClaimNo) ? $patient->cms->hiClaimNo : '' }}">
-                @endif
-                </td>
-               <td>
-                  <label for="startOfCareDate">Start Of Care Date</label>
-                  <input type="date" name="startOfCareDate" id="startOfCareDate" class="form-control" value="{{$patient?->episode?->start_care_date}}">
-               </td>
-               <td>
-                  <label for="certification_period">Certification Period</label>
-                  @php
+           <div class="d-flex justify-content-center border-top py-2 fw-bold border bg-info bg-gradient">HOME HEALTH CERTIFICATION AND PLAN OF CARE</div>
 
-                  @endphp
-                  <div class="row row-flex align-items-center gy-2">
-                     <div class="col">
-                        <div class="input-group clean-input-group">
-                           <label class="input-group-text" for="certiPeriodFrom">From:</label>
-                           <input type="date" name="certiPeriodFrom" id="certiPeriodFrom" class="form-control" value="{{isset($episodeDaterange->episode_start_date)?$episodeDaterange->episode_start_date:''}}">
-                        </div>
-                     </div>
-                     <div class="col">
-                        <div class="input-group clean-input-group">
-                           <label class="input-group-text" for="certiPeriodTo">To:</label>
-                           <input type="date" name="certiPeriodTo" id="certiPeriodTo" class="form-control" value="{{isset($episodeDaterange->episode_end_date)?$episodeDaterange->episode_end_date:''}}">
-                        </div>
-                     </div>
-                  </div>
-               </td>
-               <td colspan="2">
-                  <label for="medicalRecordNo">Medical Record No.</label>
-                  <input type="text" name="medicalRecordNo" id="medicalRecordNo" class="form-control" value="{{$patient->patient_code}}">
-               </td>
-            </tr>
-            <tr>
-               <td colspan="2">
-                     <label for="name">Patients Name and Address</label>
-                     <input type="text" name="name" id="name" class="form-control" placeholder="Name" value="{{$patient?->first_name.' '.$patient?->last_name}}">
-                  <div class="d-block">
-                     <label for="address"></label>
-                     <textarea name="address" id="address" cols="30" rows="1" class="form-control" placeholder="Address">{{$patient?->address?->address_line_1.' '.$patient?->address?->address_line_2}}</textarea>
-                  </div>
-               </td>
-               <td class="labels-group">
-                  <span class="fw-semibold d-block">Gender</span>
-                  <label class="form-check-label" for="gender_male">
-                    <input type="radio" name="gender" id="gender_male" value="1" class="form-check-input" {{ $patient?->gender == 'male' ? 'checked' : '' }}> Male
-                </label>
-                <label class="form-check-label" for="gender_female">
-                    <input type="radio" name="gender" value="2" id="gender_female" class="form-check-input" {{ $patient?->gender == 'female' ? 'checked' : '' }}> Female
-                </label>
+           <div class="d-flex border flex-row">
+               <div class="col-md-2 border px-2 py-2">
+                   1. Patient's HI Claim No.
+                   <input type="text" name="hiClaimNo" id="hiClaimNo" value="{{ $patient->insurance->medicaid_id }}" placeholder="Patient's HI Claim No." class="form-control">
+               </div>
+               <div class="col-md-2 border px-2 py-2">2. Start Of Care Date
+                   <input type="date"  name="startOfCareDate" id="startOfCareDate" value="{{$patient?->episode?->start_care_date}}" class="form-control"  >
+               </div>
+               <div class="col-md-4 d-flex flex-column border">
+                   <div class="px-2 py-2">3. Certification Period</div>
+                   <div class="d-flex flex-row justify-content-around">
+                       <div class="" style="margin-right: 10px;">From
+                           <input type="text" name="certiPeriodFrom" id="certiPeriodFrom" value="{{isset($episodeDaterange->episode_start_date)?$episodeDaterange->episode_start_date:''}}" placeholder="From" class="form-control   mr-1">
+                       </div>
+                       <div>To
+                           <input type="text" name="certiPeriodTo" id="certiPeriodTo" value="{{isset($episodeDaterange->episode_end_date)?$episodeDaterange->episode_end_date:''}}"  placeholder="To" class="form-control">
+                       </div>
+                   </div>
+               </div>
+               <div class="col-md-2 border px-2 py-2">4. Medical Record No
+                   <input type="text" placeholder="Medical Record No" name="medicalRecordNo" id="medicalRecordNo" value="{{$patient->patient_code}}" class="form-control">
+               </div>
+               <div class="col-md-2 px-2 py-2">5. Provider No.
+                   <input type="text" placeholder="Provider No." name="providerNumber" id="providerNumber" value="{{$account ? $account->medicare_p_n : ''}}" class="form-control">
+               </div>
 
-               </td>
-               <td>
-                  <label for="dateOfBirth">Date of Birth</label>
-                  <input type="date" name="dateOfBirth" id="dateOfBirth" class="form-control" value="{{$patient?->date_of_birth}}">
-               </td>
-               <td>
-                  <label for="phone">Phone Number</label>
-                  <input type="text" name="phone" id="phone" class="form-control" value="{{$patient?->address?->phone}}">
-               </td>
-            </tr>
-            <tr>
-               <td colspan="5">
-                  <label for="riskProfile">Patient Risk Profile: N0415. High-Risk Drug Classes: Use and Indication</label>
-                  <textarea name="riskProfile" id="riskProfile" cols="30" rows="7" class="form-control">
-                    @if (!empty($medications))
+           </div>
+           <div class="d-flex flex-row border">
+               <div class="d-flex col-md-6 border-end px-2 py-2">
+                   <div class="from-group col-md-12 py-2">
+                       6. Patient's Name and Address
+                       <input type="text" placeholder="Patient's Name and Address" class="form-control" name="name" id="name" value="{{$patient?->first_name.' '.$patient?->last_name}}, {{$patient?->address?->address_line_1.' '.$patient?->address?->address_line_2}}">
+                   </div>
+               </div>
+               <div class="d-flex col-md-6 px-2 py-2">
+                   <div class="from-group col-md-12 py-2">
+                       7. Provider's Name, Address and Telephone Number
+                       <input type="text" class="form-control" placeholder="Provider's Name, Address and Telephone Number" name="branchInfo" id="branchInfo" 
+                       value="{{ $account ? $account->company_name : '' }}">
+                       <input type="text" class="form-control" name="" id="branchAddress" value="{{ $account ? $account->address_line . ' - ' . $account->zip : '' }}, Tel: {{ $account ? $account->phone : '' }}">
+                   </div>
+               </div>
+           </div>
+           <div class="d-flex flex-row border">
+               <div class="d-flex flex-column col-md-6">
+                   <div class="d-flex flex-row ">
+                       <div class="col-md-7 border-end px-2 py-2">8. Date of Birth
+                           <input type="date" class="form-control" name="dateOfBirth" id="dateOfBirth" value="{{$patient?->date_of_birth}}">
+                       </div>
+                       <div class="col-md-5 px-2 py-2">
+                           9. Sex
+                           <input type="radio" name="gender" id="gender_male" id="Male" value="1" {{ $patient?->gender == 'male' ? 'checked' : '' }}>
+                           <label for="Male">M</label>
+                           <input type="radio" name="sex" name="gender" id="gender_female" value="2" {{ $patient?->gender == 'female' ? 'checked' : '' }}>
+                           <label for="Female">F</label>
+                         </div>
+                   </div>
+                   <div class="d-flex flex-row border">
+                       <div class="col-md-3 d-flex border-end border-top px-2 py-2">11. ICD- 10-CM</div>
+                       <div class="col-md-5 d-flex border-end border-top px-2 py-2">
+                           <div class="from-group col-md-12 py-2">
+                               Principal Diagnosis
+                               <input type="text" placeholder="Principal Diagnosis" class="form-control" name="principal-diagnosis">
+                           </div>
+
+                       </div>
+                       <div class="col-md-3 d-flex  px-2">
+                           <div class="from-group">
+                               <label for="principaldate" class="col-form-label"> Date: </label>
+                               <input type="date" id="principaldate" class="form-control" >
+
+                           </div>
+
+                       </div>
+                   </div>
+
+                   <div class="d-flex flex-row border">
+                       <div class="col-md-3 d-flex border-end  px-2 py-2">12. ICD- 10-CM</div>
+                       <div class="col-md-5 d-flex border-end  px-2 py-2">
+                           <div class="from-group col-md-12  py-2">
+                               Surgical Procedure
+                               <input type="text" placeholder=" Surgical Procedure" class="form-control" name="surgical-procedure">
+                           </div>
+
+                       </div>
+                       <div class="col-md-3 d-flex  px-2">
+                           <div class="from-group">
+                               <label for="principaldate" class="col-form-label"> Date: </label>
+                               <input type="date" id="principaldate" class="form-control" >
+
+                           </div>
+
+                       </div>
+                   </div>
+
+                   <div class="d-flex flex-row border">
+                       <div class="col-md-3 d-flex border-end px-2 py-2">13. ICD- 10-CM</div>
+                       <div class="col-md-5 d-flex border-end px-2 py-2">
+                           <div class="from-group col-md-12  py-2">
+                               Other Pertinent Diagnoses
+                               <input type="text" class="form-control" placeholder="Other Pertinent Diagnoses" name="other-pertinent-diagnoses">
+                           </div>
+
+
+                       </div>
+                       <div class="col-md-3 d-flex  px-2">
+                           <div class="from-group">
+                               <label for="principaldate" class="col-form-label"> Date: </label>
+                               <input type="date" id="principaldate2" class="form-control" >
+                           </div>
+
+                       </div>
+                   </div>
+
+               </div>
+               <div class="d-flex col-md-6 border-start px-2 py-2">
+                   <div class="from-group col-md-12 py-2">
+                       10. Medications: Dose/Frequency/Route (N)ew (C)hanged (U)nchanged
+                       <textarea class="form-control py-2" name="riskProfile" id="riskProfile" rows="12" placeholder="Medications: Dose/Frequency/Route (N)ew (C)hanged (U)nchanged">
+                        @if (!empty($medications))
                         @forelse($medications as $medication)
                         @if ($medication->status == 1)
                             (N) {{ $medication->medication_dosage }} - {{ $medication->frequency }} - {{ $medication->route }}
@@ -113,256 +140,439 @@
                         @endforelse
                     @endif
 
-                </textarea>
-               </td>
-            </tr>
-         </table>
-
-         <table class="table table-bordered align-middle mb-0">
-            <tr>
-               <td colspan="3"><b>Clinical Data</b></td>
-            </tr>
-            <tr>
-               <td>
-                  <label for="clinicalManager">Clinical Manager</label>
-                  <input type="text" name="clinicalManager" id="clinicalManager" class="form-control" value="{{ !empty($schedule->employee->first_name) ? $schedule->employee->first_name : '' }} {{ !empty($schedule->employee->last_name) ? $schedule->employee->last_name : '' }}">
-                </td>
-                <td rowspan="2">
-                    <div class="d-block">
-                       <label for="branchInfo">Branch Name and Address</label>
-                       <input type="text" name="branchInfo" id="branchInfo" class="form-control" placeholder="Branch Name" value="{{ $account ? $account->company_name : '' }}">
-                    </div>
-                    <div class="d-block">
-                       <label for="branchAddress"></label>
-                       <textarea name="branchAddress" id="branchAddress" cols="30" rows="1" class="form-control" placeholder="Address">{{ $account ? $account->address_line . ' - ' . $account->zip : '' }}</textarea>
-                    </div>
-                 </td>
-                 <td>
-                    <label for="clinicPhone">Phone Number</label>
-                    <input type="text" name="clinicPhone" id="clinicPhone" class="form-control" placeholder="(614) 762-8063" value="{{ $account ? $account->phone : '' }}">
-                 </td>
-            </tr>
-            <tr>
-               <td>
-                  <span class="fw-semibold">Provider Number - Medicare Number</span>
-                  <div class="d-block">
-                     <label for="providerNumber"></label>
-                     <input type="number" name="providerNumber" id="providerNumber" class="form-control" placeholder="Provider Number" value="{{$account ? $account->medicare_p_n : ''}}">
-                  </div>
-               </td>
-               <td>
-                  <label for="fax">Fax Number</label>
-                  <input type="text" name="fax" id="fax" class="form-control" value="{{$account ? $account->fax : ''}}">
-               </td>
-            </tr>
-            <tr>
-               <td colspan="3" class="px-3 py-2 bg-secondary-subtle"><b>Primary Diagnosis</b></td>
-            </tr>
-            <tr>
-                <td>
-                   <label for="diagonsisCode">Code</label>
-                   <textarea name="diagonsisCode" id="diagonsisCode" cols="30" rows="2" class="form-control autolineinput">{{ $patient && $patient->diagnosis ? $patient->diagnosis->primary_diagnosis_code : '' }}</textarea>
-                </td>
-                <td>
-                   <label for="description">Description</label>
-                   <textarea name="description" id="description" cols="30" rows="2" class="form-control autolineinput">{{ $patient && $patient->diagnosis ? $patient->diagnosis->primary_diagnosis_name : '' }}</textarea>
-                </td>
-                <td>
-                   <label for="date">Date</label>
-                   <input type="date" name="date" id="date" class="form-control" value="{{ $patient && $patient->diagnosis ? $patient->diagnosis->created_at->format('Y-m-d') : '' }}">
-                </td>
-             </tr>
-             <tr>
-                <td colspan="3" class="px-3 py-2 bg-secondary-subtle"><b>Secondary/Other Diagnosis</b></td>
-             </tr>
-             <tr>
-                <td>
-                   <label for="secDiagnosisCode">Code</label>
-                   <textarea name="secDiagnosisCode" id="secDiagnosisCode" cols="30" rows="8" class="form-control autolineinput">{{ $patient && $patient->cms ? $patient->cms->secDiagnosisCode : '' }}</textarea>
-                </td>
-                <td colspan="2">
-                   <label for="secDescription">Description</label>
-                   <textarea name="secDescription" id="secDescription" cols="30" rows="8" class="form-control autolineinput">{{ $patient && $patient->cms ? $patient->cms->secDescription : '' }}</textarea>
-                </td>
-             </tr>
-             <tr>
-                <td colspan="3">
-                   <label for="mentalStatus">Mental Status</label>
-                   <textarea name="mentalStatus" id="mentalStatus" cols="30" rows="8" class="form-control">{{ $patient && $patient->cms ? $patient->cms->mentalStatus : '' }}</textarea>
-                </td>
-             </tr>
-
-
-             <tr>
-                <td colspan="3">
-                   <label for="supplies">DME and Supplies</label>
-                   <textarea name="supplies" id="supplies" cols="30" rows="2" class="form-control">{{ $patient && $patient->cms ? $patient->cms->supplies : '' }}</textarea>
-                </td>
-             </tr>
-
-             <tr>
-                <td colspan="3">
-                   <label for="prognosis">Prognosis</label>
-                   <textarea name="prognosis" id="prognosis" cols="30" rows="1" class="form-control">{{ $patient && $patient->cms ? $patient->cms->prognosis : '' }}</textarea>
-                </td>
-             </tr>
-
-             <tr>
-                <td colspan="3">
-                   <label for="safety">Safety Measures</label>
-                   <textarea name="safety" id="safety" cols="30" rows="2" class="form-control">{{ $patient && $patient->cms ? $patient->cms->safety : '' }}</textarea>
-                </td>
-             </tr>
-
-             <tr>
-                <td colspan="3">
-                   <label for="nutritional">Nutritional Requirements</label>
-                   <textarea name="nutritional" id="nutritional" cols="30" rows="2" class="form-control">{{ $patient && $patient->cms ? $patient->cms->nutritional : '' }}</textarea>
-                </td>
-             </tr>
-
-             <tr>
-                <td colspan="3">
-                   <label for="limitations">Functional Limitations</label>
-                   <textarea name="limitations" id="limitations" cols="30" rows="10" class="form-control">
-                    {{ optional($patient->functionalAbilitie)->amputation == 1 ? 'Amputation' : '' }}
-                    {{ optional($patient->functionalAbilitie)->paralysis == 1 ? 'Paralysis' : '' }}
-                    {{ optional($patient->functionalAbilitie)->legallyBlind == 1 ? 'Legally blind' : '' }}
-                    {{ optional($patient->functionalAbilitie)->bowelBladder == 1 ? 'Bowel/Bladder (Incontinence)' : '' }}
-                    {{ optional($patient->functionalAbilitie)->endurance == 1 ? 'Endurance' : '' }}
-                    {{ optional($patient->functionalAbilitie)->minimalExertion == 1 ? 'Dyspnea with minimal exertion' : '' }}
-                    {{ optional($patient->functionalAbilitie)->contracture == 1 ? 'Contracture' : '' }}
-                    {{ optional($patient->functionalAbilitie)->ambulation == 1 ? 'Ambulation' : '' }}
-                    {{ optional($patient->functionalAbilitie)->hearing == 1 ? 'Hearing' : '' }}
-                    {{ optional($patient->functionalAbilitie)->speech == 1 ? 'Speech' : '' }}
-                    {{ !empty(optional($patient->functionalAbilitie)->speechOther) ? trim(optional($patient->functionalAbilitie)->speechOther) : '' }}
-                    {{ !empty(optional($patient->functionalAbilitie)->functionalLimitationsOther) ? trim(optional($patient->functionalAbilitie)->functionalLimitationsOther) : '' }}
-                    {{ !empty(optional($patient->functionalAbilitie)->priorTransferAbility) ? trim(optional($patient->functionalAbilitie)->priorTransferAbility) : '' }}
-                    {{ !empty(optional($patient->functionalAbilitie)->priorSocialActivityLevel) ? trim(optional($patient->functionalAbilitie)->priorSocialActivityLevel) : '' }}
-
-                </textarea>
-
-                </td>
-             </tr>
-
-             <tr>
-                <td colspan="3">
-                   <label for="other">Other</label>
-                   <textarea name="other" id="other" cols="30" rows="2" class="form-control">{{ $patient && $patient->cms ? $patient->cms->other : '' }}</textarea>
-                </td>
-             </tr>
-
-
-             <tr>
-                <td colspan="3">
-                   <label for="activities">Activities Permitted</label>
-                   <textarea name="activities" id="activities" cols="30" rows="2" class="form-control">{{ $patient && $patient->cms ? $patient->cms->activities : '' }}</textarea>
-                </td>
-             </tr>
-
-         </table>
-
-         <table class="table table-bordered mb-0">
-            <tr>
-               <td colspan="2"><b>Treatments</b></td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                   <label for="medications">Medications</label>
-                   <textarea name="medications" id="medications" cols="30" rows="10" class="form-control">{{ $patient && $patient->cms ? $patient->cms->medications : '' }}</textarea>
-                </td>
-             </tr>
-             <tr>
-                <td colspan="2" class="px-3 py-2 bg-secondary-subtle"><b>Allergies</b></td>
-             </tr>
-             <tr>
-                <td>
-                   <label for="substance">Substance</label>
-                   <p class="m-0">NKA (Food/ Drug/ Latex/ Environmental)</p>
-                   <textarea name="substance" id="substance" cols="30" rows="1" class="form-control">{{ $patient && $patient->allergy ? $patient->allergy->allergy : '' }}</textarea>
-                </td>
-                <td>
-                   <label for="reaction">Reaction</label>
-                   <textarea name="reaction" id="reaction" cols="30" rows="2" class="form-control">{{ $patient && $patient->allergy ? $patient->allergy->reaction : '' }}</textarea>
-                </td>
-             </tr>
-             <tr>
-                <td colspan="2">
-                   <label for="treatments">Orders and Treatments</label>
-                   <textarea name="treatments" id="treatments" cols="30" rows="20" class="form-control">{{ $patient && $patient->cms ? $patient->cms->treatments : '' }}</textarea>
-                </td>
-             </tr>
-             <tr>
-                <td>
-                   <p><b>Nurse Signature and Date of Verbal SOC Where Applicable</b></p>
-                   <div class="input-group clean-input-group mt-2">
-                      <label class="input-group-text" for="nurseSign">Digitally Signed by:</label>
-                      <input type="text" name="nurseSign" id="nurseSign" class="form-control" value="{{ $patient && $patient->cms ? $patient->cms->nurseSign : '' }}">
+                     </textarea>
                    </div>
-                </td>
-                <td class="align-middle">
-                   <div class="clean-input-group">
-                      <label for="signDate">Date</label>
-                      <input type="date" name="signDate" id="signDate" class="form-control" value="{{ $patient && $patient->cms ? $patient->cms->signDate : '' }}">
+               </div>
+           </div>
+           <div class="d-flex flex-row">
+               <div class="col-md-6 border-end d-flex px-2 py-2">
+                   <div class="from-group col-md-12 py-2">
+                       14. DME and Supplies:
+                       <input type="text" placeholder="" class="form-control" name="dme-and-supplies">
                    </div>
-                </td>
-             </tr>
+               </div>
+               <div class="col-md-6 border d-flex px-2 py-2">
+                   <div class="from-group col-md-12 py-2">
+                       15. Safety Measures:
+                       <input type="text" placeholder="" class="form-control" name="safety-measures">
+                   </div>
+               </div>
+           </div>
+           <div class="d-flex flex-row">
+               <div class="col-md-6 border d-flex px-2 py-2">
+                   <div class="from-group col-md-12 py-2">
+                       16. Nutritional Req. <input type="text" placeholder="" class="form-control" name="nutritional-req">
+                   </div>
+               </div>
+               <div class="col-md-6 border d-flex px-2 py-2">
+                   <div class="from-group col-md-12 py-2">
+                       17. Allergies: <input type="text" name="substance" id="substance" value="{{ $patient && $patient->allergy ? $patient->allergy->allergy : '' }}" placeholder="" class="form-control" name="Allergies">
+                   </div>
+               </div>
+           </div>
+           <div class="d-flex flex-row">
+               <div class="col-md-6 border d-flex flex-column py-2 px-2" >
 
-             <tr>
-                <td>
-                   <label class="form-check-label" for="certify">
-                      <input type="checkbox" value="1" name="certify" id="certify" class="form-check-input" {{ $patient && $patient->cms && $patient->cms->certify ? 'checked' : '' }}> I certify/recertify that this patient is confined to his/her home and needs intermittent skilled nursing care, physical therapy and/or speech therapy or continues to need occupational therapy. This patient is under my care, and I have authorized the services on this plan of care, and I or another physician will periodically review this plan. I attest that a valid face-to-face encounter occurred (or will occur) within timeframe requirements, and it is related to the primary reason the patient requires home health services.
-                   </label>
-                </td>
-                <td>
-                   <label class="form-check-label" for="fine">
-                      <input type="checkbox" value="1" name="fine" id="fine" class="form-check-input" {{ $patient && $patient->cms && $patient->cms->fine ? 'checked' : '' }}> Anyone who misrepresents, falsifies, or conceals essential information required for the payment of Federal funds may be subject to fine, imprisonment, or civil penalty under applicable Federal laws.
-                   </label>
-                </td>
-             </tr>
+                   <div class="d-flex py-2">18.A. Functional Limitations</div>
+                   <div class="d-flex flex-row justify-content-between" style="font-size: 11px;">
+                       <div class="d-flex flex-column col-md-4">
+                           <div class="">
+                               1 <input type="checkbox" name="funcitonalLimition[]" id="amputation" value="amputation">
+                               <label for="amputation">Amputation</label>
+                           </div>
 
-         </table>
+                           <div>
+                               2 <input type="checkbox" name="funcitonalLimition[]" id="bowelBladder" value="bowelBladder">
+                               <label for="bowelBladder">Bowel/Bladder (Incontinence)</label>
+                           </div>
 
-         <table class="table table-bordered align-middle mb-0">
-            <tr>
-                <td>
-                    <label for="physician">Primary Physician</label>
-                    <input type="text" name="physician" id="physician" class="form-control" value="{{ $patient && $patient->cms ? $patient->cms->physician : '' }}">
-                </td>
-                <td rowspan="2">
-                    <label for="physicianAddress">Address</label>
-                    <textarea name="physicianAddress" id="physicianAddress" cols="30" rows="2" class="form-control">{{ $patient && $patient->cms ? $patient->cms->physicianAddress : '' }}</textarea>
-                </td>
-                <td>
-                    <label for="physicianPhone">Phone Number</label>
-                    <input type="text" name="physicianPhone" id="physicianPhone" class="form-control" placeholder="(614) 762-8063" value="{{ $patient && $patient->cms ? $patient->cms->physicianPhone : '' }}">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="npi">NPI</label>
-                    <input type="text" name="npi" id="npi" class="form-control" value="{{ $patient && $patient->cms ? $patient->cms->npi : '' }}">
-                </td>
-                <td>
-                    <label for="physicianFax">Fax Number</label>
-                    <input type="text" name="physicianFax" id="physicianFax" class="form-control" value="{{ $patient && $patient->cms ? $patient->cms->physicianFax : '' }}">
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <div class="clean-input-group mt-2">
-                        <label for="physicianSign">Attending Physician's Signature and Date Signed</label>
-                        <input type="text" name="physicianSign" id="physicianSign" class="form-control" value="{{ $patient && $patient->cms ? $patient->cms->physicianSign : '' }}">
-                    </div>
-                </td>
-                <td>
-                    <div class="clean-input-group">
-                        <label for="physicianSignDate">Date</label>
-                        <input type="date" name="physicianSignDate" id="physicianSignDate" class="form-control" value="{{ $patient && $patient->cms ? $patient->cms->physicianSignDate : '' }}">
-                    </div>
-                </td>
-            </tr>
-        </table>
+                           <div>
+                               3 <input type="checkbox" name="funcitonalLimition[]" id="contracture" value="contracture">
+                               <label for="contracture">Contracture</label>
+                           </div>
 
-      </div>
-   </div>
+                           <div>
+                               4 <input type="checkbox" name="funcitonalLimition[]" id="hearing" value="hearing">
+                               <label for="hearing">Hearing</label>
+                           </div>
+
+
+                       </div>
+
+                       <div class="d-flex flex-column col-md-3">
+                           <div>
+                               5 <input type="checkbox" name="funcitonalLimition[]" id="paralysis" value="paralysis">
+                               <label for="paralysis">Paralysis</label>
+                           </div>
+
+                           <div>
+                               6 <input type="checkbox" name="funcitonalLimition[]" id="endurance" value="endurance">
+                               <label for="endurance">Endurance</label>
+                           </div>
+
+                           <div>
+                               7 <input type="checkbox" name="funcitonalLimition[]" id="ambulation" value="ambulation">
+                               <label for="ambulation">Ambulation</label>
+                           </div>
+
+                           <div>
+                               8 <input type="checkbox" name="funcitonalLimition[]" id="speech" value="speech">
+                               <label for="speech">Speech</label>
+                           </div>
+
+
+                       </div>
+
+                       <div class="d-flex flex-column col-md-5">
+                           <div>
+                               9 <input type="checkbox" name="funcitonalLimition[]" id="legallyBlind" value="legallyBlind">
+                               <label for="legallyBlind">Legally Blind</label>
+                           </div>
+
+                           <div>
+                               A <input type="checkbox" name="funcitonalLimition[]" id="dyspneaWithMinimalExertion" value="dyspneaWithMinimalExertion">
+                               <label for="dyspneaWithMinimalExertion">Dyspnea With Minimal Exertion </label>
+                           </div>
+
+                           <div>
+                               B <input type="checkbox" name="funcitonalLimition[]" id="other" value="Other">
+                               <label for="other">Other (Specify)</label>
+                           </div>
+
+
+
+                       </div>
+
+                   </div>
+               </div>
+
+               <div class="col-md-6 border d-flex flex-column px-2 py-2" >
+
+                   <div class="d-flex py-2 ">18.B. Activities Permitted</div>
+                   <div class="d-flex flex-row justify-content-between" style="font-size: 11px;">
+                       <div class="d-flex flex-column col-md-4">
+                           <div>
+                               1 <input type="checkbox" name="activitiPermitted[]" id="completeBedrest" value="completeBedrest">
+                               <label for="completeBedrest">Complete Bedrest</label>
+                           </div>
+
+                           <div>
+                               2 <input type="checkbox" name="activitiPermitted[]" id="bedrestBRP" value="bedrestBRP">
+                               <label for="bedrestBRP">Bedrest BRP</label>
+                           </div>
+
+                           <div>
+                               3 <input type="checkbox" name="activitiPermitted[]" id="upAsTolerated" value="upAsTolerated">
+                               <label for="upAsTolerated">Up As Tolerated</label>
+                           </div>
+
+                           <div>
+                               4 <input type="checkbox" name="activitiPermitted[]" id="transferBed" value="transferBed">
+                               <label for="transferBed">Transfer Bed/Chair</label>
+                           </div>
+
+                           <div>
+                               5 <input type="checkbox" name="activitiPermitted[]" id="exercisesPrescribed" value="exercisesPrescribed">
+                               <label for="exercisesPrescribed">Exercises Prescribed</label>
+                           </div>
+
+
+                       </div>
+
+                       <div class="d-flex flex-column col-md-4">
+
+
+                           <div>
+                               6 <input type="checkbox" name="activitiPermitted[]" id="partialWeightBearing" value="partialWeightBearing">
+                               <label for="partialWeightBearing">Partial Weight Bearing</label>
+                           </div>
+
+                           <div>
+                               7 <input type="checkbox" name="activitiPermitted[]" id="independentAtHome" value="independentAtHome">
+                               <label for="independentAtHome">Independent At Home</label>
+                           </div>
+
+                           <div>
+                               8 <input type="checkbox" name="activitiPermitted[]" id="crutches" value="crutches">
+                               <label for="crutches">Crutches</label>
+                           </div>
+                           <div>
+                               9 <input type="checkbox" name="activitiPermitted[]" id="cane" value="cane">
+                               <label for="cane">Cane</label>
+                           </div>
+
+                       </div>
+
+                       <div class="d-flex flex-column col-md-4">
+
+
+                           <div>
+                               A <input type="checkbox" name="activitiPermitted[]" id="wheelchair" value="wheelchair">
+                               <label for="wheelchair">Wheelchair </label>
+                           </div>
+
+                           <div>
+                               B <input type="checkbox" id="walker" name="activitiPermitted[]" value="walker">
+                               <label for="walker">Walker</label>
+                           </div>
+                           <div>
+                               C <input type="checkbox" name="activitiPermitted[]" id="noRestrictions" value="noRestrictions">
+                               <label for="noRestrictions">No Restrictions</label>
+                           </div>
+                           <div>
+                               D <input type="checkbox" name="activitiPermitted[]" id="actiothers" value="Other">
+                               <label for="actiothers">Other (Specify)</label>
+                           </div>
+
+
+
+                       </div>
+
+                   </div>
+               </div>
+
+           </div>
+
+           <div class="d-flex flex-row">
+               <div class="col-md-4 px-2 py-2">19. Mental Status:</div>
+               <div class="col-md-8 d-flex flex-wrap">
+                   <div class="col-md-3">
+                       1 <input type="checkbox" name="mentalstatus" id="oriented" value="oriented">
+                       <label for="oriented">Oriented</label>
+                   </div>
+
+                   <div class="col-md-3">
+                       2 <input type="checkbox" name="mentalstatus" id="comatose" value="comatose">
+                       <label for="comatose">Comatose</label>
+                   </div>
+
+                   <div class="col-md-3">
+                       3 <input type="checkbox" name="mentalstatus" id="forgetful" value="forgetful">
+                       <label for="forgetful">Forgetful</label>
+                   </div>
+
+                   <div class="col-md-3">
+                       4 <input type="checkbox" name="mentalstatus" id="depressed" value="depressed">
+                       <label for="depressed">Depressed</label>
+                   </div>
+
+                   <div class="col-md-3">
+                       5 <input type="checkbox" name="mentalstatus" id="disoriented" value="disoriented">
+                       <label for="disoriented">Disoriented</label>
+                   </div>
+
+                   <div class="col-md-3">
+                       6 <input type="checkbox" name="mentalstatus" id="lethargic" value="lethargic">
+                       <label for="lethargic">Lethargic</label>
+                   </div>
+                   <div class="col-md-3">
+                       7 <input type="checkbox" name="mentalstatus" id="agitated" value="agitated">
+                       <label for="agitated">Agitated</label>
+                   </div>
+                   <div class="col-md-3">
+                       8 <input type="checkbox" name="mentalstatus" id="menstother" value="Other">
+                       <label for="menstother">Other</label>
+                   </div>
+
+               </div>
+           </div>
+
+           <div class="d-flex flex-row border">
+               <div class="col-md-2 px-2 py-2">20. Prognosis:</div>
+
+               <div class="col-md-2 py-2">
+                   1 <input type="checkbox" name="Prognosis" id="poor" value="poor">
+                   <label for="poor">Poor</label>
+               </div>
+
+               <div class="col-md-2 px-2 py-2">
+                   2 <input type="checkbox" name="Prognosis" id="guarded" value="guarded">
+                   <label for="guarded">Guarded</label>
+               </div>
+               <div class="col-md-2 px-2 py-2">
+                   3 <input type="checkbox" name="Prognosis" id="fair" value="fair">
+                   <label for="fair">Fair</label>
+               </div>
+               <div class="col-md-2 px-2 py-2">
+                   4 <input type="checkbox" name="Prognosis" id="good" value="good">
+                   <label for="good">Good</label>
+               </div>
+               <div class="col-md-2 px-2 py-2">
+                   5 <input type="checkbox" name="Prognosis" id="excellent" value="excellent">
+                   <label for="excellent">Excellent</label>
+               </div>
+
+
+
+           </div>
+
+           <div class="d-flex border px-2 py-2" style="height: 300px;">
+               <div class="from-group col-md-12 py-2">
+                   21. Orders for Discipline and Treatments (Specify Amount/Frequency/Duration)
+
+                   <textarea class="form-control py-2"  name="medications" id="medications" rows="7">{{ $patient && $patient->cms ? $patient->cms->medications : '' }}</textarea>
+
+               </div>
+           </div>
+           <div class="d-flex border px-2 py-2" style="height: 200px;">
+               <div class="from-group col-md-12 py-2">
+                   22. Goals/Rehabilitation Potential/Discharge Plans
+
+                   <textarea class="form-control py-2" name="treatments" id="treatments"  rows="4">{{ $patient && $patient->cms ? $patient->cms->treatments : '' }}</textarea>
+               </div>
+           </div>
+
+           <div class="d-flex flex-row border" >
+               <div class="d-flex col-md-8 border-end px-2 py-2">
+                   <div class="from-group col-md-12 py-2">
+                       23. Nurse's Signature and Date of Verbal SOC Where Applicable: 
+                       <textarea name="nurseSign" id="nurseSign" cols="30" rows="3"></textarea>
+                   </div>
+               </div>
+               <div class="d-flex col-md-4 px-2 py-2">
+                   <div class="from-group col-md-12 py-2">
+                       25. Date HHA Received Signed POT
+
+                       <input type="date" class="form-control" name="DateHHA">
+                   </div>
+               </div>
+           </div>
+           <div class="d-flex flex-row border" >
+               <div class="d-flex col-md-6 border-end px-2 py-2">
+                   <div class="from-group col-md-12 py-2">
+
+                       24. Physician's Name and Address
+
+                       <textarea class="form-control py-2" rows="5"></textarea>
+                   </div>
+               </div>
+               <div class="d-flex col-md-6 px-2 py-2">
+
+
+
+                   <div class="from-group col-md-12 py-2">
+                       <div>
+
+                           26. I certify/recertify that this patient is confined to his/her home and needs
+                           intermittent skilled nursing care, physical therapy and/or speech
+                           therapy or continues to need occupational therapy. The patient is under
+                           my care, and I have authorized the services on this plan
+                       </div>
+                       <div>
+
+                           <textarea class="form-control py-2"></textarea>
+                       </div>
+                   </div>
+
+
+               </div>
+           </div>
+
+           <div class="d-flex flex-row border" >
+               <div class="d-flex col-md-6 border-end px-2 py-2">
+                   <div class="from-group col-md-12 py-2">
+                       <div>
+
+                           27. Attending Physician's Singnature and Date Signed
+                       </div>
+                       <div>
+
+                           <textarea class="form-control py-2" rows="4"></textarea>
+                       </div>
+                   </div>
+
+               </div>
+               <div class="d-flex col-md-6 px-2 py-2">
+                   <div class="from-group col-md-12 py-2">
+                       28. Anyone who misrepresents, falsifies, or conceals essential information required for payment of Federal funds may be subject to fine, imprisonment, or civil penalty under applicable Federal laws.
+                       <textarea class="form-control py-2"></textarea>
+
+                   </div>
+               </div>
+           </div>
+
+
+       </div>
+
+       <div class="d-flex flex-column border mt-2 mx-3 mb-4">
+           <div class="d-flex justify-content-center py-2 fw-bold border bg-info bg-gradient"> ADDENDUM TO: PLAN OF TREATMENT </div>
+
+           <div class="d-flex border flex-row">
+               <div class="col-md-2 border-end px-2 py-2">1. Patient's HI Claim No. <input type="text" placeholder="" class="form-control" name="hiClaimNo" id="" value="{{ $patient->insurance->medicaid_id }}">
+               </div>
+               <div class="col-md-2 border-end px-2 py-2">2. Start Of Care Date <input type="date"  class="form-control" name="startOfCareDate" id="startOfCareDate" value="{{$patient?->episode?->start_care_date}}">
+               </div>
+               <div class="col-md-4 d-flex flex-column border-end">
+                   <div class="px-2 py-2">3. Certification Period</div>
+                   <div class="d-flex flex-row justify-content-around">
+                       <div>From <input type="date" class="form-control" name="certiPeriodFrom" id="certiPeriodFrom" value="{{isset($episodeDaterange->episode_start_date)?$episodeDaterange->episode_start_date:''}}">
+                       </div>
+                       <div>To <input type="date" class="form-control" name="certiPeriodTo" id="certiPeriodTo" value="{{isset($episodeDaterange->episode_end_date)?$episodeDaterange->episode_end_date:''}}">
+                       </div>
+                   </div>
+               </div>
+               <div class="col-md-2 border-end px-2 py-2">4. Medical Record No
+                   <input type="text" placeholder="" class="form-control" name="medicalRecordNo" id="medicalRecordNo" value="{{$patient->patient_code}}" class="form-control">
+               </div>
+               <div class="col-md-2  px-2 py-2">5. Provider No. <input type="text" placeholder="" class="form-control" name="providerNumber" id="providerNumber" value="{{$account ? $account->medicare_p_n : ''}}" class="form-control">
+               </div>
+
+           </div>
+
+           <div class="d-flex flex-row border">
+               <div class="d-flex col-md-6 border-end px-2 py-2">
+                   <div class="from-group col-md-12 py-2">
+                       6. Patient's Name
+                       <input type="text" placeholder="" class="form-control" name="patientsName2" value="{{$patient->first_name}} {{$patient->middle_name}} {{$patient->last_name}} ">
+                   </div>
+               </div>
+               <div class="d-flex col-md-6 px-2 py-2">
+                   <div class="from-group col-md-12 py-2">
+
+                       7. Provider's Name
+                       <input type="text" placeholder="" class="form-control" value="{{ $account ? $account->company_name : '' }}">
+                   </div>
+
+               </div>
+           </div>
+           <div class="d-flex px-2 py-2">
+             
+               <div class="from-group col-md-12 py-2">
+                   <textarea name="periodicallyreviewtheplan" placeholder="8. of care and will periodically review the plan" id="periodicallyreviewtheplan" cols="100" rows="3"></textarea>
+               </div>
+           </div>
+
+           <div class="d-flex flex-row border">
+               <div class="d-flex col-md-8 border-end px-2 py-2">
+                   <div class="from-group col-md-12">
+                     <textarea placeholder="9. Signature of Physician:" name="" id="" cols="60" rows="3"></textarea>
+                   </div>
+               </div>
+               <div class="d-flex col-md-4 px-2 py-2">
+                   <div class="from-group">
+                       <label for="physicalsign" class="col-form-label">  10. Date:
+                       </label>
+                       <input type="text" id="physicalsign" class="form-control" >
+                   </div>
+               </div>
+           </div>
+
+           <div class="d-flex flex-row border">
+               <div class="d-flex col-md-8 border-end px-2 py-2">
+                   <div class="from-group col-md-12 py-2">
+                       
+                       <textarea placeholder="11. Optional Name / Signature of Nurse / Therapist" name="" id="" cols="60" rows="3"></textarea>
+                   </div>
+               </div>
+               <div class="d-flex col-md-4 px-2 py-2">
+                   <div class="from-group">
+                       <label for="optionsing" class="col-form-label"> 12. Date: </label>
+                       <input type="date" id="optionsing" class="form-control" >
+
+                   </div>
+               </div>
+
+           </div>
+       </div>
+       </body>
+       </html>

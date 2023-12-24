@@ -197,6 +197,16 @@
                            </td>
                         </tr>
                      </table>
+                     <tr class="mb-4">
+                        <td class="labels-group">
+                           <h5>Prognosis:</h5>
+                       <select class="form-select mb-2" id="prognosis" style="max-width: 400px;"
+                               name="discontinued[]" multiple="multiple">
+                           <option disabled>-- Select Goals --</option>
+                       </select>
+                            <textarea name="discontinued" id="prognosis_content" cols="30" rows="3" class="form-control mt-1"></textarea>
+                        </td>
+                    </tr>
                         <tr class="mb-4">
                            <td class="labels-group">
                               <h5>Add Interventions</h5>
