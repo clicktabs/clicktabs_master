@@ -432,7 +432,10 @@
 
                        24. Physician's Name and Address
 
-                       <textarea class="form-control py-2" rows="5"></textarea>
+                       <textarea class="form-control py-2" name="name" id="name" rows="5"> 
+                            {{ $patient && $patient->cms ? $patient->cms->physician : '' }},
+                            {{ $patient && $patient->cms ? $patient->cms->physicianAddress : '' }}
+                       </textarea>
                    </div>
                </div>
                <div class="d-flex col-md-6 px-2 py-2">
@@ -449,7 +452,9 @@
                        </div>
                        <div>
 
-                           <textarea class="form-control py-2"></textarea>
+                           <textarea class="form-control py-2" >
+                           
+                           </textarea>
                        </div>
                    </div>
 
