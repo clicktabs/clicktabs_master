@@ -71,14 +71,15 @@
                        <div class="col-md-5 d-flex border-end border-top px-2 py-2">
                            <div class="from-group col-md-12 py-2">
                                Principal Diagnosis
-                               <input type="text" placeholder="Principal Diagnosis" class="form-control" name="principal-diagnosis">
+                               <input type="text" placeholder="Principal Diagnosis" class="form-control" name="diagonsisCode" id="diagonsisCode"
+                               value="{{ $patient && $patient->diagnosis ? $patient->diagnosis->primary_diagnosis_code : '' }}">
                            </div>
 
                        </div>
                        <div class="col-md-3 d-flex  px-2">
                            <div class="from-group">
                                <label for="principaldate" class="col-form-label"> Date: </label>
-                               <input type="date" id="principaldate" class="form-control" >
+                               <input type="date" name="date" id="date" value="{{ $patient && $patient->diagnosis ? $patient->diagnosis->created_at->format('Y-m-d') : '' }}" class="form-control" >
 
                            </div>
 
@@ -177,22 +178,22 @@
                    <div class="d-flex flex-row justify-content-between" style="font-size: 11px;">
                        <div class="d-flex flex-column col-md-4">
                            <div class="">
-                               1 <input type="checkbox" name="funcitonalLimition[]" id="amputation" value="amputation">
+                               1 <input type="checkbox" name="funcitonalLimition" id="amputation" value="amputation">
                                <label for="amputation">Amputation</label>
                            </div>
 
                            <div>
-                               2 <input type="checkbox" name="funcitonalLimition[]" id="bowelBladder" value="bowelBladder">
+                               2 <input type="checkbox" name="funcitonalLimition" id="bowelBladder" value="bowelBladder">
                                <label for="bowelBladder">Bowel/Bladder (Incontinence)</label>
                            </div>
 
                            <div>
-                               3 <input type="checkbox" name="funcitonalLimition[]" id="contracture" value="contracture">
+                               3 <input type="checkbox" name="funcitonalLimition" id="contracture" value="contracture">
                                <label for="contracture">Contracture</label>
                            </div>
 
                            <div>
-                               4 <input type="checkbox" name="funcitonalLimition[]" id="hearing" value="hearing">
+                               4 <input type="checkbox" name="funcitonalLimition" id="hearing" value="hearing">
                                <label for="hearing">Hearing</label>
                            </div>
 
@@ -201,22 +202,22 @@
 
                        <div class="d-flex flex-column col-md-3">
                            <div>
-                               5 <input type="checkbox" name="funcitonalLimition[]" id="paralysis" value="paralysis">
+                               5 <input type="checkbox" name="funcitonalLimition" id="paralysis" value="paralysis">
                                <label for="paralysis">Paralysis</label>
                            </div>
 
                            <div>
-                               6 <input type="checkbox" name="funcitonalLimition[]" id="endurance" value="endurance">
+                               6 <input type="checkbox" name="funcitonalLimition" id="endurance" value="endurance">
                                <label for="endurance">Endurance</label>
                            </div>
 
                            <div>
-                               7 <input type="checkbox" name="funcitonalLimition[]" id="ambulation" value="ambulation">
+                               7 <input type="checkbox" name="funcitonalLimition" id="ambulation" value="ambulation">
                                <label for="ambulation">Ambulation</label>
                            </div>
 
                            <div>
-                               8 <input type="checkbox" name="funcitonalLimition[]" id="speech" value="speech">
+                               8 <input type="checkbox" name="funcitonalLimition" id="speech" value="speech">
                                <label for="speech">Speech</label>
                            </div>
 
@@ -225,24 +226,20 @@
 
                        <div class="d-flex flex-column col-md-5">
                            <div>
-                               9 <input type="checkbox" name="funcitonalLimition[]" id="legallyBlind" value="legallyBlind">
+                               9 <input type="checkbox" name="funcitonalLimition" id="legallyBlind" value="legallyBlind">
                                <label for="legallyBlind">Legally Blind</label>
                            </div>
 
                            <div>
-                               A <input type="checkbox" name="funcitonalLimition[]" id="dyspneaWithMinimalExertion" value="dyspneaWithMinimalExertion">
+                               A <input type="checkbox" name="funcitonalLimition" id="dyspneaWithMinimalExertion" value="dyspneaWithMinimalExertion">
                                <label for="dyspneaWithMinimalExertion">Dyspnea With Minimal Exertion </label>
                            </div>
 
                            <div>
-                               B <input type="checkbox" name="funcitonalLimition[]" id="other" value="Other">
+                               B <input type="checkbox" name="funcitonalLimition" id="other" value="Other">
                                <label for="other">Other (Specify)</label>
                            </div>
-
-
-
                        </div>
-
                    </div>
                </div>
 
@@ -280,8 +277,6 @@
                        </div>
 
                        <div class="d-flex flex-column col-md-4">
-
-
                            <div>
                                6 <input type="checkbox" name="activitiPermitted[]" id="partialWeightBearing" value="partialWeightBearing">
                                <label for="partialWeightBearing">Partial Weight Bearing</label>
@@ -323,16 +318,11 @@
                                D <input type="checkbox" name="activitiPermitted[]" id="actiothers" value="Other">
                                <label for="actiothers">Other (Specify)</label>
                            </div>
-
-
-
                        </div>
 
                    </div>
                </div>
-
            </div>
-
            <div class="d-flex flex-row">
                <div class="col-md-4 px-2 py-2">19. Mental Status:</div>
                <div class="col-md-8 d-flex flex-wrap">
@@ -432,7 +422,6 @@
                <div class="d-flex col-md-4 px-2 py-2">
                    <div class="from-group col-md-12 py-2">
                        25. Date HHA Received Signed POT
-
                        <input type="date" class="form-control" name="DateHHA">
                    </div>
                </div>
@@ -476,11 +465,9 @@
                            27. Attending Physician's Singnature and Date Signed
                        </div>
                        <div>
-
                            <textarea class="form-control py-2" rows="4"></textarea>
                        </div>
                    </div>
-
                </div>
                <div class="d-flex col-md-6 px-2 py-2">
                    <div class="from-group col-md-12 py-2">
@@ -490,8 +477,6 @@
                    </div>
                </div>
            </div>
-
-
        </div>
 
        <div class="d-flex flex-column border mt-2 mx-3 mb-4">
@@ -516,9 +501,7 @@
                </div>
                <div class="col-md-2  px-2 py-2">5. Provider No. <input type="text" placeholder="" class="form-control" name="providerNumber" id="providerNumber" value="{{$account ? $account->medicare_p_n : ''}}" class="form-control">
                </div>
-
            </div>
-
            <div class="d-flex flex-row border">
                <div class="d-flex col-md-6 border-end px-2 py-2">
                    <div class="from-group col-md-12 py-2">
@@ -536,12 +519,10 @@
                </div>
            </div>
            <div class="d-flex px-2 py-2">
-             
                <div class="from-group col-md-12 py-2">
                    <textarea name="periodicallyreviewtheplan" placeholder="8. of care and will periodically review the plan" id="periodicallyreviewtheplan" cols="100" rows="3"></textarea>
                </div>
            </div>
-
            <div class="d-flex flex-row border">
                <div class="d-flex col-md-8 border-end px-2 py-2">
                    <div class="from-group col-md-12">
@@ -568,10 +549,8 @@
                    <div class="from-group">
                        <label for="optionsing" class="col-form-label"> 12. Date: </label>
                        <input type="date" id="optionsing" class="form-control" >
-
                    </div>
                </div>
-
            </div>
        </div>
        </body>
