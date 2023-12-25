@@ -415,10 +415,15 @@
            <div class="d-flex flex-row border" >
                <div class="d-flex col-md-8 border-end px-2 py-2">
                    <div class="from-group col-md-12 py-2">
-                       23. Nurse's Signature and Date of Verbal SOC Where Applicable:
+                       <span class="fw-bolder">23. Nurse's Signature and Date of Verbal SOC Where Applicable: </span>
                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#doctorFormModal">Add Signature</button>
                         <div id="doctorSignatureImageContainer" style="display: none;">
                             <img id="doctorSignatureImage" src="" alt="Nurse's Signature">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#nurseFormModal">Add Signature</button>
+                                <div id="nurseSignatureImageContainer" style="display: none;">
+                                    <img id="nurseSignatureImage" src="" alt="Nurse's Signature">
+                                    <input type="hidden" id="nurseSignaturePath" name="nurseSignaturePath" value="">
+                                </div>
                         </div>
                    </div>
                </div>
@@ -550,7 +555,13 @@
                <div class="d-flex col-md-8 border-end px-2 py-2">
                    <div class="from-group col-md-12 py-2">
 
-                       <textarea placeholder="11. Optional Name / Signature of Nurse / Therapist" name="" id="" cols="60" rows="3"></textarea>
+                         <label for="">11. Optional Name / Signature of Nurse / Therapist</label> 
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#nurseFormModal">Add Signature</button>
+                                <div id="nurseSignatureImageContainer" style="display: none;">
+                                    <img id="nurseSignatureImage" src="" alt="Nurse's Signature">
+                                    <input type="hidden" id="nurseSignaturePath" name="nurseSignaturePath" value="">
+                                </div>
+                    
                    </div>
                </div>
                <div class="d-flex col-md-4 px-2 py-2">

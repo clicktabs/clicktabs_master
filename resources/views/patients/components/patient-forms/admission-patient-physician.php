@@ -108,7 +108,7 @@
 </div>
 
 <script>
-    $(".face_to_face").hide();
+$(".face_to_face").hide();
 $("#face_to_face_evaluation_date").click(function() {
     if($(this).is(":checked")) {
         $(".face_to_face").show(300);
