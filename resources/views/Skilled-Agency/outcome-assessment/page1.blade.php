@@ -18,8 +18,8 @@
         <td>
             <div class="row row-flex align-items-center">
                 <div class="col-6">
-                    <input name="nipNumber" type="text" value="{{!empty($account->npi)?$account->npi:''}}"
-                           class="form-control">
+                    <input name="npi" type="text" value="{{!empty($account->npi)?$account->npi:''}}"
+                           class="form-control">   
                 </div>
                 <div class="col-6">
                     <label class="form-check-label">
@@ -184,7 +184,7 @@
         <td>
             <div class="row row-flex align-items-center">
                 <div class="col-6">
-                    <input type="text" name="medicare" value="@if ($routeName=='skilled-agency.get-oasis-e-start-of-care'){{!empty($account->medicare_p_n)?$account->medicare_p_n:''}}@endif"
+                    <input type="text" name="medicare" value="{{!empty($account->medicare_p_n)?$account->medicare_p_n:''}}"
                            class="form-control"></div>
                 <div class="col-6">
                     <label class="form-check-label">
@@ -205,7 +205,7 @@
         <td>
             <div class="row row-flex align-items-center">
                 <div class="col-6">
-                    <input type="text" name="medicare" value="@if ($routeName=='skilled-agency.get-oasis-e-start-of-care'){{!empty($account->medicaid_p_n)?$account->medicaid_p_n:''}}@endif"
+                    <input type="text" name="medicare" value="{{!empty($account->medicaid_p_n)?$account->medicaid_p_n:''}}"
                            class="form-control"></div>
                 <div class="col-6">
                     <label class="form-check-label">

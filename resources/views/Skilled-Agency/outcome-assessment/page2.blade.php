@@ -16,8 +16,6 @@
             <td><strong>↓ Check all that apply</strong></td>
          </tr>
          <tr>
-
-
             <td><label class="form-check-label">
                <input type="checkbox" name="hispanic" class="form-check-input" @if(in_array('No, not of Hispanic, Latino/a, or Spanish origin', $race_enc)) checked @endif> A. No, not of Hispanic, Latino/a, or Spanish origin</label></td>
             </tr>

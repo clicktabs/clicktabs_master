@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Models\PatientEpisodeTiming;
+use App\Models\Demographic;
 use App\Models\PatientAddressInfo;
 use App\Models\PatientServiceAddress;
 use App\Models\Patient;
@@ -42,6 +43,7 @@ use App\Models\AideSupervisoryVisit;
 use App\Models\NurseSectionSecondFour;
 use App\Models\NurseSectionSecondThree;
 use App\Models\OasisEDeath;
+use App\Models\PatientDemographic;
 use App\Models\QaList;
 
 class SkilledAgencyController extends Controller
@@ -53,6 +55,7 @@ class SkilledAgencyController extends Controller
      */
     public function planofcare($id)
     {
+        
         $petiming = PatientEpisodeTiming::where('patient_id', $id)->first();
         $addressInfo = PatientAddressInfo::where('patient_id', $id)->first();
         $addressserviceInfo = PatientServiceAddress::where('patient_id', $id)->first();
@@ -108,12 +111,12 @@ class SkilledAgencyController extends Controller
         $patientInsurance = $patient->insurance;
         $patientAddressInfo = $patient->address;
         $patientEpisodeTiming = $patient->episode;
-        $pTransportation = $patient->transportation;;
+        $pTransportation = $patient->transportation;
         $patientTransportation = json_decode($pTransportation->transportation, true);
         $account = Account::where('user_id', Auth::user()->id)->first();
 
 
-        return view('skilled-agency.oasis-e-start-of-care', compact('account','source_of_add','patientTransportation','pharmacies','physicians', 'payors_sub_addons','insurance_type_sub_addons', 'patient', 'patient_severity_sub_addons','psa','insurance','administrative', 'patientExtraInfo','ethnicities','patientInsurance','patientAddressInfo','patientEpisodeTiming','race_enc', 'new_goals', 'inventions' ))->with('active',$request->tab);
+        return view('skilled-agency.oasis-e-start-of-care', compact('account','source_of_add','patientTransportation','pharmacies','physicians', 'payors_sub_addons','insurance_type_sub_addons', 'patient', 'patient_severity_sub_addons','psa','insurance','administrative', 'patientExtraInfo','ethnicities','patientInsurance','patientAddressInfo','patientEpisodeTiming','race_enc', 'new_goals', 'inventions'))->with('active',$request->tab);
     }
 
     public function nursingVisitNote()

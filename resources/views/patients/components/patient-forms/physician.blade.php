@@ -93,10 +93,12 @@
                 <div class="form-group">
                     <input type="checkbox" name="face_to_face_evaluation" id="face_to_face_evaluation_date" class="form-control">
                     <span for="face_to_face_evaluation_date">Date of Face-to-Face Visit</span>
+                  
                 </div>
                 <div class="form-group">
                     <input type="checkbox" name="face_to_face_evaluation" id="face_to_face_evaluation_completed" class="form-control">
                     <span for="face_to_face_evaluation_completed">Face-to-Face to be completed within 30 days</span>
+                    
                 </div>
 
             </div>

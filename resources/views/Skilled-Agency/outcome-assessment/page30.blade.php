@@ -32,7 +32,7 @@
                    <input type="text" placeholder="Medical Record No" name="medicalRecordNo" id="medicalRecordNo" value="{{$patient->patient_code}}" class="form-control">
                </div>
                <div class="col-md-2 px-2 py-2">5. Provider No.
-                   <input type="text" placeholder="Provider No." name="providerNumber" id="providerNumber" value="{{$account ? $account->medicare_p_n : ''}}" class="form-control">
+                   <input type="text" placeholder="Provider No." name="providerNumber" id="providerNumber" value="{{$account ? $account->unique_agency_oasis : ''}}" class="form-control">
                </div>
 
            </div>
@@ -48,7 +48,7 @@
                        7. Provider's Name, Address and Telephone Number
                        <input type="text" class="form-control" placeholder="Provider's Name, Address and Telephone Number" name="branchInfo" id="branchInfo" 
                        value="{{ $account ? $account->company_name : '' }}">
-                       <input type="text" class="form-control" name="" id="branchAddress" value="{{ $account ? $account->address_line . ' - ' . $account->zip : '' }}, Tel: {{ $account ? $account->phone : '' }}">
+                       <input type="text" class="form-control" style="font-size: 15px;" name="" id="branchAddress" value="{{ $account ? $account->address_line . ' - ' . $account->zip : '' }}, Tel: {{ $account ? $account->phone : '' }}, Fax: {{ $account ? $account->fax : '' }}">
                    </div>
                </div>
            </div>

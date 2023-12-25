@@ -23,6 +23,7 @@ return new class extends Migration
             $table->json("initial_non_oasis_recert")->nullable();
             $table->date("start_care_date");
             $table->date("episode_start_date");
+            $table->string('episode_timing')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
