@@ -762,8 +762,8 @@ border-bottom: 3px double;
                 </div>
                 <div class="mt-[20px]">
                     <textarea name="p_communication_text" class="py-[10px] px-[10px] border-[1px] border-[#dfdede] w-full h-[250px]">{{ old('p_communication_text') }}</textarea>
-                </div>
-                <button class="btn btn-primary" type="submit">Save</button>
+                </div>                                          
+                        <button class="btn btn-primary" type="submit">Save</button>
             </form>
         </div>
 

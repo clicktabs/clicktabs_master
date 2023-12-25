@@ -14,7 +14,7 @@ if(isset($patient->diagnosis->other_diagnosis_name)){
 <table class="table table-bordered align-middle default-td not-responsive">
                      <tr>
                         <td class="p-4">
-                           <p class="text-danger border-bottom border-2 pb-2"><b>* = Required Information</b></p>
+                           <div class="vt p-2">@include('layouts.company_info')</div>
                            <div class="row row-flex align-items-center gy-3">
                               <div class="col-md-6">
                                  <label for="PhysicianName" class="form-label"><b>Physician's Name:</b></label>
@@ -53,7 +53,7 @@ if(isset($patient->diagnosis->other_diagnosis_name)){
                               </div>
                               <div class="col-md-3">
                                  <label for="SSS" class="form-label"><b>(M0064) Social Security Number:</b></label>
-                                 <input type="text" value="{{isset($patient->extra_info->physician->speciality)?$patient->extra_info->physician->speciality:''}}"  name="SSS" id="SSS" class="form-control">
+                                 <input type="text" value="{{isset($patient->social_security_no)?$patient->social_security_no:''}}"  name="SSS" id="SSS" class="form-control">
                               </div>
                            </div>
 
@@ -79,10 +79,10 @@ if(isset($patient->diagnosis->other_diagnosis_name)){
 
                            <p class="mt-4 mb-1"><b>RN to Evaluate for Home Health Care Service</b></p>
                            <div class="labels-group">
-                              <label class="form-check-label"><input type="checkbox" class="form-check-input" name="phsicianSkilled" value="1"> Skilled Nursing</label>
-                              <label class="form-check-label"><input type="checkbox" class="form-check-input" name="phsicianHealthAide" value="1"> Home Health Aide</label>
-                              <label class="form-check-label"><input type="checkbox" class="form-check-input" name="phsicianTherapy" value="1"> Therapy (OT/PT/ST)</label>
-                              <label class="form-check-label"><input type="checkbox" class="form-check-input" name="phsicianTherapy" value="1"> Other</label>
+                              <label class="form-check-label"><input type="checkbox" class="form-check-input" name="phsicianSkilled[]" value="1"> Skilled Nursing</label>
+                              <label class="form-check-label"><input type="checkbox" class="form-check-input" name="phsicianHealthAide[]" value="2"> Home Health Aide</label>
+                              <label class="form-check-label"><input type="checkbox" class="form-check-input" name="phsicianTherapy[]" value="3"> Therapy (OT/PT/ST)</label>
+                              <label class="form-check-label"><input type="checkbox" class="form-check-input" name="phsicianTherapy[]" value="4"> Other</label>
                            </div>
 
                            <div class="row row-flex align-items-center gy-3 mt-1">
@@ -163,12 +163,14 @@ if(isset($patient->diagnosis->other_diagnosis_name)){
                               <div class="col-md-6">
                                  <label for="NewMedicationDate" class="form-label"><b>New Medication Date:</b></label>
                                  {{-- <input type="text" name="NewMedicationDate" id="NewMedicationDate" class="form-control"> --}}
-                                 <textarea class="form-control" name="NewMedicationDate" id="NewMedicationDate" cols="30" rows="10"></textarea>
+                                 <textarea class="form-control" name="NewMedicationDate" id="NewMedicationDate" cols="30" rows="10" 
+                                 placeholder="please use extra sheets if necessary"></textarea>
                               </div>
                               <div class="col-md-6">
                                  <label for="OldMedicationsDate" class="form-label"><b>Old Medications and Start Date:</b></label>
                                  {{-- <input type="text" name="OldMedicationsDate" id="OldMedicationsDate" class="form-control"> --}}
-                                 <textarea class="form-control" name="OldMedicationsDate" id="OldMedicationsDate" cols="30" rows="10"></textarea>
+                                 <textarea class="form-control" name="OldMedicationsDate" id="OldMedicationsDate" cols="30" rows="10" 
+                                 placeholder="please use extra sheets if necessary"></textarea>
                               </div>
                            </div>
 
