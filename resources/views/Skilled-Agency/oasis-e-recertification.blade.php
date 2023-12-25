@@ -160,7 +160,7 @@
                                                 <label class="form-check-label ms-2"><input type="radio" class="form-check-input" name="relationship" value="Friend">Friend</label>
                                                 <label class="form-check-label ms-2"><input type="radio" class="form-check-input" name="relationship" value="Other">Other:</label>
                                                 <div class="clean-input-group d-inline-flex ms-1" style="width: auto;">
-                                                    <input type="text" name="relationship_1" id="" class="form-control">
+                                                    <input type="text" name="relationship_other_1" id="" class="form-control">
                                                 </div>
                                             </div>
 
@@ -203,7 +203,7 @@
                                             <div class="mt-2">
                                                 <b>Does the patient have a representative?</b>
                                                 <label class="form-check-label ms-2"><input type="checkbox" class="form-check-input" name="patient_1" value="patient">N/A</label>
-                                                <label class="form-check-label ms-2"><input type="checkbox" class="form-check-input" name="patientrepresentative" value="patientrepresentative">None available</label>
+                                                <label class="form-check-label ms-2"><input type="checkbox" class="form-check-input" name="patientrepresentative_1" value="patientrepresentative">None available</label>
                                             </div>
 
                                             <div class="mt-2">
@@ -215,9 +215,9 @@
 
                                             <div class="mt-2">
                                                 <span>Relationship:</span>
-                                                <label class="form-check-label ms-2"><input type="radio" class="form-check-input" name="relationship" value="Family_1">Family</label>
-                                                <label class="form-check-label ms-2"><input type="radio" class="form-check-input" name="relationship" value="Friend_1">Friend</label>
-                                                <label class="form-check-label ms-2"><input type="radio" class="form-check-input" name="relationship" value="Other_1">Other:</label>
+                                                <label class="form-check-label ms-2"><input type="radio" class="form-check-input" name="relationship_1" value="Family_1">Family</label>
+                                                <label class="form-check-label ms-2"><input type="radio" class="form-check-input" name="relationship_1" value="Friend_1">Friend</label>
+                                                <label class="form-check-label ms-2"><input type="radio" class="form-check-input" name="relationship_1" value="Other_1">Other:</label>
                                                 <div class="clean-input-group d-inline-flex ms-1" style="width: auto;">
                                                     <input type="text" name="caregiverName_1" id="" class="form-control">
                                                 </div>
@@ -313,11 +313,11 @@
 
                                             <div class="mt-2">
                                                 <span>Relationship:</span>
-                                                <label class="form-check-label ms-2"><input type="radio" class="form-check-input" name="relationship" value="Family">Family</label>
-                                                <label class="form-check-label ms-2"><input type="radio" class="form-check-input" name="relationship" value="Friend">Friend</label>
-                                                <label class="form-check-label ms-2"><input type="radio" class="form-check-input" name="relationship" value="Other">Other:</label>
+                                                <label class="form-check-label ms-2"><input type="radio" class="form-check-input" name="relationship_2" value="Family">Family</label>
+                                                <label class="form-check-label ms-2"><input type="radio" class="form-check-input" name="relationship_2" value="Friend">Friend</label>
+                                                <label class="form-check-label ms-2"><input type="radio" class="form-check-input" name="relationship_2" value="Other">Other:</label>
                                                 <div class="clean-input-group d-inline-flex ms-1" style="width: auto;">
-                                                    <input type="text" id="relationship_1" class="form-control">
+                                                    <input type="text" name="relationship_2_other" id="relationship_1" class="form-control">
                                                 </div>
                                             </div>
 
@@ -366,11 +366,11 @@
 
                                             <div class="mt-2">
                                                 <span>Relationship:</span>
-                                                <label class="form-check-label ms-2"><input type="radio" class="form-check-input" name="relationship" value="Family">Family</label>
-                                                <label class="form-check-label ms-2"><input type="radio" class="form-check-input" name="relationship" value="Friend">Friend</label>
-                                                <label class="form-check-label ms-2"><input type="radio" class="form-check-input" name="relationship" value="Other">Other:</label>
+                                                <label class="form-check-label ms-2"><input type="radio" class="form-check-input" name="relationship_3" value="Family">Family</label>
+                                                <label class="form-check-label ms-2"><input type="radio" class="form-check-input" name="relationship_3" value="Friend">Friend</label>
+                                                <label class="form-check-label ms-2"><input type="radio" class="form-check-input" name="relationship_3" value="Other">Other:</label>
                                                 <div class="clean-input-group d-inline-flex ms-1" style="width: auto;">
-                                                    <input type="text" name="relationship_1" id="" class="form-control">
+                                                    <input type="text" name="relationship_3_other" id="" class="form-control">
                                                 </div>
                                             </div>
 
@@ -721,7 +721,7 @@
                                             <label class="form-check-label ms-2"><input type="checkbox" class="form-check-input" value="1" name="Hearing" > Hearing</label>
                                             <label class="form-check-label ms-2"><input type="checkbox" class="form-check-input" value="1" name="Smell"> Smell</label>
                                             <label class="form-check-label ms-2"><input type="checkbox" class="form-check-input" value="1" name="Taste" > Taste</label>
-                                            <label class="form-check-label ms-2"><input type="checkbox" class="form-check-input" value="1" name="Throat"> Throat</label>
+                                            <label class="form-check-label ms-2"><input type="checkbox" class="form-check-input" value="1" name="Throat_2"> Throat</label>
                                         </div>
                                     </div>
                                 </div>
@@ -951,7 +951,7 @@
                                     <label class="form-check-label ms-2"><input type="radio" name="supportPatient" value="No" class="form-check-input"> No</label>
                                     <label class="form-check-label ms-2"><input type="radio" name="supportPatient" value="Yes" class="form-check-input"> Yes</label>
                                     <label class="form-check-label ms-2">If yes, give name and relationship to the client:</label>
-                                    <textarea name="relationship" id="" cols="30" rows="1" class="form-control mt-1"></textarea>
+                                    <textarea name="relationship_4" id="" cols="30" rows="1" class="form-control mt-1"></textarea>
                                 </div>
 
                                 <div class="mt-2">
@@ -1025,18 +1025,18 @@
 
                                 <div class="mt-2">
                                     <span>Inappropriate reactions/behaviors toward:</span>
-                                    <label class="form-check-label ms-2"><input type="checkbox" class="form-check-input" value="1" name="Caregiver"> Caregiver(s)</label>
+                                    <label class="form-check-label ms-2"><input type="checkbox" class="form-check-input" value="1" name="Caregiver_3"> Caregiver(s)</label>
                                     <label class="form-check-label ms-2"><input type="checkbox" class="form-check-input" value="1" name="Clinician"> Clinician(s)</label>
-                                    <label class="form-check-label ms-2"><input type="checkbox" class="form-check-input" value="1" name="Representative"> Representative</label>
+                                    <label class="form-check-label ms-2"><input type="checkbox" class="form-check-input" value="1" name="Representative_2"> Representative</label>
                                     <label class="form-check-label ms-2"><input type="checkbox" class="form-check-input" value="1" name="behaviorstoward_Others"> Others:</label>
                                     <div class="clean-input-group d-inline-flex">
                                         <input type="text" name="behaviorstoward_Others_1" id="" class="form-control">
                                     </div>
 
                                     <br>
-                                    <label class="form-check-label ms-2"><input type="radio" name="Rest" class="form-check-input" value="Reported"> Reported</label>
-                                    <label class="form-check-label ms-2"><input type="radio" name="Rest" class="form-check-input" value="Observed"> Observed</label>
-                                    <label class="form-check-label ms-2"><input type="radio" name="Rest" class="form-check-input" value="N/A"> N/A</label>
+                                    <label class="form-check-label ms-2"><input type="radio" name="Rest_2" class="form-check-input" value="Reported"> Reported</label>
+                                    <label class="form-check-label ms-2"><input type="radio" name="Rest_2" class="form-check-input" value="Observed"> Observed</label>
+                                    <label class="form-check-label ms-2"><input type="radio" name="Rest_2" class="form-check-input" value="N/A"> N/A</label>
                                     <div class="ms-2">
                                         <label for="">Describe:</label>
                                         <textarea name="describeInappropriate" id="" cols="30" rows="1" class="form-control"></textarea>
@@ -1102,8 +1102,8 @@
                                     <tr>
                                         <td class="labels-group">
                                             <span class="fw-medium me-2">Did the</span>
-                                            <label class="form-check-label"><input type="checkbox" value="1" name="patient" class="form-check-input">Patient</label>
-                                            <label class="form-check-label"><input type="checkbox" value="1" name="representative" class="form-check-input" >Representative</label>
+                                            <label class="form-check-label"><input type="checkbox" value="1" name="patient_2" class="form-check-input">Patient</label>
+                                            <label class="form-check-label"><input type="checkbox" value="1" name="representative_3" class="form-check-input" >Representative</label>
                                             <label class="input-group clean-input-group d-inline-flex w-auto">
                                                 <span class="input-group-text fw-medium">Other</span>
                                                 <input type="text" id="" name="didOther" class="form-control">
@@ -1186,8 +1186,8 @@
                                     <tr>
                                         <td class="labels-group pb-1">
                                             <label class="form-check-label"><input type="checkbox" value="1" name="The" class="form-check-input">The</label>
-                                            <label class="form-check-label"><input type="checkbox"  value="1" name="ThePatient"  class="form-check-input">Patient</label>
-                                            <label class="form-check-label"><input type="checkbox"  value="1" name="Representative" class="form-check-input">Representative</label>
+                                            <label class="form-check-label"><input type="checkbox"  value="1" name="ThePatient_2"  class="form-check-input">Patient</label>
+                                            <label class="form-check-label"><input type="checkbox"  value="1" name="Representative_4" class="form-check-input">Representative</label>
                                             <label class="input-group clean-input-group d-inline-flex w-auto">
                                                 <span class="input-group-text fw-medium">Other</span>
                                                 <input type="text" id="other_goal_written_by" name="otherGoalWritten" class="form-control">
@@ -1549,13 +1549,13 @@
                                         <td>
                                             <label class="input-group clean-input-group">
                                                 <span class="input-group-text fw-medium">l.</span>
-                                                <input type="text" class="form-control" name="Completei">
+                                                <input type="text" class="form-control" name="Completei_2">
                                             </label>
                                         </td>
                                         <td>
                                             <label class="input-group clean-input-group">
                                                 <span class="input-group-text fw-medium">l.</span>
-                                                <input type="text" class="form-control" name="Complete_i">
+                                                <input type="text" class="form-control" name="Complete_i_2">
                                             </label>
                                         </td>
                                     </tr>
@@ -1895,7 +1895,7 @@
                                     <td><label class="form-check-label"><input type="checkbox" value="1" name="Crutches" class="form-check-input" > Crutches</label></td>
                                     <td><label class="form-check-label"><input type="checkbox" value="1" name="Cane" class="form-check-input" > Cane</label></td>
                                     <td><label class="form-check-label"><input type="checkbox" value="1" name="Wheelchair" class="form-check-input" > Wheelchair</label></td>
-                                    <td><label class="form-check-label"><input type="checkbox" value="1" name="Walker" class="form-check-input"> Walker</label></td>
+                                    <td><label class="form-check-label"><input type="checkbox" value="1" name="Walker_2" class="form-check-input"> Walker</label></td>
                                 </tr>
                                 <tr>
                                     <td colspan="6">
@@ -1939,7 +1939,7 @@
                                 </tr>
                                 <tr>
                                     <td><label class="form-check-label"><input type="checkbox" value="1" name="Contracture" class="form-check-input"> Contracture</label></td>
-                                    <td><label class="form-check-label"><input type="checkbox" value="1" name="Ambulation" class="form-check-input"> Ambulation</label></td>
+                                    <td><label class="form-check-label"><input type="checkbox" value="1" name="Ambulation_2" class="form-check-input"> Ambulation</label></td>
                                     <td>
                                     <div class="input-group clean-input-group">
                                         <label class="input-group-text fw-medium">Other (specify):</label>
@@ -1948,7 +1948,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><label class="form-check-label"><input type="checkbox" value="1" name="Hearing" class="form-check-input"> Hearing</label></td>
+                                    <td><label class="form-check-label"><input type="checkbox" value="1" name="Hearing_2" class="form-check-input"> Hearing</label></td>
                                     <td><label class="form-check-label"><input type="checkbox" value="1" name="Speech" class="form-check-input"> Speech</label></td>
                                     <td>
                                     <div class="input-group clean-input-group">
@@ -2186,7 +2186,7 @@
                                 <div>
                                     <label class="form-check-label"><input type="checkbox" class="form-check-input"> Contracture(s): Location</label>
                                     <div class="clean-input-group d-inline-flex">
-                                        <input type="text" name="Contracture" id="" class="form-control">
+                                        <input type="text" name="Contracture_2" id="" class="form-control">
                                     </div>
                                 </div>
                                 <div>
@@ -2244,7 +2244,7 @@
                                 <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Amputations" class="form-check-input">Amputation</label>
                                 <label class="form-check-label ms-2"><input type="checkbox" value="1" name="BK"class="form-check-input">BK</label>
                                 <label class="form-check-label ms-2"><input type="checkbox" value="1" name="AK" class="form-check-input">AK</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="UE"  class="form-check-input">UE;</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="UE_2"  class="form-check-input">UE;</label>
                                 <label class="form-check-label ms-2"><input type="checkbox" value="1" name="R"  class="form-check-input">R</label>
                                 <label class="form-check-label ms-2"><input type="checkbox" value="1" name="L"  class="form-check-input">L (specify):</label>
                                 <div class="clean-input-group d-inline-flex">
@@ -2283,8 +2283,8 @@
 
                                 <div class="mt-2">
                                 <span>Have fall risk factors changed since prior assessment?</span>
-                                <label class="form-check-label ms-2"><input type="radio" name="fallsReported" value="No" class="form-check-input"> No</label>
-                                <label class="form-check-label ms-2"><input type="radio" name="fallsReported" value="Yes" class="form-check-input"> Yes (describe):</label>
+                                <label class="form-check-label ms-2"><input type="radio" name="fallsReported_2" value="No" class="form-check-input"> No</label>
+                                <label class="form-check-label ms-2"><input type="radio" name="fallsReported_2" value="Yes" class="form-check-input"> Yes (describe):</label>
                                 <textarea name="describeFactors" id="" cols="30" rows="1" class="form-control mt-1"></textarea>
                                 </div>
 
@@ -2511,7 +2511,7 @@
                                         </div>
             
                                         <div class="d-block mt-2">
-                                            <label class="form-check-label"><input type="checkbox" name="balloon" value="1" class="form-check-input">Second/tip balloon inflated with</label>
+                                            <label class="form-check-label"><input type="checkbox" name="balloon_2" value="1" class="form-check-input">Second/tip balloon inflated with</label>
                                             <label class="input-group clean-input-group d-inline-flex w-auto">
                                             <input type="text" id="" name="secondTip_ml" class="form-control">
                                             <span class="input-group-text fw-medium">mL</span>
@@ -2897,7 +2897,7 @@
                                 <span>Reports symptoms of:</span><br>
                                 <div>
                                     <label class="form-check-label"><input type="radio" name="ReportsSymptoms" value="Hyperglycemia" class="form-check-input"> Hyperglycemia:</label>
-                                    <label class="form-check-label ms-2"><input type="checkbox" value="1" name="increasedUrination" class="form-check-input"> Increased urination</label>
+                                    <label class="form-check-label ms-2"><input type="checkbox" value="1" name="increasedUrination_2" class="form-check-input"> Increased urination</label>
                                     <label class="form-check-label ms-2"><input type="checkbox" value="1" name="increasedThirst" class="form-check-input"> Increased thirst</label>
                                 </div>
                                 <div>
@@ -3244,7 +3244,7 @@
                                     <td>Noisy labored breathing,
                                         long period of hyperventilation or
                                         Cheyne-Stokes respirations</td>
-                                    <td><input type="number" name="Independent" class="form-control"></td>
+                                    <td><input type="number" name="Independent_2" class="form-control"></td>
                                 </tr>
                                 <tr>
                                     <td><b>Negative Vocalization</b></td>
@@ -3314,14 +3314,14 @@
                                     <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Dressing"  class="form-check-input"> Dressing:</label>
                                     <label class="form-check-label ms-2"><input type="checkbox" value="1" name="upper"  class="form-check-input"> lower</label>
                                     <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Undressing"  class="form-check-input"> Undressing:</label>
-                                    <label class="form-check-label ms-2"><input type="checkbox" value="1" name="upper"  class="form-check-input"> upper</label>
+                                    <label class="form-check-label ms-2"><input type="checkbox" value="1" name="upper_2"  class="form-check-input"> upper</label>
                                     <label class="form-check-label ms-2"><input type="checkbox" value="1" name="lower"  class="form-check-input"> lower</label>
                                 </div>
                                 <div class="ms-3 mt-1">
                                     <label class="form-check-label"><input type="checkbox" value="1" name="Stairs"  class="form-check-input"> Stairs:</label>
                                     <label class="form-check-label ms-2"><input type="checkbox" value="1" name="ascend"  class="form-check-input"> ascend</label>
                                     <label class="form-check-label ms-2"><input type="checkbox" value="1" name="descend"  class="form-check-input"> descend</label>
-                                    <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Eating"  class="form-check-input"> Eating</label>
+                                    <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Eating_2"  class="form-check-input"> Eating</label>
                                     <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Toileting"  class="form-check-input"> Toileting</label>
                                     <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Appetite"  class="form-check-input"> Appetite</label>
                                     <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Positional"  class="form-check-input"> Positional changes</label>
@@ -3344,7 +3344,7 @@
                             <div class="mt-2">
                                 <span>What makes pain worse?</span>
                                 <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Movement"  class="form-check-input"> Movement</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Ambulation"  class="form-check-input"> Ambulation</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Ambulation_3"  class="form-check-input"> Ambulation</label>
                                 <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Immobility" class="form-check-input"> Immobility</label>
                                 <div class="d-inline-flex ms-2">
                                     <label class="form-check-label"><input type="checkbox" value="1" name="immobilityOther" class="form-check-input"> Other:</label>
@@ -3367,7 +3367,7 @@
                                 <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Ice"  class="form-check-input"> Ice</label>
                                 <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Massage"  class="form-check-input"> Massage</label>
                                 <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Repositioning"  class="form-check-input"> Repositioning</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Rest"  class="form-check-input"> Rest</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Rest_3"  class="form-check-input"> Rest</label>
                                 <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Relaxation"  class="form-check-input"> Relaxation</label>
                                 <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Medication" class="form-check-input"> Medication</label>
                                 <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Diversion" class="form-check-input"> Diversion</label>
@@ -3643,7 +3643,7 @@
                                 <tr>
                                     <td class="text-start">Edema Pedal Right</td>
                                     <td><input type="checkbox" value="1" name="edemaPedal"  id=""></td>
-                                    <td><input type="checkbox" value="1" name="edemaPedal_right" id=""></td>
+                                    <td><input type="checkbox" value="1" name="edemaPedal_right_2" id=""></td>
                                     <td>
                                         <label class="form-check-label ms-2"><input type="radio" name="edemaPedal_right" value="+1" class="form-check-input"> +1</label>
                                         <label class="form-check-label ms-2"><input type="radio" name="edemaPedal_right" value="+2" class="form-check-input"> +2</label>
@@ -3657,7 +3657,7 @@
                                 </tr>
                                 <tr>
                                     <td class="text-start">Edema Pedal Left</td>
-                                    <td><input type="checkbox" value="1" name="EdemaPedal" id=""></td>
+                                    <td><input type="checkbox" value="1" name="EdemaPedal_4" id=""></td>
                                     <td><input type="checkbox" value="1" name="Pedalleft" id=""></td>
                                     <td>
                                         <label class="form-check-label ms-2"><input type="radio" name="edemaPedal_left" value="+1" class="form-check-input"> +1</label>
@@ -3836,7 +3836,7 @@
                                             </tr>
                                             <tr>
                                                 <td>At rest</td>
-                                                <td><input type="text" name="atRest" class="form-control"></td>
+                                                <td><input type="text" name="atRest_5" class="form-control"></td>
                                                 <td><input type="text" name="atRest_1" class="form-control"></td>
                                                 <td><input type="text" name="atRest_2" class="form-control"></td>
                                                 <td><input type="text" name="atRest_3" class="form-control"></td>
@@ -3988,9 +3988,9 @@
 
                             <div class="mt-1">
                                 <b>Appetite:</b>
-                                <label class="form-check-label ms-2"><input type="radio" name="Appetite" value="Fair" class="form-check-input"> Fair</label>
-                                <label class="form-check-label ms-2"><input type="radio" name="Appetite" value="Good"  class="form-check-input"> Good</label>
-                                <label class="form-check-label ms-2"><input type="radio" name="Appetite" value="Poor"  class="form-check-input"> Poor</label>
+                                <label class="form-check-label ms-2"><input type="radio" name="Appetite_2" value="Fair" class="form-check-input"> Fair</label>
+                                <label class="form-check-label ms-2"><input type="radio" name="Appetite_2" value="Good"  class="form-check-input"> Good</label>
+                                <label class="form-check-label ms-2"><input type="radio" name="Appetite_2" value="Poor"  class="form-check-input"> Poor</label>
                                 <label class="form-check-label ms-4"><input type="checkbox" name="Nausea" value="1" class="form-check-input"> Nausea</label>
                                 <label class="form-check-label ms-2"><input type="checkbox" name="Vomiting" value="1" class="form-check-input"> Vomiting:</label>
                                 <div class="d-inline-flex flex-grow-1 ms-2">
@@ -4312,9 +4312,9 @@
                                 <span>Done by:</span>
                                 <label class="form-check-label ms-2"><input type="radio" name="DoneBy" value="Patient" class="form-check-input"> Patient</label>
                                 <div class="d-inline-flex ms-2">
-                                    <label class="form-check-label"><input type="radio" name="DoneBy" value=" Caregiver (name)" class="form-check-input"> Caregiver (name)</label>
+                                    <label class="form-check-label"><input type="radio" name="DoneBy" value=" Caregiver" class="form-check-input"> Caregiver (name)</label>
                                     <div class="clean-input-group flex-grow-1">
-                                        <input type="text" id="" class="form-control">
+                                        <input type="text" id="" class="form-control" name="DoneByCaregiver">
                                     </div>
                                 </div>
                                 <label class="form-check-label"><input type="radio" name="DoneBy" value="Family" class="form-check-input"> Family</label>
@@ -4323,7 +4323,7 @@
                                 <div class="d-inline-flex ms-2">
                                     <label class="form-check-label"><input type="radio" name="DoneBy" value="Other" class="form-check-input"> Other:</label>
                                     <div class="clean-input-group flex-grow-1">
-                                        <input type="text" id="otherDoneBy" class="form-control">
+                                        <input type="text" id="otherDoneBy" name="otherDoneBy" class="form-control">
                                     </div>
                                 </div>
                             </div>
@@ -4491,72 +4491,72 @@
                                         </td>
                                         <td>
                                             <div><label class="form-check-label"><input type="radio" name="Type1" value="Arterial" class="form-check-input">Arterial</label></div>
-                                            <div><label class="form-check-label"><input type="radio" name="Type1" value="Diabetic foot ulcer" class="form-check-input">Diabetic foot ulcer</label></div>
+                                            <div><label class="form-check-label"><input type="radio" name="Type1" value="Diabetic" class="form-check-input">Diabetic foot ulcer</label></div>
                                             <div><label class="form-check-label"><input type="radio" name="Type1" value="Malignancy" class="form-check-input">Malignancy</label></div>
                                             <div><label class="form-check-label"><input type="radio" name="Type1" value="Mechanical/Trauma" class="form-check-input">Mechanical/Trauma</label></div>
-                                            <div><label class="form-check-label"><input type="radio" name="Type1" value="Pressure ulcer" class="form-check-input">Pressure ulcer</label></div>
+                                            <div><label class="form-check-label"><input type="radio" name="Type1" value="PressureUlcer" class="form-check-input">Pressure ulcer</label></div>
                                             <div><label class="form-check-label"><input type="radio" name="Type1" value="Surgical*" class="form-check-input">Surgical*</label></div>
-                                            <div><label class="form-check-label"><input type="radio" name="Type1" value="Dialysis access" class="form-check-input">Dialysis access</label></div>
-                                            <div><label class="form-check-label"><input type="radio" name="Type1" value="Venous stasis ulcer" class="form-check-input">Venous stasis ulcer</label></div>
+                                            <div><label class="form-check-label"><input type="radio" name="Type1" value="DialysisAccess" class="form-check-input">Dialysis access</label></div>
+                                            <div><label class="form-check-label"><input type="radio" name="Type1" value="VenousUlcer" class="form-check-input">Venous stasis ulcer</label></div>
                                             <div><label class="form-check-label"><input type="radio" name="Type1" value="IV" class="form-check-input">IV</label></div>
                                             <div><label class="form-check-label"><input type="radio" name="Type1" value="Other" class="form-check-input">Other:</label>
-                                                <textarea name="" id="" cols="30" rows="1" class="form-control mt-1"></textarea>
+                                                <textarea name="" id="" cols="30" rows="1" class="form-control mt-1" name="OtherType1"></textarea>
                                             </div>
                                         </td>
                                         <td>
                                             <div><label class="form-check-label"><input type="radio" name="Type2" value="Arterial" class="form-check-input">Arterial</label></div>
-                                            <div><label class="form-check-label"><input type="radio" name="Type2" value="Diabetic foot ulcer" class="form-check-input">Diabetic foot ulcer</label></div>
+                                            <div><label class="form-check-label"><input type="radio" name="Type2" value="Diabetic" class="form-check-input">Diabetic foot ulcer</label></div>
                                             <div><label class="form-check-label"><input type="radio" name="Type2" value="Malignancy" class="form-check-input">Malignancy</label></div>
                                             <div><label class="form-check-label"><input type="radio" name="Type2" value="Mechanical/Trauma" class="form-check-input">Mechanical/Trauma</label></div>
-                                            <div><label class="form-check-label"><input type="radio" name="Type2" value="Pressure ulcer" class="form-check-input">Pressure ulcer</label></div>
+                                            <div><label class="form-check-label"><input type="radio" name="Type2" value="PressureUlcer" class="form-check-input">Pressure ulcer</label></div>
                                             <div><label class="form-check-label"><input type="radio" name="Type2" value="Surgical*" class="form-check-input">Surgical*</label></div>
-                                            <div><label class="form-check-label"><input type="radio" name="Type2" value="Dialysis access" class="form-check-input">Dialysis access</label></div>
-                                            <div><label class="form-check-label"><input type="radio" name="Type2" value="Venous stasis ulcer" class="form-check-input">Venous stasis ulcer</label></div>
+                                            <div><label class="form-check-label"><input type="radio" name="Type2" value="DialysisAccess" class="form-check-input">Dialysis access</label></div>
+                                            <div><label class="form-check-label"><input type="radio" name="Type2" value="VenousStasis" class="form-check-input">Venous stasis ulcer</label></div>
                                             <div><label class="form-check-label"><input type="radio" name="Type2" value="IV" class="form-check-input">IV</label></div>
                                             <div><label class="form-check-label"><input type="radio" name="Type2" value="Other" class="form-check-input">Other:</label>
-                                                <textarea name="" id="" cols="30" rows="1" class="form-control mt-1"></textarea>
+                                                <textarea name="" id="" cols="30" rows="1" class="form-control mt-1" name="OtherType2"></textarea>
                                             </div>
                                         </td>
                                         <td>
                                             <div><label class="form-check-label"><input type="radio" name="Type3" value="Arterial" class="form-check-input">Arterial</label></div>
-                                            <div><label class="form-check-label"><input type="radio" name="Type3" value="Diabetic foot ulcer" class="form-check-input">Diabetic foot ulcer</label></div>
+                                            <div><label class="form-check-label"><input type="radio" name="Type3" value="Diabetic" class="form-check-input">Diabetic foot ulcer</label></div>
                                             <div><label class="form-check-label"><input type="radio" name="Type3" value="Malignancy" class="form-check-input">Malignancy</label></div>
                                             <div><label class="form-check-label"><input type="radio" name="Type3" value="Mechanical/Trauma" class="form-check-input">Mechanical/Trauma</label></div>
-                                            <div><label class="form-check-label"><input type="radio" name="Type3" value="Pressure ulcer" class="form-check-input">Pressure ulcer</label></div>
+                                            <div><label class="form-check-label"><input type="radio" name="Type3" value="PressureUlcer" class="form-check-input">Pressure ulcer</label></div>
                                             <div><label class="form-check-label"><input type="radio" name="Type3" value="Surgical*" class="form-check-input">Surgical*</label></div>
-                                            <div><label class="form-check-label"><input type="radio" name="Type3" value="Dialysis access" class="form-check-input">Dialysis access</label></div>
-                                            <div><label class="form-check-label"><input type="radio" name="Type3" value="Venous stasis ulcer" class="form-check-input">Venous stasis ulcer</label></div>
+                                            <div><label class="form-check-label"><input type="radio" name="Type3" value="DialysisAccess" class="form-check-input">Dialysis access</label></div>
+                                            <div><label class="form-check-label"><input type="radio" name="Type3" value="VenousStasis" class="form-check-input">Venous stasis ulcer</label></div>
                                             <div><label class="form-check-label"><input type="radio" name="Type3" value="IV" class="form-check-input">IV</label></div>
                                             <div><label class="form-check-label"><input type="radio" name="Type3" value="Other" class="form-check-input">Other:</label>
-                                                <textarea name="" id="" cols="30" rows="1" class="form-control mt-1"></textarea>
+                                                <textarea name="" id="" cols="30" rows="1" class="form-control mt-1" name="OtherType3"></textarea>
                                             </div>
                                         </td>
                                         <td>
-                                            <div><label class="form-check-label"><input type="radio" name="Type4" value="" class="form-check-input">Arterial</label></div>
-                                            <div><label class="form-check-label"><input type="radio" name="Type4" value="" class="form-check-input">Diabetic foot ulcer</label></div>
-                                            <div><label class="form-check-label"><input type="radio" name="Type4" value="" class="form-check-input">Malignancy</label></div>
-                                            <div><label class="form-check-label"><input type="radio" name="Type4" value="" class="form-check-input">Mechanical/Trauma</label></div>
-                                            <div><label class="form-check-label"><input type="radio" name="Type4" value="" class="form-check-input">Pressure ulcer</label></div>
-                                            <div><label class="form-check-label"><input type="radio" name="Type4" value="" class="form-check-input">Surgical*</label></div>
-                                            <div><label class="form-check-label"><input type="radio" name="Type4" value="" class="form-check-input">Dialysis access</label></div>
-                                            <div><label class="form-check-label"><input type="radio" name="Type4" value="" class="form-check-input">Venous stasis ulcer</label></div>
-                                            <div><label class="form-check-label"><input type="radio" name="Type4" value="" class="form-check-input">IV</label></div>
-                                            <div><label class="form-check-label"><input type="radio" name="Type4" value="" class="form-check-input">Other:</label>
-                                                <textarea name="" id="" cols="30" rows="1" class="form-control mt-1"></textarea>
+                                            <div><label class="form-check-label"><input type="radio" name="Type4" value="Arterial" class="form-check-input">Arterial</label></div>
+                                            <div><label class="form-check-label"><input type="radio" name="Type4" value="Diabetic" class="form-check-input">Diabetic foot ulcer</label></div>
+                                            <div><label class="form-check-label"><input type="radio" name="Type4" value="Malignancy" class="form-check-input">Malignancy</label></div>
+                                            <div><label class="form-check-label"><input type="radio" name="Type4" value="Mechanical/Trauma" class="form-check-input">Mechanical/Trauma</label></div>
+                                            <div><label class="form-check-label"><input type="radio" name="Type4" value="PressureUlcer" class="form-check-input">Pressure ulcer</label></div>
+                                            <div><label class="form-check-label"><input type="radio" name="Type4" value="Surgical" class="form-check-input">Surgical*</label></div>
+                                            <div><label class="form-check-label"><input type="radio" name="Type4" value="DialysisAccess" class="form-check-input">Dialysis access</label></div>
+                                            <div><label class="form-check-label"><input type="radio" name="Type4" value="VenousStasis" class="form-check-input">Venous stasis ulcer</label></div>
+                                            <div><label class="form-check-label"><input type="radio" name="Type4" value="IV" class="form-check-input">IV</label></div>
+                                            <div><label class="form-check-label"><input type="radio" name="Type4" value="Other" class="form-check-input">Other:</label>
+                                                <textarea name="" id="" cols="30" rows="1" class="form-control mt-1" name="OtherType4"></textarea>
                                             </div>
                                         </td>
                                         <td>
                                             <div><label class="form-check-label"><input type="radio" name="Type5" value="Arterial" class="form-check-input">Arterial</label></div>
-                                            <div><label class="form-check-label"><input type="radio" name="Type5" value="Diabetic foot ulcer" class="form-check-input">Diabetic foot ulcer</label></div>
-                                            <div><label class="form-check-label"><input type="radio" name="Type5" value="Malignancy<" class="form-check-input">Malignancy</label></div>
+                                            <div><label class="form-check-label"><input type="radio" name="Type5" value="Diabetic" class="form-check-input">Diabetic foot ulcer</label></div>
+                                            <div><label class="form-check-label"><input type="radio" name="Type5" value="Malignancy" class="form-check-input">Malignancy</label></div>
                                             <div><label class="form-check-label"><input type="radio" name="Type5" value="Mechanical/Trauma" class="form-check-input">Mechanical/Trauma</label></div>
-                                            <div><label class="form-check-label"><input type="radio" name="Type5" value="Pressure ulcer" class="form-check-input">Pressure ulcer</label></div>
+                                            <div><label class="form-check-label"><input type="radio" name="Type5" value="PressureUlcer" class="form-check-input">Pressure ulcer</label></div>
                                             <div><label class="form-check-label"><input type="radio" name="Type5" value="Surgical*" class="form-check-input">Surgical*</label></div>
-                                            <div><label class="form-check-label"><input type="radio" name="Type5" value="Dialysis access" class="form-check-input">Dialysis access</label></div>
-                                            <div><label class="form-check-label"><input type="radio" name="Type5" value="Venous stasis ulcer" class="form-check-input">Venous stasis ulcer</label></div>
+                                            <div><label class="form-check-label"><input type="radio" name="Type5" value="DialysisAccess" class="form-check-input">Dialysis access</label></div>
+                                            <div><label class="form-check-label"><input type="radio" name="Type5" value="VenousUlcer" class="form-check-input">Venous stasis ulcer</label></div>
                                             <div><label class="form-check-label"><input type="radio" name="Type5" value="IV" class="form-check-input">IV</label></div>
                                             <div><label class="form-check-label"><input type="radio" name="Type5" value="Other" class="form-check-input">Other:</label>
-                                                <textarea name=" surgicalWound_Explain" id="" cols="30" rows="1" class="form-control mt-1"></textarea>
+                                                <textarea name="OtherType5" id="" cols="30" rows="1" class="form-control mt-1"></textarea>
                                             </div>
                                         </td>
                                     </tr>
@@ -4757,7 +4757,7 @@
                                                     <input type="text" name="Stage_1" id="" class="form-control">
                                                 </div>
                                             </div>
-                                            <div class="mt-1"><label class="form-check-label"><input type="radio" name="Stage1" value="1" class="form-check-input">Unstageable</label></div>
+                                            <div class="mt-1"><label class="form-check-label"><input type="radio" name="Stage1" value="Unstageable" class="form-check-input">Unstageable</label></div>
                                             <div><label class="form-check-label"><input type="radio" name="Stage1" value="Unobservable" class="form-check-input">Unobservable</label></div>
                                             <div><label class="form-check-label"><input type="radio" name="Stage1" value="DTI" class="form-check-input">DTI</label></div>
                                         </td>
@@ -4810,80 +4810,80 @@
                                     <tr>
                                         <td class="bg-secondary-subtle align-middle">Severity of Ulcer<br>(exclude pressure ulcers)</td>
                                         <td>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Skin_only"  class="form-check-input">Skin only</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Fatty_tissue" class="form-check-input">Fatty tissue</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Skin_only"  class="form-check-input">Skin only</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Fatty_tissue" class="form-check-input">Fatty tissue</label></div>
                                             <div>
-                                                <label class="form-check-label"><input type="checkbox" name="Muscle"  class="form-check-input">Muscle</label>
-                                                <label class="form-check-label ms-3"><input type="checkbox" name="Bone"  class="form-check-input">Bone</label>
+                                                <label class="form-check-label"><input type="checkbox" value="1" name="Muscle"  class="form-check-input">Muscle</label>
+                                                <label class="form-check-label ms-3"><input type="checkbox" value="1" name="Bone"  class="form-check-input">Bone</label>
                                             </div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="MuscleNecrosis"  class="form-check-input">Muscle necrosis</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Bone_necrosis"  class="form-check-input">Bone necrosis</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="MuscleNecrosis"  class="form-check-input">Muscle necrosis</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Bone_necrosis"  class="form-check-input">Bone necrosis</label></div>
                                             <div class="d-flex">
-                                                <label class="form-check-label"><input type="checkbox" name="necrosisOther"  class="form-check-input">Other:</label>
+                                                <label class="form-check-label"><input type="checkbox" value="1" name="necrosisOther"  class="form-check-input">Other:</label>
                                                 <div class="clean-input-group flex-grow-1">
                                                     <input type="text" id="" name="necrosisOther1" class="form-control" style="width: 80px;">
                                                 </div>
                                             </div>
                                         </td>
                                         <td>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Skin"  class="form-check-input">Skin only</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Fatty_tissue_1"  class="form-check-input">Fatty tissue</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Skin"  class="form-check-input">Skin only</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Fatty_tissue_1"  class="form-check-input">Fatty tissue</label></div>
                                             <div>
-                                                <label class="form-check-label"><input type="checkbox" name="Muscle_1"  class="form-check-input">Muscle</label>
-                                                <label class="form-check-label ms-3"><input type="checkbox" name="Bone_1"  class="form-check-input">Bone</label>
+                                                <label class="form-check-label"><input type="checkbox" value="1" name="Muscle_1"  class="form-check-input">Muscle</label>
+                                                <label class="form-check-label ms-3"><input type="checkbox" value="1" name="Bone_1"  class="form-check-input">Bone</label>
                                             </div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="MuscleNecrosis_1" class="form-check-input">Muscle necrosis</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Bone_necrosis_1"  class="form-check-input">Bone necrosis</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="MuscleNecrosis_1" class="form-check-input">Muscle necrosis</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Bone_necrosis_1"  class="form-check-input">Bone necrosis</label></div>
                                             <div class="d-flex">
-                                                <label class="form-check-label"><input type="checkbox" name="necrosisOther_1"  class="form-check-input">Other:</label>
+                                                <label class="form-check-label"><input type="checkbox" value="1" name="necrosisOther_1"  class="form-check-input">Other:</label>
                                                 <div class="clean-input-group flex-grow-1">
                                                     <input type="text" id="" name="necrosisOther2" class="form-control" style="width: 80px;">
                                                 </div>
                                             </div>
                                         </td>
                                         <td>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Skin_1"  class="form-check-input">Skin only</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Fatty_tissue_2"  class="form-check-input">Fatty tissue</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Skin_1"  class="form-check-input">Skin only</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Fatty_tissue_2"  class="form-check-input">Fatty tissue</label></div>
                                             <div>
-                                                <label class="form-check-label"><input type="checkbox" name="Muscle_2"   class="form-check-input">Muscle</label>
-                                                <label class="form-check-label ms-3"><input type="checkbox" name="Bone_2"   class="form-check-input">Bone</label>
+                                                <label class="form-check-label"><input type="checkbox" value="1" name="Muscle_2"   class="form-check-input">Muscle</label>
+                                                <label class="form-check-label ms-3"><input type="checkbox" value="1" name="Bone_2"   class="form-check-input">Bone</label>
                                             </div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="MuscleNecrosis_2"   class="form-check-input">Muscle necrosis</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Bone_necrosis_2"   class="form-check-input">Bone necrosis</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="MuscleNecrosis_2"   class="form-check-input">Muscle necrosis</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Bone_necrosis_2"   class="form-check-input">Bone necrosis</label></div>
                                             <div class="d-flex">
-                                                <label class="form-check-label"><input type="checkbox" name="necrosisOther_2"  class="form-check-input">Other:</label>
+                                                <label class="form-check-label"><input type="checkbox" value="1" name="necrosisOther_2"  class="form-check-input">Other:</label>
                                                 <div class="clean-input-group flex-grow-1">
-                                                    <input type="text" id="" class="form-control" name="necrosisOther2" style="width: 80px;">
+                                                    <input type="text" id="" class="form-control" name="necrosisOther5" style="width: 80px;">
                                                 </div>
                                             </div>
                                         </td>
                                         <td>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Skin_2" value="" class="form-check-input">Skin only</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox"  name="Fatty_tissue_3" value="" class="form-check-input">Fatty tissue</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Skin_2" value="" class="form-check-input">Skin only</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1"  name="Fatty_tissue_3" value="" class="form-check-input">Fatty tissue</label></div>
                                             <div>
-                                                <label class="form-check-label"><input type="checkbox"  name="Muscle_3" value="" class="form-check-input">Muscle</label>
-                                                <label class="form-check-label ms-3"><input type="checkbox" name="Bone_3" value="" class="form-check-input">Bone</label>
+                                                <label class="form-check-label"><input type="checkbox" value="1"  name="Muscle_3" value="" class="form-check-input">Muscle</label>
+                                                <label class="form-check-label ms-3"><input type="checkbox" value="1" name="Bone_3" value="" class="form-check-input">Bone</label>
                                             </div>
-                                            <div><label class="form-check-label"><input type="checkbox"  name="MuscleNecrosis_3" value="" class="form-check-input">Muscle necrosis</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox"   name="Bone_necrosis_3" value="" class="form-check-input">Bone necrosis</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1"  name="MuscleNecrosis_3" value="" class="form-check-input">Muscle necrosis</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1"   name="Bone_necrosis_3" value="" class="form-check-input">Bone necrosis</label></div>
                                             <div class="d-flex">
-                                                <label class="form-check-label"><input type="checkbox"  name="necrosisOther_3" value="" class="form-check-input">Other:</label>
+                                                <label class="form-check-label"><input type="checkbox" value="1"  name="necrosisOther_3" value="" class="form-check-input">Other:</label>
                                                 <div class="clean-input-group flex-grow-1">
                                                     <input type="text" id="" name="necrosisOther3" class="form-control" style="width: 80px;">
                                                 </div>
                                             </div>
                                         </td>
                                         <td>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Skin_3" value="" class="form-check-input">Skin only</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Fatty_tissue_4" value="" class="form-check-input">Fatty tissue</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Skin_3" value="" class="form-check-input">Skin only</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Fatty_tissue_4" value="" class="form-check-input">Fatty tissue</label></div>
                                             <div>
-                                                <label class="form-check-label"><input type="checkbox" name="Muscle_4" value="" class="form-check-input">Muscle</label>
-                                                <label class="form-check-label ms-3"><input type="checkbox" name="Bone_4" value="" class="form-check-input">Bone</label>
+                                                <label class="form-check-label"><input type="checkbox" value="1" name="Muscle_4" value="" class="form-check-input">Muscle</label>
+                                                <label class="form-check-label ms-3"><input type="checkbox" value="1" name="Bone_4" value="" class="form-check-input">Bone</label>
                                             </div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="MuscleNecrosis_4" value="" class="form-check-input">Muscle necrosis</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Bone_necrosis_4" value="" class="form-check-input">Bone necrosis</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="MuscleNecrosis_4" value="" class="form-check-input">Muscle necrosis</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Bone_necrosis_4" value="" class="form-check-input">Bone necrosis</label></div>
                                             <div class="d-flex">
-                                                <label class="form-check-label"><input type="checkbox" name="necrosisOther_4" value="" class="form-check-input">Other:</label>
+                                                <label class="form-check-label"><input type="checkbox" value="1" name="necrosisOther_4" value="" class="form-check-input">Other:</label>
                                                 <div class="clean-input-group flex-grow-1">
                                                     <input type="text"  name="necrosisOther4" id="" class="form-control" style="width: 80px;">
                                                 </div>
@@ -4918,60 +4918,60 @@
                                     <tr>
                                         <td class="bg-secondary-subtle align-middle">Surrounding Skin</td>
                                         <td>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Erythema"  class="form-check-input">Erythema</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Induration"   class="form-check-input">Induration</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Maceration"  class="form-check-input">Maceration</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Normal"   class="form-check-input">Normal</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Erythema"  class="form-check-input">Erythema</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Induration"   class="form-check-input">Induration</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Maceration"  class="form-check-input">Maceration</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Normal"   class="form-check-input">Normal</label></div>
                                             <div class="d-flex">
-                                                <label class="form-check-label"><input type="checkbox" name="surroundingOther" value="Other" class="form-check-input">Other:</label>
+                                                <label class="form-check-label"><input type="checkbox" value="1" name="surroundingOther" value="Other" class="form-check-input">Other:</label>
                                                 <div class="clean-input-group flex-grow-1">
                                                     <input type="text" name="surroundingOther1" id="" class="form-control" style="width: 100px;">
                                                 </div>
                                             </div>
                                         </td>
                                         <td>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Erythema_1"  class="form-check-input">Erythema</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Induration_1"  class="form-check-input">Induration</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Maceration_1"   class="form-check-input">Maceration</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Normal_1"   class="form-check-input">Normal</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Erythema_1"  class="form-check-input">Erythema</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Induration_1"  class="form-check-input">Induration</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Maceration_1"   class="form-check-input">Maceration</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Normal_1"   class="form-check-input">Normal</label></div>
                                             <div class="d-flex">
-                                                <label class="form-check-label"><input type="checkbox" name="surroundingOther_1"  class="form-check-input">Other:</label>
+                                                <label class="form-check-label"><input type="checkbox" value="1" name="surroundingOther_1"  class="form-check-input">Other:</label>
                                                 <div class="clean-input-group flex-grow-1">
                                                     <input type="text" name="surroundingOther2" id="" class="form-control" style="width: 100px;">
                                                 </div>
                                             </div>
                                         </td>
                                         <td>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Erythema_2"   class="form-check-input">Erythema</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Induration_2"   class="form-check-input">Induration</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Maceration_2"   class="form-check-input">Maceration</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Normal_2"   class="form-check-input">Normal</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Erythema_2"   class="form-check-input">Erythema</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Induration_2"   class="form-check-input">Induration</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Maceration_2"   class="form-check-input">Maceration</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Normal_2"   class="form-check-input">Normal</label></div>
                                             <div class="d-flex">
-                                                <label class="form-check-label"><input type="checkbox"  name="surroundingOther_2" class="form-check-input">Other:</label>
+                                                <label class="form-check-label"><input type="checkbox" value="1"  name="surroundingOther_5" class="form-check-input">Other:</label>
                                                 <div class="clean-input-group flex-grow-1">
-                                                    <input type="text" name="surroundingOther3" id="" class="form-control" style="width: 100px;">
+                                                    <input type="text" name="surroundingOther6" id="" class="form-control" style="width: 100px;">
                                                 </div>
                                             </div>
                                         </td>
                                         <td>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Erythema_3"  class="form-check-input">Erythema</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Induration_3"  class="form-check-input">Induration</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Maceration_3"   class="form-check-input">Maceration</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Normal_3"   class="form-check-input">Normal</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Erythema_3"  class="form-check-input">Erythema</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Induration_3"  class="form-check-input">Induration</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Maceration_3"   class="form-check-input">Maceration</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Normal_3"   class="form-check-input">Normal</label></div>
                                             <div class="d-flex">
-                                                <label class="form-check-label"><input type="checkbox" name="surroundingOther_3" class="form-check-input">Other:</label>
+                                                <label class="form-check-label"><input type="checkbox" value="1" name="surroundingOther_3" class="form-check-input">Other:</label>
                                                 <div class="clean-input-group flex-grow-1">
                                                     <input type="text" name="surroundingOther4" id="" class="form-control" style="width: 100px;">
                                                 </div>
                                             </div>
                                         </td>
                                         <td>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Erythema_4" value=""  class="form-check-input">Erythema</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Induration_4" value=""  class="form-check-input">Induration</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Maceration_4" value=""  class="form-check-input">Maceration</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Normal_4" value=""  class="form-check-input">Normal</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Erythema_4" value=""  class="form-check-input">Erythema</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Induration_4" value=""  class="form-check-input">Induration</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Maceration_4" value=""  class="form-check-input">Maceration</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Normal_4" value=""  class="form-check-input">Normal</label></div>
                                             <div class="d-flex">
-                                                <label class="form-check-label"><input type="checkbox" name="surroundingOther_4" class="form-check-input">Other:</label>
+                                                <label class="form-check-label"><input type="checkbox" value="1" name="surroundingOther_4" class="form-check-input">Other:</label>
                                                 <div class="clean-input-group flex-grow-1">
                                                     <input type="text" name="surroundingOther5" id="" class="form-control" style="width: 100px;">
                                                 </div>
@@ -4992,21 +4992,21 @@
                                         <td class="bg-secondary-subtle align-middle">Appearance of the<br>Wound Bed</td>
                                         <td>
                                             <div class="d-flex">
-                                                <label class="form-check-label d-flex"><input type="checkbox" name="Slough" class="form-check-input">Slough</label>
+                                                <label class="form-check-label d-flex"><input type="checkbox" value="1" name="Slough" class="form-check-input">Slough</label>
                                                 <div class="clean-input-group flex-grow-1">
                                                     <input type="text" name="appearanceSlough" id="" class="form-control">
                                                 </div>
                                                 <span>%</span>
                                             </div>
                                             <div class="d-flex mt-1">
-                                                <label class="form-check-label d-flex"><input type="checkbox" name="Eschar" class="form-check-input">Eschar</label>
+                                                <label class="form-check-label d-flex"><input type="checkbox" value="1" name="Eschar" class="form-check-input">Eschar</label>
                                                 <div class="clean-input-group flex-grow-1">
                                                     <input type="text" name="appearanceEschar" id="" class="form-control">
                                                 </div>
                                                 <span>%</span>
                                             </div>
                                             <div class="d-flex mt-1">
-                                                <label class="form-check-label d-flex"><input type="checkbox" name="Granulation" class="form-check-input">Granulation</label>
+                                                <label class="form-check-label d-flex"><input type="checkbox" value="1" name="Granulation" class="form-check-input">Granulation</label>
                                                 <div class="clean-input-group flex-grow-1">
                                                     <input type="text" name="appearanceGranulation" id="" class="form-control">
                                                 </div>
@@ -5015,21 +5015,21 @@
                                         </td>
                                         <td>
                                             <div class="d-flex">
-                                                <label class="form-check-label d-flex"><input type="checkbox" name="appearanceSlough11" class="form-check-input">Slough</label>
+                                                <label class="form-check-label d-flex"><input type="checkbox" value="1" name="appearanceSlough11" class="form-check-input">Slough</label>
                                                 <div class="clean-input-group flex-grow-1">
-                                                    <input type="text" name="appearanceSlough_1" name="appearanceEschar11" id="" class="form-control">
+                                                    <input type="text" name="appearanceEschar11" id="" class="form-control">
                                                 </div>
                                                 <span>%</span>
                                             </div>
                                             <div class="d-flex mt-1">
-                                                <label class="form-check-label d-flex"><input type="checkbox" class="form-check-input">Eschar</label>
+                                                <label class="form-check-label d-flex"><input type="checkbox" value="1" name="IfAppearanceEschar_11" class="form-check-input">Eschar</label>
                                                 <div class="clean-input-group flex-grow-1">
                                                     <input type="text" name="appearanceEschar_11" id="" class="form-control">
                                                 </div>
                                                 <span>%</span>
                                             </div>
                                             <div class="d-flex mt-1">
-                                                <label class="form-check-label d-flex"><input type="checkbox" name="appearanceGranulation11" class="form-check-input">Granulation</label>
+                                                <label class="form-check-label d-flex"><input type="checkbox" value="1" name="appearanceGranulation11" class="form-check-input">Granulation</label>
                                                 <div class="clean-input-group flex-grow-1">
                                                     <input type="text" name="appearanceGranulation_11" id="" class="form-control">
                                                 </div>
@@ -5038,21 +5038,21 @@
                                         </td>
                                         <td>
                                             <div class="d-flex">
-                                                <label class="form-check-label d-flex"><input type="checkbox" name="appearanceSlough22" class="form-check-input">Slough</label>
+                                                <label class="form-check-label d-flex"><input type="checkbox" value="1" name="appearanceSlough22" class="form-check-input">Slough</label>
                                                 <div class="clean-input-group flex-grow-1">
                                                     <input type="text" name="appearanceSlough_22" id="" class="form-control">
                                                 </div>
                                                 <span>%</span>
                                             </div>
                                             <div class="d-flex mt-1">
-                                                <label class="form-check-label d-flex"><input type="checkbox" name="appearanceEschar22" class="form-check-input">Eschar</label>
+                                                <label class="form-check-label d-flex"><input type="checkbox" value="1" name="appearanceEschar22" class="form-check-input">Eschar</label>
                                                 <div class="clean-input-group flex-grow-1">
                                                     <input type="text" name="appearanceEschar_22" id="" class="form-control">
                                                 </div>
                                                 <span>%</span>
                                             </div>
                                             <div class="d-flex mt-1">
-                                                <label class="form-check-label d-flex"><input type="checkbox" name="appearanceGranulation33" class="form-check-input">Granulation</label>
+                                                <label class="form-check-label d-flex"><input type="checkbox" value="1" name="appearanceGranulation33" class="form-check-input">Granulation</label>
                                                 <div class="clean-input-group flex-grow-1">
                                                     <input type="text" name="appearanceGranulation_33" id="" class="form-control">
                                                 </div>
@@ -5061,21 +5061,21 @@
                                         </td>
                                         <td>
                                             <div class="d-flex">
-                                                <label class="form-check-label d-flex"><input type="checkbox" class="form-check-input">Slough</label>
+                                                <label class="form-check-label d-flex"><input type="checkbox" value="1" name="appearanceSlough4" class="form-check-input">Slough</label>
                                                 <div class="clean-input-group flex-grow-1">
                                                     <input type="text" name="appearanceSlough_4" id="" class="form-control">
                                                 </div>
                                                 <span>%</span>
                                             </div>
                                             <div class="d-flex mt-1">
-                                                <label class="form-check-label d-flex"><input type="checkbox" name="appearanceEschar44" class="form-check-input">Eschar</label>
+                                                <label class="form-check-label d-flex"><input type="checkbox" value="1" name="appearanceEschar44" class="form-check-input">Eschar</label>
                                                 <div class="clean-input-group flex-grow-1">
                                                     <input type="text" name="appearanceEschar_44" id="" class="form-control">
                                                 </div>
                                                 <span>%</span>
                                             </div>
                                             <div class="d-flex mt-1">
-                                                <label class="form-check-label d-flex"><input type="checkbox" name="appearanceGranulation44" class="form-check-input">Granulation</label>
+                                                <label class="form-check-label d-flex"><input type="checkbox" value="1" name="appearanceGranulation44" class="form-check-input">Granulation</label>
                                                 <div class="clean-input-group flex-grow-1">
                                                     <input type="text" name="appearanceGranulation_44" id="" class="form-control">
                                                 </div>
@@ -5084,21 +5084,21 @@
                                         </td>
                                         <td>
                                             <div class="d-flex">
-                                                <label class="form-check-label d-flex"><input type="checkbox" name="appearanceSlough55" class="form-check-input">Slough</label>
+                                                <label class="form-check-label d-flex"><input type="checkbox" value="1" name="appearanceSlough55" class="form-check-input">Slough</label>
                                                 <div class="clean-input-group flex-grow-1">
                                                     <input type="text" name="appearanceSlough_55"  id="" class="form-control">
                                                 </div>
                                                 <span>%</span>
                                             </div>
                                             <div class="d-flex mt-1">
-                                                <label class="form-check-label d-flex"><input type="checkbox" class="form-check-input">Eschar</label>
+                                                <label class="form-check-label d-flex"><input type="checkbox" value="1" name="appearanceEschar5" class="form-check-input">Eschar</label>
                                                 <div class="clean-input-group flex-grow-1">
                                                     <input type="text" name="appearanceEschar_5" id="" class="form-control">
                                                 </div>
                                                 <span>%</span>
                                             </div>
                                             <div class="d-flex mt-1">
-                                                <label class="form-check-label d-flex"><input type="checkbox" name="appearanceGranulation55" class="form-check-input">Granulation</label>
+                                                <label class="form-check-label d-flex"><input type="checkbox" value="1" name="appearanceGranulation55" class="form-check-input">Granulation</label>
                                                 <div class="clean-input-group flex-grow-1">
                                                     <input type="text" name="appearanceGranulation_5" id="" class="form-control">
                                                 </div>
@@ -5131,8 +5131,8 @@
                                         </td>
                                         <td>
                                             <div>
-                                                <label class="form-check-label"><input type="radio" name="Drainage3" class="form-check-input">None</label>
-                                                <label class="form-check-label ms-3"><input type="radio" name="Drainage3" class="form-check-input">Small</label>
+                                                <label class="form-check-label"><input type="radio" name="Drainage3" value="None" class="form-check-input">None</label>
+                                                <label class="form-check-label ms-3"><input type="radio" name="Drainage3" value="Small" class="form-check-input">Small</label>
                                             </div>
                                             <div>
                                                 <label class="form-check-label"><input type="radio" name="Drainage3" value="Moderate" class="form-check-input">Moderate</label>
@@ -5141,8 +5141,8 @@
                                         </td>
                                         <td>
                                             <div>
-                                                <label class="form-check-label"><input type="radio" name="Drainage4" class="form-check-input">None</label>
-                                                <label class="form-check-label ms-3"><input type="radio" name="Drainage4" class="form-check-input">Small</label>
+                                                <label class="form-check-label"><input type="radio" name="Drainage4" value="None" class="form-check-input">None</label>
+                                                <label class="form-check-label ms-3"><input type="radio" name="Drainage4" value="Small" class="form-check-input">Small</label>
                                             </div>
                                             <div>
                                                 <label class="form-check-label"><input type="radio" name="Drainage4" value="Moderate" class="form-check-input">Moderate</label>
@@ -5447,7 +5447,7 @@
                     <tr>
                         <td>
                             <div>
-                                <label class="form-check-label"><input type="checkbox" name="drugRegimen" class="form-check-input"> Drug Regimen Review completed.</label>
+                                <label class="form-check-label"><input type="checkbox" value="1" name="drugRegimen" class="form-check-input"> Drug Regimen Review completed.</label>
                                 <div class="d-inline-flex ms-3">
                                     <label class="form-check-label d-flex" style="white-space: nowrap;">Date:</label>
                                     <div class="clean-input-group flex-grow-1">
@@ -5460,14 +5460,14 @@
 
                             <div class="mt-1">
                                 <span>Check if any of the following were identified:</span>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="Potential"  class="form-check-input"> Potential adverse effects</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="drugReactions" class="form-check-input"> Drug reactions</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="Ineffective" class="form-check-input"> Ineffective drug therapy</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="Significant"  class="form-check-input"> Significant side effects</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="significantDrug"  class="form-check-input"> Significant drug interactions</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="Duplicate" class="form-check-input"> Duplicate drug therapy</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="Non-compliance" class="form-check-input"> Non-compliance with drug therapy</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="highRisk"  class="form-check-input"> High-risk drugs</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Potential"  class="form-check-input"> Potential adverse effects</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="drugReactions" class="form-check-input"> Drug reactions</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Ineffective" class="form-check-input"> Ineffective drug therapy</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Significant"  class="form-check-input"> Significant side effects</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="significantDrug"  class="form-check-input"> Significant drug interactions</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Duplicate" class="form-check-input"> Duplicate drug therapy</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Non-compliance" class="form-check-input"> Non-compliance with drug therapy</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="highRisk"  class="form-check-input"> High-risk drugs</label>
                             </div>
 
                             <div class="mt-1">
@@ -5477,12 +5477,12 @@
 
                             <div class="mt-2">
                                 <b>Medication Allergies:</b>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="medicationAllergies" class="form-check-input"> No known medication allergies</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="Aspirin" class="form-check-input"> Aspirin</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="Penicillin" class="form-check-input"> Penicillin</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="Sulfa" class="form-check-input"> Sulfa</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="medicationAllergies" class="form-check-input"> No known medication allergies</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Aspirin" class="form-check-input"> Aspirin</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Penicillin" class="form-check-input"> Penicillin</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Sulfa" class="form-check-input"> Sulfa</label>
                                 <div class="d-inline-flex ms-2">
-                                    <label class="form-check-label"><input type="checkbox" name="medicationallergiesOther" class="form-check-input"> Other(s):</label>
+                                    <label class="form-check-label"><input type="checkbox" value="1" name="medicationallergiesOther" class="form-check-input"> Other(s):</label>
                                     <div class="clean-input-group flex-grow-1">
                                         <input type="text" name="medicationallergiesOther_1" id="" class="form-control">
                                     </div>
@@ -5501,7 +5501,7 @@
                                 <b>Financial ability to pay for medications:</b>
                                 <label class="form-check-label ms-2"><input type="radio" name="FinancialAbility" value="Yes" class="form-check-input"> Yes</label>
                                 <label class="form-check-label ms-2"><input type="radio" name="FinancialAbility" value="No" class="form-check-input"> No</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="FinancialAbility_1" value="" class="form-check-input"> No change since last assessment</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" name="FinancialAbility_1" value="1" class="form-check-input"> No change since last assessment</label>
                                 <div class="ms-2 mt-1">
                                     <span>If no, was MSW referral made?</span>
                                     <label class="form-check-label ms-2"><input type="radio" name="MSWreferral" value="Yes" class="form-check-input"> Yes</label>
@@ -5526,7 +5526,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <div><label class="form-check-label"><input type="checkbox" name="infusion" class="form-check-input"> <b>N/A</b></label></div>
+                            <div><label class="form-check-label"><input type="checkbox" name="infusion" value="1" class="form-check-input"> <b>N/A</b></label></div>
                             <div class="mt-1">
                                 <span>Does the patient have an IV?</span>
                                 <label class="form-check-label ms-2"><input type="radio" name="patientIV" value="No" class="form-check-input"> No</label>
@@ -5587,7 +5587,7 @@
                                     </div>
                                 </div>
                                 <div class="ms-2 mt-1">
-                                    <label class="form-check-label"><input type="checkbox" name="notFlushed" class="form-check-input"> N/A not flushed</label>
+                                    <label class="form-check-label"><input type="checkbox" name="notFlushed" value="1" class="form-check-input"> N/A not flushed</label>
                                     <div class="d-inline-flex ms-3">
                                         <label class="form-check-label d-flex" style="white-space: nowrap;">Injection cap change frequency:</label>
                                         <div class="clean-input-group flex-grow-1">
@@ -5608,17 +5608,17 @@
                                     </div>
                                 </div>
                                 <div class="ms-2 mt-1">
-                                    <label class="form-check-label"><input type="checkbox" name="flushed" class="form-check-input"> N/A not flushed</label>
+                                    <label class="form-check-label"><input type="checkbox" value="1" name="flushed" class="form-check-input"> N/A not flushed</label>
                                     <div class="ms-3">
-                                        <label class="form-check-label"><input type="checkbox" name="Sterile" class="form-check-input"> Sterile</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="Clean"  class="form-check-input"> Clean</label>
+                                        <label class="form-check-label"><input type="checkbox" value="1" name="Sterile" class="form-check-input"> Sterile</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Clean"  class="form-check-input"> Clean</label>
                                         <span class="ms-3">Performed by:</span>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="performedPatient" class="form-check-input"> Patient</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="performedNurse" class="form-check-input"> Nurse</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="performedCaregiver" class="form-check-input"> Caregiver</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="performedFamily" class="form-check-input"> Family</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="performedPatient" class="form-check-input"> Patient</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="performedNurse" class="form-check-input"> Nurse</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="performedCaregiver" class="form-check-input"> Caregiver</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="performedFamily" class="form-check-input"> Family</label>
                                         <div class="d-inline-flex ms-2">
-                                            <label class="form-check-label"><input type="checkbox" name="performedOther" class="form-check-input"> Other:</label>
+                                            <label class="form-check-label"><input type="checkbox" value="1" name="performedOther" class="form-check-input"> Other:</label>
                                             <div class="clean-input-group flex-grow-1">
                                                 <input type="text" name="performedOther_1" id="" class="form-control">
                                             </div>
@@ -5642,7 +5642,7 @@
                             </div>
 
                             <div class="d-flex mt-1">
-                                <label class="form-check-label"><input type="checkbox" name="pumpType" class="form-check-input"> Pump: (type, specify):</label>
+                                <label class="form-check-label"><input type="checkbox" value="1" name="pumpType" class="form-check-input"> Pump: (type, specify):</label>
                                 <div class="clean-input-group flex-grow-1">
                                     <input type="text" name="pumpType_1" id="" class="form-control">
                                 </div>
@@ -5650,12 +5650,12 @@
 
                             <div class="mt-1">
                                 <span>Administered by:</span>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="administeredbyPatient"  class="form-check-input"> Patient</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="administeredbyNurse"  class="form-check-input"> Nurse</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="administeredbyCaregiver"  class="form-check-input"> Caregiver</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="administeredbyFamily" class="form-check-input"> Family</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="administeredbyPatient"  class="form-check-input"> Patient</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="administeredbyNurse"  class="form-check-input"> Nurse</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="administeredbyCaregiver"  class="form-check-input"> Caregiver</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="administeredbyFamily" class="form-check-input"> Family</label>
                                 <div class="d-inline-flex ms-2">
-                                    <label class="form-check-label"><input type="checkbox" name="administeredbyOther"  class="form-check-input"> Other:</label>
+                                    <label class="form-check-label"><input type="checkbox" value="1" name="administeredbyOther"  class="form-check-input"> Other:</label>
                                     <div class="clean-input-group flex-grow-1">
                                         <input type="text" name="administeredby_Other" id="" class="form-control">
                                     </div>
@@ -5688,7 +5688,7 @@
                         <td>
                             <p class="mb-0">Within the past 12 months:</p>
                             <div class="ms-2">
-                                <label class="form-check-label"><input type="checkbox" name="InfluenzaFlu" class="form-check-input"> Influenza (specifically
+                                <label class="form-check-label"><input type="checkbox" value="1" name="InfluenzaFlu" class="form-check-input"> Influenza (specifically
                                     this year's flu season)</label>
                                 <label class="form-check-label ms-2"><input type="radio" name="Influenza" value="No" class="form-check-input"> No</label>
                                 <label class="form-check-label ms-2"><input type="radio" name="Influenza" value="Yes" class="form-check-input"> Yes</label>
@@ -5696,12 +5696,12 @@
                         
                             <div class="mt-1">
                                 <span>According to immunization guidelines:</span><br>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="accordingPneumonia"  class="form-check-input"> Pneumonia</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="accordingTetanus"  class="form-check-input"> Tetanus</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="accordingShingles"  class="form-check-input"> Shingles</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="accordingHepatitis"  class="form-check-input"> Hepatitis C</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="accordingPneumonia"  class="form-check-input"> Pneumonia</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="accordingTetanus"  class="form-check-input"> Tetanus</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="accordingShingles"  class="form-check-input"> Shingles</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="accordingHepatitis"  class="form-check-input"> Hepatitis C</label>
                                 <div class="d-inline-flex ms-2">
-                                    <label class="form-check-label"><input type="checkbox" name="otherHepatitis"  class="form-check-input"> Other:</label>
+                                    <label class="form-check-label"><input type="checkbox" value="1" name="otherHepatitis"  class="form-check-input"> Other:</label>
                                     <div class="clean-input-group flex-grow-1">
                                         <input type="text" name="immunizationGuidelines" id="" class="form-control">
                                     </div>
@@ -5715,9 +5715,9 @@
 
                             <div class="mt-1">
                                 <b>Last COVID-19 Vaccination:</b><br>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="Vaccination"  class="form-check-input">
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Vaccination"  class="form-check-input">
                                     Initial vaccine series</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="Vaccination_1" class="form-check-input"> Booster:</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Vaccination_1" class="form-check-input"> Booster:</label>
                                 <label class="form-check-label ms-2"><input type="radio" name="vaccination_booster" value="1st" class="form-check-input">
                                     1st</label>
                                 <label class="form-check-label ms-2"><input type="radio" name="vaccination_booster" value="2nd" class="form-check-input">
@@ -5745,17 +5745,17 @@
                         <td>
                             <div>
                                 <span>Did the</span>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="refusedPatient"  class="form-check-input"> Patient</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="refusedRepresentative"  class="form-check-input"> Representative</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="refusedPatient"  class="form-check-input"> Patient</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="refusedRepresentative"  class="form-check-input"> Representative</label>
                                 <div class="d-inline-flex ms-2">
-                                    <label class="form-check-label"><input type="checkbox" name="refusedOther"  class="form-check-input"> Other:</label>
+                                    <label class="form-check-label"><input type="checkbox" value="1" name="refusedOther"  class="form-check-input"> Other:</label>
                                     <div class="clean-input-group flex-grow-1">
                                         <input type="text" name="refusedOther1" id="" class="form-control">
                                     </div>
                                     <span>refuse</span>
                                 </div>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="refuseCare"  class="form-check-input"> Care(s)</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="refuseService" class="form-check-input"> Service(s) since the last assessment?</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="refuseCare"  class="form-check-input"> Care(s)</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="refuseService" class="form-check-input"> Service(s) since the last assessment?</label>
                             </div>
 
                             <div class="mt-1">
@@ -5766,8 +5766,8 @@
 
                             <div class="mt-2">
                                 <span>Are the</span>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="theCare" class="form-check-input"> Care(s)</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="theServices" class="form-check-input"> Service(s)</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="theCare" class="form-check-input"> Care(s)</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="theServices" class="form-check-input"> Service(s)</label>
                                 <span class="ms-3">they refused a significant part of the recommended plan of care?</span>
                                 <label class="form-check-label ms-2"><input type="radio" name="ServiceYesNo_1" value="No" class="form-check-input"> No</label>
                                 <label class="form-check-label ms-2"><input type="radio" name="ServiceYesNo_1" value="Yes" class="form-check-input"> Yes &nbsp; If yes, explain how:</label>
@@ -5798,17 +5798,17 @@
                                         <label class="form-check-label ms-2"><input type="radio" name="WoundCare"  value="N/A" class="form-check-input">N/A</label>
                                     </td>
                                     <td class="text-center">
-                                        <label class="form-check-label"><input type="checkbox" name="woundCarePatient" class="form-check-input">Patient</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="woundCareCaregiver"   class="form-check-input">Caregiver</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="woundCareRepresentative"  class="form-check-input">Representative</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="woundCareFamily"  class="form-check-input">Family</label>
+                                        <label class="form-check-label"><input type="checkbox" value="1" name="woundCarePatient" class="form-check-input">Patient</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="woundCareCaregiver"   class="form-check-input">Caregiver</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="woundCareRepresentative"  class="form-check-input">Representative</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="woundCareFamily"  class="form-check-input">Family</label>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <span>Diabetic:</span>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="diabeticFoot"  class="form-check-input">Foot exam</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="diabeticCare"  class="form-check-input">Care</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="diabeticFoot"  class="form-check-input">Foot exam</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="diabeticCare"  class="form-check-input">Care</label>
                                     </td>
                                     <td class="text-center">
                                         <label class="form-check-label"><input type="radio" name="Diabetic" value="Yes" class="form-check-input">Yes</label>
@@ -5816,10 +5816,10 @@
                                         <label class="form-check-label ms-2"><input type="radio" name="Diabetic" value="N/A" class="form-check-input">N/A</label>
                                     </td>
                                     <td class="text-center">
-                                        <label class="form-check-label"><input type="checkbox" name="diabeticPatient" class="form-check-input">Patient</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="diabeticCaregiver" class="form-check-input">Caregiver</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="diabeticRepresentative" class="form-check-input">Representative</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="diabeticFamily" class="form-check-input">Family</label>
+                                        <label class="form-check-label"><input type="checkbox" value="1" name="diabeticPatient" class="form-check-input">Patient</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="diabeticCaregiver" class="form-check-input">Caregiver</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="diabeticRepresentative" class="form-check-input">Representative</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="diabeticFamily" class="form-check-input">Family</label>
                                     </td>
                                 </tr>
                                 <tr>
@@ -5832,10 +5832,10 @@
                                         <label class="form-check-label ms-2"><input type="radio" name="InsulinAdministration" value="N/A" class="form-check-input">N/A</label>
                                     </td>
                                     <td class="text-center">
-                                        <label class="form-check-label"><input type="checkbox" name="insulinPatient"  class="form-check-input">Patient</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="insulinCaregiver"  class="form-check-input">Caregiver</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="insulinRepresentative"  class="form-check-input">Representative</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="insulinFamily"  class="form-check-input">Family</label>
+                                        <label class="form-check-label"><input type="checkbox" value="1" name="insulinPatient"  class="form-check-input">Patient</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="insulinCaregiver"  class="form-check-input">Caregiver</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="insulinRepresentative"  class="form-check-input">Representative</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="insulinFamily"  class="form-check-input">Family</label>
                                     </td>
                                 </tr>
                                 <tr>
@@ -5848,10 +5848,10 @@
                                         <label class="form-check-label ms-2"><input type="radio" name="GlucometerUse" value="N/A" class="form-check-input">N/A</label>
                                     </td>
                                     <td class="text-center">
-                                        <label class="form-check-label"><input type="checkbox" name="glucometer" class="form-check-input">Patient</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="glucometerPatient" class="form-check-input">Caregiver</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="glucometerRepresentative" class="form-check-input">Representative</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="glucometerFamily" class="form-check-input">Family</label>
+                                        <label class="form-check-label"><input type="checkbox" value="1" name="glucometer" class="form-check-input">Patient</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="glucometerPatient" class="form-check-input">Caregiver</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="glucometerRepresentative" class="form-check-input">Representative</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="glucometerFamily" class="form-check-input">Family</label>
                                     </td>
                                 </tr>
                                 <tr>
@@ -5864,20 +5864,20 @@
                                         <label class="form-check-label ms-2"><input type="radio" name="NutritionalManagement" value="N/A" class="form-check-input">N/A</label>
                                     </td>
                                     <td class="text-center">
-                                        <label class="form-check-label"><input type="checkbox" name="nutritionalPatient"  class="form-check-input">Patient</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="nutritionalCaregiver" class="form-check-input">Caregiver</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="nutritionalRepresentative"  class="form-check-input">Representative</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="nutritionalFamily" class="form-check-input">Family</label>
+                                        <label class="form-check-label"><input type="checkbox" value="1" name="nutritionalPatient"  class="form-check-input">Patient</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="nutritionalCaregiver" class="form-check-input">Caregiver</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="nutritionalRepresentative"  class="form-check-input">Representative</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="nutritionalFamily" class="form-check-input">Family</label>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <span>Medication(s) administration:</span><br>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="Oral"  class="form-check-input">Oral</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="Injected"  class="form-check-input">Injected</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="Infused"  class="form-check-input">Infused</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="Inhaled"  class="form-check-input">Inhaled</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="Topical" class="form-check-input">Topical</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Oral"  class="form-check-input">Oral</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Injected"  class="form-check-input">Injected</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Infused"  class="form-check-input">Infused</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Inhaled"  class="form-check-input">Inhaled</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Topical" class="form-check-input">Topical</label>
                                     </td>
                                     <td class="text-center">
                                         <label class="form-check-label"><input type="radio" name="MedicationAdministration" value="Yes" class="form-check-input">Yes</label>
@@ -5885,10 +5885,10 @@
                                         <label class="form-check-label ms-2"><input type="radio" name="MedicationAdministration" value="N/A" class="form-check-input">N/A</label>
                                     </td>
                                     <td class="text-center">
-                                        <label class="form-check-label"><input type="checkbox" name="MedicationAdministration_Patient"  class="form-check-input">Patient</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="MedicationAdministration_Caregiver"  class="form-check-input">Caregiver</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="MedicationAdministration_Representative"  class="form-check-input">Representative</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="MedicationAdministration_Family"  class="form-check-input">Family</label>
+                                        <label class="form-check-label"><input type="checkbox" value="1" name="MedicationAdministration_Patient"  class="form-check-input">Patient</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="MedicationAdministration_Caregiver"  class="form-check-input">Caregiver</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="MedicationAdministration_Representative"  class="form-check-input">Representative</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="MedicationAdministration_Family"  class="form-check-input">Family</label>
                                     </td>
                                 </tr>
                                 <tr>
@@ -5901,10 +5901,10 @@
                                         <label class="form-check-label ms-2"><input type="radio" name="PainManagement" value="N/A" class="form-check-input">N/A</label>
                                     </td>
                                     <td class="text-center">
-                                        <label class="form-check-label"><input type="checkbox" name="painManagement_Patient" class="form-check-input">Patient</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="painManagement_Caregiver"  class="form-check-input">Caregiver</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="painManagement_Representative"  class="form-check-input">Representative</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="painManagement_Family" class="form-check-input">Family</label>
+                                        <label class="form-check-label"><input type="checkbox" value="1" name="painManagement_Patient" class="form-check-input">Patient</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="painManagement_Caregiver"  class="form-check-input">Caregiver</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="painManagement_Representative"  class="form-check-input">Representative</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="painManagement_Family" class="form-check-input">Family</label>
                                     </td>
                                 </tr>
                                 <tr>
@@ -5917,10 +5917,10 @@
                                         <label class="form-check-label ms-2"><input type="radio" name="OxygenUse" value="N/A" class="form-check-input">N/A</label>
                                     </td>
                                     <td class="text-center">
-                                        <label class="form-check-label"><input type="checkbox" name="oxygenPatient" class="form-check-input">Patient</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="oxygenCaregiver"   class="form-check-input">Caregiver</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="oxygenRepresentative" class="form-check-input">Representative</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="oxygenFamily"  class="form-check-input">Family</label>
+                                        <label class="form-check-label"><input type="checkbox" value="1" name="oxygenPatient" class="form-check-input">Patient</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="oxygenCaregiver"   class="form-check-input">Caregiver</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="oxygenRepresentative" class="form-check-input">Representative</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="oxygenFamily"  class="form-check-input">Family</label>
                                     </td>
                                 </tr>
                                 <tr>
@@ -5933,10 +5933,10 @@
                                         <label class="form-check-label ms-2"><input type="radio" name="medicalDevices" value="N/A" class="form-check-input">N/A</label>
                                     </td>
                                     <td class="text-center">
-                                        <label class="form-check-label"><input type="checkbox" name="medicalPatient"  class="form-check-input">Patient</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="medicalCaregiver"  class="form-check-input">Caregiver</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="medicalRepresentative" class="form-check-input">Representative</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="medicalFamily"  class="form-check-input">Family</label>
+                                        <label class="form-check-label"><input type="checkbox" value="1" name="medicalPatient"  class="form-check-input">Patient</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="medicalCaregiver"  class="form-check-input">Caregiver</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="medicalRepresentative" class="form-check-input">Representative</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="medicalFamily"  class="form-check-input">Family</label>
                                     </td>
                                 </tr>
                                 <tr>
@@ -5949,10 +5949,10 @@
                                         <label class="form-check-label ms-2"><input type="radio" name="PressureReduction" value="N/A" class="form-check-input">N/A</label>
                                     </td>
                                     <td class="text-center">
-                                        <label class="form-check-label"><input type="checkbox" name="pressurePatient"  class="form-check-input">Patient</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="pressureCaregiver"  class="form-check-input">Caregiver</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="pressureRepresentative"  class="form-check-input">Representative</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="pressureFamily"  class="form-check-input">Family</label>
+                                        <label class="form-check-label"><input type="checkbox" value="1" name="pressurePatient"  class="form-check-input">Patient</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="pressureCaregiver"  class="form-check-input">Caregiver</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="pressureRepresentative"  class="form-check-input">Representative</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="pressureFamily"  class="form-check-input">Family</label>
                                     </td>
                                 </tr>
                                 <tr>
@@ -5965,10 +5965,10 @@
                                         <label class="form-check-label ms-2"><input type="radio" name="CatheterCare" value="N/A" class="form-check-input">N/A</label>
                                     </td>
                                     <td class="text-center">
-                                        <label class="form-check-label"><input type="checkbox" name="catheterPatient" class="form-check-input">Patient</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="catheterCaregiver" class="form-check-input">Caregiver</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="catheterRepresentative" class="form-check-input">Representative</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="catheterFamily" class="form-check-input">Family</label>
+                                        <label class="form-check-label"><input type="checkbox" value="1" name="catheterPatient" class="form-check-input">Patient</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="catheterCaregiver" class="form-check-input">Caregiver</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="catheterRepresentative" class="form-check-input">Representative</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="catheterFamily" class="form-check-input">Family</label>
                                     </td>
                                 </tr>
                                 <tr>
@@ -5981,10 +5981,10 @@
                                         <label class="form-check-label ms-2"><input type="radio" name="TrachCare" value="N/A" class="form-check-input">N/A</label>
                                     </td>
                                     <td class="text-center">
-                                        <label class="form-check-label"><input type="checkbox" name="trachPatient"  class="form-check-input">Patient</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="trachCaregiver"  class="form-check-input">Caregiver</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="trachRepresentative"  class="form-check-input">Representative</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="trachFamily" class="form-check-input">Family</label>
+                                        <label class="form-check-label"><input type="checkbox" value="1" name="trachPatient"  class="form-check-input">Patient</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="trachCaregiver"  class="form-check-input">Caregiver</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="trachRepresentative"  class="form-check-input">Representative</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="trachFamily" class="form-check-input">Family</label>
                                     </td>
                                 </tr>
                                 <tr>
@@ -5997,10 +5997,10 @@
                                         <label class="form-check-label ms-2"><input type="radio" name="OstomyCare" value="N/A" class="form-check-input">N/A</label>
                                     </td>
                                     <td class="text-center">
-                                        <label class="form-check-label"><input type="checkbox" name="ostomyPatient"  class="form-check-input">Patient</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="ostomyCaregiver"   class="form-check-input">Caregiver</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="ostomyRepresentative"   class="form-check-input">Representative</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="ostomyFamily"  class="form-check-input">Family</label>
+                                        <label class="form-check-label"><input type="checkbox" value="1" name="ostomyPatient"  class="form-check-input">Patient</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="ostomyCaregiver"   class="form-check-input">Caregiver</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="ostomyRepresentative"   class="form-check-input">Representative</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="ostomyFamily"  class="form-check-input">Family</label>
                                     </td>
                                 </tr>
                                 <tr>
@@ -6013,10 +6013,10 @@
                                         <label class="form-check-label ms-2"><input type="radio" name="PreparednessPlan" value="N/A" class="form-check-input">N/A</label>
                                     </td>
                                     <td class="text-center">
-                                        <label class="form-check-label"><input type="checkbox" name="emergencyPatient"  class="form-check-input">Patient</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="emergencyCaregiver"  class="form-check-input">Caregiver</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="emergencyRepresentative"  class="form-check-input">Representative</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="emergencyFamily" class="form-check-input">Family</label>
+                                        <label class="form-check-label"><input type="checkbox" value="1" name="emergencyPatient"  class="form-check-input">Patient</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="emergencyCaregiver"  class="form-check-input">Caregiver</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="emergencyRepresentative"  class="form-check-input">Representative</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="emergencyFamily" class="form-check-input">Family</label>
                                     </td>
                                 </tr>
                                 <tr>
@@ -6029,10 +6029,10 @@
                                         <label class="form-check-label ms-2"><input type="radio" name="InfectionControl" value="N/A" class="form-check-input">N/A</label>
                                     </td>
                                     <td class="text-center">
-                                        <label class="form-check-label"><input type="checkbox" name="infectioncontrolPatient"  class="form-check-input">Patient</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="infectioncontrolCaregiver"  class="form-check-input">Caregiver</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="infectioncontrolRepresentative"  class="form-check-input">Representative</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="infectioncontrolFamily" class="form-check-input">Family</label>
+                                        <label class="form-check-label"><input type="checkbox" value="1" name="infectioncontrolPatient"  class="form-check-input">Patient</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="infectioncontrolCaregiver"  class="form-check-input">Caregiver</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="infectioncontrolRepresentative"  class="form-check-input">Representative</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="infectioncontrolFamily" class="form-check-input">Family</label>
                                     </td>
                                 </tr>
                                 <tr>
@@ -6045,10 +6045,10 @@
                                         <label class="form-check-label ms-2"><input type="radio" name="ReportToAgency" value="N/A" class="form-check-input">N/A</label>
                                     </td>
                                     <td class="text-center">
-                                        <label class="form-check-label"><input type="checkbox" name="agencyPatient"  class="form-check-input">Patient</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="agencyCaregiver"  class="form-check-input">Caregiver</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="agencyRepresentative"  class="form-check-input">Representative</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="agencyFamily" class="form-check-input">Family</label>
+                                        <label class="form-check-label"><input type="checkbox" value="1" name="agencyPatient"  class="form-check-input">Patient</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="agencyCaregiver"  class="form-check-input">Caregiver</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="agencyRepresentative"  class="form-check-input">Representative</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="agencyFamily" class="form-check-input">Family</label>
                                     </td>
                                 </tr>
                                 <tr>
@@ -6061,10 +6061,10 @@
                                         <label class="form-check-label ms-2"><input type="radio" name="PatientRights" value="N/A" class="form-check-input">N/A</label>
                                     </td>
                                     <td class="text-center">
-                                        <label class="form-check-label"><input type="checkbox" name="rightsPatient"  class="form-check-input">Patient</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="rightsCaregiver"  class="form-check-input">Caregiver</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="rightsRepresentative"  class="form-check-input">Representative</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="rightsFamily" class="form-check-input">Family</label>
+                                        <label class="form-check-label"><input type="checkbox" value="1" name="rightsPatient"  class="form-check-input">Patient</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="rightsCaregiver"  class="form-check-input">Caregiver</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="rightsRepresentative"  class="form-check-input">Representative</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="rightsFamily" class="form-check-input">Family</label>
                                     </td>
                                 </tr>
                                 <tr>
@@ -6077,39 +6077,39 @@
 
                             <div class="px-3 py-2">
                                 <span>Teach back method used to:</span>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="methodEducate" class="form-check-input"> Educate</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="methodTrain"  class="form-check-input"> Train</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="methodPatient"  class="form-check-input"> Patient</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="methodCaregiver"  class="form-check-input"> Caregiver</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="methodRepresentative" class="form-check-input"> Representative</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="methodFamily"  class="form-check-input"> Family</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="methodEducate" class="form-check-input"> Educate</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="methodTrain"  class="form-check-input"> Train</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="methodPatient"  class="form-check-input"> Patient</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="methodCaregiver"  class="form-check-input"> Caregiver</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="methodRepresentative" class="form-check-input"> Representative</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="methodFamily"  class="form-check-input"> Family</label>
                                 <div class="ms-2 mt-1">
-                                    <label class="form-check-label"><input type="checkbox" name="methodusedPatient"  class="form-check-input"> Patient</label>
-                                    <label class="form-check-label ms-2"><input type="checkbox" name="methodusedCaregiver"  class="form-check-input"> Caregiver</label>
-                                    <label class="form-check-label ms-2"><input type="checkbox" name="methodusedRepresentative"  class="form-check-input"> Representative</label>
+                                    <label class="form-check-label"><input type="checkbox" value="1" name="methodusedPatient"  class="form-check-input"> Patient</label>
+                                    <label class="form-check-label ms-2"><input type="checkbox" value="1" name="methodusedCaregiver"  class="form-check-input"> Caregiver</label>
+                                    <label class="form-check-label ms-2"><input type="checkbox" value="1" name="methodusedRepresentative"  class="form-check-input"> Representative</label>
                                     <div class="d-inline-flex ms-2">
-                                        <label class="form-check-label"><input type="checkbox" name="methodusedFamilyeducated"  class="form-check-input"> Family educated this visit specifically for:</label>
+                                        <label class="form-check-label"><input type="checkbox" value="1" name="methodusedFamilyeducated"  class="form-check-input"> Family educated this visit specifically for:</label>
                                         <div class="clean-input-group flex-grow-1">
                                             <input type="text" name="methodusedFamilyeducated_other" id="" class="form-control">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="ms-2 mt-1">
-                                    <label class="form-check-label"><input type="checkbox" name="teachPatient"  class="form-check-input"> Patient</label>
-                                    <label class="form-check-label ms-2"><input type="checkbox" name="teachCaregiver"  class="form-check-input"> Caregiver</label>
-                                    <label class="form-check-label ms-2"><input type="checkbox" name="teachRepresentative"  class="form-check-input"> Representative</label>
-                                    <label class="form-check-label ms-2"><input type="checkbox" name="teachFamily"  class="form-check-input"> Family made aware that</label>
-                                    <label class="form-check-label ms-2"><input type="checkbox" name="teachEducation"  class="form-check-input"> education</label>
-                                    <label class="form-check-label ms-2"><input type="checkbox" name="teachTraining"  class="form-check-input"> training will continue during follow-up visits as needed.</label>
+                                    <label class="form-check-label"><input type="checkbox" value="1" name="teachPatient"  class="form-check-input"> Patient</label>
+                                    <label class="form-check-label ms-2"><input type="checkbox" value="1" name="teachCaregiver"  class="form-check-input"> Caregiver</label>
+                                    <label class="form-check-label ms-2"><input type="checkbox" value="1" name="teachRepresentative"  class="form-check-input"> Representative</label>
+                                    <label class="form-check-label ms-2"><input type="checkbox" value="1" name="teachFamily"  class="form-check-input"> Family made aware that</label>
+                                    <label class="form-check-label ms-2"><input type="checkbox" value="1" name="teachEducation"  class="form-check-input"> education</label>
+                                    <label class="form-check-label ms-2"><input type="checkbox" value="1" name="teachTraining"  class="form-check-input"> training will continue during follow-up visits as needed.</label>
                                 </div>
                             </div>
 
                             <div class="px-3 py-2">
                                 <span>Does the</span>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="usedteachPatient" class="form-check-input"> Patient</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="usedteachCaregiver"  class="form-check-input"> Caregiver</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="usedteachRepresentative"  class="form-check-input"> Representative</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="usedteach Family"  class="form-check-input"> Family</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="usedteachPatient" class="form-check-input"> Patient</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="usedteachCaregiver"  class="form-check-input"> Caregiver</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="usedteachRepresentative"  class="form-check-input"> Representative</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="usedteachFamily"  class="form-check-input"> Family</label>
                                 <span class="ms-2">have an action plan when disease symptoms exacerbate (e.g., when to call the homecare agency vs. emergency services)?:</span>
                                 <label class="form-check-label ms-2"><input type="radio" name="actionPlan" value="Yes" class="form-check-input"> Yes</label>
                                 <label class="form-check-label ms-2"><input type="radio" name="actionPlan" value="No" class="form-check-input"> No</label>
@@ -6133,77 +6133,77 @@
                                 <table class="table table-bordered">
                                     <tr>
                                         <td>
-                                            <div><label class="form-check-label"><input type="checkbox" name="skilledObservation"  class="form-check-input">Skilled observation & assessment</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="foleyCare"  class="form-check-input">Foley care</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Wound_care"  class="form-check-input">Wound care</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Wound_dressing"  class="form-check-input">Wound dressing</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Pressure_ulcer"  class="form-check-input">Pressure ulcer/injury care</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Venipuncture"  class="form-check-input">Venipuncture</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="skilledObservation"  class="form-check-input">Skilled observation & assessment</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="foleyCare"  class="form-check-input">Foley care</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Wound_care"  class="form-check-input">Wound care</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Wound_dressing"  class="form-check-input">Wound dressing</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Pressure_ulcer"  class="form-check-input">Pressure ulcer/injury care</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Venipuncture"  class="form-check-input">Venipuncture</label></div>
                                             <div>
-                                                <label class="form-check-label"><input type="checkbox" name="ngchange"  class="form-check-input">Change:</label>
-                                                <label class="form-check-label ms-1"><input type="checkbox" name="NG_tube"  class="form-check-input">NG tube</label>
-                                                <label class="form-check-label ms-1"><input type="checkbox" name="G_tube"  class="form-check-input">G tube</label>
+                                                <label class="form-check-label"><input type="checkbox" value="1" name="ngchange"  class="form-check-input">Change:</label>
+                                                <label class="form-check-label ms-1"><input type="checkbox" value="1" name="NG_tube"  class="form-check-input">NG tube</label>
+                                                <label class="form-check-label ms-1"><input type="checkbox" value="1" name="G_tube"  class="form-check-input">G tube</label>
                                             </div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Admin."  class="form-check-input">Admin. of vitamin B<sub>12</sub></label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Adminofvitamin"  class="form-check-input">Admin. of vitamin B<sub>12</sub></label></div>
                                             <div>
-                                                <label class="form-check-label"><input type="checkbox" name="Prep"  class="form-check-input">Prep.</label>
-                                                <label class="form-check-label ms-1"><input type="checkbox" name="adminInsulin"  class="form-check-input">Admin. &nbsp; insulin</label>
+                                                <label class="form-check-label"><input type="checkbox" value="1" name="Prep"  class="form-check-input">Prep.</label>
+                                                <label class="form-check-label ms-1"><input type="checkbox" value="1" name="adminInsulin"  class="form-check-input">Admin. &nbsp; insulin</label>
                                             </div>
                                         </td>
                                         <td>
                                             <div>
-                                                <label class="form-check-label"><input type="checkbox" name="Teach_admin"  class="form-check-input">Teach</label>
-                                                <label class="form-check-label ms-1"><input type="checkbox" name="admin_teach"  class="form-check-input">Admin.</label>
-                                                <label class="form-check-label ms-1"><input type="checkbox" name="ivs"  class="form-check-input">IVs</label>
-                                                <label class="form-check-label ms-1"><input type="checkbox" name="Clysis"  class="form-check-input">Clysis</label>
+                                                <label class="form-check-label"><input type="checkbox" value="1" name="Teach_admin"  class="form-check-input">Teach</label>
+                                                <label class="form-check-label ms-1"><input type="checkbox" value="1" name="admin_teach"  class="form-check-input">Admin.</label>
+                                                <label class="form-check-label ms-1"><input type="checkbox" value="1" name="ivs"  class="form-check-input">IVs</label>
+                                                <label class="form-check-label ms-1"><input type="checkbox" value="1" name="Clysis"  class="form-check-input">Clysis</label>
                                             </div>
                                             <div>
-                                                <label class="form-check-label"><input type="checkbox" name="Teach_ostomy"  class="form-check-input">Teach ostomy</label>
-                                                <label class="form-check-label ms-1"><input type="checkbox" name="conduit_care"  class="form-check-input">Ileo. conduit care</label>
+                                                <label class="form-check-label"><input type="checkbox" value="1" name="Teach_ostomy"  class="form-check-input">Teach ostomy</label>
+                                                <label class="form-check-label ms-1"><input type="checkbox" value="1" name="conduit_care"  class="form-check-input">Ileo. conduit care</label>
                                             </div>
                                             <div>
-                                                <label class="form-check-label"><input type="checkbox" name="Teaching"  class="form-check-input">Teach</label>
-                                                <label class="form-check-label ms-1"><input type="checkbox" name="tube_feedings"  class="form-check-input">Admin. &nbsp; tube feedings</label>
+                                                <label class="form-check-label"><input type="checkbox" value="1" name="Teaching"  class="form-check-input">Teach</label>
+                                                <label class="form-check-label ms-1"><input type="checkbox" value="1" name="tube_feedings"  class="form-check-input">Admin. &nbsp; tube feedings</label>
                                             </div>
                                             <div>
-                                                <label class="form-check-label"><input type="checkbox" name="teaching_1"  class="form-check-input">Teach</label>
-                                                <label class="form-check-label ms-1"><input type="checkbox" name="careofTrach"  class="form-check-input">Admin. &nbsp; care of trach</label>
+                                                <label class="form-check-label"><input type="checkbox" value="1" name="teaching_1"  class="form-check-input">Teach</label>
+                                                <label class="form-check-label ms-1"><input type="checkbox" value="1" name="careofTrach"  class="form-check-input">Admin. &nbsp; care of trach</label>
                                             </div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="terminally"  class="form-check-input">Teach care - terminally ill</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="terminally"  class="form-check-input">Teach care - terminally ill</label></div>
                                             <div>
-                                                <label class="form-check-label"><input type="checkbox" name="IM_injection"  class="form-check-input">IM injection</label>
-                                                <label class="form-check-label ms-1"><input type="checkbox" name="SQ_injection"  class="form-check-input">SQ injection</label>
+                                                <label class="form-check-label"><input type="checkbox" value="1" name="IM_injection"  class="form-check-input">IM injection</label>
+                                                <label class="form-check-label ms-1"><input type="checkbox" value="1" name="SQ_injection"  class="form-check-input">SQ injection</label>
                                             </div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Psych_intervention" class="form-check-input">Psych. intervention</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="SS_infection"  class="form-check-input">Observe S/S infection</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Psych_intervention" class="form-check-input">Psych. intervention</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="SS_infection"  class="form-check-input">Observe S/S infection</label></div>
                                         </td>
                                         <td>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Diabetic_observation"  class="form-check-input">Diabetic observation</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="diabetic_care"  class="form-check-input">Teach diabetic care</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Diabetic_observation"  class="form-check-input">Diabetic observation</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="diabetic_care"  class="form-check-input">Teach diabetic care</label></div>
                                             <div>
-                                                <label class="form-check-label"><input type="checkbox" name="Observe"  class="form-check-input">Observe</label>
-                                                <label class="form-check-label ms-1"><input type="checkbox" name="Teach_medication"  class="form-check-input">Teach medication (N or C)</label>
+                                                <label class="form-check-label"><input type="checkbox" value="1" name="Observe"  class="form-check-input">Observe</label>
+                                                <label class="form-check-label ms-1"><input type="checkbox" value="1" name="Teach_medication"  class="form-check-input">Teach medication (N or C)</label>
                                             </div>
                                             <div>
-                                                <label class="form-check-label"><input type="checkbox" name="effects"  class="form-check-input">effects</label>
-                                                <label class="form-check-label ms-1"><input type="checkbox" name="side_effects"  class="form-check-input">side effects</label>
+                                                <label class="form-check-label"><input type="checkbox" value="1" name="effects"  class="form-check-input">effects</label>
+                                                <label class="form-check-label ms-1"><input type="checkbox" value="1" name="side_effects"  class="form-check-input">side effects</label>
                                             </div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Physiology_Disease"  class="form-check-input">Physiology/Disease process teaching</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Diet_teaching"  class="form-check-input">Diet teaching</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Safety_factors"  class="form-check-input">Safety factors</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Prenatal_assessment"  class="form-check-input">Prenatal assessment</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Physiology_Disease"  class="form-check-input">Physiology/Disease process teaching</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Diet_teaching"  class="form-check-input">Diet teaching</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Safety_factors"  class="form-check-input">Safety factors</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Prenatal_assessment"  class="form-check-input">Prenatal assessment</label></div>
                                         </td>
                                         <td>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Post_partum" class="form-check-input">Post-partum assessment</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Post_partum" class="form-check-input">Post-partum assessment</label></div>
                                             <div>
-                                                <label class="form-check-label"><input type="checkbox" name="Teachcareof"  class="form-check-input">Teach care of:</label>
-                                                <label class="form-check-label ms-1"><input type="checkbox" name="infant"  class="form-check-input">infant</label>
-                                                <label class="form-check-label ms-1"><input type="checkbox" name="child"  class="form-check-input">child</label>
+                                                <label class="form-check-label"><input type="checkbox" value="1" name="Teachcareof"  class="form-check-input">Teach care of:</label>
+                                                <label class="form-check-label ms-1"><input type="checkbox" value="1" name="infant"  class="form-check-input">infant</label>
+                                                <label class="form-check-label ms-1"><input type="checkbox" value="1" name="child"  class="form-check-input">child</label>
                                             </div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Pain_management"  class="form-check-input">Pain management</label></div>
-                                            <div><label class="form-check-label"><input type="checkbox" name="Fall_safety"  class="form-check-input">Fall safety teaching</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Pain_management"  class="form-check-input">Pain management</label></div>
+                                            <div><label class="form-check-label"><input type="checkbox" value="1" name="Fall_safety"  class="form-check-input">Fall safety teaching</label></div>
                                             <div>
-                                                <label class="form-check-label"><input type="checkbox" name="Fall_safetyOther"  class="form-check-input">Other:</label>
+                                                <label class="form-check-label"><input type="checkbox" value="1" name="Fall_safetyOther"  class="form-check-input">Other:</label>
                                                 <textarea name="Fall_safetyOtherExplain" id="" cols="30" rows="2" class="form-control mt-1"></textarea>
                                             </div>
                                         </td>
@@ -6249,8 +6249,8 @@
                                             <b>STAFF:</b>
                                             <label class="form-check-label ms-2"><input type="radio" name="STAFF" value="Present" class="form-check-input">Present</label>
                                             <label class="form-check-label ms-2"><input type="radio" name="STAFF" value="Not present" class="form-check-input">Not present</label>
-                                            <label class="form-check-label ms-4"><input type="checkbox" name="AIDE"  class="form-check-input"><b>AIDE</b></label>
-                                            <label class="form-check-label ms-2"><input type="checkbox" name="LPN_LVN" class="form-check-input"><b>LPN/LVN</b></label>
+                                            <label class="form-check-label ms-4"><input type="checkbox" value="1" name="AIDE"  class="form-check-input"><b>AIDE</b></label>
+                                            <label class="form-check-label ms-2"><input type="checkbox" value="1" name="LPN_LVN" class="form-check-input"><b>LPN/LVN</b></label>
                                         </div>
                                         <div class="d-flex mt-1">
                                             <label class="form-check-label"><b>NEXT SCHEDULED SUPERVISORY VISIT:</b></label>
@@ -6301,19 +6301,19 @@
                                 <div>
                                     <p class="mb-1"><b>1. Criteria One:</b> because of illness or injury, (must choose at least one):</p>
                                     <div class="ms-2">
-                                        <label class="form-check-label"><input type="checkbox" name="adaptiveDevice" class="form-check-input"> Dependent upon adaptive device(s)</label><br>
+                                        <label class="form-check-label"><input type="checkbox" value="1" name="adaptiveDevice" class="form-check-input"> Dependent upon adaptive device(s)</label><br>
                                         <span class="ms-2">Check all that apply:</span>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="crutches" class="form-check-input"> crutches</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="canes"   class="form-check-input"> canes</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="walker"   class="form-check-input"> walker</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="wheelchair"   class="form-check-input"> wheelchair:</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="manual"   class="form-check-input"> manual</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="motorized"   class="form-check-input"> motorized</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="prosthetic"   class="form-check-input"> prosthetic limb</label><br>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="scooter"  class="form-check-input"> scooter</label>
-                                        <label class="form-check-label ms-2"><input type="checkbox" name="helper"   class="form-check-input"> a helper</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="crutches" class="form-check-input"> crutches</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="canes"   class="form-check-input"> canes</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="walker_3"   class="form-check-input"> walker</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="wheelchair"   class="form-check-input"> wheelchair:</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="manual"   class="form-check-input"> manual</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="motorized"   class="form-check-input"> motorized</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="prosthetic"   class="form-check-input"> prosthetic limb</label><br>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="scooter"  class="form-check-input"> scooter</label>
+                                        <label class="form-check-label ms-2"><input type="checkbox" value="1" name="helper"   class="form-check-input"> a helper</label>
                                         <div class="d-inline-flex ms-2">
-                                            <label class="form-check-label"><input type="checkbox" name="injuryOther" class="form-check-input"> Other:</label>
+                                            <label class="form-check-label"><input type="checkbox" value="1" name="injuryOther" class="form-check-input"> Other:</label>
                                             <div class="clean-input-group flex-grow-1">
                                                 <input type="text" name="injuryOther_1" id="" class="form-control">
                                             </div>
@@ -6321,14 +6321,14 @@
                                     </div>
 
                                     <div class="d-flex mt-1">
-                                        <label class="form-check-label"><input type="checkbox" name="specialTransportation"  class="form-check-input"> Needs special transportation as indicated by</label>
+                                        <label class="form-check-label"><input type="checkbox" value="1" name="specialTransportation"  class="form-check-input"> Needs special transportation as indicated by</label>
                                         <div class="clean-input-group flex-grow-1">
                                             <input type="text" name="special_Transportation" id="" class="form-control">
                                         </div>
                                     </div>
 
                                     <div class="d-flex mt-1">
-                                        <label class="form-check-label"><input type="checkbox" name="hysicalAssist" class="form-check-input"> Needs physical assist to leave as indicated by:</label>
+                                        <label class="form-check-label"><input type="checkbox" value="1" name="hysicalAssist" class="form-check-input"> Needs physical assist to leave as indicated by:</label>
                                         <div class="clean-input-group flex-grow-1">
                                             <input type="text" name="hysicalAssist_1" id="" class="form-control">
                                         </div>
@@ -6336,7 +6336,7 @@
 
                                     <div class="mt-2"><b>AND/OR</b></div>
                                     <div class="d-flex mt-1">
-                                        <label class="form-check-label"><input type="checkbox" name="medicallyContraindicated"  class="form-check-input"> Leaving home is medically contraindicated due to:</label>
+                                        <label class="form-check-label"><input type="checkbox" value="1" name="medicallyContraindicated"  class="form-check-input"> Leaving home is medically contraindicated due to:</label>
                                         <div class="clean-input-group flex-grow-1">
                                             <input type="text" name="edicallyContraindicated_other" id="" class="form-control">
                                         </div>
@@ -6346,12 +6346,12 @@
                                 <div class="mt-2">
                                     <p class="mb-1"><b>Criteria Two:</b></p>
                                     <div class="ms-2">
-                                        <label class="form-check-label"><input type="checkbox" name="normalInability"  class="form-check-input"> There exists a normal inability to leave the home as indicated by infrequent outings, consisting of:</label>
+                                        <label class="form-check-label"><input type="checkbox" value="1" name="normalInability"  class="form-check-input"> There exists a normal inability to leave the home as indicated by infrequent outings, consisting of:</label>
                                         <textarea name="ormalInabilityComment" id="" cols="30" rows="1" class="form-control mt-1"></textarea>
                                     </div>
                                     <div class="mt-2 ms-2"><b>AND</b></div>
                                     <div class="ms-2">
-                                        <label class="form-check-label"><input type="checkbox" name="leavingHome"  class="form-check-input"> Leaving home requires a considerable and taxing effort due to functional impairment caused by diagnosis, as indicated by effort such as:</label>
+                                        <label class="form-check-label"><input type="checkbox" value="1" name="leavingHome"  class="form-check-input"> Leaving home requires a considerable and taxing effort due to functional impairment caused by diagnosis, as indicated by effort such as:</label>
                                         <textarea name="leavingHomeComment" id="" cols="30" rows="1" class="form-control mt-1"></textarea>
                                     </div>
                                 </div>
@@ -6365,12 +6365,12 @@
                                 <div><b>Patient continues to be involved with decision-making towards personal goals. The following is noted:</b></div>
                                 <div>
                                     <span>Improvements noted with the desired functional taks:</span>
-                                    <label class="form-check-label ms-3"><input type="checkbox" name="desiredFunctional"  class="form-check-input"><b> N/A</b></label>
+                                    <label class="form-check-label ms-3"><input type="checkbox" value="1" name="desiredFunctional"  class="form-check-input"><b> N/A</b></label>
                                     <textarea name="desiredFunctionalComment" id="" cols="30" rows="1" class="form-control mt-1"></textarea>
                                 </div>
                                 <div class="mt-2">
                                     <span>Patient continues to have difficulty/no gains made with the desired functional taks:</span>
-                                    <label class="form-check-label ms-3"><input type="checkbox" name="functionaltaks"  class="form-check-input"><b> N/A</b></label>
+                                    <label class="form-check-label ms-3"><input type="checkbox" value="1" name="functionaltaks"  class="form-check-input"><b> N/A</b></label>
                                     <textarea name="functionaltaksComment" id="" cols="30" rows="1" class="form-control mt-1"></textarea>
                                 </div>
                                 <div class="mt-2">
@@ -6393,35 +6393,35 @@
                                 <label class="form-check-label"><input type="radio" name="CarePlan" value="1" 
                                         class="form-check-input"> Reviewed</label>
                                 <label class="form-check-label ms-2"><input type="radio" name="CarePlan" value="2"
-                                        class="form-check-input"> Revised with with involvement from:</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="CareRevised"
+                                        class="form-check-input"> Revised with involvement from:</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="CareRevised"
                                         class="form-check-input"> Patient</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="Care"
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="Care"
                                             class="form-check-input"> Representative</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="CarePatient"
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="CarePatient"
                                                 class="form-check-input"> Caregiver</label>
-                                <label class="form-check-label ms-4"><input type="checkbox" name="CareCaregiver"
+                                <label class="form-check-label ms-4"><input type="checkbox" value="1" name="CareCaregiver"
                                         class="form-check-input"> <b>Outcome achieved</b></label>
                                 </div>
 
                                 <div class="mt-2">
                                 <b>MEDICATION STATUS:</b>
-                                <label class="form-check-label"><input type="checkbox" name="Medication_regimen"  class="form-check-input"> Medication regimen completed/reviewed - see page 19</label><br>
+                                <label class="form-check-label"><input type="checkbox" value="1" name="Medication_regimen"  class="form-check-input"> Medication regimen completed/reviewed - see page 19</label><br>
                                 <label class="form-label mb-1">Comments:</label>
                                 <textarea name="Medication_regimenComments" id="" cols="30" rows="1" class="form-control"></textarea>
                                 </div>
 
                                 <div class="mt-2">
                                 <p class="mb-1"><b>CARE COORDINATION:</b></p>
-                                <label class="form-check-label"><input type="checkbox" name="certifyingPhysician" class="form-check-input"> Certifying Physician</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="certifyingSN"   class="form-check-input"> SN</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="certifyingPT"   class="form-check-input"> PT</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="certifyingOT"  class="form-check-input"> OT</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="certifyingSLP"  class="form-check-input"> SLP</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="certifyingMSW"   class="form-check-input"> MSW</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="certifyingAide"   class="form-check-input"> Aide</label>
+                                <label class="form-check-label"><input type="checkbox" value="1" name="certifyingPhysician" class="form-check-input"> Certifying Physician</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="certifyingSN"   class="form-check-input"> SN</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="certifyingPT"   class="form-check-input"> PT</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="certifyingOT"  class="form-check-input"> OT</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="certifyingSLP"  class="form-check-input"> SLP</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="certifyingMSW"   class="form-check-input"> MSW</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="certifyingAide"   class="form-check-input"> Aide</label>
                                 <div class="d-inline-flex ms-2">
-                                    <label class="form-check-label"><input type="checkbox" name="certifyingOther"  class="form-check-input"> Other (specify)</label>
+                                    <label class="form-check-label"><input type="checkbox" value="1" name="certifyingOther"  class="form-check-input"> Other (specify)</label>
                                     <div class="clean-input-group flex-grow-1">
                                         <input type="text" name="certifyingOther_1" id="" class="form-control">
                                     </div>
@@ -6429,12 +6429,12 @@
 
                                 <p class="my-1">Was a referral made to MSW for assistance with:</p>
                                 <div class="ms-2">
-                                    <label class="form-check-label ms-2"><input type="checkbox" name="communityResources"  class="form-check-input"> Community resources</label>
-                                    <label class="form-check-label ms-2"><input type="checkbox" name="livingWill"  class="form-check-input"> Living will</label>
-                                    <label class="form-check-label ms-2"><input type="checkbox" name="counselingNeeds"  class="form-check-input"> Counseling needs</label>
-                                    <label class="form-check-label ms-2"><input type="checkbox" name="unsafeEnvironment"  class="form-check-input"> Unsafe environment</label>
+                                    <label class="form-check-label ms-2"><input type="checkbox" value="1" name="communityResources"  class="form-check-input"> Community resources</label>
+                                    <label class="form-check-label ms-2"><input type="checkbox" value="1" name="livingWill"  class="form-check-input"> Living will</label>
+                                    <label class="form-check-label ms-2"><input type="checkbox" value="1" name="counselingNeeds"  class="form-check-input"> Counseling needs</label>
+                                    <label class="form-check-label ms-2"><input type="checkbox" value="1" name="unsafeEnvironment"  class="form-check-input"> Unsafe environment</label>
                                     <div class="d-flex mt-1 ms-2">
-                                        <label class="form-check-label"><input type="checkbox"  name="unsafeEnvironment_1" class="form-check-input"> Other:</label>
+                                        <label class="form-check-label"><input type="checkbox" value="1"  name="unsafeEnvironment_1" class="form-check-input"> Other:</label>
                                         <div class="clean-input-group flex-grow-1">
                                             <input type="text"  name="unsafeEnvironment_com" id="" class="form-control">
                                         </div>
@@ -6488,8 +6488,8 @@
 
                             <div class="mt-2">
                                 <b>RECERTIFICATION:</b>
-                                <label class="form-check-label ms-2"><input type="radio" name="recertification" value="No, complete Discharge Summary" class="form-check-input"> No, complete Discharge Summary</label>
-                                <label class="form-check-label ms-2"><input type="radio" name="recertification" value="Yes, complete remaining sections, as appropriate" class="form-check-input"> Yes, complete remaining sections, as appropriate</label>
+                                <label class="form-check-label ms-2"><input type="radio" name="recertification" value="No" class="form-check-input"> No, complete Discharge Summary</label>
+                                <label class="form-check-label ms-2"><input type="radio" name="recertification" value="Yes" class="form-check-input"> Yes, complete remaining sections, as appropriate</label>
                                 <br>
                                 <label class="form-label mb-1">Document the reason(s)/medical necessity that supports the continuation of services:</label>
                                 <textarea name="necessityComments" id="" cols="30" rows="2" class="form-control"></textarea>
@@ -6509,7 +6509,7 @@
                             <div class="d-inline-flex">
                                 <label class="form-check-label d-flex" style="white-space: nowrap;">specify date:</label>
                                 <div class="clean-input-group flex-grow-1">
-                                    <input type="text" name="specify_date" id="" class="form-control">
+                                    <input type="date" name="specify_date" id="" class="form-control">
                                 </div>
                             </div>
                         </td>
@@ -6520,19 +6520,19 @@
                     </tr>
                     <tr>
                         <td>
-                            <div><label class="form-check-label"><input type="checkbox" name="independentLevel"  class="form-check-input"> Return to an independent level of care (self-care)</label></div>
+                            <div><label class="form-check-label"><input type="checkbox" value="1" name="independentLevel"  class="form-check-input"> Return to an independent level of care (self-care)</label></div>
                             <div>
-                                <label class="form-check-label"><input type="checkbox" name="residenceAssistance"  class="form-check-input"> Able to remain in residence with assistance of:</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="primaryCaregiver"  class="form-check-input"> Primary Caregiver</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="communitysupport"  class="form-check-input"> Support from community agencies</label>
+                                <label class="form-check-label"><input type="checkbox" value="1" name="residenceAssistance"  class="form-check-input"> Able to remain in residence with assistance of:</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="primaryCaregiver"  class="form-check-input"> Primary Caregiver</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="communitysupport"  class="form-check-input"> Support from community agencies</label>
                             </div>
-                            <div class="mt-1"><label class="form-check-label"><input type="checkbox" name="Restorative"  class="form-check-input"> Restorative Potential, based on clinical objective assessment and evidence-based knowledge the patient's condition is likely to undergo functional improvement and benefit from rehabilitative care</label></div>
+                            <div class="mt-1"><label class="form-check-label"><input type="checkbox" value="1" name="Restorative"  class="form-check-input"> Restorative Potential, based on clinical objective assessment and evidence-based knowledge the patient's condition is likely to undergo functional improvement and benefit from rehabilitative care</label></div>
                             <div class="mt-1">
-                                <label class="form-check-label"><input type="checkbox" name="dischargePlan"  class="form-check-input"> Discussed discharge plan with:</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="dischargePlanPatient"  class="form-check-input"> Patient</label>
-                                <label class="form-check-label ms-2"><input type="checkbox" name="dischargePlanRepresentative"  class="form-check-input"> Representative</label>
+                                <label class="form-check-label"><input type="checkbox" value="1" name="dischargePlan"  class="form-check-input"> Discussed discharge plan with:</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="dischargePlanPatient"  class="form-check-input"> Patient</label>
+                                <label class="form-check-label ms-2"><input type="checkbox" value="1" name="dischargePlanRepresentative"  class="form-check-input"> Representative</label>
                                 <div class="d-inline-flex ms-2">
-                                    <label class="form-check-label"><input type="checkbox" name="dischargePlanRepresentative_other" class="form-check-input"> Other:</label>
+                                    <label class="form-check-label"><input type="checkbox" value="1" name="dischargePlanRepresentative_other" class="form-check-input"> Other:</label>
                                     <div class="clean-input-group flex-grow-1">
                                         <input type="text" name="dischargePlanRepresentative_1" id="" class="form-control">
                                     </div>
@@ -6586,8 +6586,8 @@
                                 </tr>
                                 <tr>
                                     <td colspan="2" class="labels-group">
-                                        <label class="form-check-label"><input type="checkbox" name="CommunityOrganizations"  class="form-check-input">Community Organizations</label>
-                                        <label class="form-check-label"><input type="checkbox" name="CommunityServices"  class="form-check-input">Services:</label>
+                                        <label class="form-check-label"><input type="checkbox" value="1" name="CommunityOrganizations"  class="form-check-input">Community Organizations</label>
+                                        <label class="form-check-label"><input type="checkbox" value="1" name="CommunityServices"  class="form-check-input">Services:</label>
                                         <textarea name="CommunityComments" id="" cols="30" rows="2" class="form-control mt-1"></textarea>
                                     </td>
                                 </tr>
@@ -6620,94 +6620,94 @@
                                 <table class="table table-bordered table-py-5">
                                     <tr>
                                     <td class="w-xl-20">
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="wound_1"  class="form-check-input"><b>NONE USED WOUND CARE:</b></label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="wound_2"  class="form-check-input">2x2's</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="wound_3"  class="form-check-input">4x4's</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="wound_4"  class="form-check-input">ABD's</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="wound_5"  class="form-check-input">Cotton tipped applicators</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="wound_6"  class="form-check-input">Drain sponges</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="wound_7"  class="form-check-input">Hydrocolloids</label></div>
-                                        <div class="d-block clean-input-group"><label class="form-check-label"><input type="checkbox" name="wound_8" class="form-check-input">Kerlix size</label> <input type="text" class="form-control d-inline" style="width: 60px;"></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="wound_9"  class="form-check-input">Nu-gauze</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="wound_10"  class="form-check-input">Saline</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="wound_11"  class="form-check-input">Таре</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="wound_12"  class="form-check-input">Transparent dressings</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="wound_13"  class="form-check-input">Wound cleanser</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="wound_14"  class="form-check-input">Wound gel</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="wound_1"  class="form-check-input"><b>NONE USED WOUND CARE:</b></label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="wound_2"  class="form-check-input">2x2's</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="wound_3"  class="form-check-input">4x4's</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="wound_4"  class="form-check-input">ABD's</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="wound_5"  class="form-check-input">Cotton tipped applicators</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="wound_6"  class="form-check-input">Drain sponges</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="wound_7"  class="form-check-input">Hydrocolloids</label></div>
+                                        <div class="d-block clean-input-group"><label class="form-check-label"><input type="checkbox" value="1" name="wound_8" class="form-check-input">Kerlix size</label> <input type="text" name="KerlixSize" class="form-control d-inline" style="width: 60px;"></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="wound_9"  class="form-check-input">Nu-gauze</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="wound_10"  class="form-check-input">Saline</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="wound_11"  class="form-check-input">Таре</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="wound_12"  class="form-check-input">Transparent dressings</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="wound_13"  class="form-check-input">Wound cleanser</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="wound_14"  class="form-check-input">Wound gel</label></div>
                                         <div class="d-block">
-                                            <label class="form-check-label"><input type="checkbox" name="wound_15" class="form-check-input">Other</label>
+                                            <label class="form-check-label"><input type="checkbox" value="1" name="wound_15" class="form-check-input">Other</label>
                                             <textarea name="woundcomment" id="" cols="30" rows="1" class="form-control mt-1"></textarea>
                                         </div>
                                         <div class="py-2"></div>
                                         <span class="fw-bold">IV SUPPLIES:</span>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="alcoholSwabs" class="form-check-input">Alcohol swabs</label></div>
-                                        <div class="d-block clean-input-group"><label class="form-check-label"><input type="checkbox" name="Angiocatheter" class="form-check-input">Angiocatheter size</label> <input type="text" class="form-control d-inline" style="width: 60px;"></div>
-                                        <div class="d-block clean-input-group"><label class="form-check-label"><input type="checkbox" name="Batteries" class="form-check-input">Batteries size</label> <input type="text" class="form-control d-inline" style="width: 60px;"></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="Central" class="form-check-input">Central line dressing</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="Extension" class="form-check-input">Extension tubings</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="Infusion_pump" class="form-check-input">Infusion pump</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="Injection_caps" class="form-check-input">Injection caps</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="alcoholSwabs" class="form-check-input">Alcohol swabs</label></div>
+                                        <div class="d-block clean-input-group"><label class="form-check-label"><input type="checkbox" value="1" name="Angiocatheter" class="form-check-input">Angiocatheter size</label> <input type="text" name="AngiocatheterValue" class="form-control d-inline" style="width: 60px;"></div>
+                                        <div class="d-block clean-input-group"><label class="form-check-label"><input type="checkbox" value="1" name="Batteries" class="form-check-input">Batteries size</label> <input type="text" name="BatteriesValue" class="form-control d-inline" style="width: 60px;"></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="Central" class="form-check-input">Central line dressing</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="Extension" class="form-check-input">Extension tubings</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="Infusion_pump" class="form-check-input">Infusion pump</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="Injection_caps" class="form-check-input">Injection caps</label></div>
                                     </td>
 
                                     <td class="w-xl-20">
                                         <span class="fw-bold">IV SUPPLIES (Cont'd):</span>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="IV_pole" class="form-check-input">IV pole</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="IV_start"  class="form-check-input">IV start kit</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="IV_tubing"  class="form-check-input">IV tubing</label></div>
-                                        <div class="d-block clean-input-group"><label class="form-check-label"><input type="checkbox"  name="Syringes" class="form-check-input">Syringes size</label> <input type="text" class="form-control d-inline" style="width: 60px;"></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="Tape"  class="form-check-input">Tape</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="IV_pole" class="form-check-input">IV pole</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="IV_start"  class="form-check-input">IV start kit</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="IV_tubing"  class="form-check-input">IV tubing</label></div>
+                                        <div class="d-block clean-input-group"><label class="form-check-label"><input type="checkbox" value="1"  name="Syringes" class="form-check-input">Syringes size</label> <input type="text" value="SyringesValue" class="form-control d-inline" style="width: 60px;"></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="Tape"  class="form-check-input">Tape</label></div>
                                         <div class="d-block">
-                                            <label class="form-check-label"><input type="checkbox" name="TapeOther"  class="form-check-input">Other</label>
+                                            <label class="form-check-label"><input type="checkbox" value="1" name="TapeOther"  class="form-check-input">Other</label>
                                             <textarea name="TapeComments" id="" cols="30" rows="1" class="form-control mt-1"></textarea>
                                         </div>
 
                                         <div class="py-2"></div>
 
                                         <span class="fw-bold">URINARY/OSTOMY:</span>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="External_catheters" class="form-check-input">External catheters</label></div>
-                                        <div class="d-block clean-input-group"><label class="form-check-label"><input type="checkbox" name="ostomyPouch"  class="form-check-input">Ostomy pouch (brand, size)</label> <input type="text" class="form-control w-auto d-inline"></div>
-                                        <div class="d-block clean-input-group"><label class="form-check-label"><input type="checkbox" name="ostomyWafer"   class="form-check-input">Ostomy wafer (brand, size)</label> <input type="text" class="form-control w-auto d-inline"></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="protectant"   class="form-check-input">Skin protectant</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="Stoma"   class="form-check-input">Stoma adhesive tape</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="Underpads"   class="form-check-input">Underpads</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="Urinary"   class="form-check-input">Urinary bag</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="Pouch"   class="form-check-input">Pouch</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="pouchOther"   class="form-check-input">Other</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="External_catheters" class="form-check-input">External catheters</label></div>
+                                        <div class="d-block clean-input-group"><label class="form-check-label"><input type="checkbox" value="1" name="ostomyPouch"  class="form-check-input">Ostomy pouch (brand, size)</label> <input type="text" name="ostomyPouchValue" class="form-control w-auto d-inline"></div>
+                                        <div class="d-block clean-input-group"><label class="form-check-label"><input type="checkbox" value="1" name="ostomyWafer"   class="form-check-input">Ostomy wafer (brand, size)</label> <input type="text" name="ostomyWaferValue" class="form-control w-auto d-inline"></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="protectant"   class="form-check-input">Skin protectant</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="Stoma"   class="form-check-input">Stoma adhesive tape</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="Underpads"   class="form-check-input">Underpads</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="Urinary"   class="form-check-input">Urinary bag</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="Pouch"   class="form-check-input">Pouch</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="pouchOther"   class="form-check-input">Other</label></div>
                                         <textarea name="pouchComments" id="" cols="30" rows="1" class="form-control mt-1"></textarea>
 
                                         <div class="py-2"></div>
 
                                         <span class="fw-bold">CATHETER SUPPLIES:</span>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="Aceticacid"  class="form-check-input">Acetic acid</label></div>
-                                        <div class="d-block clean-input-group"><label class="form-check-label"><input type="checkbox" name="catheterKit"  class="form-check-input"><input type="text" class="form-control d-inline" style="width: 60px;"> Fr catheter kit (tray, bag, foley)</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="Aceticacid"  class="form-check-input">Acetic acid</label></div>
+                                        <div class="d-block clean-input-group"><label class="form-check-label"><input type="checkbox" value="1" name="catheterKit"  class="form-check-input"><input type="text" name="catheterKitValue" class="form-control d-inline" style="width: 60px;"> Fr catheter kit (tray, bag, foley)</label></div>
                                     </td>
 
                                     <td class="w-xl-20">
                                         <span class="fw-bold">CATHETER SUPPLIES (Cont'd):</span>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="irrigationTray"  class="form-check-input">Irrigation Tray</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="catheterSaline"  class="form-check-input">Saline</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="straightCatheter"  class="form-check-input">Straight catheter</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="irrigationTray"  class="form-check-input">Irrigation Tray</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="catheterSaline"  class="form-check-input">Saline</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="straightCatheter"  class="form-check-input">Straight catheter</label></div>
                                         <div class="d-block">
-                                            <label class="form-check-label"><input type="checkbox" name="straightCatheter_1"  class="form-check-input">Other</label>
+                                            <label class="form-check-label"><input type="checkbox" value="1" name="straightCatheter_1"  class="form-check-input">Other</label>
                                             <textarea name="straightCatheterComments" id="" cols="30" rows="1" class="form-control mt-1"></textarea>
                                         </div>
 
                                         <div class="py-2"></div>
 
                                         <span class="fw-bold">DIABETIC:</span>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="diabeticchemstrips"  class="form-check-input">Chemstrips</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="diabeticSyringes"  class="form-check-input">Syringes</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="diabeticchemstrips"  class="form-check-input">Chemstrips</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="diabeticSyringes"  class="form-check-input">Syringes</label></div>
                                         <div class="d-block">
-                                            <label class="form-check-label"><input type="checkbox" name="diabeticSyringes_1"  class="form-check-input">Other</label>
+                                            <label class="form-check-label"><input type="checkbox" value="1" name="diabeticSyringes_1"  class="form-check-input">Other</label>
                                             <textarea name="diabeticSyringesComments" id="" cols="30" rows="1" class="form-control mt-1"></textarea>
                                         </div>
 
                                         <div class="py-2"></div>
 
                                         <span class="fw-bold">MISCELLANEOUS:</span>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="EnemaSupplies"  class="form-check-input">Enema supplies</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="EnemaSupplies"  class="form-check-input">Enema supplies</label></div>
                                         <div class="d-block">
-                                            <label class="form-check-label"><input type="checkbox" name="Feeding_tube"  class="form-check-input">Feeding tube:</label>
+                                            <label class="form-check-label"><input type="checkbox" value="1" name="Feeding_tube"  class="form-check-input">Feeding tube:</label>
                                             <div class="ms-2">
                                                 <label class="input-group clean-input-group d-inline-flex w-auto">
                                                 <span class="input-group-text fw-medium">type</span>
@@ -6720,18 +6720,18 @@
                                             </div>
                                         </div>
                                         <div class="d-block">
-                                            <label class="form-check-label"><input type="checkbox" name="Gloves"  class="form-check-input">Gloves:</label>
+                                            <label class="form-check-label"><input type="checkbox" value="1" name="Gloves"  class="form-check-input">Gloves:</label>
                                             <div class="ms-2 labels-group">
-                                                <label class="form-check-label"><input type="checkbox" name="Sterile_1"  class="form-check-input">Sterile</label>
-                                                <label class="form-check-label"><input type="checkbox" name="Non-sterile"  class="form-check-input">Non-sterile</label>
+                                                <label class="form-check-label"><input type="checkbox" value="1" name="Sterile_1"  class="form-check-input">Sterile</label>
+                                                <label class="form-check-label"><input type="checkbox" value="1" name="Non-sterile"  class="form-check-input">Non-sterile</label>
                                             </div>
                                         </div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="medBox"  class="form-check-input">Med Box</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="stapleremovalKit"  class="form-check-input">Staple removal kit</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="steriStrips"  class="form-check-input">Steri strips</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="sutureremovalKit"  class="form-check-input">Suture removal kit</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="medBox"  class="form-check-input">Med Box</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="stapleremovalKit"  class="form-check-input">Staple removal kit</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="steriStrips"  class="form-check-input">Steri strips</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="sutureremovalKit"  class="form-check-input">Suture removal kit</label></div>
                                         <div class="d-block">
-                                            <label class="form-check-label"><input type="checkbox" name="sutureremovalKit_other" class="form-check-input">Other</label>
+                                            <label class="form-check-label"><input type="checkbox" value="1" name="sutureremovalKit_other" class="form-check-input">Other</label>
                                             <textarea name="sutureremovalKitcomments" id="" cols="30" rows="1" class="form-control mt-1"></textarea>
                                         </div>
                                     </td>
@@ -6739,73 +6739,73 @@
                                     <td class="w-xl-20">
                                         <span class="fw-bold">SUPPLIES/EQUIPMENT:</span>
                                         <div class="d-block">
-                                            <label class="form-check-label"><input type="checkbox" name="alternative"   class="form-check-input">Augmentative and alternative communication device(s) (type)</label>
+                                            <label class="form-check-label"><input type="checkbox" value="1" name="alternative"   class="form-check-input">Augmentative and alternative communication device(s) (type)</label>
                                             <textarea name="alternativeComments" id="" cols="30" rows="1" class="form-control mt-1"></textarea>
                                         </div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="bathBench"  class="form-check-input">Bath bench</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="Brace"  class="form-check-input">Brace</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="bathBench"  class="form-check-input">Bath bench</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="Brace"  class="form-check-input">Brace</label></div>
                                         <div class="d-block">
-                                            <label class="form-check-label"><input type="checkbox" name="Orthotics"  class="form-check-input">Orthotics (specify):</label>
+                                            <label class="form-check-label"><input type="checkbox" value="1" name="Orthotics"  class="form-check-input">Orthotics (specify):</label>
                                             <textarea name="suppliesComments" id="" cols="30" rows="1" class="form-control mt-1"></textarea>
                                         </div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="Cane_1"  class="form-check-input">Cane</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="Commode"  class="form-check-input">Commode</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="dressingAid"  class="form-check-input">Dressing Aid Kit/Hip Kit <small style="font-weight: normal;display: block;line-height: normal;">(e.g.reacher, long handle sponge, long handle shoe horn, etc.)</small></label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="Eggcrate"  class="form-check-input">Eggcrate</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="enteralFeeding"  class="form-check-input">Enteral feeding pump</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="Cane_1"  class="form-check-input">Cane</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="Commode"  class="form-check-input">Commode</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="dressingAid"  class="form-check-input">Dressing Aid Kit/Hip Kit <small style="font-weight: normal;display: block;line-height: normal;">(e.g.reacher, long handle sponge, long handle shoe horn, etc.)</small></label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="Eggcrate"  class="form-check-input">Eggcrate</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="enteralFeeding"  class="form-check-input">Enteral feeding pump</label></div>
                                         <div class="d-block"><label class="form-check-label">
-                                            <input type="checkbox" name="grabBars" class="form-check-input">Grab bars: Bathroom/Other</label>
+                                            <input type="checkbox" value="1" name="grabBars" class="form-check-input">Grab bars: Bathroom/Other</label>
                                             <textarea name="grabBarsComments" id="" cols="30" rows="1" class="form-control mt-1"></textarea>
                                         </div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="handheldShower"  class="form-check-input">Handheld shower</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="handheldShower"  class="form-check-input">Handheld shower</label></div>
                                         <div class="d-block">
-                                            <label class="form-check-label"><input type="checkbox" name="hospitalBed"  class="form-check-input">Hospital bed:</label>
+                                            <label class="form-check-label"><input type="checkbox" value="1" name="hospitalBed"  class="form-check-input">Hospital bed:</label>
                                             <div class="ms-2">
-                                                <label class="form-check-label"><input type="checkbox" name="semiElectric"  class="form-check-input">Semi-electric</label>
+                                                <label class="form-check-label"><input type="checkbox" value="1" name="semiElectric"  class="form-check-input">Semi-electric</label>
                                             </div>
                                         </div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="hoyerLift"  class="form-check-input">Hoyer lift</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="kneeScooter"  class="form-check-input">Knee scooter</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="medicalAlert"  class="form-check-input">Medical alert</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="Nebulizer"  class="form-check-input">Nebulizer</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="hoyerLift"  class="form-check-input">Hoyer lift</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="kneeScooter"  class="form-check-input">Knee scooter</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="medicalAlert"  class="form-check-input">Medical alert</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="Nebulizer"  class="form-check-input">Nebulizer</label></div>
                                     </td>
 
                                     <td class="w-xl-20">
                                         <span class="fw-bold">SUPPLIES/EQUIPMENT (Cont'd):</span>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="oxygenConcentrator"  class="form-check-input">Oxygen concentrator</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="oxygenConcentrator"  class="form-check-input">Oxygen concentrator</label></div>
                                         <div class="d-block clean-input-group">
-                                            <label class="form-check-label"><input type="checkbox" name="relievingDevice"  class="form-check-input">Pressure relieving device</label>
-                                            <input type="text" class="form-control">
+                                            <label class="form-check-label"><input type="checkbox" value="1" name="relievingDevice"  class="form-check-input">Pressure relieving device</label>
+                                            <input type="text" name="relievingDeviceValue" class="form-control">
                                         </div>
                                         <div class="d-block labels-group">
-                                            <label class="form-check-label"><input type="checkbox" name="Prosthesis"  class="form-check-input">Prosthesis:</label>
-                                            <label class="form-check-label"><input type="checkbox" name="prosthesisRUE"  class="form-check-input">RUE</label>
-                                            <label class="form-check-label"><input type="checkbox" name="prosthesisRLE"  class="form-check-input">RLE</label>
-                                            <label class="form-check-label"><input type="checkbox" name="prosthesisLUE"  class="form-check-input">LUE</label>
-                                            <label class="form-check-label"><input type="checkbox" name="prosthesisLLE"  class="form-check-input">LLE</label>
-                                            <label class="form-check-label"><input type="checkbox" name="prosthesisOther"  class="form-check-input">Other</label>
+                                            <label class="form-check-label"><input type="checkbox" value="1" name="Prosthesis"  class="form-check-input">Prosthesis:</label>
+                                            <label class="form-check-label"><input type="checkbox" value="1" name="prosthesisRUE"  class="form-check-input">RUE</label>
+                                            <label class="form-check-label"><input type="checkbox" value="1" name="prosthesisRLE"  class="form-check-input">RLE</label>
+                                            <label class="form-check-label"><input type="checkbox" value="1" name="prosthesisLUE"  class="form-check-input">LUE</label>
+                                            <label class="form-check-label"><input type="checkbox" value="1" name="prosthesisLLE"  class="form-check-input">LLE</label>
+                                            <label class="form-check-label"><input type="checkbox" value="1" name="prosthesisOther"  class="form-check-input">Other</label>
                                             <textarea name="prosthesisComments" id="" cols="30" rows="1" class="form-control mt-1"></textarea>
                                         </div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="raiseToilet"  class="form-check-input">Raised toilet seat</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="Reacher"  class="form-check-input">Reacher</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="raiseToilet"  class="form-check-input">Raised toilet seat</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="Reacher"  class="form-check-input">Reacher</label></div>
                                         <div class="d-block clean-input-group">
-                                            <label class="form-check-label"><input type="checkbox" name="mattressOverlay"  class="form-check-input">Special mattress overlay</label>
-                                            <input type="text" class="form-control">
+                                            <label class="form-check-label"><input type="checkbox" value="1" name="mattressOverlay"  class="form-check-input">Special mattress overlay</label>
+                                            <input type="text" name="mattressOverlayValue" class="form-control">
                                         </div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="suctionMachine"  class="form-check-input">Suction machine</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="TENSunit"  class="form-check-input">TENS unit</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="suctionMachine"  class="form-check-input">Suction machine</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="TENSunit"  class="form-check-input">TENS unit</label></div>
                                         <div class="d-block">
-                                            <label class="form-check-label"><input type="checkbox" name="transferEquipment"  class="form-check-input">Transfer equipment:</label>
+                                            <label class="form-check-label"><input type="checkbox" value="1" name="transferEquipment"  class="form-check-input">Transfer equipment:</label>
                                             <div class="ms-2">
-                                                <label class="form-check-label"><input type="checkbox" name="Board"  class="form-check-input">Board</label>
-                                                <label class="form-check-label"><input type="checkbox" name="Lift"  class="form-check-input">Lift</label>
+                                                <label class="form-check-label"><input type="checkbox" value="1" name="Board"  class="form-check-input">Board</label>
+                                                <label class="form-check-label"><input type="checkbox" value="1" name="Lift"  class="form-check-input">Lift</label>
                                             </div>
                                         </div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="Ventilator" class="form-check-input">Ventilator</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="Walker_2" class="form-check-input">Walker</label></div>
-                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" name="Wheelchair_2" class="form-check-input">Wheelchair</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="Ventilator" class="form-check-input">Ventilator</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="Walker_2" class="form-check-input">Walker</label></div>
+                                        <div class="d-block"><label class="form-check-label"><input type="checkbox" value="1" name="Wheelchair_2" class="form-check-input">Wheelchair</label></div>
                                         <div class="d-block">
-                                            <label class="form-check-label"><input type="checkbox" name="OtherSupplies"  class="form-check-input">Other Supplies Needed</label>
+                                            <label class="form-check-label"><input type="checkbox" value="1" name="OtherSupplies"  class="form-check-input">Other Supplies Needed</label>
                                             <textarea name="OtherSuppliesComments" id="" cols="30" rows="4" class="form-control mt-1"></textarea>
                                         </div>
                                     </td>
@@ -6821,9 +6821,9 @@
                     </tr>
                     <tr>
                         <td>
-                            <div class="d-block clean-input-group"><label class="form-check-label"><input type="checkbox" name="physicainName" class="form-check-input">Physician (name) <input type="text" class="form-control w-auto d-inline"> called to report comprehensive assessment findings (including medical, nursing, rehabilitative, social and discharge planning needs).</label></div>
+                            <div class="d-block clean-input-group"><label class="form-check-label"><input type="checkbox" value="1" name="IfphysicainName" class="form-check-input">Physician (name) <input type="text" name="physicainName" class="form-control w-auto d-inline"> called to report comprehensive assessment findings (including medical, nursing, rehabilitative, social and discharge planning needs).</label></div>
                             <div class="d-block">
-                                <label class="form-check-label"><input type="checkbox" name="verbalOrder" class="form-check-input">Verbal order received for home health (reasonable and necessary) skilled services. See Plan of Care or Verbal Orders.</label>
+                                <label class="form-check-label"><input type="checkbox" value="1" name="verbalOrder" class="form-check-input">Verbal order received for home health (reasonable and necessary) skilled services. See Plan of Care or Verbal Orders.</label>
                             </div>
 
                             <div style="margin: 0 -15px;">
@@ -6865,32 +6865,32 @@
                             <table class="table table-borderless align-middle table-py-5">
                                 <tr>
                                     <td>
-                                        <label class="form-check-label clean-input-group d-block"><input type="text" class="form-control"><i class="d-block"><small>Patient/Family Member/Caregiver/Representative (if applicable)</small></i></label>
+                                        <label class="form-check-label clean-input-group d-block"><input type="text" name="pfcr" class="form-control"><i class="d-block"><small>Patient/Family Member/Caregiver/Representative (if applicable)</small></i></label>
                                     </td>
                                     <td>
-                                        <label class="form-check-label clean-input-group d-block"><input type="date" class="form-control"><i class="d-block"><small>Date</small></i></label>
+                                        <label class="form-check-label clean-input-group d-block"><input type="date" name="pfcr_date" class="form-control"><i class="d-block"><small>Date</small></i></label>
                                     </td>
                                     <td>
-                                        <label class="form-check-label clean-input-group d-block"><input type="time" class="form-control"><i class="d-block"><small>Time</small></i></label>
+                                        <label class="form-check-label clean-input-group d-block"><input type="time" name="pfcr_time" class="form-control"><i class="d-block"><small>Time</small></i></label>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <label class="form-check-label clean-input-group d-block"><input type="text" class="form-control"><i class="d-block"><small>Person Completing This Form (signature/title)</small></i></label>
+                                        <label class="form-check-label clean-input-group d-block"><input type="text" name="pcf_signature" class="form-control"><i class="d-block"><small>Person Completing This Form (signature/title)</small></i></label>
                                     </td>
                                     <td>
-                                        <label class="form-check-label clean-input-group d-block"><input type="date" class="form-control"><i class="d-block"><small>Date</small></i></label>
+                                        <label class="form-check-label clean-input-group d-block"><input type="date" name="pcf_date" class="form-control"><i class="d-block"><small>Date</small></i></label>
                                     </td>
                                     <td>
-                                        <label class="form-check-label clean-input-group d-block"><input type="time" class="form-control"><i class="d-block"><small>Time</small></i></label>
+                                        <label class="form-check-label clean-input-group d-block"><input type="time" name="pcf_time" class="form-control"><i class="d-block"><small>Time</small></i></label>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td colspan="2">
-                                        <label class="form-check-label clean-input-group d-block"><input type="text" class="form-control"><i class="d-block"><small>Agency Name</small></i></label>
+                                        <label class="form-check-label clean-input-group d-block"><input type="text" name="AgencyName" class="form-control"><i class="d-block"><small>Agency Name</small></i></label>
                                     </td>
                                     <td>
-                                        <label class="form-check-label clean-input-group d-block"><input type="text" class="form-control"><i class="d-block"><small>Phone Number</small></i></label>
+                                        <label class="form-check-label clean-input-group d-block"><input type="text" name="AgencyPhone" class="form-control"><i class="d-block"><small>Phone Number</small></i></label>
                                     </td>
                                 </tr>
                                 </table>
