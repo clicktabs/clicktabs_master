@@ -112,7 +112,7 @@ $routeName=request()->route()->getName();
 
     </div>
 </div>
-
+@include('signature')
     @if($routeName==='skilled-agency.oasis-e-start-of-care' || $routeName=='oasis-soc-e.store' || $routeName=='skilled-agency.get-oasis-e-start-of-care'|| $routeName=='skilled-agency.task-form')
         <script src="{{asset('outass/bs/js/bootstrap.min.js')}}"></script>
     @endif

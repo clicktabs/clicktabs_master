@@ -46,7 +46,7 @@
                <div class="d-flex col-md-6 px-2 py-2">
                    <div class="from-group col-md-12 py-2">
                        7. Provider's Name, Address and Telephone Number
-                       <input type="text" class="form-control" placeholder="Provider's Name, Address and Telephone Number" name="branchInfo" id="branchInfo" 
+                       <input type="text" class="form-control" placeholder="Provider's Name, Address and Telephone Number" name="branchInfo" id="branchInfo"
                        value="{{ $account ? $account->company_name : '' }}">
                        <input type="text" class="form-control" style="font-size: 15px;" name="" id="branchAddress" value="{{ $account ? $account->address_line . ' - ' . $account->zip : '' }}, Tel: {{ $account ? $account->phone : '' }}, Fax: {{ $account ? $account->fax : '' }}">
                    </div>
@@ -415,8 +415,11 @@
            <div class="d-flex flex-row border" >
                <div class="d-flex col-md-8 border-end px-2 py-2">
                    <div class="from-group col-md-12 py-2">
-                       23. Nurse's Signature and Date of Verbal SOC Where Applicable: 
-                       <textarea name="nurseSign" id="nurseSign" cols="30" rows="3"></textarea>
+                       23. Nurse's Signature and Date of Verbal SOC Where Applicable:
+                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#doctorFormModal">Add Signature</button>
+                        <div id="doctorSignatureImageContainer" style="display: none;">
+                            <img id="doctorSignatureImage" src="" alt="Nurse's Signature">
+                        </div>
                    </div>
                </div>
                <div class="d-flex col-md-4 px-2 py-2">
@@ -432,7 +435,7 @@
 
                        24. Physician's Name and Address
 
-                       <textarea class="form-control py-2" name="name" id="name" rows="5"> 
+                       <textarea class="form-control py-2" name="name" id="name" rows="5">
                             {{ $patient && $patient->cms ? $patient->cms->physician : '' }},
                             {{ $patient && $patient->cms ? $patient->cms->physicianAddress : '' }}
                        </textarea>
@@ -453,7 +456,7 @@
                        <div>
 
                            <textarea class="form-control py-2" >
-                           
+
                            </textarea>
                        </div>
                    </div>
@@ -546,7 +549,7 @@
            <div class="d-flex flex-row border">
                <div class="d-flex col-md-8 border-end px-2 py-2">
                    <div class="from-group col-md-12 py-2">
-                       
+
                        <textarea placeholder="11. Optional Name / Signature of Nurse / Therapist" name="" id="" cols="60" rows="3"></textarea>
                    </div>
                </div>

@@ -188,6 +188,7 @@ if(isset($patient->diagnosis->other_diagnosis_name)){
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#nurseFormModal">Add Signature</button>
                                 <div id="nurseSignatureImageContainer" style="display: none;">
                                     <img id="nurseSignatureImage" src="" alt="Nurse's Signature">
+                                    <input type="hidden" id="nurseSignaturePath" name="nurseSignaturePath" value="">
                                 </div>
                                  <div class="d-block mt-2">
                                     <label for="NurseSignatureDate" class="form-label"><b>Date:</b></label>
@@ -209,4 +210,4 @@ if(isset($patient->diagnosis->other_diagnosis_name)){
                         </td>
                      </tr>
                   </table>
-                  @include('signature')
+
