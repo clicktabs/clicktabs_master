@@ -603,7 +603,7 @@ border-bottom: 3px double;
                                                             @endforeach
                                                         </select>
                                                     </div>
-                                                    <div>
+                                                    {{-- <div>
                                                         <label>Task: </label>
                                                         <select id="task" name="task" required>
                                                             <option value="">Select Visit</option>
@@ -616,7 +616,7 @@ border-bottom: 3px double;
                                                             <option value="hha_care_plane">HHA Care Plane</option>
                                                         </select>
                                                     </div>
-                                                </div>
+                                                </div> --}}
                                             </div>
                                             <div class="col-lg-5 col-md-6">
                                                 <div class="row row-cols-lg-1 g-10">

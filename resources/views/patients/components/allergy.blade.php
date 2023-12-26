@@ -9,7 +9,56 @@
                 <tr>
                     <th></th>
                     <th></th>
-                    <th style="font-weight: bold; text-align: left;">Active
+                    <th style="font-weight: bold; text-align: left;">Active 
+                        Allergy List
+                        ({{$allergies->where('status', 0)->count()}})
+                    </th>
+                    <th></th>
+                    <th></th>
+                    <th colspan="3"></th>
+                </tr>
+                <tr>
+                    <th>Allergy</th>
+                    <th>Type</th>
+                    <th>Severity</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th colspan="2">Actions</th>
+                </tr>
+                </thead>
+                <tbody class="text-center">
+                @foreach ($allergies->where('status', 0) as $row)
+                    <tr>
+                        <td>{{ @$row->allergy }}</td>
+                        <td>{{ @$row->type }}</td>
+                        <td>{{ @$row->severity }}</td>
+                        <td>{{ @$row->start_date }}</td>
+                        <td>{{ @$row->end_date }}</td>
+                        <td>
+                            <a href="{{ route('allergies.changeStatus', $row->id) }}"
+                                class="btn btn-{{ $row->status == 0 ? 'success' : 'danger' }}">
+                                {{ $row->status == 0 ? 'Active' : 'Inactive' }}
+                            </a>
+                        </td>
+                        <td>
+                            <button type="button"
+                                    class="btn btn-primary allergy-edit-btn"
+                                    data-allergy-id="{{ $row->id }}">
+                                Edit
+                            </button>
+                        </td>
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
+        </div><!------/End---->
+        <div class="table-responsive">
+            <table class="table mt-4">
+                <thead class="bg-[#4133BF] text-[#fff] text-center">
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th style="font-weight: bold; text-align: left;">Inactive Allergy
                         Allergy List
                         ({{$allergies->where('status', 1)->count()}})
                     </th>
@@ -53,56 +102,7 @@
                 @endforeach
                 </tbody>
             </table>
-        </div>
-        <div class="table-responsive">
-            <table class="table mt-4">
-                <thead class="bg-[#4133BF] text-[#fff] text-center">
-                <tr>
-                    <th></th>
-                    <th></th>
-                    <th style="font-weight: bold; text-align: left;">Active
-                        Allergy List
-                        ({{$allergies->where('status', 0)->count()}})
-                    </th>
-                    <th></th>
-                    <th></th>
-                    <th colspan="3"></th>
-                </tr>
-                <tr>
-                    <th>Allergy</th>
-                    <th>Type</th>
-                    <th>Severity</th>
-                    <th>Start Date</th>
-                    <th>End Date</th>
-                    <th colspan="2">Actions</th>
-                </tr>
-                </thead>
-                <tbody class="text-center">
-                @foreach ($allergies->where('status', 0) as $row)
-                    <tr>
-                        <td>{{ @$row->allergy }}</td>
-                        <td>{{ @$row->type }}</td>
-                        <td>{{ @$row->severity }}</td>
-                        <td>{{ @$row->start_date }}</td>
-                        <td>{{ @$row->end_date }}</td>
-                        <td>
-                            <a href="{{ route('allergies.changeStatus', $row->id) }}"
-                                class="btn btn-{{ $row->status == 0 ? 'success' : 'danger' }}">
-                                {{ $row->status == 0 ? 'Active' : 'Inactive' }}
-                            </a>
-                        </td>
-                        <td>
-                            <button type="button"
-                                    class="btn btn-primary allergy-edit-btn"
-                                    data-allergy-id="{{ $row->id }}">
-                                Edit
-                            </button>
-                        </td>
-                    </tr>
-                @endforeach
-                </tbody>
-            </table>
-        </div>
+        </div><!------/End---->
         <div class="modal fade !max-w-full" id="allergyModal" tabindex="-1" role="dialog" aria-labelledby="allergyModal" aria-hidden="true">
             <div class="container">
                 <h4 class="text-center font-[700] text-[20px] !bg-[#4133BF] text-[#fff] p-2">Add Allergy</h4>
