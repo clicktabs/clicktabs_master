@@ -157,6 +157,7 @@ use App\Http\Controllers\NonSkilledReportController;
 use App\Http\Controllers\QaController;
 use App\Http\Controllers\InfectionController;
 use App\Http\Controllers\OasisEDealthController;
+use App\Http\Controllers\OasisERecertificationController;
 use App\Http\Controllers\ResumptionOfCareController;
 
 Route::middleware(['check.expiration'])->group(function () {
@@ -548,6 +549,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/schedule/update-drag-event', [ScheduleCalendar::class, 'updateDragEvent']);
     Route::post('/schedule/update-copy-event', [ScheduleCalendar::class, 'updateCopyEvent']);
     Route::put('/schedule-update/api', [ScheduleCalendar::class, 'update_calendar_api']);
+
+    // Oasis E Recertification
+    Route::post('/task-form/oasis-e-recertification', [OasisERecertificationController::class, 'Store'])->name('oasis-e-recertification.store');
 
     // Social worker
     Route::get('/social/worker', [SocialWorkerController::class, 'index'])->name('socialworker.index');
