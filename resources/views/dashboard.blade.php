@@ -463,9 +463,9 @@ border-bottom: 3px double;
                 <a href="#mytask">My Tasks</a>
             </li>
 
-            <li class="flex-shrink-0">
+            {{-- <li class="flex-shrink-0">
                 <a href="#visit_note">Miss visit note</a>
-            </li>
+            </li> --}}
             <li class="flex-shrink-0">
                 <a href="#updatePassword">Update password</a>
             </li>
@@ -603,20 +603,7 @@ border-bottom: 3px double;
                                                             @endforeach
                                                         </select>
                                                     </div>
-                                                    {{-- <div>
-                                                        <label>Task: </label>
-                                                        <select id="task" name="task" required>
-                                                            <option value="">Select Visit</option>
-                                                            <option value="sixty_day_summary">60 Day Summary</option>
-                                                            <option value="communication_note">Communication note
-                                                            </option>
-                                                            <option value="hha">HHA</option>
-                                                            <option value="coordination_care">Coordination of Care
-                                                            </option>
-                                                            <option value="hha_care_plane">HHA Care Plane</option>
-                                                        </select>
-                                                    </div>
-                                                </div> --}}
+                                                </div>
                                             </div>
                                             <div class="col-lg-5 col-md-6">
                                                 <div class="row row-cols-lg-1 g-10">
@@ -725,7 +712,7 @@ border-bottom: 3px double;
             </div>
         </div>
 
-        <div id="visit_note">
+        {{-- <div id="visit_note">
             <form method="post" action="{{ route('visit-note.store') }}">
             @csrf
                 <div class="flex items-center gap-[40px]">
@@ -765,7 +752,7 @@ border-bottom: 3px double;
                 </div>                                          
                         <button class="btn btn-primary" type="submit">Save</button>
             </form>
-        </div>
+        </div> --}}
 
     </div>
 @endcan
@@ -1074,7 +1061,7 @@ document.getElementById('lon').value = lon;
                     scrollX: true,
                     data: result.data,
                     columns: [
-                        { data: 'patient_first_name', title: 'Patient First Name' },
+                        { data: 'patient_first_name', title: 'Patient Name' },
                         { data: 'task', title: 'Task' },
                         { data: 'kt_calendar_datepicker_start_date', title: 'Schedule Date' },
                         {
