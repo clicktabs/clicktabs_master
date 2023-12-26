@@ -79,10 +79,10 @@ if(isset($patient->diagnosis->other_diagnosis_name)){
 
                            <p class="mt-4 mb-1"><b>RN to Evaluate for Home Health Care Service</b></p>
                            <div class="labels-group">
-                              <label class="form-check-label"><input type="checkbox" class="form-check-input" name="phsicianSkilled[]" value=""> Skilled Nursing</label>
-                              <label class="form-check-label"><input type="checkbox" class="form-check-input" name="phsicianHealthAide[]" value=""> Home Health Aide</label>
-                              <label class="form-check-label"><input type="checkbox" class="form-check-input" name="phsicianTherapy[]" value=""> Therapy (OT/PT/ST)</label>
-                              <label class="form-check-label"><input type="checkbox" class="form-check-input" name="phsicianTherapy[]" value=""> Other</label>
+                              <label class="form-check-label"><input type="checkbox" class="form-check-input" name="phsicianSkilled[]" value="1"> Skilled Nursing</label>
+                              <label class="form-check-label"><input type="checkbox" class="form-check-input" name="phsicianHealthAide[]" value="2"> Home Health Aide</label>
+                              <label class="form-check-label"><input type="checkbox" class="form-check-input" name="phsicianTherapy[]" value="3"> Therapy (OT/PT/ST)</label>
+                              <label class="form-check-label"><input type="checkbox" class="form-check-input" name="phsicianTherapy[]" value="4"> Other</label>
                            </div>
 
                            <div class="row row-flex align-items-center gy-3 mt-1">

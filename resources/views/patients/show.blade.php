@@ -1786,7 +1786,5 @@
             }
         });
     });
-
 </script>
-
 @endsection
