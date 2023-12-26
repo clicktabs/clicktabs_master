@@ -214,7 +214,7 @@
 <div class="bg-[#efefef] py-[30px] mb-[50px]">
     <div class="container mx-auto">
         <div class="header text-center">
-            <h2 class="text-[35px] text-[#4133BF] mb-[8px] font-[700]">Click-Tabs Solutions Emphasizes on</h2>
+            <h2 class="text-[35px] text-[#4133BF] mb-[8px] font-[700]">Click-Tabs Solutions Emphasizes on!!!!</h2>
             <p class="text-[18px] font-[700]">Security, Compliance, and Growth</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-[40px]">
