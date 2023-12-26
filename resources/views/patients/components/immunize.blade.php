@@ -1,4 +1,4 @@
-<div class="">
+<div class="immunization">
     <div
         class="list-title mt-1 d-flex flex-column flex-md-row justify-content-between">
         <div class="">
@@ -18,7 +18,7 @@
         </button>
 
     </div>
-    <div class="table-responsive">
+    <div class="content_active table-responsive">
         <table class="table mt-4">
             <thead class="bg-[#4133BF] text-[#fff] text-center">
             <tr>
@@ -44,7 +44,7 @@
                 <th colspan="3">Actions</th>
             </tr>
             </thead>
-            <tbody class="text-center">
+            <tbody class="active text-center">
             @if($immunizations)
                 @foreach ($immunizations->where('status', 1) as $row)
                     <tr>
@@ -278,3 +278,5 @@
     </div>
 
 </div>
+
+
