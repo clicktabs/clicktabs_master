@@ -16,6 +16,11 @@ use DateTime;
 use DateInterval;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Hhavisitnote;
+use App\Models\Hhavisitnote1;
+use App\Models\Hhavisitnote2;
+use App\Models\Medication;
+use App\Models\Account;
 
 
 class ScheduleCalendar extends Controller
@@ -225,7 +230,11 @@ class ScheduleCalendar extends Controller
                 $patientEpisodeTiming = $patient->episode;
                 $pTransportation = $patient->transportation;;
                 $patientTransportation = json_decode($pTransportation->transportation, true);
-                return view('Skilled-Agency.oasis-e-start-of-care', compact('patient','race_enc','ethnicities','source_of_add','patientInsurance','patientAddressInfo','patientEpisodeTiming','patientTransportation'))->with('active', 'phistory');
+                $episodeDaterange = PatientEpisodeManager::select('episode_start_date', 'episode_end_date')->where('id',$schedule->episode_id)->first();
+                $medications = Medication::select('medication_dosage','frequency','route','status')->where('patient_id', $patient->id)->get();
+                $account = Account::first();
+                return view('Skilled-Agency.oasis-e-start-of-care', compact('patient','race_enc','ethnicities','source_of_add','patientInsurance','patientAddressInfo',
+                'patientEpisodeTiming','patientTransportation', 'episodeDaterange','medications','schedule','account'))->with('active', 'phistory');
             case 'Skilled Nurse Visit (Billable)':
                 $patient = Patient::where('id', $schedule->patient_id)->first();
                 return view('Skilled-Agency.nurse-visit-note.index', compact('patient'));
@@ -251,8 +260,18 @@ class ScheduleCalendar extends Controller
                 return view('Skilled-Agency.nurse-visit-note.index');
             case 'SNV W/ Discharge Summary':
                 return view('Skilled-Agency.nurse-visit-note.index');
+
             case 'HHA Visit (Billable)':
-                return view('Skilled-Agency.hha-visit-note');
+                $hhhaData = [];
+                $hhhaData['visitnote'] = Hhavisitnote::where('schedule_id', $data)->first();
+                if (!empty($hhhaData['visitnote'])) {
+                    $hhhaData['hhavisitnote1'] = Hhavisitnote1::where('hhavisitnote1s_id', $hhhaData['visitnote']->id)->first();
+                    $hhhaData['hhavisitnote2'] = Hhavisitnote2::where('hhavisitnote2s_id', $hhhaData['visitnote']->id)->first();
+                    return view('Skilled-Agency.hha-visit-note-edit', compact('data','hhhaData'));
+                } else {
+                    return view('Skilled-Agency.hha-visit-note', compact('data'));
+                }
+
             default:
                 return redirect()->back()->with('danger', 'Something Went Wrong!!');
         }

@@ -412,7 +412,7 @@
                         data: 'id',
                         className: "dt-center editor-delete",
                         orderable: false,
-                        "mRender" : function ( data, type, row ) {
+                        "mRender" : function ( data, type, row ) {  
                             console.log(data)
                             return `
                             <button class="btn btn-primary edit" data-eventId="${data}">Edit</button>

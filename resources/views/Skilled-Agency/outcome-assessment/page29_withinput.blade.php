@@ -14,7 +14,7 @@ if(isset($patient->diagnosis->other_diagnosis_name)){
 <table class="table table-bordered align-middle default-td not-responsive">
                      <tr>
                         <td class="p-4">
-                           <p class="text-danger border-bottom border-2 pb-2"><b>* = Required Information</b></p>
+                           <div class="vt p-2">@include('layouts.company_info')</div>
                            <div class="row row-flex align-items-center gy-3">
                               <div class="col-md-6">
                                  <label for="PhysicianName" class="form-label"><b>Physician's Name:</b></label>
@@ -52,8 +52,8 @@ if(isset($patient->diagnosis->other_diagnosis_name)){
                                  <input type="text"  value="{{isset($patient->extra_info->physician->alternate_phone)?$patient->extra_info->physician->alternate_phone:''}}"  name="Tel_2" id="Tel_2" class="form-control">
                               </div>
                               <div class="col-md-3">
-                                 <label for="SSS" class="form-label"><b>SSS #:</b></label>
-                                 <input type="text" value="{{isset($patient->extra_info->physician->speciality)?$patient->extra_info->physician->speciality:''}}"  name="SSS" id="SSS" class="form-control">
+                                 <label for="SSS" class="form-label"><b>(M0064) Social Security Number:</b></label>
+                                 <input type="text" value="{{isset($patient->social_security_no)?$patient->social_security_no:''}}"  name="SSS" id="SSS" class="form-control">
                               </div>
                            </div>
 
@@ -63,7 +63,7 @@ if(isset($patient->diagnosis->other_diagnosis_name)){
                                  <input type="date"  value="{{isset($patient->date_of_birth)?$patient->date_of_birth:''}}" name="ClientDateOfBirth" id="ClientDateOfBirth" class="form-control">
                               </div>
                               <div class="col-md-3">
-                                 <label for="NPI" class="form-label"><b>NPI #:</b></label>
+                                 <label for="NPI" class="form-label"><b>Physician NPI Number:</b></label>
                                  <input type="text" value="{{isset($patient->social_security_no)?$patient->social_security_no:''}}" name="NPI" id="NPI" class="form-control">
                               </div>
                               <div class="col-md-3">
@@ -79,78 +79,82 @@ if(isset($patient->diagnosis->other_diagnosis_name)){
 
                            <p class="mt-4 mb-1"><b>RN to Evaluate for Home Health Care Service</b></p>
                            <div class="labels-group">
-                              <label class="form-check-label"><input type="checkbox" class="form-check-input" name="phsicianSkilled" value="1"> Skilled Nursing</label>
-                              <label class="form-check-label"><input type="checkbox" class="form-check-input" name="phsicianHealthAide" value="1"> Home Health Aide</label>
-                              <label class="form-check-label"><input type="checkbox" class="form-check-input" name="phsicianTherapy" value="1"> Therapy (OT/PT/ST)</label>
-                              <label class="form-check-label"><input type="checkbox" class="form-check-input" name="phsicianTherapy" value="1"> Other</label>
+                              <label class="form-check-label"><input type="checkbox" class="form-check-input" name="phsicianSkilled[]" value="1"> Skilled Nursing</label>
+                              <label class="form-check-label"><input type="checkbox" class="form-check-input" name="phsicianHealthAide[]" value="2"> Home Health Aide</label>
+                              <label class="form-check-label"><input type="checkbox" class="form-check-input" name="phsicianTherapy[]" value="3"> Therapy (OT/PT/ST)</label>
+                              <label class="form-check-label"><input type="checkbox" class="form-check-input" name="phsicianTherapy[]" value="4"> Other</label>
                            </div>
 
                            <div class="row row-flex align-items-center gy-3 mt-1">
                               <div class="col-md-6">
                                  <label for="PrimaryDiagnosis" class="form-label"><b>Primary Diagnosis:</b></label>
-                                 <input type="text" name="PrimaryDiagnosis"  value="{{isset($patient->diagnosis->primary_diagnosis_name)?$patient->diagnosis->primary_diagnosis_name:''}}" id="PrimaryDiagnosis" class="form-control">
+                                 <input type="text" name="PrimaryDiagnosis"  value="{{isset($patient->diagnosis->primary_diagnosis_code)?$patient->diagnosis->primary_diagnosis_code:''}}" id="PrimaryDiagnosis" class="form-control">
                               </div>
                               <div class="col-md-6">
                                  <label for="PD_ICD9" class="form-label"><b>ICD9:</b></label>
-                                 <input type="text"  value="{{isset($patient->diagnosis->primary_diagnosis_code)?$patient->diagnosis->primary_diagnosis_code:''}}" name="PD_ICD9" id="PD_ICD9" class="form-control">
+                                 <input type="text"  value="{{isset($patient->diagnosis->primary_diagnosis_name)?$patient->diagnosis->primary_diagnosis_name:''}}" name="PD_ICD9" id="PD_ICD9" class="form-control">
                               </div>
                            </div>
+                           @php
+                               $dataArray = json_decode($patient->diagnosis->other_diagnosis_code, true);
+                               $dataNames = json_decode($patient->diagnosis->other_diagnosis_name, true);
+                           @endphp
 
                            <div class="row row-flex align-items-center gy-3 mt-1">
                               <div class="col-md-6">
                                  <label for="OtherDiagnosis" class="form-label"><b>Other Diagnosis:</b></label>
-                                 <input type="text"  value="{{$otherdig}}" name="OtherDiagnosis" id="OtherDiagnosis" class="form-control">
+                                 <input type="text"  value="{{isset($dataArray[0])?$dataArray[0]:''}}" name="OtherDiagnosis" id="OtherDiagnosis" class="form-control">
                               </div>
                               <div class="col-md-6">
                                  <label for="OD_ICD9" class="form-label"><b>ICD10:</b></label>
-                                 <input type="text"  value="{{$otherdigcode}}" name="OD_ICD9" id="OD_ICD9" class="form-control">
+                                 <input type="text"  value="{{isset($dataNames[0])?$dataNames[0]:''}}" name="OD_ICD9" id="OD_ICD9" class="form-control">
                               </div>
                            </div>
 
                            <div class="row row-flex align-items-center gy-3 mt-1">
                               <div class="col-md-6">
-                                 <input type="text" name="OtherDiagnosis" id="OtherDiagnosis" class="form-control">
+                                 <input type="text" name="OtherDiagnosis" value="{{isset($dataArray[1])?$dataArray[1]:''}}" id="OtherDiagnosis" class="form-control">
                               </div>
                               <div class="col-md-6">
                                  <div class="input-group">
                                     <label class="input-group-text">ICD10:</label>
-                                    <input type="text" id="" class="form-control">
+                                    <input type="text" id="" value="{{isset($dataNames[1])?$dataNames[1]:''}}" class="form-control">
                                  </div>
                               </div>
                            </div>
 
                            <div class="row row-flex align-items-center gy-3 mt-1">
                               <div class="col-md-6">
-                                 <input type="text" name="OtherDiagnosis" id="OtherDiagnosis" class="form-control">
+                                 <input type="text" name="OtherDiagnosis" value="{{isset($dataArray[2])?$dataArray[2]:''}}" id="OtherDiagnosis" class="form-control">
                               </div>
                               <div class="col-md-6">
                                  <div class="input-group">
                                     <label class="input-group-text">ICD10:</label>
-                                    <input type="text" id="" class="form-control">
+                                    <input type="text" id="" value="{{isset($dataNames[2])?$dataNames[2]:''}}" class="form-control">
                                  </div>
                               </div>
                            </div>
 
                            <div class="row row-flex align-items-center gy-3 mt-1">
                               <div class="col-md-6">
-                                 <input type="text" name="OtherDiagnosis" id="OtherDiagnosis" class="form-control">
+                                 <input type="text" name="OtherDiagnosis" value="{{isset($dataArray[3])?$dataArray[3]:''}}" id="OtherDiagnosis" class="form-control">
                               </div>
                               <div class="col-md-6">
                                  <div class="input-group">
                                     <label class="input-group-text">ICD10:</label>
-                                    <input type="text" id="" class="form-control">
+                                    <input type="text" id="" value="{{isset($dataNames[3])?$dataNames[3]:''}}" class="form-control">
                                  </div>
                               </div>
                            </div>
 
                            <div class="row row-flex align-items-center gy-3 mt-1">
                               <div class="col-md-6">
-                                 <input type="text" name="OtherDiagnosis" id="OtherDiagnosis" class="form-control">
+                                 <input type="text" name="OtherDiagnosis" value="{{isset($dataArray[4])?$dataArray[4]:''}}" id="OtherDiagnosis" class="form-control">
                               </div>
                               <div class="col-md-6">
                                  <div class="input-group">
                                     <label class="input-group-text">ICD10:</label>
-                                    <input type="text" id="" class="form-control">
+                                    <input type="text" id="" value="{{isset($dataNames[4])?$dataNames[4]:''}}" class="form-control">
                                  </div>
                               </div>
                            </div>
@@ -158,11 +162,15 @@ if(isset($patient->diagnosis->other_diagnosis_name)){
                            <div class="row row-flex align-items-center gy-3 mt-1">
                               <div class="col-md-6">
                                  <label for="NewMedicationDate" class="form-label"><b>New Medication Date:</b></label>
-                                 <input type="text" name="NewMedicationDate" id="NewMedicationDate" class="form-control">
+                                 {{-- <input type="text" name="NewMedicationDate" id="NewMedicationDate" class="form-control"> --}}
+                                 <textarea class="form-control" name="NewMedicationDate" id="NewMedicationDate" cols="30" rows="10" 
+                                 placeholder="please use extra sheets if necessary"></textarea>
                               </div>
                               <div class="col-md-6">
                                  <label for="OldMedicationsDate" class="form-label"><b>Old Medications and Start Date:</b></label>
-                                 <input type="text" name="OldMedicationsDate" id="OldMedicationsDate" class="form-control">
+                                 {{-- <input type="text" name="OldMedicationsDate" id="OldMedicationsDate" class="form-control"> --}}
+                                 <textarea class="form-control" name="OldMedicationsDate" id="OldMedicationsDate" cols="30" rows="10" 
+                                 placeholder="please use extra sheets if necessary"></textarea>
                               </div>
                            </div>
 
@@ -176,42 +184,32 @@ if(isset($patient->diagnosis->other_diagnosis_name)){
                            </div>
 
                            <div class="row row-flex align-items-center gy-3 mt-1">
-                               <!--  <div class="col-md-6">
-                                 <label for="MdSignature" class="form-label"><b>M.D. Signature:</b></label>
-                                 {{-- <input type="text" name="MdSignature" id="MdSignature" class="form-control"> --}}
-
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#doctorFormModal">Add M.D. Signature</button>
-
-                                <div id="doctorSignatureImageContainer" style="display: none;">
-                                    <img id="doctorSignatureImage" src="" alt="Doctor's Signature">
-                                </div>
-
-
-                                 <div class="d-block mt-2">
-                                    <label for="MdSignatureDate" class="form-label"><b>Date:</b></label>
-                                    <input type="text" name="MdSignatureDate" value="{{date('m-d-Y')}}" id="MdSignatureDate" class="form-control">
-                                 </div>
-                              </div>-->
 
                               <div class="col-md-6">
                                  <label for="NurseSignature" class="form-label"><b>Nurse's Signature:</b></label>
-                                 {{-- <input type="text" name="NurseSignature" id="NurseSignature" class="form-control"> --}}
-
-                                 <!-- Nurse Signature Button -->
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#nurseFormModal">Add Signature</button>
-
-                                <!-- Nurse Signature image container initially hidden -->
                                 <div id="nurseSignatureImageContainer" style="display: none;">
                                     <img id="nurseSignatureImage" src="" alt="Nurse's Signature">
+                                    <input type="hidden" id="nurseSignaturePath" name="nurseSignaturePath" value="">
                                 </div>
-
                                  <div class="d-block mt-2">
                                     <label for="NurseSignatureDate" class="form-label"><b>Date:</b></label>
                                     <input type="text" value="{{date('m-d-Y')}}" name="NurseSignatureDate" id="NurseSignatureDate" class="form-control">
                                  </div>
                               </div>
+                              <div class="col-md-6">
+
+                                <span class="signature-area">
+                                    Signature: ___________________________________________
+                                </span>
+                                <br>
+                                <br>
+                                <span class="date">
+                                    Date: ____________________________________
+                                </span>
+                            </div>
                            </div>
                         </td>
                      </tr>
                   </table>
-                  @include('signature')
+

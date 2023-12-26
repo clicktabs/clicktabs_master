@@ -17,11 +17,11 @@ class CreateCMSTable extends Migration
             $table->id();
             $table->integer('patient_history_id')->nullable();
             
-            $table->integer('hiClaimNo')->nullable();
+            $table->string('hiClaimNo')->nullable();
             $table->date('startOfCareDate')->nullable();
             $table->date('certiPeriodFrom')->nullable();
             $table->date('certiPeriodTo')->nullable();
-            $table->integer('medicalRecordNo')->nullable();
+            $table->string('medicalRecordNo')->nullable();
             $table->text('name')->nullable();
             $table->text('address')->nullable();
             $table->text('gender')->nullable();

@@ -7,11 +7,11 @@
                 Add
                 Immunization
             </button>
-            <button
+            {{-- <button
                 class="btn btn-primary !bg-[#4133BF] text-[#fff]">
                 Decline/Contraindicate
                 Immunization
-            </button>
+            </button> --}}
         </div>
         <button class=" btn btn-primary !bg-[#4133BF] text-[#fff]">Export to
             Excel

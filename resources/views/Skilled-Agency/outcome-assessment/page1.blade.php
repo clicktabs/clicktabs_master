@@ -18,8 +18,8 @@
         <td>
             <div class="row row-flex align-items-center">
                 <div class="col-6">
-                    <input name="nipNumber" type="text" value="@if ($routeName=='skilled-agency.get-oasis-e-start-of-care'){{!empty($account->npi)?$account->npi:''}}@endif"
-                           class="form-control">
+                    <input name="npi" type="text" value="{{!empty($account->npi)?$account->npi:''}}"
+                           class="form-control">   
                 </div>
                 <div class="col-6">
                     <label class="form-check-label">
@@ -38,7 +38,7 @@
     <tr>
         <td>
 
-<input type="text" name="medicare" value="@if ($routeName=='skilled-agency.get-oasis-e-start-of-care'){{!empty($account->unique_agency_oasis)?$account->unique_agency_oasis:''}}@endif"
+<input type="text" name="medicare" value="{{!empty($account->medicaid_p_n)?$account->medicaid_p_n:''}}"
                    class="form-control">
         </td>
     </tr>
@@ -51,7 +51,7 @@
     </tr>
     <tr>
         <td>
-            <input type="text" name="branchState" value="@if ($routeName=='skilled-agency.get-oasis-e-start-of-care'){{!empty($account->state)?$account->state:''}}@endif"
+            <input type="text" name="branchState" value="{{!empty($account->state)?$account->state:''}}"
                    class="form-control">
         </td>
     </tr>
@@ -184,7 +184,7 @@
         <td>
             <div class="row row-flex align-items-center">
                 <div class="col-6">
-                    <input type="text" name="medicare" value="@if ($routeName=='skilled-agency.get-oasis-e-start-of-care'){{!empty($account->medicare_p_n)?$account->medicare_p_n:''}}@endif"
+                    <input type="text" name="medicare" value="{{!empty($account->medicare_p_n)?$account->medicare_p_n:''}}"
                            class="form-control"></div>
                 <div class="col-6">
                     <label class="form-check-label">
@@ -205,7 +205,7 @@
         <td>
             <div class="row row-flex align-items-center">
                 <div class="col-6">
-                    <input type="text" name="medicare" value="@if ($routeName=='skilled-agency.get-oasis-e-start-of-care'){{!empty($account->medicaid_p_n)?$account->medicaid_p_n:''}}@endif"
+                    <input type="text" name="medicare" value="{{!empty($account->medicaid_p_n)?$account->medicaid_p_n:''}}"
                            class="form-control"></div>
                 <div class="col-6">
                     <label class="form-check-label">

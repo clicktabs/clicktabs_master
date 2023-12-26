@@ -183,11 +183,11 @@
                                                                     <option value="select_task">Select Task</option>
                                                                     <option value="nursing">Nursing</option>
                                                                     <option value="hha">HHA</option>
-                                                                    <option value="mws-other">MSW/Other</option>
+                                                                    {{-- <option value="mws-other">MSW/Other</option>
                                                                     <option value="theraphy">Theraphy</option>
                                                                     <option value="dietitian">Dietitian</option>
                                                                     <option value="orders-care">Orders/Care</option>
-                                                                    <option value="daily-outlier">Daily/Outlier</option>
+                                                                    <option value="daily-outlier">Daily/Outlier</option> --}}
                                                                 </select>
                                                             </div>
                                                         </div>

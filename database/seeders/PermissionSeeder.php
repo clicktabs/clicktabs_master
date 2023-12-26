@@ -64,6 +64,8 @@ class PermissionSeeder extends Seeder
             'Administrator',
             'Employee',
             'Nursing',
+            'RN Nursing',
+            'LPN/LVN Nursing',
             'Occupational Therapist',
             'Home Health Aide',
             'Quality Assurance',

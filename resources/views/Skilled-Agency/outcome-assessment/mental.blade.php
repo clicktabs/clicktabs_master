@@ -26,6 +26,7 @@
                 </label>
             </div>
         </td>
+        
     </tr>
     <tr>
         <td class="bg-black py-2 px-3">

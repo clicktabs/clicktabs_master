@@ -96,6 +96,10 @@ class Patient extends Model
     {
         return $this->hasOne(PatientTransportation::class, 'patient_id');
     }
+    public function allergy()
+    {
+        return $this->hasOne(Allergy::class, 'patient_id');
+    }
 
     public function cms()
     {
@@ -104,5 +108,10 @@ class Patient extends Model
     public function physician()
     {
         return $this->belongsTo(PhysicianOrders::class, 'id','patient_history_id');
+    }
+
+    public function functionalAbilitie()
+    {
+        return $this->belongsTo(FunctionalAbilitie::class, 'id','patient_history_id');
     }
 }

@@ -105,6 +105,7 @@
                     <div class="form-group">
                         <input type="checkbox" name="language_barrier" id="language_barrier" class="form-control">
                         <span for="language_barrier">Date of Face-to-Face Visit</span>
+               
                     </div>
                     <div class="form-group">
                         <input type="checkbox" name="language_barrier" id="language_barrier" class="form-control">

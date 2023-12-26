@@ -4,75 +4,8 @@
         {{-- <h4>Vitals</h4> --}}
         <button
             class="add_new_vital btn btn-primary !bg-[#4133BF] text-[#fff]">
-            Add
-            new
+            Add new
         </button>
-    </div>
-    <div class="table-responsive">
-        <table class="table mt-4">
-            <thead class="bg-[#4133BF] text-[#fff] text-center">
-            <tr>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th style="font-weight: bold; text-align: left;">Active
-                    Vitals({{$vitals->where('status', 1)->count()}})
-                </th>
-                <th></th>
-                <th></th>
-                <th></th>
-                <th colspan="3"></th>
-            </tr>
-            <tr>
-                <th>Pulse</th>
-                <th>Temperature</th>
-                <th>Blood Pressure</th>
-                <th>Respiratory</th>
-                <th>Waight</th>
-                <th>Blood Suger</th>
-                <th>Pain</th>
-                <th colspan="3">Action</th>
-            </tr>
-            </thead>
-            <tbody class="text-center">
-            @foreach ($vitals->where('status', 1) as $vital)
-                <tr>
-                    <td>{{ $vital->pulse }}</td>
-                    <td>{{ $vital->temperature }}C</td>
-                    <td>{{ $vital->bp }}</td>
-                    <td>{{ $vital->respiration }}</td>
-                    <td>{{ $vital->waight }}</td>
-                    <td>{{ $vital->bs }}%</td>
-                    <td>{{ $vital->pain }}</td>
-                    <td>
-                        <a href="{{ route('vitals.changeStatus', $vital->id) }}"
-                           class="btn btn-{{ $vital->status == 0 ? 'success' : 'danger' }}">
-                            {{ $vital->status == 0 ? 'Active' : 'Inactive' }}
-                        </a>
-                    </td>
-                    <td>
-                        <button type="button"
-                                class="btn btn-primary vital-edit-btn"
-                                data-vital-id="{{ $vital->id }}">
-                            Edit
-                        </button>
-                    </td>
-                    <td>
-                        <form
-                            action="{{ route('vitals.destroy', $vital->id) }}"
-                            method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit"
-                                    class="btn btn-danger">Delete
-                            </button>
-                        </form>
-                    </td>
-
-                </tr>
-            @endforeach
-            </tbody>
-        </table>
     </div>
     <div class="table-responsive">
         <table class="table mt-4">
@@ -139,7 +72,73 @@
             @endforeach
             </tbody>
         </table>
-    </div>
+    </div><!----/End----->
+    <div class="table-responsive">
+        <table class="table mt-4">
+            <thead class="bg-[#4133BF] text-[#fff] text-center">
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th style="font-weight: bold; text-align: left;">Active
+                    Vitals({{$vitals->where('status', 1)->count()}})
+                </th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th colspan="3"></th>
+            </tr>
+            <tr>
+                <th>Pulse</th>
+                <th>Temperature</th>
+                <th>Blood Pressure</th>
+                <th>Respiratory</th>
+                <th>Waight</th>
+                <th>Blood Suger</th>
+                <th>Pain</th>
+                <th colspan="3">Action</th>
+            </tr>
+            </thead>
+            <tbody class="text-center">
+            @foreach ($vitals->where('status', 1) as $vital)
+                <tr>
+                    <td>{{ $vital->pulse }}</td>
+                    <td>{{ $vital->temperature }}C</td>
+                    <td>{{ $vital->bp }}</td>
+                    <td>{{ $vital->respiration }}</td>
+                    <td>{{ $vital->waight }}</td>
+                    <td>{{ $vital->bs }}%</td>
+                    <td>{{ $vital->pain }}</td>
+                    <td>
+                        <a href="{{ route('vitals.changeStatus', $vital->id) }}"
+                           class="btn btn-{{ $vital->status == 0 ? 'success' : 'danger' }}">
+                            {{ $vital->status == 0 ? 'Active' : 'Inactive' }}
+                        </a>
+                    </td>
+                    <td>
+                        <button type="button"
+                                class="btn btn-primary vital-edit-btn"
+                                data-vital-id="{{ $vital->id }}">
+                            Edit
+                        </button>
+                    </td>
+                    <td>
+                        <form
+                            action="{{ route('vitals.destroy', $vital->id) }}"
+                            method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit"
+                                    class="btn btn-danger">Delete
+                            </button>
+                        </form>
+                    </td>
+
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
+    </div><!----/End----->
     <div class="modal fade !max-w-full" id="vitalModal" tabindex="-1"
          role="dialog" aria-labelledby="vitalModal" aria-hidden="true">
 

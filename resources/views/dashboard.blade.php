@@ -307,18 +307,16 @@ border-bottom: 3px double;
 </div>
 <div class="container-full">
     <div class="row">
-        <div class="col-lg-12">
-
+        <div class="col-lg-12">  
             @if($user->hasRole('super-admin'))
             @else
             @can('employee-dashboard')
             @endcan
-
             @can('admin-dashboard')
+            {{-- @can('employee-dashboard') --}}
             @endcan
             @endif
             @if ($user->hasRole('Employee'))
-
             @else
             <div class="main_content">
                 <div id="tabs">
@@ -465,9 +463,9 @@ border-bottom: 3px double;
                 <a href="#mytask">My Tasks</a>
             </li>
 
-            <li class="flex-shrink-0">
+            {{-- <li class="flex-shrink-0">
                 <a href="#visit_note">Miss visit note</a>
-            </li>
+            </li> --}}
             <li class="flex-shrink-0">
                 <a href="#updatePassword">Update password</a>
             </li>
@@ -605,19 +603,6 @@ border-bottom: 3px double;
                                                             @endforeach
                                                         </select>
                                                     </div>
-                                                    <div>
-                                                        <label>Task: </label>
-                                                        <select id="task" name="task" required>
-                                                            <option value="">Select Visit</option>
-                                                            <option value="sixty_day_summary">60 Day Summary</option>
-                                                            <option value="communication_note">Communication note
-                                                            </option>
-                                                            <option value="hha">HHA</option>
-                                                            <option value="coordination_care">Coordination of Care
-                                                            </option>
-                                                            <option value="hha_care_plane">HHA Care Plane</option>
-                                                        </select>
-                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-5 col-md-6">
@@ -727,7 +712,7 @@ border-bottom: 3px double;
             </div>
         </div>
 
-        <div id="visit_note">
+        {{-- <div id="visit_note">
             <form method="post" action="{{ route('visit-note.store') }}">
             @csrf
                 <div class="flex items-center gap-[40px]">
@@ -764,10 +749,10 @@ border-bottom: 3px double;
                 </div>
                 <div class="mt-[20px]">
                     <textarea name="p_communication_text" class="py-[10px] px-[10px] border-[1px] border-[#dfdede] w-full h-[250px]">{{ old('p_communication_text') }}</textarea>
-                </div>
-                <button class="btn btn-primary" type="submit">Save</button>
+                </div>                                          
+                        <button class="btn btn-primary" type="submit">Save</button>
             </form>
-        </div>
+        </div> --}}
 
     </div>
 @endcan
@@ -878,10 +863,10 @@ $('#mileage_rate').val(data.schedule.mileage_rate);
 $('#user_rate').val(data.schedule.user_rate);
 
 let originalDateTimeStart = data.schedule.kt_calendar_datepicker_start_date + " " + data.schedule.start_time;
-let startLocalDate = moment(originalDateTimeStart, "YYYY-MM-DD HH:mm:ss").format("YYYY-MM-DD[T]HH:mm");
+let startLocalDate = moment(originalDateTimeStart, "MM-DD-YYYY HH:mm:ss").format("MM-DD-YYYY[T]HH:mm");
 
 let originalDateTimeEnd = data.schedule.kt_calendar_datepicker_end_date + " " + data.schedule.end_time;
-let endLocalDate = moment(originalDateTimeEnd, "YYYY-MM-DD HH:mm:ss").format("YYYY-MM-DD[T]HH:mm");
+let endLocalDate = moment(originalDateTimeEnd, "MM-DD-YYYY HH:mm:ss").format("MM-DD-YYYY[T]HH:mm");
 
 let start_date = $('#kt_calendar_datepicker_start_date');
 let end_date = $('#kt_calendar_datepicker_end_date');
@@ -908,7 +893,7 @@ $('#schedulingList').DataTable({
         url: "/schedule/get-schedule",
     },
     columns: [
-        { data: 'patient_first_name', title: 'Patient First Name' },
+        { data: 'patient_first_name', title: 'Patient Name' },
         { data: 'kt_calendar_datepicker_start_date', title: 'Start Date' },
         { data: 'kt_calendar_datepicker_end_date', title: 'End Date' },
         { data: 'start_time', title: 'Start Time' },
@@ -1076,7 +1061,7 @@ document.getElementById('lon').value = lon;
                     scrollX: true,
                     data: result.data,
                     columns: [
-                        { data: 'patient_first_name', title: 'Patient First Name' },
+                        { data: 'patient_first_name', title: 'Patient Name' },
                         { data: 'task', title: 'Task' },
                         { data: 'kt_calendar_datepicker_start_date', title: 'Schedule Date' },
                         {

@@ -1,3 +1,7 @@
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+
 <div class="vt card mb-2 tabcontent" id="physician">
             <form name="patientPhysicianForm" id="patientPhysicianForm">
                 <div class="card-header text-center !bg-[#4133BF]">
@@ -84,9 +88,9 @@
                         <label for="face_to_face_evaluation_na">NA</label>
                     </div>
                     <div class="form-group">
-                        <input type="checkbox" name="face_to_face_evaluation[]" value="date"
-                        id="face_to_face_date" class="form-control">
+                        <input type="checkbox" name="face_to_face_evaluation[]" value="date" id="face_to_face_evaluation_date" class="form-control">                        
                         <label for="face_to_face_evaluation_date">Date of Face-to-Face Visit</label>
+                        <input class="face_to_face" type="date" name="facevisit" >
                     </div>
                     <div class="form-group">
                         <input type="checkbox" name="face_to_face_evaluation[]"
@@ -102,3 +106,14 @@
                 </div>
         </form>
 </div>
+
+<script>
+$(".face_to_face").hide();
+$("#face_to_face_evaluation_date").click(function() {
+    if($(this).is(":checked")) {
+        $(".face_to_face").show(300);
+    } else {
+        $(".face_to_face").hide(200);
+    }
+});
+</script>

@@ -1,577 +1,563 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Oasis-e-start-of-care</title>
-    <style>
-        @charset "UTF-8";
-
-        .container,
-        .container-lg,
-        .container-md,
-        .container-sm,
-        .container-xl,
-        .container-xxl {
-            max-width: 1320px;
-            margin-right: auto;
-            margin-left: auto;
-        }
-
-        *,
-        ::after,
-        ::before {
-            box-sizing: border-box;
-        }
-
-        .m-0 {
-            margin: 0 !important;
-        }
-
-        .mt-0 {
-            margin-top: 0 !important;
-        }
-
-        .mt-1 {
-            margin-top: 5px !important;
-        }
-
-        .mt-2 {
-            margin-top: 10px !important;
-        }
-
-        .mb-1 {
-            margin-bottom: .25rem !important;
-        }
-        .mb-0 {
-            margin-bottom: 0 !important;
-        }
-        .mb-2 {
-            margin-bottom: 10px !important;
-        }
-
-        .p-0 {padding: 0 !important;}
-        .pb-0 {padding-bottom: 0 !important;}
-        .pb-1 {padding-bottom: 5px !important;}
-        .pb-2 {padding-bottom: 10px !important;}
-        .pt-1 {padding-top: 5px !important;}
-        .pt-2 {padding-top: 10px !important;}
-        .pt-0 {padding-top: 0 !important;}
-
-        .bg-black {
-            background-color: #000 !important;
-        }
-
-        .text-white {
-            color: #fff !important;
-        }
-
-        .text-center {
-            text-align: center !important;
-        }
-
-        .align-items-center {
-            align-items: center !important;
-        }
-
-        .input-group {
-            position: relative;
-            display: table;
-            vertical-align: middle !important;
-        }
-
-        .input-group-text {
-            display: table-cell;
-            padding: 0 10px;
-            font-size: 0.9rem;
-            font-weight: 400;
-            color: #212529;
-            text-align: center;
-            white-space: nowrap;
-            background-color: #f8f9fa;
-            border: 1px solid #999;
-            border-radius: 0.375rem 0 0 0.375rem;
-            height: 24px;
-            line-height: 22px;
-        }
-
-        .input-group>.form-control,
-        .input-group>.form-floating,
-        .input-group>.form-select {
-            display: table-cell;
-            width: 150px;
-            min-width: 0;
-            border-radius: 0;
-            height: 24px;
-        }
-
-        .form-control {
-            display: block;
-            width: 100%;
-            min-height: 24px;
-            padding: 0;
-            font-size: 0.9rem;
-            font-weight: 400;
-            line-height: 1.5;
-            color: #212529;
-            background-color: #fff;
-            background-clip: padding-box;
-            border: 1px solid #999;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            border-radius: 0.375rem;
-        }
-
-        .form-check-input[type=checkbox] {
-            margin: 0;
-            position: relative;
-            top: 5px;
-        }
-
-        .d-md-flex {
-            display: flex !important;
-        }
-
-        .bg-secondary-subtle {
-            background-color: #e2e3e5 !important;
-        }
-
-        .border {
-            border: 1px solid #999 !important;
-        }
-
-        .section-heading>span {
-            padding: 5px 15px;
-        }
-
-        .align-middle {
-            vertical-align: middle !important;
-        }
-
-        .align-top {
-            vertical-align: top !important;
-        }
-
-        .table {
-            width: 100%;
-            margin-bottom: 1rem;
-            vertical-align: top;
-            border-color: #999;
-        }
-
-        .table table {
-            margin-bottom: -1px;
-        }
-
-        table {
-            caption-side: bottom;
-            border-collapse: collapse;
-        }
-
-        tbody,
-        td,
-        tfoot,
-        th,
-        thead,
-        tr {
-            border-color: inherit;
-            border-style: solid;
-            border-width: 1px;
-        }
-
-        .table>tbody {
-            vertical-align: inherit;
-        }
-
-        .table td,
-        .table th {
-            padding: .5rem .5rem;
-            color: initial;
-            background-color: #fff;
-            border-bottom-width: 1px;
-            box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 9999px inset;
-            vertical-align: middle;
-        }
-
-        .table-borderless tbody,
-        .table-borderless td,
-        .table-borderless th,
-        .table-borderless thead,
-        .table-borderless tr {
-            border-width: 0;
-        }
-
-        .table-borderless td .table-bordered tbody,
-        .table-borderless td .table-bordered td,
-        .table-borderless td .table-bordered th,
-        .table-borderless td .table-bordered thead,
-        .table-borderless td .table-bordered tr {
-            border-width: 1px;
-        }
-
-        .bg-secondary-subtle {
-            background-color: #e2e3e5 !important;
-        }
-
-        nav {
-            display: none;
-        }
-
-        .h1,
-        h1 {
-            font-size: 1.9rem;
-        }
-
-        .h2,
-        h2 {
-            font-size: 1.5rem;
-        }
-
-        body {
-            -webkit-print-color-adjust: exact;
-            print-color-adjust: exact;
-        }
-
-        h2.d-md-flex {
-            display: flex !important;
-        }
-
-        h2>.border-md-end-1 {
-            border-right: 1px solid #999 !important;
-        }
-
-        .row>.col-auto>.input-group>.form-control {
-            max-width: 130px;
-        }
-
-        .col-6 {
-            flex: 0 0 auto;
-            width: 50%;
-        }
-
-        .navbar-expand-lg .navbar-nav {
-            flex-direction: row;
-            column-gap: 20px;
-        }
-
-        body {
-            background-color: #fff;
-        }
-
-        .nm-3 {
-            margin-left: -15px !important;
-            margin-right: -15px !important;
-        }
-
-        .nmt-1 {
-            margin-top: -1px !important;
-        }
-
-        .nmb-1 {
-            margin-bottom: -1px !important;
-        }
-
-        @media (min-width: 992px) {
-            .nmt-lg-1 {
-                margin-top: -1px !important;
-            }
-        }
-
-        .labels-mt-1 label {
-            margin-top: 5px;
-        }
-
-        .clean-input-group {
-            align-items: flex-end;
-            column-gap: 10px;
-        }
-
-        .clean-input-group .input-group-text,
-        .clean-input-group .form-control {
-            border-radius: 0;
-            border: 0 none;
-            padding: 0;
-        }
-
-        .clean-input-group .form-control {
-            border-bottom: 1px solid #999;
-        }
-
-        .clean-input-group .form-control:focus {
-            border-color: transparent;
-            box-shadow: none;
-            border-bottom: 1px solid #000;
-        }
-
-        img {
-            max-width: 100%;
-        }
-
-        @media (max-width: 991px) {
-            .mt-md-2 {
-                margin-top: 10px !important;
-            }
-        }
-
-        @media (min-width: 992px) {
-            .border-lg-end-2 {
-                border-right: 2px solid #999 !important;
-            }
-        }
-
-        @media (min-width: 768px) {
-            .border-md-end-2 {
-                border-right: 2px solid #999 !important;
-            }
-
-            .border-md-end-1 {
-                border-right: 1px solid #999 !important;
-            }
-        }
-
-        .form-holder h2>span {
-            padding: 5px 15px;
-        }
-
-        @media (max-width: 767px) {
-            .form-holder h2>span {
-                display: block;
-            }
-        }
-
-        @media (max-width: 767px) {
-            #oasis-e-form .table-responsive {
-                max-width: calc(540px - var(--bs-gutter-x));
-            }
-        }
-
-        @media (max-width: 575px) {
-            #oasis-e-form .table-responsive {
-                max-width: calc(100vw - var(--bs-gutter-x));
-            }
-        }
-
-        @page {
-            margin: 0 0 0 0;
-        }
-
-        
-    /* body { counter-increment: page; counter-reset: pageplus1 1; } */
-  </style>
-</head>
-
-<body style="padding: 50px;">
-<div>
-    {{-- HOME HEALTH CERTIFICATION AND PLAN OF CARE --}}
-    <table class="table table-bordered m-0">
-        <tr>
-           <td class="bg-black" colspan="2">
-              <h3 class="text-center m-0 text-white">HOME HEALTH CERTIFICATION AND PLAN OF CARE</h3>
-           </td>
-        </tr>
-        <tr>
-           <td>Patients HI Claim No. {{$cms->hiClaimNo}}</td>
-           <td>Start Of Care Date {{$cms->startOfCareDate}}</td>
-        </tr>
-        <tr>
-           <td>
-              <label>Certification Period</label><br>
-              From: {{$cms->certiPeriodFrom}} &nbsp;&nbsp; To: {{$cms->certiPeriodTo}}
-           </td>
-           <td>Medical Record No. {{$cms->medicalRecordNo}}</td>
-        </tr>
-
-        <tr>
-           <td>
-              Patients Name and Address<br>
-              Name: {{$cms->name}}
-              Address: {{$cms->address}}
-           </td>
-           <td>
-              <span style="font-weight: 500">Gender:</span>
-              &nbsp; <input style="position: relative;top:4px" {{$cms->gender ===1? 'checked' : ''}} type="radio"
-              class="form-check-input"> Male
-              &nbsp; <input style="position: relative;top:4px" {{$cms->gender ===1? 'checked' : ''}} type="radio"
-              class="form-check-input"> Female
-           </td>
-        </tr>
-        <tr>
-           <td>Date of Birth: {{$cms->dateOfBirth}}</td>
-           <td>Phone Number: {{$cms->phone}}</td>
-        </tr>
-
-        <tr>
-           <td colspan="2">Patient Risk Profile<br>{!! $cms->riskProfile !!}</td>
-        </tr>
-     </table>
-
-     {{-- Clinical Data --}}
-     <table class="table table-borderless m-0">
-        <tr>
-            <td colspan="2" class="p-0">
-                <table class="table table-bordered m-0">
-
-                    {{-- Clinical Data --}}
-                    <tr>
-                        <td colspan="3"><b>Clinical Data</b></td>
-                     </tr>
-                     <tr>
-                        <td>
-                           Clinical Manager: {{ $cms->clinicalManager }}
-                        </td>
-                        <td rowspan="2">
-                            Branch Name: {{ $cms->branchInfo }}
-                            Branch Address: {{ $cms->branchAddress }}
-                        </td>
-                        <td>Phone Number: {{ $cms->clinicPhone }}</td>
-                     </tr>
-                     <tr>
-                        <td>
-                            Provider Number: {{ $cms->providerNumber }}<br>
-                            Medicare Number: {{ $cms->medicare }}<br>
-                        </td>
-                        <td>Fax Number: {{ $cms->fax }}</td>
-                     </tr>
-
-                     {{-- Primary Diagnosis --}}
-                     <tr>
-                        <td colspan="3" class="bg-secondary-subtle"><b>Primary Diagnosis</b></td>
-                     </tr>
-                     <tr>
-                        <td>
-                            Code<br>{{ $cms->diagonsisCode }}
-                        </td>
-                        <td>
-                            Description<br>{{ $cms->description }}
-                        </td>
-                        <td>Date: {{ $cms->date }}</td>
-                     </tr>
-
-                     {{-- Secondary/Other Diagnosis --}}
-                     <tr>
-                        <td colspan="3" class="bg-secondary-subtle"><b>Secondary/Other Diagnosis</b></td>
-                     </tr>
-                     <tr>
-                        <td>
-                            Code<br>{{ $cms->secDiagnosisCode }}
-                        </td>
-                        <td colspan="2">Description<br>{{ $cms->secDescription }}</td>
-                     </tr>
-                     <tr>
-                        <td colspan="3">
-                            Mental Status<br>{{ $cms->mentalStatus }}
-                        </td>
-                     </tr>
-
-                     <tr>
-                        <td colspan="3">
-                            DME and Supplies<br>{{ $cms->supplies }}
-                        </td>
-                     </tr>
-
-                     <tr>
-                        <td colspan="3">
-                            Prognosis<br>{{ $cms->prognosis }}
-                        </td>
-                     </tr>
-
-                     <tr>
-                        <td colspan="3">
-                            Safety Measures<br>{{ $cms->safety }}
-                        </td>
-                     </tr>
-
-                     <tr>
-                        <td colspan="3">
-                            Nutritional Requirements<br>{{ $cms->nutritional }}
-                        </td>
-                     </tr>
-
-                     <tr>
-                        <td colspan="3">
-                            Functional Limitations<br>{{ $cms->limitations }}
-                        </td>
-                     </tr>
-
-                     <tr>
-                        <td colspan="3">
-                            Other<br>{{ $cms->other }}
-                        </td>
-                     </tr>
-
-                     <tr>
-                        <td colspan="3">
-                            Activities Permitted<br>{{ $cms->activities }}
-                        </td>
-                     </tr>
-                </table>
-            </td>
-        </tr>
-     </table>
-
-     {{-- Treatments --}}
-     <table class="table table-bordered m-0">
-        <tr>
-           <td colspan="2"><b>Treatments</b></td>
-        </tr>
-        <tr>
-           <td colspan="2">Medications<br>{{$cms->medications}}</td>
-        </tr>
-
-        {{-- Allergies --}}
-        <tr>
-           <td colspan="2" class="bg-secondary-subtle"><b>Allergies</b></td>
-        </tr>
-        <tr>
-           <td>Substance<br>NKA (Food/ Drug/ Latex/ Environmental)<br>{{$cms->substance}}</td>
-           <td>Reaction<br>{{$cms->reaction}}</td>
-        </tr>
-        <tr>
-           <td colspan="2">Orders and Treatments<br>{{$cms->treatments}}</td>
-        </tr>
-        <tr>
-           <td>
-              <p class="mt-0 mb-2"><b>Nurse Signature and Date of Verbal SOC Where Applicable</b></p>
-              Digitally Signed by: {{$cms->nurseSign}}
-           </td>
-           <td class="align-middle">Date: {{$cms->signDate}}</td>
-        </tr>
-        <tr>
-           <td>
-                <input {{$cms->certify ? 'checked' : ''}} type="checkbox" class="form-check-input"> I certify/ recertify that this patient is confined to his/her home and needs intermittent skilled nursing care, physical therapy and/or speech therapy or continues to need occupational therapy. This patient is under my care, and I have authorized the services on this plan of care and I or another physician will periodically review this plan. I attest that a valid face-to-face encounter occurred (or will occur) within timeframe requirements and it is related to the primary reason the patient requires home health services.
-           </td>
-           <td>
-                 <input  {{$cms->fine ? 'checked' : ''}} type="checkbox" class="form-check-input"> Anyone who misrepresents, falsifies, or conceals essential information required for payment of Federal funds may be subject to fine, imprisonment, or civil penalty under applicable Federal laws.
-           </td>
-        </tr>
-     </table>
-     <table class="table table-borderless m-0">
-        <tr>
-            <td colspan="2" class="p-0">
-                <table class="table table-bordered m-0">
-                    <tr>
-                       <td>Primary Physician {{$cms->physician}}</td>
-                       <td>Address<br>{{$cms->physicianAddress}}</td>
-                       <td>Phone Number: {{$cms->physicianPhone}}</td>
-                    </tr>
-                    <tr>
-                       <td colspan="2">NPI: {{$cms->npi}}</td>
-                       <td>Fax Number: {{$cms->physicianFax}}</td>
-                    </tr>
-                    <tr>
-                       <td colspan="2">Attending Physician's Signature and Date Signed<br>{{$cms->physicianSign}}</td>
-                       <td>Date<br>{{$cms->physicianSignDate}}</td>
-                    </tr>
-                 </table>
-            </td>
-        </tr>
-     </table>
-</div>
-    @include('pdf.home-care.pagecounter')
-</body>
-
-</html>
+<div class="container">
+    <div class="d-flex flex-column" style="background: white;">
+        <div class="d-flex flex-row justify-content-between mx-3 " >
+            <div>Department of Health and Human Services Centers for Medicare & Medicaid Services</div>
+            <div>Form Approved OMB No. 0938-0357</div>
+        </div>
+        <div class="d-flex flex-column mt-2 border mx-3 mb-4">
+ 
+            <div class="d-flex justify-content-center border-top py-2 fw-bold border bg-info bg-gradient">HOME HEALTH CERTIFICATION AND PLAN OF CARE</div>
+ 
+            <div class="d-flex border flex-row">
+                <div class="col-md-2 border px-2 py-2">
+                    1. Patient's HI Claim No.
+                    <input type="text" name="hiClaimNo" id="hiClaimNo" value="{{ $patient->insurance->medicaid_id }}" placeholder="Patient's HI Claim No." class="form-control">
+                </div>
+                <div class="col-md-2 border px-2 py-2">2. Start Of Care Date
+                    <input type="date"  name="startOfCareDate" id="startOfCareDate" value="{{$patient?->episode?->start_care_date}}" class="form-control"  >
+                </div>
+                <div class="col-md-4 d-flex flex-column border">
+                    <div class="px-2 py-2">3. Certification Period</div>
+                    <div class="d-flex flex-row justify-content-around">
+                        <div class="" style="margin-right: 10px;">From
+                            <input type="text" name="certiPeriodFrom" id="certiPeriodFrom" value="{{isset($episodeDaterange->episode_start_date)?$episodeDaterange->episode_start_date:''}}" placeholder="From" class="form-control   mr-1">
+                        </div>
+                        <div>To
+                            <input type="text" name="certiPeriodTo" id="certiPeriodTo" value="{{isset($episodeDaterange->episode_end_date)?$episodeDaterange->episode_end_date:''}}"  placeholder="To" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 border px-2 py-2">4. Medical Record No
+                    <input type="text" placeholder="Medical Record No" name="medicalRecordNo" id="medicalRecordNo" value="{{$patient->patient_code}}" class="form-control">
+                </div>
+                <div class="col-md-2 px-2 py-2">5. Provider No.
+                    <input type="text" placeholder="Provider No." name="providerNumber" id="providerNumber" value="{{$account ? $account->medicare_p_n : ''}}" class="form-control">
+                </div>
+ 
+            </div>
+            <div class="d-flex flex-row border">
+                <div class="d-flex col-md-6 border-end px-2 py-2">
+                    <div class="from-group col-md-12 py-2">
+                        6. Patient's Name and Address
+                        <input type="text" placeholder="Patient's Name and Address" class="form-control" name="name" id="name" value="{{$patient?->first_name.' '.$patient?->last_name}}, {{$patient?->address?->address_line_1.' '.$patient?->address?->address_line_2}}">
+                    </div>
+                </div>
+                <div class="d-flex col-md-6 px-2 py-2">
+                    <div class="from-group col-md-12 py-2">
+                        7. Provider's Name, Address and Telephone Number
+                        <input type="text" class="form-control" placeholder="Provider's Name, Address and Telephone Number" name="branchInfo" id="branchInfo" 
+                        value="{{ $account ? $account->company_name : '' }}">
+                        <input type="text" class="form-control" name="" id="branchAddress" value="{{ $account ? $account->address_line . ' - ' . $account->zip : '' }}, Tel: {{ $account ? $account->phone : '' }}">
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-row border">
+                <div class="d-flex flex-column col-md-6">
+                    <div class="d-flex flex-row ">
+                        <div class="col-md-7 border-end px-2 py-2">8. Date of Birth
+                            <input type="date" class="form-control" name="dateOfBirth" id="dateOfBirth" value="{{$patient?->date_of_birth}}">
+                        </div>
+                        <div class="col-md-5 px-2 py-2">
+                            9. Sex
+                            <input type="radio" name="gender" id="gender_male" id="Male" value="1" {{ $patient?->gender == 'male' ? 'checked' : '' }}>
+                            <label for="Male">M</label>
+                            <input type="radio" name="sex" name="gender" id="gender_female" value="2" {{ $patient?->gender == 'female' ? 'checked' : '' }}>
+                            <label for="Female">F</label>
+                          </div>
+                    </div>
+                    <div class="d-flex flex-row border">
+                        <div class="col-md-3 d-flex border-end border-top px-2 py-2">11. ICD- 10-CM</div>
+                        <div class="col-md-5 d-flex border-end border-top px-2 py-2">
+                            <div class="from-group col-md-12 py-2">
+                                Principal Diagnosis
+                                <input type="text" placeholder="Principal Diagnosis" class="form-control" name="diagonsisCode" id="diagonsisCode"
+                                value="{{ $patient && $patient->diagnosis ? $patient->diagnosis->primary_diagnosis_code : '' }}">
+                            </div>
+ 
+                        </div>
+                        <div class="col-md-3 d-flex  px-2">
+                            <div class="from-group">
+                                <label for="principaldate" class="col-form-label"> Date: </label>
+                                <input type="date" name="date" id="date" value="{{ $patient && $patient->diagnosis ? $patient->diagnosis->created_at->format('Y-m-d') : '' }}" class="form-control" >
+ 
+                            </div>
+ 
+                        </div>
+                    </div>
+ 
+                    <div class="d-flex flex-row border">
+                        <div class="col-md-3 d-flex border-end  px-2 py-2">12. ICD- 10-CM</div>
+                        <div class="col-md-5 d-flex border-end  px-2 py-2">
+                            <div class="from-group col-md-12  py-2">
+                                Surgical Procedure
+                                <input type="text" placeholder=" Surgical Procedure" class="form-control" name="surgical-procedure">
+                            </div>
+ 
+                        </div>
+                        <div class="col-md-3 d-flex  px-2">
+                            <div class="from-group">
+                                <label for="principaldate" class="col-form-label"> Date: </label>
+                                <input type="date" id="principaldate" class="form-control" >
+ 
+                            </div>
+ 
+                        </div>
+                    </div>
+ 
+                    <div class="d-flex flex-row border">
+                        <div class="col-md-3 d-flex border-end px-2 py-2">13. ICD- 10-CM</div>
+                        <div class="col-md-5 d-flex border-end px-2 py-2">
+                            <div class="from-group col-md-12  py-2">
+                                Other Pertinent Diagnoses
+                                <input type="text" class="form-control" placeholder="Other Pertinent Diagnoses" name="other-pertinent-diagnoses">
+                            </div>
+ 
+ 
+                        </div>
+                        <div class="col-md-3 d-flex  px-2">
+                            <div class="from-group">
+                                <label for="principaldate" class="col-form-label"> Date: </label>
+                                <input type="date" id="principaldate2" class="form-control" >
+                            </div>
+ 
+                        </div>
+                    </div>
+ 
+                </div>
+                <div class="d-flex col-md-6 border-start px-2 py-2">
+                    <div class="from-group col-md-12 py-2">
+                        10. Medications: Dose/Frequency/Route (N)ew (C)hanged (U)nchanged
+                        <textarea class="form-control py-2" name="riskProfile" id="riskProfile" rows="12" placeholder="Medications: Dose/Frequency/Route (N)ew (C)hanged (U)nchanged">
+                         @if (!empty($medications))
+                         @forelse($medications as $medication)
+                         @if ($medication->status == 1)
+                             (N) {{ $medication->medication_dosage }} - {{ $medication->frequency }} - {{ $medication->route }}
+                         @else
+                             (C) {{ $medication->medication_dosage }} - {{ $medication->frequency }} - {{ $medication->route }}
+                         @endif
+                         @empty
+                             No medications found.
+                         @endforelse
+                     @endif
+ 
+                      </textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-row">
+                <div class="col-md-6 border-end d-flex px-2 py-2">
+                    <div class="from-group col-md-12 py-2">
+                        14. DME and Supplies:
+                        <input type="text" placeholder="" class="form-control" name="dme-and-supplies">
+                    </div>
+                </div>
+                <div class="col-md-6 border d-flex px-2 py-2">
+                    <div class="from-group col-md-12 py-2">
+                        15. Safety Measures:
+                        <input type="text" placeholder="" class="form-control" name="safety-measures">
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-row">
+                <div class="col-md-6 border d-flex px-2 py-2">
+                    <div class="from-group col-md-12 py-2">
+                        16. Nutritional Req. <input type="text" placeholder="" class="form-control" name="nutritional-req">
+                    </div>
+                </div>
+                <div class="col-md-6 border d-flex px-2 py-2">
+                    <div class="from-group col-md-12 py-2">
+                        17. Allergies: <input type="text" name="substance" id="substance" value="{{ $patient && $patient->allergy ? $patient->allergy->allergy : '' }}" placeholder="" class="form-control" name="Allergies">
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-row">
+                <div class="col-md-6 border d-flex flex-column py-2 px-2" >
+ 
+                    <div class="d-flex py-2">18.A. Functional Limitations</div>
+                    <div class="d-flex flex-row justify-content-between" style="font-size: 11px;">
+                        <div class="d-flex flex-column col-md-4">
+                            <div class="">
+                                1 <input type="checkbox" name="funcitonalLimition" id="amputation" value="amputation">
+                                <label for="amputation">Amputation</label>
+                            </div>
+ 
+                            <div>
+                                2 <input type="checkbox" name="funcitonalLimition" id="bowelBladder" value="bowelBladder">
+                                <label for="bowelBladder">Bowel/Bladder (Incontinence)</label>
+                            </div>
+ 
+                            <div>
+                                3 <input type="checkbox" name="funcitonalLimition" id="contracture" value="contracture">
+                                <label for="contracture">Contracture</label>
+                            </div>
+ 
+                            <div>
+                                4 <input type="checkbox" name="funcitonalLimition" id="hearing" value="hearing">
+                                <label for="hearing">Hearing</label>
+                            </div>
+ 
+ 
+                        </div>
+ 
+                        <div class="d-flex flex-column col-md-3">
+                            <div>
+                                5 <input type="checkbox" name="funcitonalLimition" id="paralysis" value="paralysis">
+                                <label for="paralysis">Paralysis</label>
+                            </div>
+ 
+                            <div>
+                                6 <input type="checkbox" name="funcitonalLimition" id="endurance" value="endurance">
+                                <label for="endurance">Endurance</label>
+                            </div>
+ 
+                            <div>
+                                7 <input type="checkbox" name="funcitonalLimition" id="ambulation" value="ambulation">
+                                <label for="ambulation">Ambulation</label>
+                            </div>
+ 
+                            <div>
+                                8 <input type="checkbox" name="funcitonalLimition" id="speech" value="speech">
+                                <label for="speech">Speech</label>
+                            </div>
+ 
+ 
+                        </div>
+ 
+                        <div class="d-flex flex-column col-md-5">
+                            <div>
+                                9 <input type="checkbox" name="funcitonalLimition" id="legallyBlind" value="legallyBlind">
+                                <label for="legallyBlind">Legally Blind</label>
+                            </div>
+ 
+                            <div>
+                                A <input type="checkbox" name="funcitonalLimition" id="dyspneaWithMinimalExertion" value="dyspneaWithMinimalExertion">
+                                <label for="dyspneaWithMinimalExertion">Dyspnea With Minimal Exertion </label>
+                            </div>
+ 
+                            <div>
+                                B <input type="checkbox" name="funcitonalLimition" id="other" value="Other">
+                                <label for="other">Other (Specify)</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+ 
+                <div class="col-md-6 border d-flex flex-column px-2 py-2" >
+ 
+                    <div class="d-flex py-2 ">18.B. Activities Permitted</div>
+                    <div class="d-flex flex-row justify-content-between" style="font-size: 11px;">
+                        <div class="d-flex flex-column col-md-4">
+                            <div>
+                                1 <input type="checkbox" name="activitiPermitted[]" id="completeBedrest" value="completeBedrest">
+                                <label for="completeBedrest">Complete Bedrest</label>
+                            </div>
+ 
+                            <div>
+                                2 <input type="checkbox" name="activitiPermitted[]" id="bedrestBRP" value="bedrestBRP">
+                                <label for="bedrestBRP">Bedrest BRP</label>
+                            </div>
+ 
+                            <div>
+                                3 <input type="checkbox" name="activitiPermitted[]" id="upAsTolerated" value="upAsTolerated">
+                                <label for="upAsTolerated">Up As Tolerated</label>
+                            </div>
+ 
+                            <div>
+                                4 <input type="checkbox" name="activitiPermitted[]" id="transferBed" value="transferBed">
+                                <label for="transferBed">Transfer Bed/Chair</label>
+                            </div>
+ 
+                            <div>
+                                5 <input type="checkbox" name="activitiPermitted[]" id="exercisesPrescribed" value="exercisesPrescribed">
+                                <label for="exercisesPrescribed">Exercises Prescribed</label>
+                            </div>
+ 
+ 
+                        </div>
+ 
+                        <div class="d-flex flex-column col-md-4">
+                            <div>
+                                6 <input type="checkbox" name="activitiPermitted[]" id="partialWeightBearing" value="partialWeightBearing">
+                                <label for="partialWeightBearing">Partial Weight Bearing</label>
+                            </div>
+ 
+                            <div>
+                                7 <input type="checkbox" name="activitiPermitted[]" id="independentAtHome" value="independentAtHome">
+                                <label for="independentAtHome">Independent At Home</label>
+                            </div>
+ 
+                            <div>
+                                8 <input type="checkbox" name="activitiPermitted[]" id="crutches" value="crutches">
+                                <label for="crutches">Crutches</label>
+                            </div>
+                            <div>
+                                9 <input type="checkbox" name="activitiPermitted[]" id="cane" value="cane">
+                                <label for="cane">Cane</label>
+                            </div>
+ 
+                        </div>
+ 
+                        <div class="d-flex flex-column col-md-4">
+ 
+ 
+                            <div>
+                                A <input type="checkbox" name="activitiPermitted[]" id="wheelchair" value="wheelchair">
+                                <label for="wheelchair">Wheelchair </label>
+                            </div>
+ 
+                            <div>
+                                B <input type="checkbox" id="walker" name="activitiPermitted[]" value="walker">
+                                <label for="walker">Walker</label>
+                            </div>
+                            <div>
+                                C <input type="checkbox" name="activitiPermitted[]" id="noRestrictions" value="noRestrictions">
+                                <label for="noRestrictions">No Restrictions</label>
+                            </div>
+                            <div>
+                                D <input type="checkbox" name="activitiPermitted[]" id="actiothers" value="Other">
+                                <label for="actiothers">Other (Specify)</label>
+                            </div>
+                        </div>
+ 
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-row">
+                <div class="col-md-4 px-2 py-2">19. Mental Status:</div>
+                <div class="col-md-8 d-flex flex-wrap">
+                    <div class="col-md-3">
+                        1 <input type="checkbox" name="mentalstatus" id="oriented" value="oriented">
+                        <label for="oriented">Oriented</label>
+                    </div>
+ 
+                    <div class="col-md-3">
+                        2 <input type="checkbox" name="mentalstatus" id="comatose" value="comatose">
+                        <label for="comatose">Comatose</label>
+                    </div>
+ 
+                    <div class="col-md-3">
+                        3 <input type="checkbox" name="mentalstatus" id="forgetful" value="forgetful">
+                        <label for="forgetful">Forgetful</label>
+                    </div>
+ 
+                    <div class="col-md-3">
+                        4 <input type="checkbox" name="mentalstatus" id="depressed" value="depressed">
+                        <label for="depressed">Depressed</label>
+                    </div>
+ 
+                    <div class="col-md-3">
+                        5 <input type="checkbox" name="mentalstatus" id="disoriented" value="disoriented">
+                        <label for="disoriented">Disoriented</label>
+                    </div>
+ 
+                    <div class="col-md-3">
+                        6 <input type="checkbox" name="mentalstatus" id="lethargic" value="lethargic">
+                        <label for="lethargic">Lethargic</label>
+                    </div>
+                    <div class="col-md-3">
+                        7 <input type="checkbox" name="mentalstatus" id="agitated" value="agitated">
+                        <label for="agitated">Agitated</label>
+                    </div>
+                    <div class="col-md-3">
+                        8 <input type="checkbox" name="mentalstatus" id="menstother" value="Other">
+                        <label for="menstother">Other</label>
+                    </div>
+ 
+                </div>
+            </div>
+ 
+            <div class="d-flex flex-row border">
+                <div class="col-md-2 px-2 py-2">20. Prognosis:</div>
+ 
+                <div class="col-md-2 py-2">
+                    1 <input type="checkbox" name="Prognosis" id="poor" value="poor">
+                    <label for="poor">Poor</label>
+                </div>
+ 
+                <div class="col-md-2 px-2 py-2">
+                    2 <input type="checkbox" name="Prognosis" id="guarded" value="guarded">
+                    <label for="guarded">Guarded</label>
+                </div>
+                <div class="col-md-2 px-2 py-2">
+                    3 <input type="checkbox" name="Prognosis" id="fair" value="fair">
+                    <label for="fair">Fair</label>
+                </div>
+                <div class="col-md-2 px-2 py-2">
+                    4 <input type="checkbox" name="Prognosis" id="good" value="good">
+                    <label for="good">Good</label>
+                </div>
+                <div class="col-md-2 px-2 py-2">
+                    5 <input type="checkbox" name="Prognosis" id="excellent" value="excellent">
+                    <label for="excellent">Excellent</label>
+                </div>
+ 
+ 
+ 
+            </div>
+ 
+            <div class="d-flex border px-2 py-2" style="height: 300px;">
+                <div class="from-group col-md-12 py-2">
+                    21. Orders for Discipline and Treatments (Specify Amount/Frequency/Duration)
+ 
+                    <textarea class="form-control py-2"  name="medications" id="medications" rows="7">{{ $patient && $patient->cms ? $patient->cms->medications : '' }}</textarea>
+ 
+                </div>
+            </div>
+            <div class="d-flex border px-2 py-2" style="height: 200px;">
+                <div class="from-group col-md-12 py-2">
+                    22. Goals/Rehabilitation Potential/Discharge Plans
+ 
+                    <textarea class="form-control py-2" name="treatments" id="treatments"  rows="4">{{ $patient && $patient->cms ? $patient->cms->treatments : '' }}</textarea>
+                </div>
+            </div>
+ 
+            <div class="d-flex flex-row border" >
+                <div class="d-flex col-md-8 border-end px-2 py-2">
+                    <div class="from-group col-md-12 py-2">
+                        23. Nurse's Signature and Date of Verbal SOC Where Applicable: 
+                        <textarea name="nurseSign" id="nurseSign" cols="30" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="d-flex col-md-4 px-2 py-2">
+                    <div class="from-group col-md-12 py-2">
+                        25. Date HHA Received Signed POT
+                        <input type="date" class="form-control" name="DateHHA">
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-row border" >
+                <div class="d-flex col-md-6 border-end px-2 py-2">
+                    <div class="from-group col-md-12 py-2">
+ 
+                        24. Physician's Name and Address
+ 
+                        <textarea class="form-control py-2" name="name" id="name" rows="5"> 
+                             {{ $patient && $patient->cms ? $patient->cms->physician : '' }},
+                             {{ $patient && $patient->cms ? $patient->cms->physicianAddress : '' }}
+                        </textarea>
+                    </div>
+                </div>
+                <div class="d-flex col-md-6 px-2 py-2">
+ 
+ 
+ 
+                    <div class="from-group col-md-12 py-2">
+                        <div>
+ 
+                            26. I certify/recertify that this patient is confined to his/her home and needs
+                            intermittent skilled nursing care, physical therapy and/or speech
+                            therapy or continues to need occupational therapy. The patient is under
+                            my care, and I have authorized the services on this plan
+                        </div>
+                        <div>
+ 
+                            <textarea class="form-control py-2" >
+                            
+                            </textarea>
+                        </div>
+                    </div>
+ 
+ 
+                </div>
+            </div>
+ 
+            <div class="d-flex flex-row border" >
+                <div class="d-flex col-md-6 border-end px-2 py-2">
+                    <div class="from-group col-md-12 py-2">
+                        <div>
+ 
+                            27. Attending Physician's Singnature and Date Signed
+                        </div>
+                        <div>
+                            <textarea class="form-control py-2" rows="4"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex col-md-6 px-2 py-2">
+                    <div class="from-group col-md-12 py-2">
+                        28. Anyone who misrepresents, falsifies, or conceals essential information required for payment of Federal funds may be subject to fine, imprisonment, or civil penalty under applicable Federal laws.
+                        <textarea class="form-control py-2"></textarea>
+ 
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="d-flex flex-column border mt-2 mx-3 mb-4">
+            <div class="d-flex justify-content-center py-2 fw-bold border bg-info bg-gradient"> ADDENDUM TO: PLAN OF TREATMENT </div>
+ 
+            <div class="d-flex border flex-row">
+                <div class="col-md-2 border-end px-2 py-2">1. Patient's HI Claim No. <input type="text" placeholder="" class="form-control" name="hiClaimNo" id="" value="{{ $patient->insurance->medicaid_id }}">
+                </div>
+                <div class="col-md-2 border-end px-2 py-2">2. Start Of Care Date <input type="date"  class="form-control" name="startOfCareDate" id="startOfCareDate" value="{{$patient?->episode?->start_care_date}}">
+                </div>
+                <div class="col-md-4 d-flex flex-column border-end">
+                    <div class="px-2 py-2">3. Certification Period</div>
+                    <div class="d-flex flex-row justify-content-around">
+                        <div>From <input type="date" class="form-control" name="certiPeriodFrom" id="certiPeriodFrom" value="{{isset($episodeDaterange->episode_start_date)?$episodeDaterange->episode_start_date:''}}">
+                        </div>
+                        <div>To <input type="date" class="form-control" name="certiPeriodTo" id="certiPeriodTo" value="{{isset($episodeDaterange->episode_end_date)?$episodeDaterange->episode_end_date:''}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 border-end px-2 py-2">4. Medical Record No
+                    <input type="text" placeholder="" class="form-control" name="medicalRecordNo" id="medicalRecordNo" value="{{$patient->patient_code}}" class="form-control">
+                </div>
+                <div class="col-md-2  px-2 py-2">5. Provider No. <input type="text" placeholder="" class="form-control" name="providerNumber" id="providerNumber" value="{{$account ? $account->medicare_p_n : ''}}" class="form-control">
+                </div>
+            </div>
+            <div class="d-flex flex-row border">
+                <div class="d-flex col-md-6 border-end px-2 py-2">
+                    <div class="from-group col-md-12 py-2">
+                        6. Patient's Name
+                        <input type="text" placeholder="" class="form-control" name="patientsName2" value="{{$patient->first_name}} {{$patient->middle_name}} {{$patient->last_name}} ">
+                    </div>
+                </div>
+                <div class="d-flex col-md-6 px-2 py-2">
+                    <div class="from-group col-md-12 py-2">
+ 
+                        7. Provider's Name
+                        <input type="text" placeholder="" class="form-control" value="{{ $account ? $account->company_name : '' }}">
+                    </div>
+ 
+                </div>
+            </div>
+            <div class="d-flex px-2 py-2">
+                <div class="from-group col-md-12 py-2">
+                    <textarea name="periodicallyreviewtheplan" placeholder="8. of care and will periodically review the plan" id="periodicallyreviewtheplan" cols="100" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="d-flex flex-row border">
+                <div class="d-flex col-md-8 border-end px-2 py-2">
+                    <div class="from-group col-md-12">
+                      <textarea placeholder="9. Signature of Physician:" name="" id="" cols="60" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="d-flex col-md-4 px-2 py-2">
+                    <div class="from-group">
+                        <label for="physicalsign" class="col-form-label">  10. Date:
+                        </label>
+                        <input type="text" id="physicalsign" class="form-control" >
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="d-flex flex-row border">
+                <div class="d-flex col-md-8 border-end px-2 py-2">
+                    <div class="from-group col-md-12 py-2">
+                        
+                        <textarea placeholder="11. Optional Name / Signature of Nurse / Therapist" name="" id="" cols="60" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="d-flex col-md-4 px-2 py-2">
+                    <div class="from-group">
+                        <label for="optionsing" class="col-form-label"> 12. Date: </label>
+                        <input type="date" id="optionsing" class="form-control" >
+                    </div>
+                </div>
+            </div>
+        </div>
+        </body>
+        </html>
+ 

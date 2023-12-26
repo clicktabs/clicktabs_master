@@ -13,7 +13,7 @@
         }
 
         .dataTables_length label select {
-            width: 100px;  
+            width: 100px;
         }
 
         table.dataTable > tbody > tr.child ul.dtr-details {
@@ -722,7 +722,7 @@
                 const month = String(newDate.getMonth() + 1).padStart(2, '0');
                 const day = String(newDate.getDate()).padStart(2, '0');
 
-                const result = `${year}-${month}-${day}`;
+                const result = `${month}-${day}-${year}`;
 
                 console.log(result);
                 $('#episode_end_date').val(result)

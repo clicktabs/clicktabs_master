@@ -165,13 +165,13 @@
                                 <div id="tabs" class="vt pt-1 fw-bolder">
                                     <ul class=" ">
                                         <li><a href="#main">Main</a></li>
-                                        <li><a href="#invoice">Invoice</a></li>
+                                        {{-- <li><a href="#invoice">Invoice</a></li>
                                         <li><a href="#tabs-3">Bill Info</a></li>
                                         <li><a href="#tabs-4">Pay Info</a></li>
                                         <li><a href="#tabs-5">Maliage</a></li>
                                         <li><a href="#tabs-6">Payers</a></li>
                                         <li><a href="#tabs-7">Schedule Info</a></li>
-                                        <li><a href="#tabs-8">Signatures</a></li>
+                                        <li><a href="#tabs-8">Signatures</a></li> --}}
                                     </ul>
                                     <div id="main">
                                         <form class="form" action="{{ route("schedule.save") }}" method="post"
@@ -1386,7 +1386,7 @@
                 month = '0' + month.toString();
             if (day < 10)
                 day = '0' + day.toString();
-            let maxDate = year + '-' + month + '-' + day;
+            let maxDate = month + '-' + day + '-' + year;
             $('#kt_calendar_datepicker_start_date').attr('min', maxDate);
 
             // End date

@@ -183,8 +183,8 @@
                               <div class="col-auto">
                                  <div class="input-group">
                                     <label class="input-group-text">Date</label>
-                                    <input type="date" id="" name="referralDate" value="{{ old('referralDate') }}" class="form-control">
-                                 </div>
+                                    <input type="date" id="" name="referralDate" value="" class="form-control">
+                                 </div>                           
                               </div>
                               <!-- <div class="col-auto">
                                  <div class="input-group">
