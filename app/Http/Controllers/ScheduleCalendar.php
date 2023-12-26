@@ -214,7 +214,8 @@ class ScheduleCalendar extends Controller
             case 'Oasis-E-Death(Non-Billable)':
                 return view('Skilled-Agency.oasis-e-dealth');
             case 'Oasis-E-Recertification(Billable)':
-                return view('Skilled-Agency.oasis-e-recertification');
+                $patient = Patient::where('id', $schedule->patient_id)->first();
+                return view('Skilled-Agency.oasis-e-recertification', compact('patient'));
             case 'Oasis-E-Transfer(Non-Billable)':
                 return view('Skilled-Agency.oasis-e-transfer');
             case 'OASIS-E Start of Care':
