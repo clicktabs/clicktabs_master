@@ -1071,18 +1071,10 @@
 					<!------------------Update Meication Profile Starts------------------------------->
 					<div class="px-[15px]" id="tabs-medication">
 						<div class="flex items-center gap-[15px] mt-[5px] overflow-x-scroll">
-							<button
-							class="add_new_medication_continue btn btn-success text-white flex-shrink-0 !bg-[#4133BF]">
-							Add Medication
-						</button>
+                            <button type="button" class="add_new_medication_continue btn btn-success text-white flex-shrink-0 !bg-[#4133BF]">
+                                Add Medication
+                            </button>
 					</div>
-				<div class="modal fade !max-w-[768px] !w-[768px]" id="continueModal" tabindex="-1" role="dialog" aria-labelledby="continueModal" aria-hidden="true">
-						<div class="overlay fixed top-0 left-0 w-full h-full"></div>
-						<div class="container">
-
-						</div>
-					</div>
-				</div>
 				<!------------------Update Meication Profile Ends------------------------------->
 
 
@@ -1376,3 +1368,157 @@
 		</div>
 
 </div><!------/page one end---->
+
+
+<!-- Modal -->
+<div class="modal fade !max-w-[768px] !w-[768px]" id="continueModal" tabindex="-1" role="dialog" aria-labelledby="continueModal" aria-hidden="true">
+    <div class="overlay fixed top-0 left-0 w-full h-full"></div>
+    <div class="container">
+        <form action="{{ route('medication.discontinue.store') }}" method="POST">
+            @csrf
+            <div class="medication-content">
+                <div class="row">
+                    <h4 class="text-center font-[700] text-[20px] !bg-[#4133BF] text-[#fff] p-2">Add Medications</h4>
+                    <div class="col-md-12">
+                        <div class="flex items-center gap-[15px]">
+                            <input type="checkbox" name="long_standing"
+                                   id="long_standing" value="1"/>
+                            <label for="long_standing">Long Standing</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="hidden" name="p_id" value="{{$patient->id}}">
+                    <div class="col-md-6">
+                        <label for="conStartDate" class="py-1">Start Date
+                            <span class="text-red">*</span></label>
+                        <input name="start_date" id="conStartDate"
+                               type="date" placeholder="Date picker"
+                               class="form-control s ou  p-3" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="dcThroughDate" class="py-1">D/C Through
+                            Date<span class="text-red">*</span></label>
+                        <input name="through_date" id="dcThroughDate"
+                               type="date" class="form-control s ou  p-3"
+                               required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col relative">
+                        <label for="medication_dosage" class="block py-1">
+                            Medication & Dosage <span
+                                class="text-red">*</span></label>
+                        <input class="form-control" type="text"
+                               name="medication_dosage"
+                               id="medication_dosage"
+                               placeholder="Drug name"/>
+                        <span class="text-[12px] block font-[700]">Search for
+                            Medication is required to include medication in drug
+                            interactions check.</span>
+                        <div id="results"></div>
+                    </div>
+                    <div class="col">
+                        <label for="drug_strengths" class="py-1">
+                            Medication & Dosage strength <span
+                                class="text-red">*</span></label>
+                        <select class="form-control" id="drug_strengths"
+                                name="strength">
+                            <option value="">Select drug strength
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="contRoute" class="py-1"> Route <span
+                                class="text-red">*</span></label>
+                        <input name="route" id="contRoute" type="text"
+                               placeholder="Route"
+                               class="form-control s ou  p-3"
+                               required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="contFrequency" class="py-1"> Frequency
+                            <span class="text-red">*</span></label>
+                        <input name="frequency" id="contFrequency"
+                               type="text" placeholder="Frequency"
+                               class="form-control s ou  p-3" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="contClassification"
+                               class="py-1">Classification
+                            <span class="text-red">*</span></label>
+                        <input name="classification" id="contClassification"
+                               type="text" placeholder="Classification"
+                               class="form-control s ou  p-3" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="medicationType" class="py-1"> Type<span
+                                class="text-red">*</span></label>
+                        <select class="form-control !py-[16px]"
+                                name="type">
+                            <option value="1">New</option>
+                            <option value="0">New</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="contPhysician" class="py-1"> Physician <span class="text-red">*</span></label>
+                        <select name="physician" required>
+                            <option value="">Select physician</option>
+                            @if($physicians)
+                                @foreach( $physicians as $single_physician )
+                                    <option value="{{$single_physician->id}}">{{$single_physician->first_name . ' ' . $single_physician->last_name}}</option>
+                                @endforeach
+                            @endif
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="contPharmacy" class="py-1"> Pharmacy<span class="text-red">*</span></label>
+                        <select name="pharmacy" required>
+                            <option value="">Select pharmacy</option>
+                            @if($pharmacies)
+                                @foreach( $pharmacies as $single_pharmacie )
+                                    <option value="{{$single_pharmacie->id}}">{{$single_pharmacie->name}}</option>
+                                @endforeach
+                            @endif
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label for="medicationType" class="py-1"> Medication
+                            status
+                            <span class="text-red">*</span></label>
+                        <select class="form-control !py-[16px]"
+                                name="status">
+                            <option value="1">Continue</option>
+                            <option value="0">Dis continue</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="flex items-center gap-[15px]">
+                        <button type="submit" class="form-control btn btn-primary !bg-[#4133BF] text-[#fff]">Save &
+                            Exit
+                        </button>
+                        <button type="button" class="form-control btn btn-primary !bg-[#4133BF] text-[#fff]">Exit
+                            Without Saving
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal fade !max-w-full" id="editquickViewmedicationModal"
+     tabindex="-1" role="dialog"
+     aria-labelledby="medicationModal" aria-hidden="true">
+    <div class="container edit-modal-content4">
+    </div>
+</div>
+<!--/ End Modal -->

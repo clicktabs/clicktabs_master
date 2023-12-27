@@ -248,6 +248,10 @@ border-bottom: 3px double;
 .dataTables_scrollHead .dataTables_scrollHeadInner table {
     width: 100% !important;
 }
+
+.dataTables_scroll, .dataTables_scrollHead {
+    padding-top: 0;
+}
 </style>
 @endsection
 @section('content')
@@ -454,7 +458,7 @@ border-bottom: 3px double;
         @endif
         @canany(['admin-dashboard','employee-dashboard'])
     <div id="employee_info_tabs" class="mt-[0px] bg-[#fff] p-[0px]">
-        <ul class="d-flex flex-nowrap align-items-center gap-3  py-[10px] px-[20px] mb-[30px] bg-[#4133BF] " >
+        <ul class="d-flex flex-nowrap align-items-center gap-3  py-[10px] px-[20px] mb-3 bg-[#4133BF] " >
             <li class="flex-shrink-0">
                 <a href="#employee_patient">My patients</a>
             </li>
