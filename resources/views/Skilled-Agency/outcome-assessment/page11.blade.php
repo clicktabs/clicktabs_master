@@ -447,7 +447,6 @@
                 Yes</label>
             <br>
 
-            {{-- Pull from addons intervention --}}
             <label class="form-check-label">Reason for need:</label>
             <textarea name="ifhhaExplain" id="" cols="30" rows="2" class="form-control mt-1"></textarea>
         </td>
@@ -738,4 +737,5 @@
         </td>
     </tr>
 </table>
+
 

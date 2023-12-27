@@ -38,10 +38,6 @@ class TemplatesController extends Controller
         $new_goals_addons = Addon::where('name', 'like', 'New Goals%')->where('status', '1')->first();
         $new_goals = get_sub_addons($new_goals_addons, $organization_id);
 
-        $new_intervention_addons = Addon::where('name', 'like', 'New Interventions%')->where('status', '1')->first();
-        $new_interventions = get_sub_addons($new_intervention_addons, $organization_id);
-
-
         // $section_gg_functional_abilities = Addon::where('name', 'like', 'Section GG Functional Abilities and Goals%')->where('status', '1')->first();
         // $section_gg_functional_abilities = get_sub_addons($section_gg_functional_abilities, $organization_id);
 
@@ -51,8 +47,9 @@ class TemplatesController extends Controller
         // $bims_summary_scores = Addon::where('name', 'like', 'C0500. BIMS Summary Score%')->where('status', '1')->first();
         // $bims_summary_scores = get_sub_addons($bims_summary_scores, $organization_id);
 
-     
-        // return view('templates.create', compact('new_goals', 'new_interventions', 'section_gg_functional_abilities', 'section_g_functional_status', 'bims_summary_scores'));
+        $new_intervention_addons = Addon::where('name', 'like', 'New Interventions%')->where('status', '1')->first();
+        $new_interventions = get_sub_addons($new_intervention_addons, $organization_id);
+
         return view('templates.create', compact('new_goals', 'new_interventions'));
     }
 
@@ -68,10 +65,10 @@ class TemplatesController extends Controller
 
         $validated = $request->all();
         Template::create([
-            'new_goals_templates' => json_encode($validated['new_goals']),
-            'template_new_goals_content' => $validated['new_goal_content'],
-            'template_new_intervention_content' => $validated['new_intervention_content'],
-            'new_intervention_templates' => json_encode($validated['new_interventions']),
+            'new_goals_templates' => json_encode($request->new_goals),
+            'template_new_goals_content' => $request->new_goal_content,
+            'template_new_intervention_content' => $request->new_intervention_content,
+            'new_intervention_templates' => json_encode($request->new_interventions),
 
             // 'section_gg_functional_abilities_goals_content' => $validated['section_gg_functional_abilities_goals_content'],
             // 'section_gg_functional_abilities_goals_templates' => json_encode($validated['section_gg_functional_abilities_goals_templates']),
@@ -81,7 +78,7 @@ class TemplatesController extends Controller
 
             // 'bims_summary_score_content' => $validated['bims_summary_score_content'],
             // 'bims_summary_score_templates' => json_encode($validated['bims_summary_score_templates']),
-            // 'organization_id' => $organization_id
+            'organization_id' => $organization_id
         ]);
 
         return redirect()->route('templates.index')->with('success', 'Template created successfully.');
@@ -110,9 +107,6 @@ class TemplatesController extends Controller
         $new_goals_addons = Addon::where('name', 'like', 'New Goals%')->where('status', '1')->first();
         $new_goals = get_sub_addons($new_goals_addons, $organization_id);
 
-        $new_intervention_addons = Addon::where('name', 'like', 'New Interventions%')->where('status', '1')->first();
-        $new_interventions = get_sub_addons($new_intervention_addons, $organization_id);
-
         // $section_gg_functional_abilities = Addon::where('name', 'like', 'Section GG Functional Abilities and Goals%')->where('status', '1')->first();
         // $section_gg_functional_abilities = get_sub_addons($section_gg_functional_abilities, $organization_id);
 
@@ -124,7 +118,8 @@ class TemplatesController extends Controller
         // $bims_summary_scores = Addon::where('name', 'like', 'C0500. BIMS Summary Score%')->where('status', '1')->first();
         // $bims_summary_scores = get_sub_addons($bims_summary_scores, $organization_id);
 
-       
+        $new_intervention_addons = Addon::where('name', 'like', 'New Interventions%')->where('status', '1')->first();
+        $new_interventions = get_sub_addons($new_intervention_addons, $organization_id);
 
         $templates = Template::find($id);
 
@@ -156,7 +151,7 @@ class TemplatesController extends Controller
 
         // $template->bims_summary_score_content = $validated['bims_summary_score_content'];
         // $template->bims_summary_score_templates = json_encode($validated['bims_summary_score_templates']);
-        // $template->organization_id = $organization_id;
+        $template->organization_id = $organization_id;
         $template->save();
 
         return redirect()->route('templates.index')->with('success', 'Template updated successfully.');
