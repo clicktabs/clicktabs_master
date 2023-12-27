@@ -480,6 +480,10 @@ display: none;
 max-width: 100% !important;
 width: 90% !important;
 }
+.modal [class*="col-md-"] {
+    margin: 0.5rem 0;
+}
+
 </style>
 
 @endsection
@@ -535,4 +539,130 @@ width: 90% !important;
 <script src="{{ asset('assets/js/maplibre-gl.js') }}"></script>
 <script src="{{ asset('assets/js/leaflet-maplibre-gl.js') }}"></script>
 <script src="{{ asset('assets/js/jquery-ui.js') }}"></script>
+
+<script>
+    jQuery(document).ready(function() {
+        $('.add_new_medication_continue').click(function () {
+            $('#continueModal').modal({
+                fadeDuration: 100
+            });
+        });
+
+        jQuery('#results').hide();
+
+        const debounceDelay = 100;
+        let debounceTimer;
+        let lastSearchQuery = '';
+        const apiURL = 'https://clinicaltables.nlm.nih.gov/api/rxterms/v3/search?ef=STRENGTHS_AND_FORMS,SXDG_RXCUI';
+
+        jQuery('#medication_dosage, #medication_dosage_edit').keyup(function () {
+            const searchTerm = $(this).val().trim();
+            jQuery('.overlay').show();
+            clearTimeout(debounceTimer);
+            jQuery('#results').show('slow');
+            debounceTimer = setTimeout(() => {
+                if (searchTerm === lastSearchQuery) {
+                    return;
+                }
+                lastSearchQuery = jQuery(this).val();
+                if (searchTerm !== '') {
+                    fetchData(searchTerm);
+                } else {
+                    clearMedicationList();
+                }
+            }, debounceDelay);
+        });
+
+        $(document).on('keyup', '#medication_dosage_edit', function () {
+            const searchTerm = $(this).val().trim();
+            jQuery('.overlay').show();
+            clearTimeout(debounceTimer);
+            jQuery('#results_edit').show('slow');
+            debounceTimer = setTimeout(() => {
+                if (searchTerm === lastSearchQuery) {
+                    return;
+                }
+                lastSearchQuery = jQuery(this).val();
+                if (searchTerm !== '') {
+                    fetchData(searchTerm);
+                } else {
+                    clearMedicationList();
+                }
+            }, debounceDelay);
+        });
+        let strengthData = [];
+
+        function fetchData(searchTerm) {
+            $.ajax({
+                url: apiURL + '&terms=' + searchTerm,
+                method: 'GET',
+                success: function (response) {
+                    const data = response;
+                    console.log(response)
+                    const secondItem = data[1];
+                    strengthData = data[2].STRENGTHS_AND_FORMS;
+                    displayMedication(secondItem);
+                },
+                error: function (error) {
+                    console.log('An error occurred:', error);
+                }
+            });
+        }
+
+        function displayMedication(medication) {
+            // console.log(medication)
+            const medicationListDiv = $('#results');
+            medicationListDiv.empty();
+
+            let list = $('<ul></ul>');
+
+            if (medication.length > 0) {
+                for (let i = 0; i < medication.length; i++) {
+                    list.append(
+                        `<li data-medication='${medication[i]}' data-index='${i}' >${medication[i]}</li>`)
+                }
+            } else {
+                list.append('<div>No data found</div>');
+            }
+
+
+            medicationListDiv.append(list);
+        }
+
+        // Insert drug name
+        jQuery('body').on('click', '#results ul li', function () {
+            jQuery('#medication_dosage').val(jQuery(this).data('medication'));
+            jQuery('#results').fadeOut('fast');
+            jQuery('.overlay').hide();
+            let index = jQuery(this).data('index');
+            jQuery('#drug_strengths').empty();
+            jQuery('#drug_strengths').append($('<option>', {
+                value: '',
+                text: 'Select drug strength'
+            }));
+            for (let i = 0; i < strengthData[index].length; i++) {
+                jQuery('#drug_strengths').append($('<option>', {
+                    value: strengthData[index][i],
+                    text: strengthData[index][i]
+                }));
+            }
+        });
+
+        jQuery('.overlay').click(function () {
+            jQuery(this).hide();
+            jQuery('#results').hide();
+        });
+
+        function clearMedicationList() {
+            const medicationListDiv = $('#results');
+            medicationListDiv.empty();
+
+            jQuery('#drug_strengths').empty();
+            jQuery('#drug_strengths').append($('<option>', {
+                value: '',
+                text: 'Select drug strength'
+            }));
+        }
+    });
+</script>
 @endsection
