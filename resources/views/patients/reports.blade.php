@@ -31,14 +31,6 @@
                                         <option value="">Location 4</option>
                                     </select>
                                 </td> 
-                                <td>
-                                    <select class="form-select" aria-label="Location select">
-                                        <option value="">Select Option</option>
-                                        <option value="">DODD</option>
-                                        <option value="">Non-skilled</option>
-                                        <option value="">skilled</option>
-                                    </select>
-                                </td>  
                                 <td style="max-width: 200px">
                                     <select class="form-select" aria-label="Location select">
                                         <option value="">Select Report Item</option>
@@ -62,7 +54,6 @@
                                         <option value="">Employee Roster</option>  
                                         <option value="">Employee License</option>  
                                         <option value="">Expiring Documents</option>  
-                                        <option value="">Employee Task</option>  
                                         <option value="">Employee Visits</option>  
                                         <option value="">Employee Birthday</option>                      
                                     </select>

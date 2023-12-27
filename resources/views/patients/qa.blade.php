@@ -50,14 +50,14 @@
                                         <option value="Supervisor Visit<">HHA Supervisor Visit</option>
                                     </select>
                                 </td>
-                                <td style="max-width: 200px">
+                                {{-- <td style="max-width: 200px">
                                     <select class="form-select" aria-label="All Tasks select">
                                         <option value="">Select Status</option>
                                         <option value="Pending">Pending</option>
                                         <option value="Review">Review</option>
                                         <option value="Submitted">Submitted</option>
                                     </select>
-                                </td>
+                                </td> --}}
                             </tr>
                         </tbody>
                     </table>
