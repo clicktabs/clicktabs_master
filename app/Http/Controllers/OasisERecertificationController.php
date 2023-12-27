@@ -1740,15 +1740,11 @@ class OasisERecertificationController extends Controller
         $oasisM->save();
 
         $qaList = new QaList();
-        $qaList->patient_id = 2;
+        $qaList->patient_id = $request->patient_id;
 
         $qaList->save();
 
-        if (isset($request->save_exit)) {
-            return redirect(route('patients.qa'));
-        }
-
-        return redirect()->back();
+        return redirect(route('patients.qa'));
         
     }
 }
