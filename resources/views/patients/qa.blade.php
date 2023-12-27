@@ -46,7 +46,7 @@
                                         <option value="Orders Not Sent">Orders Not Sent</option>
                                         <option value="Pending Orders Signature">Pending Orders Signature</option>
                                         <option value="Assessment">Oasis-E-SOC-Assessment</option>
-                                        <option value="Assessment">Oasis-E-Recertification-Assessment</option>
+                                        <option value="Recertification">Oasis-E-Recertification-Assessment</option>
                                         <option value="Supervisor Visit<">HHA Supervisor Visit</option>
                                     </select>
                                 </td>
