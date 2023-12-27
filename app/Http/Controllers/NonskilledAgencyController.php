@@ -343,7 +343,7 @@ class NonskilledAgencyController extends Controller
     {
         // dd($req->input());   // dd($req->all());
 
-        Hhavisitnote::create([
+        $hha1s = Hhavisitnote::create([
             'schedule_id' => $req->input('schedule_id'),
             'date_1' => $req->date_1,
             'time_in' => $req->time_in,
@@ -409,6 +409,7 @@ class NonskilledAgencyController extends Controller
         ]);
 
         Hhavisitnote1::create([
+            'hhavisitnote1s_id' => $hha1s->id,
             'clean_dentures_1' => $req->clean_dentures_1,
             'shave' => $req->shave,
             'shave_1' => $req->shave_1,
@@ -463,6 +464,7 @@ class NonskilledAgencyController extends Controller
         ]);
 
         Hhavisitnote2::create([
+            'hhavisitnote2s_id' => $hha1s->id,
             'every_hrs' => $req->every_hrs,
             'comments_33' => $req->comments_33,
             'exercise_pt' => $req->exercise_pt,
@@ -515,8 +517,189 @@ class NonskilledAgencyController extends Controller
             'patient_date' => $req->patient_date
 
         ]);
+        return redirect()->back()->with('success', ' HHA visit Record Created Successfully');
 
-            return redirect()->back()->with('success', ' HHA visit Record Created Successfully');
+    }
+    public function hhaVisitNoteUpdate(Request $req)
+    {
+        $id  = $req->id;
+        $hha1s = Hhavisitnote::findOrFail($id);
+
+        $hha1s->update([
+            // 'schedule_id' => $req->input('schedule_id'),
+            'date_1' => $req->date_1,
+            'time_in' => $req->time_in,
+            'date_2' => $req->date_2,
+            'time_out' => $req->time_out,
+            'vitals_results' => $req->vitals_results,
+            'vitals_P' => $req->vitals_P,
+            'refused_1' => $req->refused_1,
+            'comments_1' => $req->comments_1,
+            'vitals_R' => $req->vitals_R,
+            'vitals_R' => $req->vitals_R,
+            'vitals_B_P' => $req->vitals_B_P,
+            'comments_2' => $req->comments_2,
+            'refused_2' => $req->refused_2,
+            'vitals_weight' => $req->vitals_weight,
+            'vitals_pain_rating' => $req->vitals_pain_rating,
+            'refused_3' => $req->refused_3,
+            'comments_3' => $req->comments_3,
+            'bath' => $req->bath,
+            'comments_4' => $req->comments_4,
+            'bed_bath' => $req->bed_bath,
+            'refused_4' => $req->refused_4,
+            'comments_5' => $req->comments_5,
+            'refused_5' => $req->refused_5,
+            'assis_bath_chair_1' => $req->assis_bath_chair_1,
+            'assis_bath_chair_2' => $req->assis_bath_chair_2,
+            'assis_bath_chair_3' => $req->assis_bath_chair_3,
+            'other_specify' => $req->other_specify,
+            'comments_6' => $req->comments_6,
+            'assist_bath_chair' => $req->assist_bath_chair,
+            'assist_bath_chair_1' => $req->assist_bath_chair_1,
+            'comments_7' => $req->comments_7,
+            'assist_with_dressing' => $req->assist_with_dressing,
+            'assist_with_dressing_1' => $req->assist_with_dressing_1,
+            'comments_8' => $req->comments_8,
+            'hair_care' => $req->hair_care,
+            'comments_9' => $req->comments_9,
+            'shampoo' => $req->shampoo,
+            'shampoo_1' => $req->shampoo_1,
+            'comments_11' => $req->comments_11,
+            'skin_care' => $req->skin_care,
+            'skin_care_1' => $req->skin_care_1,
+            'comments_12' => $req->comments_12,
+            'moisturizer' => $req->moisturizer,
+            'moisturizer_1' => $req->moisturizer_1,
+            'foot_care' => $req->moisturizer,
+            'foot_care_1' => $req->moisturizer_1,
+            'comments_14' => $req->comments_14,
+            'check_pressure_areas' => $req->check_pressure_areas,
+            'check_pressure_areas_1' => $req->check_pressure_areas_1,
+            'comments_15' => $req->comments_15,
+            'nail_care' => $req->nail_care,
+            'nail_care_1' => $req->nail_care_1,
+            'comments_16' => $req->comments_16,
+            'oral_care' => $req->oral_care,
+            'oral_care_1' => $req->oral_care_1,
+            'comments_17' => $req->comments_17,
+            'clean_dentures' => $req->clean_dentures,
+
+            'status' => 'pending',
+
+
+        ]);
+        $hha2s = Hhavisitnote1::where('hhavisitnote1s_id', $id);
+        $hha2s->update([
+            // 'hhavisitnote1s_id' => $hha1s->id,
+            'clean_dentures_1' => $req->clean_dentures_1,
+            'shave' => $req->shave,
+            'shave_1' => $req->shave_1,
+            'comments_19' => $req->comments_19,
+            'other' => $req->other,
+            'other_1' => $req->other_1,
+            'comments_20' => $req->comments_20,
+            'perineal_care' => $req->perineal_care,
+            'perineal_care_1' => $req->perineal_care_1,
+            'comments_21' => $req->comments_21,
+            'assist_with_elimination' => $req->assist_with_elimination,
+            'assist_with_elimination_1' => $req->assist_with_elimination_1,
+            'comments_22' => $req->comments_22,
+            'catheter_care' => $req->catheter_care,
+            'catheter_care_1' => $req->catheter_care_1,
+            'comments_23' => $req->comments_23,
+            'ostomy_care' => $req->ostomy_care,
+            'ostomy_care_1' => $req->ostomy_care_1,
+            'comments_24' => $req->comments_24,
+            'Intake' => $req->Intake,
+            'Output' => $req->Output,
+            'comments_25' => $req->comments_25,
+            'inspect_reinforce_dressing' => $req->inspect_reinforce_dressing,
+            'comments_26' => $req->comments_26,
+            'refuse_7' => $req->refuse_7,
+            'medication_reminders' => $req->medication_reminders,
+            'comments_27' => $req->comments_27,
+            'refuse_8' => $req->refuse_8,
+            'medication_assistance' => $req->medication_assistance,
+            'comments_28' => $req->comments_28,
+            'refuse_9' => $req->refuse_9,
+            'other_303' => $req->other_303,
+            'comments_29' => $req->comments_29,
+            'ambulation' => $req->ambulation,
+            'w_c' => $req->w_c,
+            'walker' => $req->walker,
+            'cane' => $req->cane,
+            'refuse_11' => $req->refuse_11,
+            'gait_belt' => $req->gait_belt,
+            'chair' => $req->chair,
+            'bed' => $req->bed,
+            'dangle' => $req->dangle,
+            'commod' => $req->commod,
+            'shower' => $req->shower,
+            'tub' => $req->tub,
+            'comments_31' => $req->comments_31,
+            'ROM' => $req->ROM,
+            'Arm' => $req->Arm,
+            'Leg' => $req->Leg,
+            'comments_32' => $req->comments_32,
+            'reposition' => $req->reposition,
+        ]);
+        $hha3s = Hhavisitnote2::where('hhavisitnote2s_id', $id);
+        $hha3s->update([
+            // 'hhavisitnote2s_id' => $hha1s->id,
+            'every_hrs' => $req->every_hrs,
+            'comments_33' => $req->comments_33,
+            'exercise_pt' => $req->exercise_pt,
+            'exercise_ot' => $req->exercise_ot,
+            'exercise_slp' => $req->exercise_slp,
+            'refused_17' => $req->refused_17,
+            'comments_35' => $req->comments_35,
+            'other_408' => $req->other_408,
+            'refused_18' => $req->refused_18,
+            'comments_36' => $req->comments_36,
+            'meal_preparation' => $req->meal_preparation,
+            'refused_19' => $req->refused_19,
+            'comments_37' => $req->comments_37,
+            'assist_feeding' => $req->assist_feeding,
+            'refused_20' => $req->refused_20,
+            'comments_38' => $req->comments_38,
+            'radio_1' => $req->radio_1,
+            'refused_21' => $req->refused_21,
+            'comments_39' => $req->comments_39,
+            'grocery_shopping' => $req->grocery_shopping,
+            'refused_22' => $req->refused_22,
+            'comments_40' => $req->comments_40,
+            'other_500' => $req->other_500,
+            'refused_23' => $req->refused_23,
+            'comments_41' => $req->comments_41,
+            'other_100' => $req->other_100,
+            'refused_24' => $req->refused_24,
+            'comments_42' => $req->comments_42,
+            'bedroom' => $req->bedroom,
+            'bathroom' => $req->bathroom,
+            'kitchen' => $req->kitchen,
+            'change_bed_linen' => $req->change_bed_linen,
+            'refused_25' => $req->refused_25,
+            'comments_43' => $req->comments_43,
+            'equipment_care' => $req->equipment_care,
+            'refused_26' => $req->refused_26,
+            'comments_44' => $req->comments_44,
+            'other_50' => $req->other_50,
+            'comments_45' => $req->comments_45,
+            'CommentsNotes' => $req->CommentsNotes,
+            'sn' => $req->sn,
+            'therapy' => $req->therapy,
+            'ot' => $req->ot,
+            'slp' => $req->slp,
+            'family' => $req->family,
+            'patient' => $req->patient,
+            'signature_date' => $req->signature_date,
+            'date' => $req->date,
+            'patientsign' => $req->patientsign,
+            'patient_date' => $req->patient_date
+
+        ]);
+        return redirect()->back()->with('success', ' HHA visit Record Updated Successfully');
 
     }
 
@@ -1067,7 +1250,7 @@ class NonskilledAgencyController extends Controller
                     return redirect()->route('nonskilled.agencyreportReport')->with('success', 'Agency Report Approved');
                 } else {
                     return redirect()->back()->with('danger', 'Agency Report Not Found');
-                }  
+                }
             break;
 
             case 'moi_Report':

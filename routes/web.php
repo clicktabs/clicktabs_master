@@ -271,6 +271,8 @@ Route::post('/patients/non-skilled-hha-care-plan-store', [NonskilledAgencyContro
 
 //hha Visit Note Store
 Route::post('/patients/non-skilled-hha-visit-note-store', [NonskilledAgencyController::class, 'hhaVisitNoteStore'])->name('nonskilled.hhaVisitNoteStore');
+Route::post('/patients/non-skilled-hha-visit-note-update', [NonskilledAgencyController::class, 'hhaVisitNoteUpdate'])->name('nonskilled.hhaVisitNoteUpdate');
+
 
 //hha Visit Note Store
 Route::post('/patients/non-skilled-physician-order-store', [NonskilledAgencyController::class, 'physicianOrderStore'])->name('nonskilled.physicianOrderStore');
@@ -486,7 +488,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/addon-physician-update', [PhysicianController::class, 'update'])->name('physician.update');
 
     // Reports
-    
+
     Route::get('/patient-reports/open-oasis', [OpenOasisController::class, 'index'])->name('patient-reports.open-oasis');
     Route::get('/patient-reports/open-shift', [OpenShiftController::class, 'index'])->name('patient-reports.open-shift');
     Route::get('/patient-reports/active-allergy', [AllergyController::class, 'index'])->name('patient-reports.active-allergy');

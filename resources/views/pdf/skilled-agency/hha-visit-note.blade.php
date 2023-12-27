@@ -557,7 +557,7 @@
                                 <b>Assist with Mobility:</b>
                                 &nbsp; <label class="form-check-label" for="gait_belt"><input type="checkbox" {{$hhvn1->gait_belt=='1' ? 'checked' : '' }} name="gait_belt" id="gait_belt" value="" class="form-check-input"> Gait Belt</label>
                                 &nbsp; <label class="form-check-label" for="chair"><input type="checkbox" {{$hhvn1->chair=='1' ? 'checked' : '' }} name="chair" id="" value="chair" class="form-check-input"> Chair</label>
-                                
+
                             </div>
                             <div>
                                 <label class="form-check-label" for="bed"><input type="checkbox" {{$hhvn1->bed=='1' ? 'checked' : '' }} name="bed" id="bed" value="" class="form-check-input"> Bed</label>
