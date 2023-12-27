@@ -73,8 +73,8 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="y flex flex-wrap shrink-0 gap-[15px] justify-end">
-                                    <button class="btn btn-primary bg-[#6366f1]" type="button">Generate</button>
-                                    <button class="btn btn-primary bg-[#6366f1]" type="button">Export Excel</button>
+                                    <button class="btn btn-primary bg-[#6366f1] mr-5" type="button">Generate</button>
+                                    {{-- <button class="btn btn-primary bg-[#6366f1]" type="button">Export Excel</button> --}}
                                 </div>
                             </div>
                         </div>

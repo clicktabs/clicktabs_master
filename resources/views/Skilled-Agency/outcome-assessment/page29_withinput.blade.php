@@ -91,7 +91,7 @@ if(isset($patient->diagnosis->other_diagnosis_name)){
                                  <input type="text" name="PrimaryDiagnosis"  value="{{isset($patient->diagnosis->primary_diagnosis_code)?$patient->diagnosis->primary_diagnosis_code:''}}" id="PrimaryDiagnosis" class="form-control">
                               </div>
                               <div class="col-md-6">
-                                 <label for="PD_ICD9" class="form-label"><b>ICD9:</b></label>
+                                 <label for="PD_ICD9" class="form-label"><b>ICD10:</b></label>
                                  <input type="text"  value="{{isset($patient->diagnosis->primary_diagnosis_name)?$patient->diagnosis->primary_diagnosis_name:''}}" name="PD_ICD9" id="PD_ICD9" class="form-control">
                               </div>
                            </div>
@@ -200,7 +200,7 @@ if(isset($patient->diagnosis->other_diagnosis_name)){
                               <div class="col-md-6">
 
                                 <span class="signature-area">
-                                    Signature: ___________________________________________
+                                   Physician(MD) Signature: ___________________________________________
                                 </span>
                                 <br>
                                 <br>

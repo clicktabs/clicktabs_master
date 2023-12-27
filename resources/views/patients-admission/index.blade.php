@@ -151,6 +151,7 @@
                                     <th>First name</th>
                                     <th>Last name</th>
                                     <th>Birth Date</th>
+                                    <th>Assign Patient</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
@@ -165,6 +166,7 @@
                                             <td><a href="{{route('patients.show', $patient->id)}}">{{$patient->first_name}}</a></td>
                                             <td><a href="{{route('patients.show', $patient->id)}}">{{$patient->last_name}}</a></td>
                                             <td><a href="{{route('patients.show', $patient->id)}}">{{date_format($date,"m-d-Y")}}</a></td>
+                                            <td></td>
                                             <td>
                                                 <div class="flex flex-wrap gap-[5px]">
                                                     <a class="btn btn-info" href="{{route('patients.show', $patient->id)}}">View</a>
