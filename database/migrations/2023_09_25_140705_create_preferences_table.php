@@ -84,7 +84,7 @@ class CreatePreferencesTable extends Migration
             $table->boolean('materialsMedicationRegimen')->nullable();
             $table->boolean('materialsAdministratorContact')->nullable();
             $table->boolean('materialsCopyOfRights')->nullable();
-            $table->integer('otherMaterials')->nullable();
+            $table->text('otherMaterials')->nullable();
             $table->boolean('materialsRightsResponsibilities')->nullable();
             $table->boolean('materialsStateHotline')->nullable();
             $table->boolean('materialsAdvanceDirectives')->nullable();
