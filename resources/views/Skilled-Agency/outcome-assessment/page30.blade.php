@@ -164,12 +164,12 @@
                    <div class="from-group col-md-12 py-2">
                        16. Nutritional Req.
                        <textarea class="form-control" name="nutritional-req" cols="30" rows="10">
-                        {{ $patient->SwallowingNutritional->feedingEatingNo ==1 ? 'Able to independently feed self.':'' }}
-                        {{ $patient->SwallowingNutritional->feedingEatingYes == 1 ? 'Able to feed self independently but requires.':'' }}
-                        {{ $patient->SwallowingNutritional->feedingEatingUnable == 1 ? 'Unable to feed self and must be assisted or supervised throughout the meal/snack.':'' }}
-                        {{ $patient->SwallowingNutritional->feedingEatingAble == 1 ? 'Able to take in nutrients orally and receives supplemental nutrients through a nasogastric tube or gastrostomy.':'' }}
-                        {{ $patient->SwallowingNutritional->feedingEatingUnableGastrostomy == 1 ? 'Unable to take in nutrients orally and is fed nutrients through a nasogastric tube or gastrostomy.':'' }}
-                        {{ $patient->SwallowingNutritional->feedingEatingUnableNutrients == 1 ? 'Unable to take in nutrients orally or by tube feeding.':'' }}
+                        {{ isset($patient->SwallowingNutritional->feedingEatingNo) && $patient->SwallowingNutritional->feedingEatingNo == 1 ? 'Able to independently feed self.' : '' }}
+                        {{ isset($patient->SwallowingNutritional->feedingEatingYes) && $patient->SwallowingNutritional->feedingEatingYes == 1 ? 'Able to feed self independently but requires.' : '' }}
+                        {{ isset($patient->SwallowingNutritional->feedingEatingUnable) && $patient->SwallowingNutritional->feedingEatingUnable == 1 ? 'Unable to feed self and must be assisted or supervised throughout the meal/snack.' : '' }}
+                        {{ isset($patient->SwallowingNutritional->feedingEatingAble) && $patient->SwallowingNutritional->feedingEatingAble == 1 ? 'Able to take in nutrients orally and receives supplemental nutrients through a nasogastric tube or gastrostomy.' : '' }}
+                        {{ isset($patient->SwallowingNutritional->feedingEatingUnableGastrostomy) && $patient->SwallowingNutritional->feedingEatingUnableGastrostomy == 1 ? 'Unable to take in nutrients orally and is fed nutrients through a nasogastric tube or gastrostomy.' : '' }}
+                        {{ isset($patient->SwallowingNutritional->feedingEatingUnableNutrients) && $patient->SwallowingNutritional->feedingEatingUnableNutrients == 1 ? 'Unable to take in nutrients orally or by tube feeding.' : '' }}
                        </textarea>
                        {{-- <input type="text" placeholder="" class="form-control" name="nutritional-req"> --}}
                    </div>
