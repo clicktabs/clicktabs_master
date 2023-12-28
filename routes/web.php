@@ -532,7 +532,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
      Route::get('/cms-1460', [CMS1460Controller::class, 'index'])->name('cms-1460');
      Route::get('/cms-1500', [CMS1500Controller::class, 'index'])->name('cms-1500');
      // Added by Enamul
-    Route::get('/patient/admission', [PatientAdmissionController::class, 'index'])->name('patient.admission');
+    Route::get('/patient/admissions', [PatientAdmissionController::class, 'index'])->name('patient.admission');
     Route::get('/patient/list', [PatientListcontroller::class, 'index'])->name('patient.list');
     // Schedule calendar
     Route::get('/schedule/calendar', [ScheduleCalendar::class, 'index'])->name('schedule.calendar');
