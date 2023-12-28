@@ -168,7 +168,7 @@
                                             <td><a href="{{route('patients.show', $patient->id)}}">{{$patient->last_name}}</a></td>
                                             <td><a href="{{route('patients.show', $patient->id)}}">{{date_format($date,"m-d-Y")}}</a></td>
                                             <td>
-                                                <select class="form-select" multiple aria-label="multiple select example">
+                                                <select class="form-select" multiple aria-label="multiple select example" style="max-height: 56px;">
                                                     @if ($employees)
                                                         @foreach($employees as $employee)
                                                             <option {{ $employee->id == $patient->schedule->employee->id ? 'selected' : '' }} value="{{$employee->id}}">{{ $employee->first_name . ' ' . $employee->last_name }}</option>
