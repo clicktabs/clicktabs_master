@@ -16,11 +16,11 @@ class CreateFunctionalStatusesTable extends Migration
         Schema::create('functional_statuses', function (Blueprint $table) {
             $table->id();
             $table->integer('patient_history_id')->nullable();
-            
+
             $table->integer('grooming')->nullable();
             $table->integer('dressingUpper')->nullable();
             $table->integer('dressingLower')->nullable();
-            $table->integer('bathing')->nullable();  
+            $table->integer('bathing')->nullable();
             $table->integer('toiletTransferring')->nullable();
             $table->integer('toiletingHygiene')->nullable();
             $table->integer('transferring')->nullable();
@@ -41,7 +41,7 @@ class CreateFunctionalStatusesTable extends Migration
             $table->integer('toiletHygieneAd')->nullable();
             $table->integer('atbftm')->nullable();
             $table->integer('dtpplta')->nullable();
-            $table->integer('rpeTestScoreComment')->nullable();
+            $table->text('rpeTestScoreComment')->nullable();
             $table->integer('dspias')->nullable();
 
 
@@ -247,7 +247,7 @@ class CreateFunctionalStatusesTable extends Migration
 
 
 
-            
+
 
             $table->text('reasonforNeed')->nullable();
             $table->text('adaptOther')->nullable();
