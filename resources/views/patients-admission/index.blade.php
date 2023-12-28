@@ -158,6 +158,7 @@
                                 <tbody class="text-sm gp le ln">
                                 @if($patients)
                                     @foreach($patients as $patient)
+                                        {{-- @dd($patient->schedule->employee) --}}
                                         <tr class="active cursor-pointer " data-id="{{$patient->id}}">
                                             @php
                                                 $date=date_create($patient->date_of_birth);
@@ -168,9 +169,11 @@
                                             <td><a href="{{route('patients.show', $patient->id)}}">{{date_format($date,"m-d-Y")}}</a></td>
                                             <td>
                                                 <select class="form-select" multiple aria-label="multiple select example">
-                                                    <option selected>Assign patient to Employee</option>
-                                                    <option value="1">One</option>
-                                                    <option value="2">Two</option>
+                                                    @if ($employees)
+                                                        @foreach($employees as $employee)
+                                                            <option {{ $employee->id == $patient->schedule->employee->id ? 'selected' : '' }} value="{{$employee->id}}">{{ $employee->first_name . ' ' . $employee->last_name }}</option>
+                                                        @endforeach
+                                                    @endif
                                                   </select>
                                             </td>
                                             <td>

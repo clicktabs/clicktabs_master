@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Employee;
 use App\Models\Patient;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -20,8 +21,12 @@ class PatientAdmissionController extends Controller
     public function index()
     {
         $organization_id = Auth::user()->organization_id;
+
+        $employees = Employee::where('organization_id', '=', $organization_id)->get();
+        
         $patients = Patient::where('organization_id', '=', $organization_id)->where('status', '=', 'admit')->get();
-        return view('patients-admission.index', compact('patients'));
+
+        return view('patients-admission.index', compact('patients', 'employees'));
     }
 
     /**
