@@ -22,9 +22,9 @@
 
                           <div class="bg-primary-subtle border border-primary rounded-1 p-3">
                              <div class="row g-2">
-                                <div class="col-lg">
-                                   <div class="d-flex align-items-center gap-2">
-                                      <div class="col-md-2 text-md-end"><label for="" class="fw-medium">Branch:</label></div>
+                          
+                                   <div class="col">
+                                      <div class=""><label for="" class="fw-medium">Branch:</label></div>
                                       <div>
                                          <select class="form-select" name="Branch" aria-label="">
                                             <option>Select</option>
@@ -32,56 +32,18 @@
                                          </select>
                                       </div>
                                    </div>
-                                </div>
-                                <div class="col-lg">
-                                   <div class="d-flex align-items-center gap-2">
-                                      <div class="col-md-3 text-md-end"><label for="" class="fw-medium">Case Manager:</label></div>
-                                      <div>
-                                         <select class="form-select"  name="caseManager" aria-label="">
-                                            <option>Select</option>
-                                            <option value="" selected>All Case Managers</option>
-                                         </select>
-                                      </div>
-                                   </div>
-                                </div>
-                                <div class="col-lg">
-                                   <div class="d-flex align-items-center gap-2">
-                                      <div class="col-md-3 text-md-end"><label for="" class="fw-medium">Date Range:</label></div>
+                
+                                   <div class="col">
+                                      <div class=""><label for="" class="fw-medium">Date Range From:</label></div>
                                       <div><input type="date" name="dateRange" class="form-control"></div>
-                                   </div>
-                                </div>
-                             </div>
-                             <div class="row g-2 mt-2">
-                                <div class="col-lg">
-                                   <div class="d-flex align-items-center gap-2">
-                                      <div class="col-md-2 text-md-end"><label for="" class="fw-medium">Type:</label></div>
-                                      <div>
-                                         <select class="form-select"  name="Type" aria-label="">
-                                            <option>Select</option>
-                                            <option value="" selected>All Types</option>
-                                         </select>
-                                      </div>
-                                   </div>
-                                </div>
-                                <div class="col-lg">
-                                   <div class="d-flex align-items-center gap-2">
-                                      <div class="col-md-3 text-md-end"><label for="" class="fw-medium">Status:</label></div>
-                                      <div>
-                                         <select class="form-select"  name="Status" aria-label="">
-                                            <option>Select</option>
-                                            <option value="" selected>All Statuses</option>
-                                         </select>
-                                      </div>
-                                   </div>
-                                </div>
-                                <div class="col-lg">
-                                   <div class="d-flex align-items-center gap-2">
-                                      <div class="col-md-3 text-md-end"><label for="" class="fw-medium">To:</label></div>
-                                      <div><input type="date" name="to" class="form-control"></div>
-                                   </div>
-                                </div>
-                             </div>
-                          </div>
+                                    </div>
+                                 
+                                    <div class="col">
+                                       <div class=""><label for="" class="fw-medium">Date Range To:</label></div>
+                                       <div><input type="date" name="to" class="form-control"></div>
+                                    </div>
+                                 </div>
+                              </div>
 
                           <p>No Items Selected</p>
 
