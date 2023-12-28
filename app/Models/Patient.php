@@ -114,4 +114,12 @@ class Patient extends Model
     {
         return $this->belongsTo(FunctionalAbilitie::class, 'id','patient_history_id');
     }
+    public function functionalStatus()
+    {
+        return $this->belongsTo(FunctionalStatus::class, 'id','patient_history_id');
+    }
+    public function SwallowingNutritional()
+    {
+        return $this->belongsTo(SwallowingNutritional::class, 'id','patient_history_id');
+    }
 }
