@@ -30,6 +30,7 @@ return new class extends Migration
             $table->json('advance_directives')->nullable();
             $table->json('emergency_preparedness')->nullable();
             $table->json('coordination_of_care')->nullable();
+            $table->timestamp('faceVsitDate')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
