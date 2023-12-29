@@ -533,12 +533,14 @@ Route::middleware(['auth', 'verified'])->group(function () {
      Route::get('/cms-1500', [CMS1500Controller::class, 'index'])->name('cms-1500');
      // Added by Enamul
     Route::get('/patient/admission', [PatientAdmissionController::class, 'index'])->name('patient.admission');
+    Route::post('/patient/admission/update/{id}', [PatientAdmissionController::class, 'update'])->name('patient.admission.update');
     Route::get('/patient/list', [PatientListcontroller::class, 'index'])->name('patient.list');
     // Schedule calendar
     Route::get('/schedule/calendar', [ScheduleCalendar::class, 'index'])->name('schedule.calendar');
     Route::get('/schedule/calendar/day', [ScheduleCalendar::class, 'day_calendar'])->name('schedule.calendar.day');
     Route::get('/schedule/calendar/week', [ScheduleCalendar::class, 'week_calendar'])->name('schedule.calendar.week');
     Route::get('/schedule/calendar/list', [ScheduleCalendar::class, 'list'])->name('schedule.calendar.list');
+    Route::post('/schedule/calendar/employee/update', [ScheduleCalendar::class, 'updateEmployee'])->name('schedule.calendar.employee.update');
     Route::get('/employee/standard/application', [EmployeesAplication::class, 'application'])->name('employees.application');
     Route::post('/schedule/save', [ScheduleCalendar::class, 'store'])->name('schedule.save');
     Route::get('/get-dates/{patientId}', [ScheduleCalendar::class, 'getEpisodeDates'])->name('getScheduleDate');
