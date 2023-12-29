@@ -409,7 +409,9 @@
                <div class="from-group col-md-12 py-2">
                    21. Orders for Discipline and Treatments (Specify Amount/Frequency/Duration)
 
-                   <textarea class="form-control py-2"  name="medications" id="medications" rows="7">{{ $patient && $patient->cms ? $patient->cms->medications : '' }}</textarea>
+                   <textarea class="form-control py-2"  name="medications" id="medications" rows="7">
+                    {{ isset($patient->specialTreatment->discontinued) ? $patient->specialTreatment->discontinued : '' }}
+                   </textarea>
 
                </div>
            </div>
@@ -417,7 +419,7 @@
                <div class="from-group col-md-12 py-2">
                    22. Goals/Rehabilitation Potential/Discharge Plans
 
-                   <textarea class="form-control py-2" name="treatments" id="treatments"  rows="4">{{ $patient && $patient->cms ? $patient->cms->treatments : '' }}</textarea>
+                   <textarea class="form-control py-2" name="treatments" id="treatments"  rows="4">{{ isset($patient->preference->discontinued) ? $patient->preference->discontinued : '' }}</textarea>
                </div>
            </div>
 
@@ -450,8 +452,8 @@
                        24. Physician's Name and Address
 
                        <textarea class="form-control py-2" name="name" id="name" rows="5">
-                            {{ $patient && $patient->cms ? $patient->cms->physician : '' }},
-                            {{ $patient && $patient->cms ? $patient->cms->physicianAddress : '' }}
+                            {{ isset($patient->extra_info->physician) ? $patient->extra_info->physician->first_name : '' }} {{ isset($patient->extra_info->physician) ? $patient->extra_info->physician->last_name : '' }},
+                            {{ isset($patient->extra_info->physician) ? $patient->extra_info->physician->address_line_1 : '' }} {{ isset($patient->extra_info->physician) ? $patient->extra_info->physician->address_line_2 : '' }}
                        </textarea>
                    </div>
                </div>

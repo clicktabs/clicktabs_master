@@ -122,4 +122,12 @@ class Patient extends Model
     {
         return $this->belongsTo(SwallowingNutritional::class, 'id','patient_history_id');
     }
+    public function specialTreatment()
+    {
+        return $this->belongsTo(SpecialTreatment::class, 'id','patient_history_id');
+    }
+    public function preference()
+    {
+        return $this->belongsTo(Preference::class, 'id','patient_history_id');
+    }
 }

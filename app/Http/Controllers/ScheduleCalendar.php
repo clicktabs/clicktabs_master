@@ -234,8 +234,13 @@ class ScheduleCalendar extends Controller
                 $episodeDaterange = PatientEpisodeManager::select('episode_start_date', 'episode_end_date')->where('id',$schedule->episode_id)->first();
                 $medications = Medication::select('medication_dosage','frequency','route','status')->where('patient_id', $patient->id)->get();
                 $account = Account::first();
+                $companyId = Auth::user()->organization_id;
+                $invention_addons = Addon::where('name', 'like', 'New Interventions%')->where('status', 1)->first();
+                $inventions = get_sub_addons($invention_addons, $companyId);
+                $new_goals_addons = Addon::where('name', 'like', 'New Goals%')->where('status', '1')->first();
+                $new_goals = get_sub_addons($new_goals_addons, $companyId);
                 return view('Skilled-Agency.oasis-e-start-of-care', compact('patient','race_enc','ethnicities','source_of_add','patientInsurance','patientAddressInfo',
-                'patientEpisodeTiming','patientTransportation', 'episodeDaterange','medications','schedule','account'))->with('active', 'phistory');
+                'patientEpisodeTiming','patientTransportation', 'episodeDaterange','medications','schedule','account','inventions','new_goals'))->with('active', 'phistory');
 
             case 'Skilled Nurse Visit (Billable)':
                 $organization_id = Auth::user()->organization_id;

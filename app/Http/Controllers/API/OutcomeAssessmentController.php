@@ -1408,6 +1408,7 @@ class OutcomeAssessmentController extends Controller
             'personCompletingTime' => $request->personCompletingTime,
             'agencyName' => $request->agencyName,
             'agencyPhone' => $request->agencyPhone,
+            'discontinued' => $request->discontinued,
             'created_by' => Auth::user()->id,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
