@@ -151,7 +151,8 @@
                                     <th>First name</th>
                                     <th>Last name</th>
                                     <th>Birth Date</th>
-                                    <th>Action</th>
+                                    <th>Assign patient to Employee</th>
+                                    <th style="max-width: 265px">Action</th>
                                 </tr>
                                 </thead>
                                 <tbody class="text-sm gp le ln">
@@ -166,17 +167,18 @@
                                             <td><a href="{{route('patients.show', $patient->id)}}">{{$patient->first_name}}</a></td>
                                             <td><a href="{{route('patients.show', $patient->id)}}">{{$patient->last_name}}</a></td>
                                             <td><a href="{{route('patients.show', $patient->id)}}">{{date_format($date,"m-d-Y")}}</a></td>
-                                            {{-- <td>
-                                                <select class="form-select" multiple aria-label="multiple select example" style="max-height: 56px;">
+                                            <td>
+                                                <select name="employes[]" class="form-select" multiple aria-label="multiple select example" style="max-height: 56px;">
                                                     @if ($employees)
                                                         @foreach($employees as $employee)
                                                             <option {{ $employee->id == $patient->schedule->employee->id ? 'selected' : '' }} value="{{$employee->id}}">{{ $employee->first_name . ' ' . $employee->last_name }}</option>
                                                         @endforeach
                                                     @endif
                                                   </select>
-                                            </td> --}}
+                                            </td> 
                                             <td>
                                                 <div class="flex flex-wrap gap-[5px]">
+                                                    <button type="button" class="btn btn-primary !bg-[#0b5ed7] update" data-id="{{$patient->id}}">Update</button>
                                                     <a class="btn btn-info" href="{{route('patients.show', $patient->id)}}">View</a>
                                                     <a href="/patients/{{$patient->id}}/edit" class="btn btn-primary !bg-[#0b5ed7]" >Edit</a>
                                                     <button type="button" class="btn btn-danger !bg-[#bb2d3b] ho xi ye delete" data-id="{{$patient->id}}">Delete</button>

@@ -98,18 +98,54 @@
         <div class="bg-white bd rounded-sm border border-slate-200 container-fluid pt-[50px] pb-[80px]">
             <table class="client_table ux ou display nowrap" style="width:100%" id="schedulingList">
                 <thead class="bg-[#4133BF] text-[#fff]">
-                <tr>
-                    <th>Employee Name</th>
-                    <th>Patient Name</th>
-                    <th>Start Date</th>
-                    <th>End Date</th>
-                    <th>Start Time</th>
-                    <th>End Time</th>
-                    <th>Status</th>                 
-                    <th class="action">Action</th>
-                </tr>
-            </thead>
+                    <tr>
+                        <th>Employee Name</th>
+                        <th>Patient Name</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
+                        <th>Status</th>
+                        <th class="action">Action</th>
+                    </tr>
+                </thead>
+
+                <tbody class="text-sm gp le ln">
+                    @if($schedules)
+                        @foreach($schedules as $schedule)
+                            <tr class="active cursor-pointer " data-id="{{$schedule->id}}">
+                                <td>
+                                    <select class="form-select select-employees" aria-label="multiple select example" style="max-height: 56px;margin:0;">
+                                        @if ($employees)
+                                            @foreach($employees as $employee)
+                                                <option {{ $employee->id == $schedule->employee->id ? 'selected' : '' }} value="{{$employee->id}}">{{ $employee->first_name . ' ' . $employee->last_name }}</option>
+                                            @endforeach
+                                        @endif
+                                    </select>
+                                </td>
+                                <td>{{$schedule->patient_first_name . ' ' . $schedule->patient_last_name}}</td>
+                                <td>{{$schedule->kt_calendar_datepicker_start_date}}</td>
+                                <td>{{$schedule->kt_calendar_datepicker_end_date}}</td>
+                                <td>{{$schedule->start_time}}</td>
+                                <td>{{$schedule->end_time}}</td>
+                                <td>
+                                    <div class="rounded-[5px] {{$schedule->scheduling_status ? $schedule->scheduling_status : 'completed'}}">
+                                        <p class="text-white text-center py-[5px] px-[10px] border-none">{{$schedule->scheduling_status ? Str::replace(array('_', '-'), ' ', Str::ucfirst($schedule->scheduling_status)) : 'Completed'}}</p>
+                                    </div>
+                                </td>
+                                
+                                <td>
+                                    <div class="flex flex-wrap gap-[5px]">
+                                        <button class="btn btn-primary edit" data-eventId="{{$schedule->id}}">Edit</button>
+                                        <button class="btn btn-danger delete" data-eventId="{{$schedule->id}}">Delete</button>`
+                                    </div>
+                                </td>
+                            </tr>
+                        @endforeach
+                    @endif
+                </tbody>
             </table>
+
             <div class="modal fade !max-w-full" id="kt_modal_add_event_form" tabindex="-1" aria-hidden="true">
                 <!--begin::Modal dialog-->
                 <div class="modal-dialog next_modal_content modal-dialog-centered relative">
@@ -376,7 +412,40 @@
             $('#rec_event_data').click(function () {
                 $('.week_lists').css("display", "flex").fadeIn();
             });
+
             $('#schedulingList').DataTable({
+                order: [ 1, 'desc' ],
+                scrollX: true,
+            });
+
+            $('.select-employees').on('change', function() {
+                // Update
+                // jQuery('.loader_wrap').fadeIn();
+                let id = $(this).closest('tr').data('id');
+                let employeeId = $(this).val();
+
+                $.ajax({
+                    url: '/schedule/calendar/employee/update',
+                    method: 'POST',
+                    cache: false,
+                    data: {
+                        id: id,
+                        employee_id: employeeId,
+                    },
+                    success: function (data) {
+                        toastr.success(data.message)
+                        toastr.options.closeMethod = 'fadeOut';
+                        toastr.options.closeDuration = 300;
+                        toastr.options.closeEasing = 'swing';
+                        toastr.options.progressBar = true;
+                    },
+                    error: function (data) {
+                        console.log(data);
+                    }
+                });
+            });
+            
+            /* $('#schedulingList').DataTable({
                 scrollX: true,
                 ajax: {
                     url: "/schedule/get-schedule",
@@ -413,14 +482,13 @@
                         className: "dt-center editor-delete",
                         orderable: false,
                         "mRender" : function ( data, type, row ) {  
-                            console.log(data)
                             return `
                             <button class="btn btn-primary edit" data-eventId="${data}">Edit</button>
                             <button class="btn btn-danger delete" data-eventId="${data}">Delete</button>`
                         }
                     }
                 ],
-            });
+            }); */
 
             jQuery(document).on('submit', '#scheduleForm', function(e) {
                     e.preventDefault();

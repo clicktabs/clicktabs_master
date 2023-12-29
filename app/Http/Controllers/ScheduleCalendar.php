@@ -413,12 +413,26 @@ class ScheduleCalendar extends Controller
         $payors = Addon::where('name', 'like', 'Payor%')->where('status', '1')->first();
         $payors = get_sub_addons($payors, $organization_id);
 
-        $schedules = Schedule::leftJoin('employees', 'schedule.employee_id', 'employees.id')
-                            ->select(['employees.first_name', 'schedule.*'])
-                            ->get();
+        // $schedules = Schedule::leftJoin('employees', 'schedule.employee_id', 'employees.id')
+        //                     ->select(['employees.first_name', 'schedule.*'])
+        //                     ->get();
 
         $tasks = Addon::where('name', 'like', 'Tasks%')->where('status', '1')->first();
         $tasks = get_sub_addons($tasks, $organization_id);
+
+
+        $schedules = Schedule::leftJoin('employees', 'schedule.employee_id', '=', 'employees.id')
+            ->leftJoin('patients', 'schedule.patient_id', '=', 'patients.id')
+            ->select([
+                'employees.first_name',
+                'employees.last_name',
+                'patients.first_name as patient_first_name',
+                'patients.last_name as patient_last_name',
+                'schedule.*'
+            ])
+            ->where('employees.organization_id', '=', $organization_id) // Example where clause
+            ->where('patients.organization_id', '=', $organization_id) // Example where clause
+            ->get();
 
         return view('scheduling.list', compact('schedules', 'patients', 'employees', 'services', 'service_codes', 'payors', 'tasks'));
     }
@@ -431,6 +445,23 @@ class ScheduleCalendar extends Controller
     public function create()
     {
         //
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function updateEmployee(Request $request)
+    {
+        $schedule = Schedule::find($request->id);
+        $schedule->employee_id  = $request->employee_id;
+        $schedule->save();
+
+        return response()->json([
+            'status' => 200,
+            'message' => 'Employee assigned successfully',
+        ]);
     }
 
     /**
