@@ -105,7 +105,7 @@
                     <th>End Date</th>
                     <th>Start Time</th>
                     <th>End Time</th>
-                    <th>Status</th>
+                    <th>Status</th>                 
                     <th class="action">Action</th>
                 </tr>
             </thead>
