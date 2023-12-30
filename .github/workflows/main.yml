@@ -19,7 +19,7 @@
 name: CI -> Deploy to My website
 on:
   push:
-    branches: [ main, development ]
+    branches: [ master, development ]
 jobs:
   build:
     runs-on: ubuntu-latest
