@@ -133,7 +133,7 @@
                                         <p class="text-white text-center py-[5px] px-[10px] border-none">{{$schedule->scheduling_status ? Str::replace(array('_', '-'), ' ', Str::ucfirst($schedule->scheduling_status)) : 'Completed'}}</p>
                                     </div>
                                 </td>
-                                
+
                                 <td>
                                     <div class="flex flex-wrap gap-[5px]">
                                         <button class="btn btn-primary edit" data-eventId="{{$schedule->id}}">Edit</button>
@@ -444,7 +444,7 @@
                     }
                 });
             });
-            
+
             /* $('#schedulingList').DataTable({
                 scrollX: true,
                 ajax: {
@@ -481,7 +481,7 @@
                         data: 'id',
                         className: "dt-center editor-delete",
                         orderable: false,
-                        "mRender" : function ( data, type, row ) {  
+                        "mRender" : function ( data, type, row ) {
                             return `
                             <button class="btn btn-primary edit" data-eventId="${data}">Edit</button>
                             <button class="btn btn-danger delete" data-eventId="${data}">Delete</button>`
@@ -505,7 +505,8 @@
                     cache: false,
                     processData: false,
                     success: function (data) {
-                        jQuery('#schedulingList').DataTable().ajax.reload();
+                        // jQuery('#schedulingList').DataTable().ajax.reload();
+                        // location.reload();
                         $('.jquery-modal.blocker.current').trigger('click');
                         jQuery('.loader_wrap').fadeOut();
                     }
@@ -525,18 +526,23 @@
             });
 
             $('body').on('click', '.delete', function () {
-                jQuery('.loader_wrap').fadeIn();
-                let event_id = $(this).data('eventid');
-                let data = [event_id];
-                $.ajax({
-                    url: "/schedule/delete-schedule",
-                    type: "POST",
-                    data: {ids:data},
-                    success: function(data) {
-                        jQuery('#schedulingList').DataTable().ajax.reload();
-                        jQuery('.loader_wrap').fadeOut();
-                    }});
-            })
+            // jQuery('.loader_wrap').fadeIn();
+            let event_id = $(this).data('eventid');
+            let data = [event_id];
+            $.ajax({
+                url: "/schedule/delete-schedule",
+                type: "POST",
+                data: {ids: data},
+                success: function (data) {
+                    // Reload the entire page
+                    location.reload();
+                },
+                complete: function () {
+                    jQuery('.loader_wrap').fadeOut();
+                }
+            });
+        });
+
 
             $('#kt_modal_add_event_close').click(function () {
                 $('.jquery-modal.blocker.current').trigger('click')
