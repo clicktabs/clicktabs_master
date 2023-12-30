@@ -1093,7 +1093,7 @@ public function updateCopyEvent(Request $request) {
             $schedule->payor_sub_addon_id  = $request->payor_sub_addon_id;
             $schedule->scheduling_notes  = $request->scheduling_notes;
             $schedule->created_at = date('Y-m-d H:i:s');
-            if ($episode) {
+            if (isset($episode)) {
                 $schedule->episode_id  = $episode->id;
             }
             $schedule->save();
