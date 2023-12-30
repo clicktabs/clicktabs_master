@@ -16,33 +16,23 @@
 #         password: ${{T3nKAdquSPIZamVQ}}
 #         server-directory: /var/www/click-tabs/
 
-name: CI -> Deploy to My website
-on:
-  push:
-    branches: [ master, development ]
+
+
+
+on: push
+name: 🚀 Deploy website on push
 jobs:
-  build:
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      # Here is the deployment action
-      - name: Upload from public_html via FTP
-        uses: airvzxf/ftp-deployment-action@latest
-        with:
-          server: ${{ secrets.FTP_3.210.72.15 }}
-          user: ${{ secrets.FTP_clicktabs }}
-          password: ${{ secrets.T3nKAdquSPIZamVQ }}
-          local_dir: "./public_html"
-          remote_dir: "/var/www/click-tabs/"
-          delete: "true"
-          max_retries: "7"
-          no_symlinks: "false"
-          ftp_ssl_allow: "true"
-          ftp_use_feat: "true"
-          ftp_nop_interval: "9"
-          net_max_retries: "0"
-          net_persist_retries: "11"
-          net_timeout: "13s"
-          dns_max_retries: "17"
-          dns_fatal_timeout: "never"
-          lftp_settings: "set cache:cache-empty-listings true; set cmd:status-interval 1s; set http:user-agent 'firefox';"
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2
+      
+    - name: 📂 Sync files
+      uses: webitsbr/github-to-ftp@1.0.1
+      with:
+        server: ${{ secrets.3.210.72.15 }}
+        server-dir: ${{ secrets./var/www/click-tabs/ }}
+        username: ${{ secrets.clicktabs}}
+        password: ${{ secrets.T3nKAdquSPIZamVQ }}
