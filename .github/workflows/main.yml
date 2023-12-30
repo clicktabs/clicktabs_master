@@ -13,5 +13,5 @@ jobs:
       with:
         server: 3.210.72.15
         username: clicktabs
-        password: ${{ T3nKAdquSPIZamVQ }}
+        password: ${{T3nKAdquSPIZamVQ}}
         server-directory: /var/www/click-tabs/
