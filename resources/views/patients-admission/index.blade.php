@@ -166,7 +166,7 @@
                                             <td><a href="{{route('patients.show', $patient->id)}}">{{$patient->first_name}}</a></td>
                                             <td><a href="{{route('patients.show', $patient->id)}}">{{$patient->last_name}}</a></td>
                                             <td><a href="{{route('patients.show', $patient->id)}}">{{date_format($date,"m-d-Y")}}</a></td>
-                                             <td>
+                                            <td>
                                                 <div class="flex flex-wrap gap-[5px]">
                                                     <button type="button" class="btn btn-primary !bg-[#0b5ed7] update" data-id="{{$patient->id}}">Update</button>
                                                     <a class="btn btn-info" href="{{route('patients.show', $patient->id)}}">View</a>

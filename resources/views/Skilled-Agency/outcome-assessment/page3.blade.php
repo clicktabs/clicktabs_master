@@ -148,8 +148,7 @@
                               <div class="col-auto">
                                  <div class="input-group">
                                     <label class="input-group-text">Date</label>
-                                    <input type="date" id="" name="orderedDate" value="{{ old('orderedDate') }}" class="form-control">
-
+                                    <input type="date" id="" name="orderedDate" value="{{ isset($patient->extra_info->faceVsitDate) ? date('Y-m-d', strtotime($patient->extra_info->faceVsitDate)) : '' }}" class="form-control">
                                  </div>
                               </div>
                              <!--  <div class="col-auto">
@@ -165,14 +164,17 @@
                                  </div>
                               </div> -->
                            </div>
+                           @php
+                                $decodedExtraInfo = json_decode($patient->extra_info->face_to_face_evaluation, true);
+                           @endphp
                            <p><strong><i>→ Skip to M0100, Episode Timing, if date entered</i></strong></p>
                            <p><label class="form-check-label">
-                              <input type="checkbox" name="episodeDate" class="form-check-input"> NA - No specific SOC date ordered by physician</label></p>
+                                <input type="checkbox" name="episodeDate" class="form-check-input" {{ isset($decodedExtraInfo[0]) && $decodedExtraInfo[0] === 'na' ? 'checked' : '' }}> NA - No specific SOC date ordered by physician
                         </td>
                      </tr>
 
                      <tr>
-                        <td class="bg-secondary-subtle">  
+                        <td class="bg-secondary-subtle">
                            <strong>M0104. Date of Referral</strong>
                            <p>Indicate the date that the written or verbal referral for initiation or resumption of care was received by the HHA.</p>
                         </td>
@@ -184,7 +186,7 @@
                                  <div class="input-group">
                                     <label class="input-group-text">Date</label>
                                     <input type="date" id="" name="referralDate" value="" class="form-control">
-                                 </div>                           
+                                 </div>
                               </div>
                               <!-- <div class="col-auto">
                                  <div class="input-group">

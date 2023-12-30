@@ -43,6 +43,7 @@ class PatientPhysicianController extends Controller
             $patient_extra_info_update->attending_physician = $request->attending_physician;
             $patient_extra_info_update->referring_physician_id = $request->referring_physician;
             $patient_extra_info_update->face_to_face_evaluation = json_encode($request->face_to_face_evaluation);
+            $patient_extra_info_update->faceVsitDate = $request->faceVsitDate;
             $patient_extra_info_update->save();
             return response()->json([
                 'status'=> 200,
