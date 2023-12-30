@@ -759,30 +759,29 @@ class ScheduleCalendar extends Controller
     }
 
 //    public function udpateDragDate
-    public function updateDragEvent(Request $request) {
-        $formatedDate = $request->date;
+public function updateDragEvent(Request $request) {
+    $formatedDate = $request->date;
+    $modifyed_date = $this->updateDate($request->days, $formatedDate);
+    $schedule = Schedule::find($request->schedule_id);
+    $schedule->kt_calendar_datepicker_start_date = $modifyed_date;
+    $schedule->kt_calendar_datepicker_end_date = $modifyed_date;
+    $schedule->save();
+}
+
+public function updateCopyEvent(Request $request) {
+    $formatedDate = $request->date;
+    if($request->days !== null) {
         $modifyed_date = $this->updateDate($request->days, $formatedDate);
-        $schedule = Schedule::find($request->schedule_id);
-        $schedule->kt_calendar_datepicker_start_date = $modifyed_date;
-        $schedule->kt_calendar_datepicker_end_date = $modifyed_date;
-        $schedule->save();
+    } else {
+        $modifyed_date = $formatedDate;
     }
-
-    public function updateCopyEvent(Request $request) {
-        $formatedDate = $request->date;
-        if($request->days !== null) {
-            $modifyed_date = $this->updateDate($request->days, $formatedDate);
-        } else {
-            $modifyed_date = $formatedDate;
-        }
-
-        $schedule = Schedule::find($request->schedule_id);
-        $newSchedule = $schedule->replicate();
-        $newSchedule->kt_calendar_datepicker_start_date = $modifyed_date;
-        $newSchedule->kt_calendar_datepicker_end_date = $modifyed_date;
-        $newSchedule->updated_at = Carbon::now();
-        $newSchedule->save();
-    }
+    $schedule = Schedule::find($request->schedule_id);
+    $newSchedule = $schedule->replicate();
+    $newSchedule->kt_calendar_datepicker_start_date = $modifyed_date;
+    $newSchedule->kt_calendar_datepicker_end_date = $modifyed_date;
+    $newSchedule->updated_at = Carbon::now();
+    $newSchedule->save();
+}
 
     public function editWeekSchedule(Request $request){
         if($request->kt_calendar_datepicker_start_date){
