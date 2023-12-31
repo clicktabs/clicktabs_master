@@ -1,4 +1,4 @@
-
+<input type="hidden" name="task_schedule_id" value="{{$schedule->id}}">
 <div class="container">
    <div class="d-flex flex-column" style="background: white;">
        <div class="d-flex flex-row justify-content-between mx-3 " >

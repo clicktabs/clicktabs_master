@@ -1599,6 +1599,11 @@ class OutcomeAssessmentController extends Controller
             $attributes = ['status' => 1];
             QaList::updateOrInsert($patientId, $attributes);
 
+            $schedule = Schedule::where('id', $request->task_schedule_id)->first();
+            $schedule->scheduling_status = 'completed';
+            $schedule->save();
+
+
             return redirect()->route('dashboard')->with(['active' => 'phistory', 'success' => 'Success!! Patient OASIS & QA Complete']);
 
         } else {

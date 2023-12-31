@@ -161,7 +161,8 @@ class PatientController extends Controller
         $attributes = PatientAttribute::with('patient')->wherePatientId($id)->latest()->get();
         $patients = Patient::where('organization_id', '=', $organization_id)->get();
         $patient = Patient::find($id);
-        $patientHistorys = PatientHistory::all();
+        // $patientHistorys = PatientHistory::all();
+        $patientHistorys = Schedule::where('scheduling_status', 'completed')->get();
         $physicianOrders = PhysicianOrders::all();
         $cmss = CMS::all();
 
