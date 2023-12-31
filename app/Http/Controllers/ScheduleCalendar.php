@@ -198,6 +198,7 @@ class ScheduleCalendar extends Controller
                 'schedule.*'
             ])
             ->where('schedule.employee_id', '=', $u_id->id)
+            ->where('scheduling_status', '!=', 'completed')
             ->get();
         return response()->json([
             'status' => 200,
