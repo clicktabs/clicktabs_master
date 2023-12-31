@@ -2,9 +2,9 @@
 <div class="px-[15px] bg-white {{isset($active) && $active=='final'?'active':''}}" id="teb-two">
     <div class="container-fluid">
 <div class="form-holder pt-5 pb-5">
-    
+
           {{-- <form action="{{route('skilled-agency.nurse-visit-note.index')}}" method="POST" id="nursing-visit-form">
-                  @csrf 
+                  @csrf
                    <div class="">
                        <div class="border border-2 rounded bg-white vt">
                           <table class="table table-borderless m-0">
@@ -271,7 +271,7 @@ class="form-check-input"> Motivated</label>
                 <div class="d-inline-block mt-2">
                 <div class="input-group">
                 <label class="input-group-text m-0" for="dressingOther">Other:</label>
-                <input style="max-width: 100px;" type="text" name="dressingOther" id="dressingOther" 
+                <input style="max-width: 100px;" type="text" name="dressingOther" id="dressingOther"
                 class="form-control">
                 </div>
                 </div>
@@ -398,7 +398,7 @@ class="form-check-input"> Motivated</label>
                 </table>
                 </div>
                 </td>
-                </tr>    
+                </tr>
                 </table>
                 </td>
                 </tr>
@@ -587,7 +587,7 @@ class="form-check-input"> Motivated</label>
                 </tr>
                 <tr>
                 <td class="labels-group">
-                <label for="">Teach:</label> 
+                <label for="">Teach:</label>
                 <label class="form-check-label" for="Ostomy_care">
                 <input type="checkbox" name="ostomyCare" id="Ostomy_care" value="1"
                 class="form-check-input"> Ostomy care</label>
@@ -643,7 +643,7 @@ class="form-check-input"> Motivated</label>
                 </tr>
                 <tr>
                 <td class="labels-group">
-                <label for="">Teach medication:</label> 
+                <label for="">Teach medication:</label>
                 <label class="form-check-label" for="Teach_medication_purpose">
                 <input type="checkbox" name="teachMedicationPurpose" id="Teach_medication_purpose" value="1"
                 class="form-check-input"> purpose</label>
@@ -762,7 +762,7 @@ class="form-check-input"> Motivated</label>
                 </td>
                 </tr>
                 </table>
-            
+
                     <div class="row row-flex">
                     <div class="col-lg-6 border-lg-end-2">
                     <h3 class="bg-dark text-center p-2 mt-3 mb-2 text-white">SUMMARY CHECKLIST</h3>
@@ -844,7 +844,7 @@ class="form-check-input"> Motivated</label>
                     <input type="checkbox" name="physicianProvider" id="physician_provider" value=""
                     class="form-check-input"> Physician/Provider</label>
                     <label class="form-check-label" for="physicianPt">
-                    <input type="checkbox" name="physicianPt" id="physicianPt" value="1" class="form-check-input"> PT</label> 
+                    <input type="checkbox" name="physicianPt" id="physicianPt" value="1" class="form-check-input"> PT</label>
                     <label class="form-check-label" for="Care_coordination_physician_ot">
                     <input type="checkbox" name="physicianOt" id="physician_ot" value="1"
                     class="form-check-input"> OT</label>
@@ -982,14 +982,14 @@ class="form-check-input"> Motivated</label>
                             @if(request()->route()->getName() === 'skilled-agency.saveNursing')
                             <input type="hidden" name="patient_id" value="{{$patient_id}}">
                             @endif
-                            
+
                             <button type="submit" value="save_exit" class="!bg-[#4133BF] btn btn-primary" name="save_exit" data-next="cms-485">Save & Exit</button>
-                  
-                            <button type="submit" name="finalSubmit" value="final" class="btn btn-success btn-block active" >Save</button>
+
+                            {{-- <button type="submit" name="finalSubmit" value="final" class="btn btn-success btn-block active" >Save</button> --}}
                         </div>
                     </div>
                 </div>
              </form>
         </div>
-       
+
 </div><!------/page two end---->
