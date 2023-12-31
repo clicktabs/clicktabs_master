@@ -63,7 +63,7 @@ return new class extends Migration
             $table->string('admissiontransferDate', 10)->nullable();
             $table->string('TransferPlanned', 10)->nullable();
             $table->string('reasonforAdmission')->nullable();
-            $table->string('TransferReason', 10)->nullable();
+            $table->string('TransferReason', 50)->nullable();
             $table->string('reference_reason', 55)->nullable();
             $table->string('TransferredTo', 10)->nullable();
             $table->text('TransferReason_1')->nullable();
@@ -75,7 +75,7 @@ return new class extends Migration
             $table->boolean('MSWdisciplines')->nullable();
             $table->boolean('Aidedisciplines')->nullable();
             $table->boolean('Otherdisciplines')->nullable();
-            $table->string('OtherHHAdisciplines', 10)->nullable();
+            $table->string('OtherHHAdisciplines', 50)->nullable();
             $table->boolean('SNtransfer')->nullable();
             $table->boolean('PTtransfer')->nullable();
             $table->boolean('OTtransfer')->nullable();

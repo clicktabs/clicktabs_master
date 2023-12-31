@@ -191,8 +191,7 @@
 
                                             <div class="container-full mt-2 px-10">
                                                 <div class="row">
-                                                    <div
-                                                        class="buttons-group !p-0 !w-[430px] flex !items-center !justify-content-between !mx-auto gap-[15px]">
+                                                    <div class="buttons-group !p-0 !w-[430px] flex !items-center !justify-content-between !mx-auto gap-[15px]">
                                                         <button class="btn btn-primary !bg-[#0b5ed7]" type="button"
                                                                 id="previousButton">Previous
                                                         </button>
@@ -461,7 +460,7 @@
                                         </form>
                                     </div>
                                     <div id="invoice">
-                                        <
+                                        
                                     </div>
                                 </div><!----Invoice Ends---->
 
