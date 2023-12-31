@@ -2,9 +2,9 @@
 @php
     $account = company_info();
 @endphp
-<div class="row">
+
     <form action="create">
-        
+    <div class="row">
         <div class="tz tni bg-white bd rounded-sm border border-slate-200 col-md-6">
             <h1>checking</h1>
             <div class="">
@@ -42,6 +42,7 @@
                     <p style="text-align: center; font-size: 1em;">{{!empty($account->email)?$account->email:''}}</p>
                 </div>
         </div>
+    </div>
     </form>
 </div>
 
