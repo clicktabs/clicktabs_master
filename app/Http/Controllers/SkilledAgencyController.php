@@ -55,7 +55,7 @@ class SkilledAgencyController extends Controller
      */
     public function planofcare($id)
     {
-        
+
         $petiming = PatientEpisodeTiming::where('patient_id', $id)->first();
         $addressInfo = PatientAddressInfo::where('patient_id', $id)->first();
         $addressserviceInfo = PatientServiceAddress::where('patient_id', $id)->first();
@@ -347,10 +347,14 @@ class SkilledAgencyController extends Controller
             $nsf->save();
 
             $patient_id = $request->patient_id;
+            $organization_id = Auth::user()->organization_id;
+            $physicians = Physician::where('active_status', 1)->where('org_id', $organization_id)->get();
+            $pharmacies = Pharmacy::where('org_id', $organization_id)->get();
 
-            return view('skilled-agency.nurse-visit-note.index', compact('patient_id'))->with('active','final');
+            return view('skilled-agency.nurse-visit-note.index', compact('patient_id','physicians','pharmacies'))->with('active','final');
         }
-        if(isset($request->save_exit) || isset($request->finalSubmit)){
+
+        if(isset($request->save_exit)){
 
             $nss=new NurseSectionSecond;
             $nss->agitated=$request->agitated;
@@ -490,6 +494,7 @@ class SkilledAgencyController extends Controller
 
             $qaList = new QaList();
             $qaList->patient_id = $request->patient_id;
+            $qaList->status = 0;
             $qaList->save();
 
             if (isset($request->save_exit)) {
