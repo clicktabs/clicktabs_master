@@ -47,6 +47,8 @@ use App\Models\PatientCaseManager;
 use App\Models\PatientServiceAddress;
 use App\Models\PatientEpisodeManager;
 
+use DataTables;
+
 class PatientController extends Controller
 {
     use ApiService;
@@ -240,5 +242,41 @@ class PatientController extends Controller
             return redirect()->back()->with('error', "Error! Patient Could Not $status[1].");
         }
 
+    }
+
+    public function PatientsAjax(Request $request) {
+        if($request->ajax())
+        {
+            $data= Patient::all();
+            // dd($data);
+            // $data = Patient::select('first_name', 'middle_name', 'last_name', 'patient_code')->where()->;
+
+            /* if($request->filled('from_date') && $request->filled('to_date'))
+            {
+                $data = $data->whereBetween('created_at', [$request->from_date, $request->to_date]);
+            } */
+
+            return DataTables::of($data)->addIndexColumn()
+            ->addColumn('id', function ($patient) {
+                return '<input type="checkbox" name="patient_ids[]" value="'.$patient->id.'">';
+             })
+             ->addColumn('name', function ($patient) {
+                return $patient->first_name . ' ' . $patient->last_name;
+             })
+             ->addColumn('mrn', function ($patient) {
+                return $patient->patient_code;
+             })
+             ->addColumn('dob', function ($patient) {
+                return $patient->date_of_birth;
+             })
+             ->addColumn('address', function ($patient) {
+                return $patient->address->address_line_1;
+             })
+             ->addColumn('physician', function ($patient) {
+                return $patient->physician->physicianName;
+             })
+             ->rawColumns(['id', 'name', 'mrn', 'dob', 'physician', 'episode', 'notes'])
+            ->make(true);
+        }
     }
 }

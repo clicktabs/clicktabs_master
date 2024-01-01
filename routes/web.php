@@ -389,6 +389,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     //Reporting
 
     Route::get('/patients-reports', [ReportController::class, 'index'])->name('patients.reports');
+    Route::post('/patients-reports/print', [PDFController::class, 'PatientsReports'])->name('patients.reports.print');
+
+    Route::get('/patients/ajax/pull', [PatientController::class, 'PatientsAjax'])->name('patients.pull.ajax');
 
     Route::put('update_org_info/{org}', [OrganizationInfoController::class, 'update'])->name('update_org_info');
     Route::post('update_org_contact_person', [OrganizationContactPersonController::class, 'update'])->name('update_org_contact_person');
@@ -399,7 +402,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/physician-details', [PhysicianController::class, 'check_npi_number'])->name('physician.details');
     Route::get('/clinical-diagnosis-details', [PatientController::class, 'check_icd_request'])->name('patients.icd_details');
     Route::get('/physician-single-details', [PhysicianController::class, 'check_physician_details'])->name('physician.single_details');
-
 
 
     Route::get('/subscriptions/process-payment/{planId}', [SubscriptionPlanController::class, 'processPayment'])->name('subscriptions.process-payment');

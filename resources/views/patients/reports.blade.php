@@ -32,9 +32,9 @@
                                     </select>
                                 </td> 
                                 <td style="max-width: 200px">
-                                    <select class="form-select" aria-label="Location select">
+                                    <select class="form-select" aria-label="Location select" id="switch_table_data">
                                         <option value="">Select Report Item</option>
-                                        <option value="">Patient Roster</option>
+                                        <option value="Patient Roster">Patient Roster</option>
                                         <option value="">Patient Emergency Contact List</option>
                                         <option value="">Patient Address</option>
                                         <option value="">Patient Birthday</option>
@@ -51,13 +51,14 @@
                                         <option value="">Patient Discharge List</option> 
                                         <option value="">Patient Infection List</option> 
                                         <option value="">Physician Order History by Patient</option> 
-                                        <option value="">Employee Roster</option>  
+                                        <option value="Employee_Roster">Employee Roster</option>  
                                         <option value="">Employee License</option>  
                                         <option value="">Expiring Documents</option>  
                                         <option value="">Employee Visits</option>  
                                         <option value="">Employee Birthday</option>                      
                                     </select>
                                 </td>
+                                <td><button type="submit" class="btn btn-success hd xu ye print-selected-items" form="patientsReportsForm">Generate</button></td>
                                 <td style="max-width: 200px">
                                     <div id="daterange"  class="float-end" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%; text-align:center;height: auto;border-radius: 4px;">
                                         <i style="margin-right: 5px;" class="fa-regular fa-calendar-days"></i><span></span><i class="fa-solid fa-angle-down" style="margin-left: 5px;"></i>
@@ -103,6 +104,27 @@
                         
                     </tbody>
                 </table>
+
+                <form action="{{route('patients.reports.print')}}" method="POST" id="patientsReportsForm" target="_blank">
+                    @csrf
+                
+                    <table id="patientRoster" class="table table-striped" style="width:100%;display: none">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Patient Name</th>
+                                <th>MRN</th>
+                                <th>Date of Birth</th>
+                                <th>Address</th>
+                                <th>Physician</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                    <input type="hidden" id="reportType" name="reportType" value="">
+                </form>
             </div>
         </div>
     </main>
@@ -189,6 +211,57 @@
             }
         } );
     
+        // Swith Table Data
+        $('#switch_table_data').on('change', function() {
+
+            if( !$(this).val() ) {
+                location.reload();
+                return;
+            }
+
+            // Hider other tables
+            $('#daterange_table_wrapper').hide();
+
+            // Get Type of Report from Selection
+            $('#reportType').val($(this).val());
+
+            var patientRosterTable = $('#patientRoster').show().DataTable({
+                processing : true,
+                serverSide : true,
+                ajax : {
+                    url : "{{ route('patients.pull.ajax') }}",
+                    /* data : function(data){
+                        if( startDate && endDate ) {
+                            data.from_date = $('#daterange').data('daterangepicker').startDate.format('MM/DD/YYYY');
+                            data.to_date = $('#daterange').data('daterangepicker').endDate.format('MM/DD/YYYY');
+                        }
+                    } */
+                },
+                columns : [
+                    {data : 'id', name : 'id'},
+                    {data : 'name', name : 'first_name', className: "details-control"},
+                    {data : 'mrn', name : 'mrn'},
+                    {data : 'dob', name : 'date_of_birth'},
+                    {data : 'address', name : 'address'},
+                    {data : 'physician', name : 'physician'},
+                ]
+            });
+        });
+
+        $(document).on('click', '.print-selected-items', function (e) {
+            var ids = [];
+            $("input[type=checkbox]").each(function () {
+                var self = $(this);
+                if (self.is(':checked')) {
+                    ids.push(self.attr("value"));
+                }
+            });
+
+            if( ids.length === 0 ) {
+                e.preventDefault();
+            }
+            
+        }); 
     });
     </script>
 @endsection

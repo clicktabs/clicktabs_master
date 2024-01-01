@@ -27,6 +27,7 @@ use App\Models\NurseSectionSecondFour;
 use App\Models\NurseSectionSecondThree;
 use App\Models\NurseSectionSecondTwo;
 use App\Models\OasisEDeath;
+use App\Models\Patient;
 use App\Models\pdf;
 use App\Models\PhysicianOrders;
 use App\Models\Preference;
@@ -242,6 +243,23 @@ class PDFController extends Controller
         $dompdf->setPaper('A4', 'potrait');
         $dompdf->render();
         $filename = 'pdf_medication_' . time() . '.pdf';
+        $filePath = 'pdfs/' . $filename;
+        Storage::put($filePath, $dompdf->output());
+
+        return response()->file(storage_path('app/' . $filePath))->deleteFileAfterSend(false);
+    }
+
+    public function PatientsReports(Request $request) {
+        $patients = Patient::findMany( $request->patient_ids );
+        $reportType = $request->reportType;
+
+        $html = View::make('pdf.patients.reports-pdf', compact('patients', 'reportType'))->render();
+
+        $dompdf = new Dompdf();
+        $dompdf->loadHtml($html);
+        $dompdf->setPaper('A4', 'potrait');
+        $dompdf->render();
+        $filename = 'pdf_reports_' . time() . '.pdf';
         $filePath = 'pdfs/' . $filename;
         Storage::put($filePath, $dompdf->output());
 
