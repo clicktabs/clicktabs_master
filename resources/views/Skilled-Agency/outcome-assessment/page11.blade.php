@@ -403,7 +403,7 @@
             {{-- Pull from addons New Goals --}}
             <div><label for="" class="form-check-label block">List all the patient's goal(s) and indicate if <b>E</b>-Existing, <b>N</b>-New,
                 <b>M</b>-Modified existing or <b>D</b>-Discontinued</label></div>
-                <h5>Select all the patient's goal(s) </h5>
+                <h5>Goals/Rehabilitation Potential/Discharge Plans</h5>
             <select class="form-select mb-2" id="new_goals" style="max-width: 400px;"
                     name="discontinued[]" multiple="multiple">
                 <option disabled>-- Select Goals --</option>

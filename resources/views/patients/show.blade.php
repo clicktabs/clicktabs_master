@@ -604,7 +604,7 @@
                     .then(data => {
                         const results = data.results;
                         if (results.length > 0) {
-                            
+
                             const reactions = results[0].patient.reaction.map(reaction => reaction.reactionmeddrapt);
                             const row = document.createElement('tr');
                             const medicationDosageCell = document.createElement('td');
@@ -1719,17 +1719,7 @@
                             render: function (data, type, row) {
                                 let subscriptionPlanType = 1 || "DefaultPlan";
                                 let buttonsHtml = '';
-                                if (subscriptionPlanType === 'DOODD and home healthcare') {
-                                    buttonsHtml += `<a href="#" class="btn btn-primary" target="_blank">Open</a>`;
-                                } else if (subscriptionPlanType === 'Private Care') {
-                                    buttonsHtml += `<a href="#" class="btn btn-primary" target="_blank">Open</a>`;
-                                } else if (subscriptionPlanType === 'Home healthcare') {
-                                    buttonsHtml += `<a href="#" class="btn btn-primary" target="_blank">Open</a>`;
-                                } else if (subscriptionPlanType === 'Combo') {
-                                    buttonsHtml += `<a href="#" class="btn btn-primary" target="_blank">Open</a>`;
-                                } else {
-                                    buttonsHtml = 'No permission';
-                                }
+                                buttonsHtml += `<a href="/task-form/${data}" class="btn btn-primary" target="_blank">Open</a>`;
                                 return buttonsHtml;
                             }
                         },

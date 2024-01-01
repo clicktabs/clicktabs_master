@@ -198,6 +198,7 @@ class ScheduleCalendar extends Controller
                 'schedule.*'
             ])
             ->where('schedule.employee_id', '=', $u_id->id)
+            ->where('scheduling_status', '!=', 'completed')
             ->get();
         return response()->json([
             'status' => 200,
@@ -234,8 +235,13 @@ class ScheduleCalendar extends Controller
                 $episodeDaterange = PatientEpisodeManager::select('episode_start_date', 'episode_end_date')->where('id',$schedule->episode_id)->first();
                 $medications = Medication::select('medication_dosage','frequency','route','status')->where('patient_id', $patient->id)->get();
                 $account = Account::first();
+                $companyId = Auth::user()->organization_id;
+                $invention_addons = Addon::where('name', 'like', 'New Interventions%')->where('status', 1)->first();
+                $inventions = get_sub_addons($invention_addons, $companyId);
+                $new_goals_addons = Addon::where('name', 'like', 'New Goals%')->where('status', '1')->first();
+                $new_goals = get_sub_addons($new_goals_addons, $companyId);
                 return view('Skilled-Agency.oasis-e-start-of-care', compact('patient','race_enc','ethnicities','source_of_add','patientInsurance','patientAddressInfo',
-                'patientEpisodeTiming','patientTransportation', 'episodeDaterange','medications','schedule','account'))->with('active', 'phistory');
+                'patientEpisodeTiming','patientTransportation', 'episodeDaterange','medications','schedule','account','inventions','new_goals'))->with('active', 'phistory');
 
             case 'Skilled Nurse Visit (Billable)':
                 $organization_id = Auth::user()->organization_id;
@@ -754,30 +760,29 @@ class ScheduleCalendar extends Controller
     }
 
 //    public function udpateDragDate
-    public function updateDragEvent(Request $request) {
-        $formatedDate = $request->date;
+public function updateDragEvent(Request $request) {
+    $formatedDate = $request->date;
+    $modifyed_date = $this->updateDate($request->days, $formatedDate);
+    $schedule = Schedule::find($request->schedule_id);
+    $schedule->kt_calendar_datepicker_start_date = $modifyed_date;
+    $schedule->kt_calendar_datepicker_end_date = $modifyed_date;
+    $schedule->save();
+}
+
+public function updateCopyEvent(Request $request) {
+    $formatedDate = $request->date;
+    if($request->days !== null) {
         $modifyed_date = $this->updateDate($request->days, $formatedDate);
-        $schedule = Schedule::find($request->schedule_id);
-        $schedule->kt_calendar_datepicker_start_date = $modifyed_date;
-        $schedule->kt_calendar_datepicker_end_date = $modifyed_date;
-        $schedule->save();
+    } else {
+        $modifyed_date = $formatedDate;
     }
-
-    public function updateCopyEvent(Request $request) {
-        $formatedDate = $request->date;
-        if($request->days !== null) {
-            $modifyed_date = $this->updateDate($request->days, $formatedDate);
-        } else {
-            $modifyed_date = $formatedDate;
-        }
-
-        $schedule = Schedule::find($request->schedule_id);
-        $newSchedule = $schedule->replicate();
-        $newSchedule->kt_calendar_datepicker_start_date = $modifyed_date;
-        $newSchedule->kt_calendar_datepicker_end_date = $modifyed_date;
-        $newSchedule->updated_at = Carbon::now();
-        $newSchedule->save();
-    }
+    $schedule = Schedule::find($request->schedule_id);
+    $newSchedule = $schedule->replicate();
+    $newSchedule->kt_calendar_datepicker_start_date = $modifyed_date;
+    $newSchedule->kt_calendar_datepicker_end_date = $modifyed_date;
+    $newSchedule->updated_at = Carbon::now();
+    $newSchedule->save();
+}
 
     public function editWeekSchedule(Request $request){
         if($request->kt_calendar_datepicker_start_date){
@@ -1089,7 +1094,7 @@ class ScheduleCalendar extends Controller
             $schedule->payor_sub_addon_id  = $request->payor_sub_addon_id;
             $schedule->scheduling_notes  = $request->scheduling_notes;
             $schedule->created_at = date('Y-m-d H:i:s');
-            if ($episode) {
+            if (isset($episode)) {
                 $schedule->episode_id  = $episode->id;
             }
             $schedule->save();

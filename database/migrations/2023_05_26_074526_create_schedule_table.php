@@ -24,11 +24,11 @@ return new class extends Migration
             $table->string('task');
             $table->unsignedBigInteger('sc_sub_addon_id');
             $table->string('bill_unit_type');
-            $table->string('mileage_rate');
-            $table->string('user_rate');
-            $table->string('pay_unit_type');
+            $table->string('mileage_rate')->nullable();
+            $table->string('user_rate')->nullable();
+            $table->string('pay_unit_type')->nullable();
             $table->string('scheduling_status');
-            $table->string('organization_id');
+            $table->string('organization_id')->nullable();
             $table->unsignedBigInteger('payor_sub_addon_id');
             $table->text('scheduling_notes')->nullable();
             $table->timestamps();

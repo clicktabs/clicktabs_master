@@ -1,4 +1,4 @@
-
+<input type="hidden" name="task_schedule_id" value="{{$schedule->id}}">
 <div class="container">
    <div class="d-flex flex-column" style="background: white;">
        <div class="d-flex flex-row justify-content-between mx-3 " >
@@ -162,7 +162,16 @@
            <div class="d-flex flex-row">
                <div class="col-md-6 border d-flex px-2 py-2">
                    <div class="from-group col-md-12 py-2">
-                       16. Nutritional Req. <input type="text" placeholder="" class="form-control" name="nutritional-req">
+                       16. Nutritional Req.
+                       <textarea class="form-control" name="nutritional-req" cols="30" rows="10">
+                        {{ isset($patient->SwallowingNutritional->feedingEatingNo) && $patient->SwallowingNutritional->feedingEatingNo == 1 ? 'Able to independently feed self.' : '' }}
+                        {{ isset($patient->SwallowingNutritional->feedingEatingYes) && $patient->SwallowingNutritional->feedingEatingYes == 1 ? 'Able to feed self independently but requires.' : '' }}
+                        {{ isset($patient->SwallowingNutritional->feedingEatingUnable) && $patient->SwallowingNutritional->feedingEatingUnable == 1 ? 'Unable to feed self and must be assisted or supervised throughout the meal/snack.' : '' }}
+                        {{ isset($patient->SwallowingNutritional->feedingEatingAble) && $patient->SwallowingNutritional->feedingEatingAble == 1 ? 'Able to take in nutrients orally and receives supplemental nutrients through a nasogastric tube or gastrostomy.' : '' }}
+                        {{ isset($patient->SwallowingNutritional->feedingEatingUnableGastrostomy) && $patient->SwallowingNutritional->feedingEatingUnableGastrostomy == 1 ? 'Unable to take in nutrients orally and is fed nutrients through a nasogastric tube or gastrostomy.' : '' }}
+                        {{ isset($patient->SwallowingNutritional->feedingEatingUnableNutrients) && $patient->SwallowingNutritional->feedingEatingUnableNutrients == 1 ? 'Unable to take in nutrients orally or by tube feeding.' : '' }}
+                       </textarea>
+                       {{-- <input type="text" placeholder="" class="form-control" name="nutritional-req"> --}}
                    </div>
                </div>
                <div class="col-md-6 border d-flex px-2 py-2">
@@ -178,22 +187,22 @@
                    <div class="d-flex flex-row justify-content-between" style="font-size: 11px;">
                        <div class="d-flex flex-column col-md-4">
                            <div class="">
-                               1 <input type="checkbox" name="funcitonalLimition" id="amputation" value="amputation">
+                               1 1 <input type="checkbox" name="funcitonalLimition" id="amputation" value="1" {{ !empty($patient->functionalAbilitie->amputation) && $patient->functionalAbilitie->amputation == 1 ? 'checked' : '' }}>
                                <label for="amputation">Amputation</label>
                            </div>
 
                            <div>
-                               2 <input type="checkbox" name="funcitonalLimition" id="bowelBladder" value="bowelBladder">
+                               2 <input type="checkbox" name="funcitonalLimition" id="bowelBladder" value="1"  {{ !empty($patient->functionalAbilitie->bowelBladder) && $patient->functionalAbilitie->bowelBladder == 1 ? 'checked' : '' }}>
                                <label for="bowelBladder">Bowel/Bladder (Incontinence)</label>
                            </div>
 
                            <div>
-                               3 <input type="checkbox" name="funcitonalLimition" id="contracture" value="contracture">
+                               3 <input type="checkbox" name="funcitonalLimition" id="contracture" value="1" {{ !empty($patient->functionalAbilitie->contracture) && $patient->functionalAbilitie->contracture == 1 ? 'checked' : '' }}>
                                <label for="contracture">Contracture</label>
                            </div>
 
                            <div>
-                               4 <input type="checkbox" name="funcitonalLimition" id="hearing" value="hearing">
+                               4 <input type="checkbox" name="funcitonalLimition" id="hearing" value="1" {{ !empty($patient->functionalAbilitie->hearing) && $patient->functionalAbilitie->hearing == 1 ? 'checked' : '' }}>
                                <label for="hearing">Hearing</label>
                            </div>
 
@@ -202,22 +211,22 @@
 
                        <div class="d-flex flex-column col-md-3">
                            <div>
-                               5 <input type="checkbox" name="funcitonalLimition" id="paralysis" value="paralysis">
+                               5 <input type="checkbox" name="funcitonalLimition" id="paralysis" value="1" {{ !empty($patient->functionalAbilitie->paralysis) && $patient->functionalAbilitie->paralysis == 1 ? 'checked' : '' }}>
                                <label for="paralysis">Paralysis</label>
                            </div>
 
                            <div>
-                               6 <input type="checkbox" name="funcitonalLimition" id="endurance" value="endurance">
+                               6 <input type="checkbox" name="funcitonalLimition" id="endurance" value="1" {{ !empty($patient->functionalAbilitie->endurance) && $patient->functionalAbilitie->endurance == 1 ? 'checked' : '' }}>
                                <label for="endurance">Endurance</label>
                            </div>
 
                            <div>
-                               7 <input type="checkbox" name="funcitonalLimition" id="ambulation" value="ambulation">
+                               7 <input type="checkbox" name="funcitonalLimition" id="ambulation" value="1" {{ !empty($patient->functionalAbilitie->ambulation) && $patient->functionalAbilitie->ambulation == 1 ? 'checked' : '' }}>
                                <label for="ambulation">Ambulation</label>
                            </div>
 
                            <div>
-                               8 <input type="checkbox" name="funcitonalLimition" id="speech" value="speech">
+                               8 <input type="checkbox" name="funcitonalLimition" id="speech" value="1" {{ !empty($patient->functionalAbilitie->speech) && $patient->functionalAbilitie->speech == 1 ? 'checked' : '' }}>
                                <label for="speech">Speech</label>
                            </div>
 
@@ -226,17 +235,17 @@
 
                        <div class="d-flex flex-column col-md-5">
                            <div>
-                               9 <input type="checkbox" name="funcitonalLimition" id="legallyBlind" value="legallyBlind">
+                               9 <input type="checkbox" name="funcitonalLimition" id="legallyBlind" value="1" {{ !empty($patient->functionalAbilitie->legallyBlind) && $patient->functionalAbilitie->legallyBlind == 1 ? 'checked' : '' }}>
                                <label for="legallyBlind">Legally Blind</label>
                            </div>
 
                            <div>
-                               A <input type="checkbox" name="funcitonalLimition" id="dyspneaWithMinimalExertion" value="dyspneaWithMinimalExertion">
+                               A <input type="checkbox" name="minimalExertion" id="dyspneaWithMinimalExertion" value="1" {{ !empty($patient->functionalAbilitie->minimalExertion) && $patient->functionalAbilitie->minimalExertion == 1 ? 'checked' : '' }}>
                                <label for="dyspneaWithMinimalExertion">Dyspnea With Minimal Exertion </label>
                            </div>
 
                            <div>
-                               B <input type="checkbox" name="funcitonalLimition" id="other" value="Other">
+                               B <input type="checkbox" name="funcitonalLimition" id="other" value="1" {{ !empty($patient->functionalAbilitie->Other) && $patient->functionalAbilitie->Other == 1 ? 'checked' : '' }}>
                                <label for="other">Other (Specify)</label>
                            </div>
                        </div>
@@ -249,27 +258,27 @@
                    <div class="d-flex flex-row justify-content-between" style="font-size: 11px;">
                        <div class="d-flex flex-column col-md-4">
                            <div>
-                               1 <input type="checkbox" name="activitiPermitted[]" id="completeBedrest" value="completeBedrest">
+                               1 <input type="checkbox" name="completeBedrest" id="completeBedrest" value="1" {{ !empty($patient->functionalStatus->completeBedrest) && $patient->functionalStatus->completeBedrest == 1 ? 'checked' : '' }}>
                                <label for="completeBedrest">Complete Bedrest</label>
                            </div>
 
                            <div>
-                               2 <input type="checkbox" name="activitiPermitted[]" id="bedrestBRP" value="bedrestBRP">
-                               <label for="bedrestBRP">Bedrest BRP</label>
+                               2 <input type="checkbox" name="bathroomPrevileges" id="bathroomPrevileges" value="1" {{ !empty($patient->functionalStatus->bathroomPrevileges) && $patient->functionalStatus->bathroomPrevileges == 1 ? 'checked' : '' }}>
+                               <label for="bathroomPrevileges">Bedrest BRP</label>
                            </div>
 
                            <div>
-                               3 <input type="checkbox" name="activitiPermitted[]" id="upAsTolerated" value="upAsTolerated">
+                               3 <input type="checkbox" name="upAsTolerated2" id="upAsTolerated" value="1" {{ !empty($patient->functionalStatus->upAsTolerated2) && $patient->functionalStatus->upAsTolerated2 == 1 ? 'checked' : '' }}>
                                <label for="upAsTolerated">Up As Tolerated</label>
                            </div>
 
                            <div>
-                               4 <input type="checkbox" name="activitiPermitted[]" id="transferBed" value="transferBed">
+                               4 <input type="checkbox" name="transferbed" id="transferbed" value="1" {{ !empty($patient->functionalStatus->transferbed) && $patient->functionalStatus->transferbed == 1 ? 'checked' : '' }}>
                                <label for="transferBed">Transfer Bed/Chair</label>
                            </div>
 
                            <div>
-                               5 <input type="checkbox" name="activitiPermitted[]" id="exercisesPrescribed" value="exercisesPrescribed">
+                               5 <input type="checkbox" name="excercisePre" id="excercisePre" value="1" {{ !empty($patient->functionalStatus->excercisePre) && $patient->functionalStatus->excercisePre == 1 ? 'checked' : '' }}>
                                <label for="exercisesPrescribed">Exercises Prescribed</label>
                            </div>
 
@@ -278,21 +287,21 @@
 
                        <div class="d-flex flex-column col-md-4">
                            <div>
-                               6 <input type="checkbox" name="activitiPermitted[]" id="partialWeightBearing" value="partialWeightBearing">
+                               6 <input type="checkbox" name="partialWeight" id="partialWeight" value="1" {{ !empty($patient->functionalStatus->partialWeight) && $patient->functionalStatus->partialWeight == 1 ? 'checked' : '' }}>
                                <label for="partialWeightBearing">Partial Weight Bearing</label>
                            </div>
 
                            <div>
-                               7 <input type="checkbox" name="activitiPermitted[]" id="independentAtHome" value="independentAtHome">
+                               7 <input type="checkbox" name="independet" id="independet" value="1" {{ !empty($patient->functionalStatus->independet) && $patient->functionalStatus->independet == 1 ? 'checked' : '' }}>
                                <label for="independentAtHome">Independent At Home</label>
                            </div>
 
                            <div>
-                               8 <input type="checkbox" name="activitiPermitted[]" id="crutches" value="crutches">
+                               8 <input type="checkbox" name="crutches" id="crutches" value="1" {{ !empty($patient->functionalStatus->crutches) && $patient->functionalStatus->crutches == 1 ? 'checked' : '' }}>
                                <label for="crutches">Crutches</label>
                            </div>
                            <div>
-                               9 <input type="checkbox" name="activitiPermitted[]" id="cane" value="cane">
+                               9 <input type="checkbox" name="cane" id="cane" value="1" {{ !empty($patient->functionalStatus->cane) && $patient->functionalStatus->cane == 1 ? 'checked' : '' }}>
                                <label for="cane">Cane</label>
                            </div>
 
@@ -302,20 +311,20 @@
 
 
                            <div>
-                               A <input type="checkbox" name="activitiPermitted[]" id="wheelchair" value="wheelchair">
+                               A <input type="checkbox" name="wheelchair" id="wheelchair" value="1" {{ !empty($patient->functionalStatus->wheelchair) && $patient->functionalStatus->wheelchair == 1 ? 'checked' : '' }}>
                                <label for="wheelchair">Wheelchair </label>
                            </div>
 
                            <div>
-                               B <input type="checkbox" id="walker" name="activitiPermitted[]" value="walker">
+                               B <input type="checkbox" id="walker" name="walker" value="1" {{ !empty($patient->functionalStatus->walker) && $patient->functionalStatus->walker == 1 ? 'checked' : '' }}>
                                <label for="walker">Walker</label>
                            </div>
                            <div>
-                               C <input type="checkbox" name="activitiPermitted[]" id="noRestrictions" value="noRestrictions">
+                               C <input type="checkbox" name="noRestrictions2" id="noRestrictions2" value="1" {{ !empty($patient->functionalStatus->noRestrictions2) && $patient->functionalStatus->noRestrictions2 == 1 ? 'checked' : '' }}>
                                <label for="noRestrictions">No Restrictions</label>
                            </div>
                            <div>
-                               D <input type="checkbox" name="activitiPermitted[]" id="actiothers" value="Other">
+                               D <input type="checkbox" name="otherSpecify10" id="otherSpecify10" value="1" {{ !empty($patient->functionalStatus->otherSpecify10) ? 'checked' : '' }}>
                                <label for="actiothers">Other (Specify)</label>
                            </div>
                        </div>
@@ -327,40 +336,40 @@
                <div class="col-md-4 px-2 py-2">19. Mental Status:</div>
                <div class="col-md-8 d-flex flex-wrap">
                    <div class="col-md-3">
-                       1 <input type="checkbox" name="mentalstatus" id="oriented" value="oriented">
+                       1 <input type="checkbox" name="mentalstatus" id="oriented" value="1" {{ !empty($patient->functionalStatus->exercises) && $patient->functionalStatus->exercises == 1 ? 'checked' : '' }}>
                        <label for="oriented">Oriented</label>
                    </div>
 
                    <div class="col-md-3">
-                       2 <input type="checkbox" name="mentalstatus" id="comatose" value="comatose">
+                       2 <input type="checkbox" name="mentalstatus" id="comatose" value="comatose" {{ !empty($patient->functionalStatus->exercises) && $patient->functionalStatus->exercises == 1 ? 'checked' : '' }}>
                        <label for="comatose">Comatose</label>
                    </div>
 
                    <div class="col-md-3">
-                       3 <input type="checkbox" name="mentalstatus" id="forgetful" value="forgetful">
+                       3 <input type="checkbox" name="mentalstatus" id="forgetful" value="forgetful" {{ !empty($patient->functionalStatus->exercises) && $patient->functionalStatus->exercises == 1 ? 'checked' : '' }}>
                        <label for="forgetful">Forgetful</label>
                    </div>
 
                    <div class="col-md-3">
-                       4 <input type="checkbox" name="mentalstatus" id="depressed" value="depressed">
+                       4 <input type="checkbox" name="mentalstatus" id="depressed" value="depressed" {{ !empty($patient->functionalStatus->exercises) && $patient->functionalStatus->exercises == 1 ? 'checked' : '' }}>
                        <label for="depressed">Depressed</label>
                    </div>
 
                    <div class="col-md-3">
-                       5 <input type="checkbox" name="mentalstatus" id="disoriented" value="disoriented">
+                       5 <input type="checkbox" name="mentalstatus" id="disoriented" value="disoriented" {{ !empty($patient->functionalStatus->exercises) && $patient->functionalStatus->exercises == 1 ? 'checked' : '' }}>
                        <label for="disoriented">Disoriented</label>
                    </div>
 
                    <div class="col-md-3">
-                       6 <input type="checkbox" name="mentalstatus" id="lethargic" value="lethargic">
+                       6 <input type="checkbox" name="mentalstatus" id="lethargic" value="lethargic" {{ !empty($patient->functionalStatus->exercises) && $patient->functionalStatus->exercises == 1 ? 'checked' : '' }}>
                        <label for="lethargic">Lethargic</label>
                    </div>
                    <div class="col-md-3">
-                       7 <input type="checkbox" name="mentalstatus" id="agitated" value="agitated">
+                       7 <input type="checkbox" name="mentalstatus" id="agitated" value="agitated" {{ !empty($patient->functionalStatus->exercises) && $patient->functionalStatus->exercises == 1 ? 'checked' : '' }}>
                        <label for="agitated">Agitated</label>
                    </div>
                    <div class="col-md-3">
-                       8 <input type="checkbox" name="mentalstatus" id="menstother" value="Other">
+                       8 <input type="checkbox" name="mentalstatus" id="menstother" value="Other" {{ !empty($patient->functionalStatus->exercises) && $patient->functionalStatus->exercises == 1 ? 'checked' : '' }}>
                        <label for="menstother">Other</label>
                    </div>
 
@@ -400,7 +409,9 @@
                <div class="from-group col-md-12 py-2">
                    21. Orders for Discipline and Treatments (Specify Amount/Frequency/Duration)
 
-                   <textarea class="form-control py-2"  name="medications" id="medications" rows="7">{{ $patient && $patient->cms ? $patient->cms->medications : '' }}</textarea>
+                   <textarea class="form-control py-2"  name="medications" id="medications" rows="7">
+                    {{ isset($patient->specialTreatment->discontinued) ? $patient->specialTreatment->discontinued : '' }}
+                   </textarea>
 
                </div>
            </div>
@@ -408,7 +419,7 @@
                <div class="from-group col-md-12 py-2">
                    22. Goals/Rehabilitation Potential/Discharge Plans
 
-                   <textarea class="form-control py-2" name="treatments" id="treatments"  rows="4">{{ $patient && $patient->cms ? $patient->cms->treatments : '' }}</textarea>
+                   <textarea class="form-control py-2" name="treatments" id="treatments"  rows="4">{{ isset($patient->preference->discontinued) ? $patient->preference->discontinued : '' }}</textarea>
                </div>
            </div>
 
@@ -441,8 +452,8 @@
                        24. Physician's Name and Address
 
                        <textarea class="form-control py-2" name="name" id="name" rows="5">
-                            {{ $patient && $patient->cms ? $patient->cms->physician : '' }},
-                            {{ $patient && $patient->cms ? $patient->cms->physicianAddress : '' }}
+                            {{ isset($patient->extra_info->physician) ? $patient->extra_info->physician->first_name : '' }} {{ isset($patient->extra_info->physician) ? $patient->extra_info->physician->last_name : '' }},
+                            {{ isset($patient->extra_info->physician) ? $patient->extra_info->physician->address_line_1 : '' }} {{ isset($patient->extra_info->physician) ? $patient->extra_info->physician->address_line_2 : '' }}
                        </textarea>
                    </div>
                </div>

@@ -1408,6 +1408,7 @@ class OutcomeAssessmentController extends Controller
             'personCompletingTime' => $request->personCompletingTime,
             'agencyName' => $request->agencyName,
             'agencyPhone' => $request->agencyPhone,
+            'discontinued' => $request->discontinued,
             'created_by' => Auth::user()->id,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
@@ -1597,6 +1598,11 @@ class OutcomeAssessmentController extends Controller
             $patientId = ['patient_id' => $request->patient_history_id];
             $attributes = ['status' => 1];
             QaList::updateOrInsert($patientId, $attributes);
+
+            $schedule = Schedule::where('id', $request->task_schedule_id)->first();
+            $schedule->scheduling_status = 'completed';
+            $schedule->save();
+
 
             return redirect()->route('dashboard')->with(['active' => 'phistory', 'success' => 'Success!! Patient OASIS & QA Complete']);
 

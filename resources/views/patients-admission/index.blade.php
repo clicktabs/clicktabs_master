@@ -151,7 +151,6 @@
                                     <th>First name</th>
                                     <th>Last name</th>
                                     <th>Birth Date</th>
-                                    <th>Assign patient to Employee</th>
                                     <th style="max-width: 265px">Action</th>
                                 </tr>
                                 </thead>
@@ -167,15 +166,6 @@
                                             <td><a href="{{route('patients.show', $patient->id)}}">{{$patient->first_name}}</a></td>
                                             <td><a href="{{route('patients.show', $patient->id)}}">{{$patient->last_name}}</a></td>
                                             <td><a href="{{route('patients.show', $patient->id)}}">{{date_format($date,"m-d-Y")}}</a></td>
-                                            <td>
-                                                <select name="employes[]" class="form-select" multiple aria-label="multiple select example" style="max-height: 56px;">
-                                                    @if ($employees)
-                                                        @foreach($employees as $employee)
-                                                            <option {{ $employee->id == $patient->schedule->employee->id ? 'selected' : '' }} value="{{$employee->id}}">{{ $employee->first_name . ' ' . $employee->last_name }}</option>
-                                                        @endforeach
-                                                    @endif
-                                                  </select>
-                                            </td>
                                             <td>
                                                 <div class="flex flex-wrap gap-[5px]">
                                                     <button type="button" class="btn btn-primary !bg-[#0b5ed7] update" data-id="{{$patient->id}}">Update</button>

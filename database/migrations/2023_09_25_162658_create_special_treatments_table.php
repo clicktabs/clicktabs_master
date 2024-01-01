@@ -90,7 +90,7 @@ class CreateSpecialTreatmentsTable  extends Migration
             $table->boolean('influenzaNotReceive')->nullable();
             $table->integer('numberOfTherapy')->nullable();
             $table->boolean('notappli')->nullable();
-            $table->text('coordinationComment')->nullable();            
+            $table->text('coordinationComment')->nullable();
             $table->text('dmeCompanyName')->nullable();
             $table->text('companyPhn')->nullable();
             $table->text('companyOxygen')->nullable();
@@ -244,6 +244,7 @@ class CreateSpecialTreatmentsTable  extends Migration
             $table->time('personCompletingTime')->nullable();
             $table->text('agencyName')->nullable();
             $table->text('agencyPhone')->nullable();
+            $table->text('discontinued')->nullable();
 
             $table->integer('modified_by')->nullable();
             $table->integer('created_by')->nullable();

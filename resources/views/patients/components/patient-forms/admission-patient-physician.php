@@ -88,9 +88,9 @@
                         <label for="face_to_face_evaluation_na">NA</label>
                     </div>
                     <div class="form-group">
-                        <input type="checkbox" name="face_to_face_evaluation[]" value="date" id="face_to_face_evaluation_date" class="form-control">                        
+                        <input type="checkbox" name="face_to_face_evaluation[]" value="date" id="face_to_face_evaluation_date" class="form-control">
                         <label for="face_to_face_evaluation_date">Date of Face-to-Face Visit</label>
-                        <input class="face_to_face" type="date" name="facevisit" >
+                        <input class="face_to_face" type="date" name="faceVsitDate" >
                     </div>
                     <div class="form-group">
                         <input type="checkbox" name="face_to_face_evaluation[]"

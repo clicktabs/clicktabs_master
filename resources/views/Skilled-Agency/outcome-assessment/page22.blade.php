@@ -15,7 +15,7 @@
                         <td><label for="">A. <b>Weight</b> (in pounds). Base weight on most recent measure in last 30 days; measure weight consistently, according tostandard agency practice (for example, in a.m. after voiding, before meal, with shoes off, etc.)</label></td>
                      </tr>
                   </table>
-      
+
                   <table class="table table-bordered align-middle not-responsive default-td">
                      <tr>
                         <td class="bg-secondary-subtle" colspan="2">
@@ -56,7 +56,7 @@
                         <td class="bg-secondary-subtle text-center"><input type="checkbox" name="noa" class="form-check-input" value="4"></td>
                      </tr>
                   </table>
-      
+
                   <table class="table table-bordered align-middle not-responsive default-td">
                      {{-- <tr>
                         <td class="bg-secondary-subtle" colspan="3">
@@ -107,7 +107,7 @@
                         <td class="bg-secondary-subtle text-center"><input type="checkbox" name="noneofAbobeYes" class="form-check-input" value="1"></td>
                      </tr>
                   </table> --}}
-      
+
                   <table class="table table-bordered align-middle not-responsive">
                      <tr>
                         <td class="bg-secondary-subtle" colspan="2">
@@ -117,7 +117,7 @@
                      </tr>
                      <tr>
                         <td>
-                           <div class="d-block"><label class="form-check-label"><input type="checkbox" name="feedingEatingNo" class="form-check-input" value="0"> 0. <b>Able to independently feed self.</b></label></div>
+                           <div class="d-block"><label class="form-check-label"><input type="checkbox" name="feedingEatingNo" class="form-check-input" value="1"> 0. <b>Able to independently feed self.</b></label></div>
                            <div class="d-block"><label class="form-check-label"><input type="checkbox" name="feedingEatingYes" class="form-check-input" value="1"> 1. <b>Able to feed self independently but requires:</b>
                               <p class="ms-4">
                                  a. <b>meal set-up; <u>OR</u></b><br>
@@ -126,9 +126,9 @@
                               </p>
                            </label></div>
                            <div class="d-block"><label class="form-check-label"><input type="checkbox" name="feedingEatingUnable" class="form-check-input" value="1"> 2. <b><u>Unable</u> to feed self and must be assisted or supervised throughout the meal/snack.</b></label></div>
-                           <div class="d-block"><label class="form-check-label"><input type="checkbox" name="feedingEatingAble" class="form-check-input" value="2"> 3. <b>Able to take in nutrients orally and receives supplemental nutrients through a nasogastric tube or gastrostomy.</b></label></div>
-                           <div class="d-block"><label class="form-check-label"><input type="checkbox" name="feedingEatingUnableGastrostomy" class="form-check-input" value="3"> 4. <b><u>Unable</u> to take in nutrients orally and is fed nutrients through a nasogastric tube or gastrostomy.</b></label></div>
-                           <div class="d-block"><label class="form-check-label"><input type="checkbox" name="feedingEatingUnableNutrients" class="form-check-input" value="4"> 5. <b>Unable to take in nutrients orally or by tube feeding.</b></label></div>
+                           <div class="d-block"><label class="form-check-label"><input type="checkbox" name="feedingEatingAble" class="form-check-input" value="1"> 3. <b>Able to take in nutrients orally and receives supplemental nutrients through a nasogastric tube or gastrostomy.</b></label></div>
+                           <div class="d-block"><label class="form-check-label"><input type="checkbox" name="feedingEatingUnableGastrostomy" class="form-check-input" value="1"> 4. <b><u>Unable</u> to take in nutrients orally and is fed nutrients through a nasogastric tube or gastrostomy.</b></label></div>
+                           <div class="d-block"><label class="form-check-label"><input type="checkbox" name="feedingEatingUnableNutrients" class="form-check-input" value="1"> 5. <b>Unable to take in nutrients orally or by tube feeding.</b></label></div>
                         </td>
                      </tr>
                   </table>
