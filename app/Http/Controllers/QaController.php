@@ -21,7 +21,7 @@ class QaController extends Controller
     {
         if($request->ajax())
         {
-            $data= QaList::with('patient')->get();
+            $data= QaList::all();
             // $data = Patient::select('first_name', 'middle_name', 'last_name', 'patient_code')->where()->;
 
             if($request->filled('from_date') && $request->filled('to_date'))
@@ -34,10 +34,10 @@ class QaController extends Controller
                 return '<input type="checkbox" name="id" value="'.$row->id.'">';
              })
              ->addColumn('name', function ($row) {
-                return '<a href="/task-form/'.$row->patient->schedule->id.'" target="_blank"><b>'.$row->patient->first_name.' ' .$row->patient->last_name.'</b></a>';
+                return '<a href="/task-form/'.$row->schedule_id.'" target="_blank"><b>'.$row->schedule->patient->first_name.' ' .$row->schedule->patient->last_name.'</b></a>';
              })
              ->addColumn('mrn', function ($row) {
-                return $row->patient->patient_code;
+                return $row->schedule->patient->patient_code;
              })
              ->addColumn('event_date', function ($row) {
                 return $row->created_at;
@@ -48,7 +48,7 @@ class QaController extends Controller
                 <button class="text-secondary"><i class="fa-solid fa-heart"></i></button>';
              })
              ->addColumn('task', function ($row) {
-                return $row->patient->schedule->task;
+                return $row->schedule->task;
              })
              ->addColumn('status', function ($row) {
                 if ($row->status == 1) {
@@ -67,7 +67,7 @@ class QaController extends Controller
                 <button><i class="fa-regular fa-file" style="color: #bbb"></i></button>';
              })
              ->addColumn('assigned_to', function ($row) {
-                return $row->patient->schedule->employee->first_name.' '.$row->patient->schedule->employee->last_name;
+                return $row->schedule->employee->first_name.' '.$row->schedule->employee->last_name;
              })
              ->rawColumns(['id', 'name', 'type', 'task', 'notes'])
              ->setRowAttr([

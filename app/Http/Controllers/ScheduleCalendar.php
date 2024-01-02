@@ -23,6 +23,8 @@ use App\Models\Medication;
 use App\Models\Account;
 use App\Models\Pharmacy;
 use App\Models\Physician;
+use App\Models\AideSupervisoryVisit;
+use App\Models\QaList;
 
 class ScheduleCalendar extends Controller
 {
@@ -267,7 +269,9 @@ class ScheduleCalendar extends Controller
                 $physicians = Physician::where('active_status', 1)->where('org_id', $organization_id)->get();
                 $pharmacies = Pharmacy::where('org_id', $organization_id)->get();
                 $patient = Patient::where('id', $schedule->patient_id)->first();
-                return view('Skilled-Agency.nurse-visit-note.index', compact('patient', 'physicians', 'pharmacies'));
+
+                // return $schedule_id;
+                return view('Skilled-Agency.nurse-visit-note.index', compact('patient', 'physicians', 'pharmacies','schedule'));
 
             case 'Pediatric Skilled Nursing':
                 $organization_id = Auth::user()->organization_id;
@@ -321,7 +325,10 @@ class ScheduleCalendar extends Controller
                 } else {
                     return view('Skilled-Agency.hha-visit-note', compact('data'));
                 }
-
+            case 'HHA Supervisory Visit(Non-Billable)':
+                $schedule_id = $schedule->id;
+                $supervisory = AideSupervisoryVisit::where('schedule_id',$schedule_id)->first();
+                return view('Skilled-Agency.aide-supervisory-visit', compact('supervisory', 'schedule_id'));
             default:
                 return redirect()->back()->with('danger', 'Something Went Wrong!!');
         }
