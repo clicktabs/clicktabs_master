@@ -1608,10 +1608,10 @@ class OutcomeAssessmentController extends Controller
 
         } else {
 
-            $qaList = new QaList();
-            $qaList->patient_id = $request->patient_history_id;
-            $qaList->status = 0;
-            $qaList->save();
+            $qaList = QaList::updateOrInsert(
+                ['schedule_id' => $request->patient_history_id],
+                ['status' => 0]
+            );
 
             $conditions = ['patient_history_id' => $request->patient_history_id];
             CMS::updateOrInsert($conditions, $attributes);

@@ -3,119 +3,6 @@
     <div class="container-fluid">
 <div class="form-holder pt-5 pb-5">
 
-          {{-- <form action="{{route('skilled-agency.nurse-visit-note.index')}}" method="POST" id="nursing-visit-form">
-                  @csrf
-                   <div class="">
-                       <div class="border border-2 rounded bg-white vt">
-                          <table class="table table-borderless m-0">
-                              <tr>
-                             <td class="p-0 border-lg-end-2 pb-3">
-                                 <h3 class="bg-dark-subtle text-center p-2">EMOTIONAL STATUS</h3>
-                            <div class="ps-1 pe-1">
-                                 <table class="table table-borderless align-middle m-0 stack-padding">
-                                     <tr>
-                                <td class="labels-group">
-                                    <label class="form-check-label" for="angry"><input type="checkbox" name="angry" id="angry" value="1"
-                                    class="form-check-input"> Angry</label>
-                                    <label class="form-check-label" for="agitated"><input type="checkbox" name="agitated" id="agitated" value="1"
-                                    class="form-check-input"> Agitated</label>
-                                    <label class="form-check-label" for="fearful"><input type="checkbox" name="fearful" id="fearful" value="1"
-                                    class="form-check-input"> Fearful</label>
-                                    <label class="form-check-label" for="sad" ><input type="checkbox" name="sad" id="sad" value="1"
-                                    class="form-check-input"> Sad</label>
-                                    <br>
-                                    <label class="form-check-label mt-2" for="iscourage"><input type="checkbox" name="discourage" id="discourage" value="1"
-                                    class="form-check-input"> Discouraged</label>
-                                    <label class="form-check-label mt-2" for="lonely"><input type="checkbox" name="lonely" id="lonely" value="1"
-                                    class="form-check-input"> Lonely</label>
-                                    <br>
-                                    <label class="form-check-label mt-2" for="depressed"><input type="checkbox" name="depressed" id="depressed" value="1"
-                                    class="form-check-input"> Depressed</label>
-                                    <label class="form-check-label mt-2" for="helpless"><input type="checkbox" name="helpless" id="helpless" value="1"
-                                    class="form-check-input"> Helpless</label>
-                                    <label class="form-check-label mt-2" for="forgetfull"><input type="checkbox" name="forgetfull" id="orgetfull" value="1"
-                                    class="form-check-input"> Forgetful</label>
-                                    <br>
-                                    <label class="form-check-label mt-2"for="confused" ><input type="checkbox" name="confused" id="confused" value="1"
-                                    class="form-check-input"> Confused</label>
-                                    <label class="form-check-label mt-2" for="content"><input type="checkbox" name="content" id="content" value="1"
-                                    class="form-check-input"> Content</label>
-                                    <label class="form-check-label mt-2" for="happy"><input type="checkbox" name="happy" id="happy" value="1"
-                                    class="form-check-input"> Happy</label>
-                                    <br>
-                                    <label class="form-check-label mt-2" for="hopeful"><input type="checkbox" name="hopeful" id="hopeful" value="1"
-                                    class="form-check-input"> Hopeful</label>
-                                    <label class="form-check-label mt-2" for="motivated"><input type="checkbox" name="motivated" id="motivated" value="1"
-                                    class="form-check-input"> Motivated</label>
-                                    <br>
-                                        <div class="input-group mt-2">
-                                        <label class="input-group-text m-0" for="status_other">Other:</label>
-                                        <input type="text" name="statusOther" id="status_other" class="form-control">
-                                        </div>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                <h3 class="bg-dark-subtle text-center p-2 mt-3 mb-2">SKIN</h3>
-                <div class="ps-1 pe-1">
-                <table class="table table-borderless align-middle m-0 stack-padding">
-                <tr>
-                <td class="labels-group">
-                <label for="">Turgor:</label>
-                <label class="form-check-label" for="turgor_good"><input type="radio" name="turgor" id="turgor_good" value="good"
-                class="form-check-input"> Good</label>
-                <label class="form-check-label" for="turgor_poor"><input type="radio" name="turgor" id="turgor_poor" value="poor"
-                class="form-check-input"> Poor</label>
-                </td>
-                </tr>
-                <tr>
-                <td>
-                <div class="row row-flex">
-                <div class="col-md-6">
-                <div class="input-group">
-                <label class="input-group-text" for="turgor_color">Color:</label>
-                <input type="text" name="turgorColor" id="turgor_color" value="" class="form-control">
-                </div>
-                </div>
-                <div class="col-md-6">
-                <div class="input-group">
-                <label class="input-group-text" for="turgor_temp">Temp:</label>
-                <input type="text" name="turgorTemp" id="turgor_temp" value="" class="form-control">
-                </div>
-                </div>
-                </div>
-                </td>
-                </tr>
-                <tr>
-                <td class="labels-group">
-                <label class="form-check-label" for="turgor_itch"><input type="checkbox" name="itch" id="itch" value="1"
-                class="form-check-input"> Itch</label>
-                <label class="form-check-label" for="turgor_rash"><input type="checkbox" name="rash" id="rash" value="1"
-                class="form-check-input"> Rash</label>
-                <label class="form-check-label" for="turgor_try"><input type="checkbox" name="try" id="try" value="1"
-                class="form-check-input"> Dry</label>
-                <label class="form-check-label" for="turgor_scaling"><input type="checkbox" name="scaling" id="scaling" value="1"
-                class="form-check-input"> Scaling</label>
-                <br>
-                <label class="form-check-label mt-2" for="turgor_redness"><input type="checkbox" name="redness" id="redness" value="1"
-                class="form-check-input"> Redness</label>
-                <label class="form-check-label mt-2" for="turgor_ecchymosis"><input type="checkbox" name="ecchymosis" idturgor_ecchymosis value="1"
-                class="form-check-input"> Ecchymosis</label>
-                <label class="form-check-label mt-2" for="turgor_pallor"><input type="checkbox" name="pallor" id="turgor_pallor" value="1"
-                class="form-check-input"> Pallor</label>
-                <br>
-                <label class="form-check-label mt-2" for="turgor_jaundice"><input type="checkbox" name="jaundice" id="turgor_jaundice" value="1"
-                class="form-check-input"> Jaundice</label>
-                <div class="d-inline-block mt-2">
-                <div class="input-group">
-                <label class="input-group-text m-0" for="turgor_other">Other (specify)</label>
-                <input type="text" name="turgorOther" id="turgor_other" value="" class="form-control">
-                </div>
-                </div>
-                </td>
-                </tr>
-                </table>
-                 --}}
 <form action="{{route('skilled-agency.saveNursing')}}" method="POST" id="nursing-visit-form2">
 @csrf
 <div class="border border-2 rounded bg-white">
@@ -980,7 +867,11 @@ class="form-check-input"> Motivated</label>
                     </div>
                         <div class="pl-3 pb-3">
                             @if(request()->route()->getName() === 'skilled-agency.saveNursing')
-                            <input type="hidden" name="patient_id" value="{{$patient_id}}">
+                                <input type="hidden" name="patient_id" value="{{$patient_id}}">
+                                <input type="hidden" name="schedule_id" value="{{$schedule_id}}">
+                            @else
+                                <input type="hidden" name="patient_id" value="{{$schedule->patient_id}}">
+                                <input type="hidden" name="schedule_id" value="{{$schedule->id}}">
                             @endif
 
                             <button type="submit" value="save_exit" class="!bg-[#4133BF] btn btn-primary" name="save_exit" data-next="cms-485">Save & Exit</button>

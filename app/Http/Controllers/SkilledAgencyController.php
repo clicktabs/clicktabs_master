@@ -347,11 +347,12 @@ class SkilledAgencyController extends Controller
             $nsf->save();
 
             $patient_id = $request->patient_id;
+            $schedule_id = $request->schedule_id;
             $organization_id = Auth::user()->organization_id;
             $physicians = Physician::where('active_status', 1)->where('org_id', $organization_id)->get();
             $pharmacies = Pharmacy::where('org_id', $organization_id)->get();
 
-            return view('skilled-agency.nurse-visit-note.index', compact('patient_id','physicians','pharmacies'))->with('active','final');
+            return view('skilled-agency.nurse-visit-note.index', compact('patient_id','physicians','pharmacies','schedule_id'))->with('active','final');
         }
 
         if(isset($request->save_exit)){
@@ -492,10 +493,10 @@ class SkilledAgencyController extends Controller
             $nss->patientSignature=$request->patientSignature;
             $nss->save();
 
-            $qaList = new QaList();
-            $qaList->patient_id = $request->patient_id;
-            $qaList->status = 0;
-            $qaList->save();
+            $qaList = QaList::updateOrInsert(
+                ['schedule_id' => $request->schedule_id],
+                ['status' => 0]
+            );
 
             if (isset($request->save_exit)) {
                 return redirect(route('patients.qa'));
@@ -521,7 +522,8 @@ class SkilledAgencyController extends Controller
 
     public function storeAideSupervisoryVisit(Request $request)
     {
-        $asv = new AideSupervisoryVisit();
+        $asv = AideSupervisoryVisit::firstOrNew(['schedule_id' => $request->schedule_id]);
+
         $asv->SupervisionDate = $request->SupervisionDate;
         $asv->Start = $request->Start;
         $asv->End = $request->End;
@@ -541,11 +543,19 @@ class SkilledAgencyController extends Controller
         $asv->Complies = $request->Complies;
         $asv->patientrights = $request->patientrights;
         $asv->Changes = $request->Changes;
-
         $asv->save();
 
-        return redirect(route('skilled-agency.aide-supervisory-visit'));
+        $qaList = QaList::updateOrInsert(
+            ['schedule_id' => $request->schedule_id],
+            ['status' => 0]
+        );
+
+        $message = $asv->wasRecentlyCreated ? 'Supervisory Visit Added' : 'Supervisory Visit Updated';
+
+        return redirect()->route('dashboard')->with(['success' => $message]);
     }
+
+
 
     public function hhaVisitNote()
     {
