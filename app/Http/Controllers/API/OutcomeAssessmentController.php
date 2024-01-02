@@ -1609,7 +1609,7 @@ class OutcomeAssessmentController extends Controller
         } else {
 
             $qaList = QaList::updateOrInsert(
-                ['schedule_id' => $request->patient_history_id],
+                ['schedule_id' => $request->task_schedule_id],
                 ['status' => 0]
             );
 
