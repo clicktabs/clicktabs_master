@@ -10,6 +10,7 @@ use App\Models\BladderBowel;
 use App\Models\CMS;
 use App\Models\CognitiveMoodBehavior;
 use App\Models\Demographic;
+use App\Models\Employee;
 use App\Models\FunctionalAbilitie;
 use App\Models\FunctionalStatus;
 use App\Models\HealthCondition;
@@ -249,21 +250,39 @@ class PDFController extends Controller
         return response()->file(storage_path('app/' . $filePath))->deleteFileAfterSend(false);
     }
 
-    public function PatientsReports(Request $request) {
+    public function PatientRoster(Request $request) {
         $patients = Patient::findMany( $request->patient_ids );
         $reportType = $request->reportType;
 
-        $html = View::make('pdf.patients.reports-pdf', compact('patients', 'reportType'))->render();
+        $html = View::make('pdf.patients.patient-roster-pdf', compact('patients', 'reportType'))->render();
 
         $dompdf = new Dompdf();
         $dompdf->loadHtml($html);
         $dompdf->setPaper('A4', 'potrait');
         $dompdf->render();
-        $filename = 'pdf_reports_' . time() . '.pdf';
+        $filename = 'pdf_patient-roster_' . time() . '.pdf';
         $filePath = 'pdfs/' . $filename;
         Storage::put($filePath, $dompdf->output());
 
         return response()->file(storage_path('app/' . $filePath))->deleteFileAfterSend(false);
     }
+
+    public function EmployeeRoster(Request $request) {
+        $employees = Employee::findMany( $request->employee_ids );
+        $reportType = $request->reportType;
+
+        $html = View::make('pdf.employee.employee-roster-pdf', compact('employees', 'reportType'))->render();
+
+        $dompdf = new Dompdf();
+        $dompdf->loadHtml($html);
+        $dompdf->setPaper('A4', 'potrait');
+        $dompdf->render();
+        $filename = 'pdf_employee-roster_' . time() . '.pdf';
+        $filePath = 'pdfs/' . $filename;
+        Storage::put($filePath, $dompdf->output());
+
+        return response()->file(storage_path('app/' . $filePath))->deleteFileAfterSend(false);
+    }
+
 
 }

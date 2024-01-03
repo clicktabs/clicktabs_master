@@ -51,14 +51,14 @@
                                         <option value="">Patient Discharge List</option> 
                                         <option value="">Patient Infection List</option> 
                                         <option value="">Physician Order History by Patient</option> 
-                                        <option value="Employee_Roster">Employee Roster</option>  
+                                        <option value="Employee Roster">Employee Roster</option>
                                         <option value="">Employee License</option>  
                                         <option value="">Expiring Documents</option>  
                                         <option value="">Employee Visits</option>  
                                         <option value="">Employee Birthday</option>                      
                                     </select>
                                 </td>
-                                <td><button type="submit" class="btn btn-success hd xu ye print-selected-items" form="patientsReportsForm">Generate</button></td>
+                                <td><button type="submit" class="btn btn-success hd xu ye print-selected-items" id="generateButton" form="">Generate</button></td>
                                 <td style="max-width: 200px">
                                     <div id="daterange"  class="float-end" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%; text-align:center;height: auto;border-radius: 4px;">
                                         <i style="margin-right: 5px;" class="fa-regular fa-calendar-days"></i><span></span><i class="fa-solid fa-angle-down" style="margin-left: 5px;"></i>
@@ -105,10 +105,11 @@
                     </tbody>
                 </table>
 
-                <form action="{{route('patients.reports.print')}}" method="POST" id="patientsReportsForm" target="_blank">
+                {{-- Patient Roster Form --}}
+                <form action="{{route('patient.roster.print')}}" method="POST" id="PatientRosterForm" style="display: none;" target="_blank">
                     @csrf
                 
-                    <table id="patientRoster" class="table table-striped" style="width:100%;display: none">
+                    <table id="PatientRosterTable" class="table table-striped" style="width:100%;">
                         <thead>
                             <tr>
                                 <th></th>
@@ -123,7 +124,28 @@
                             
                         </tbody>
                     </table>
-                    <input type="hidden" id="reportType" name="reportType" value="">
+                    <input type="hidden" class="report-type" name="reportType" value="">
+                </form>
+
+                {{-- Employee Roster Form --}}
+                <form action="{{route('employee.roster.print')}}" method="POST" id="EmployeeRosterForm" style="display: none;" target="_blank">
+                    @csrf
+                
+                    <table id="EmployeeRosterTable" class="table table-striped" style="width:100%;">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Employee Name</th>
+                                <th>Employee ID</th>
+                                <th>Date of Birth</th>
+                                <th>Address</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                    <input type="hidden" class="report-type" name="reportType" value="">
                 </form>
             </div>
         </div>
@@ -211,23 +233,16 @@
             }
         } );
     
-        // Swith Table Data
-        $('#switch_table_data').on('change', function() {
+        /* 
+         * Swith Table Data from Report type selection
+        */
 
-            if( !$(this).val() ) {
-                location.reload();
-                return;
-            }
-
-            // Hider other tables
-            $('#daterange_table_wrapper').hide();
-
-            // Get Type of Report from Selection
-            $('#reportType').val($(this).val());
-
-            var patientRosterTable = $('#patientRoster').show().DataTable({
+        // Patient Roster
+        function patientRosterTable() {
+            var patientRosterTable = $('#PatientRosterTable').show().DataTable({
                 processing : true,
                 serverSide : true,
+                destroy: true,
                 ajax : {
                     url : "{{ route('patients.pull.ajax') }}",
                     /* data : function(data){
@@ -246,6 +261,70 @@
                     {data : 'physician', name : 'physician'},
                 ]
             });
+
+        }
+
+        // Employee Roster
+        function employeeRosterTable() {    
+            var employeeRosterTable = $('#EmployeeRosterTable').show().DataTable({
+                processing : true,
+                serverSide : true,
+                destroy: true,
+                ajax : {
+                    url : "{{ route('employees.pull.ajax') }}",
+                    /* data : function(data){
+                        if( startDate && endDate ) {
+                            data.from_date = $('#daterange').data('daterangepicker').startDate.format('MM/DD/YYYY');
+                            data.to_date = $('#daterange').data('daterangepicker').endDate.format('MM/DD/YYYY');
+                        }
+                    } */
+                },
+                columns : [
+                    {data : 'id', name : 'id'},
+                    {data : 'name', name : 'first_name', className: "details-control"},
+                    {data : 'employee_id', name : 'employee_id'},
+                    {data : 'dob', name : 'date_of_birth'},
+                    {data : 'address', name : 'address'},
+                ]
+            });
+        }
+
+        $('#switch_table_data').on('change', function() {
+
+            if( !$(this).val() ) {
+                location.reload();
+                return;
+            }
+
+            // Hide other tables
+            $('#daterange_table_wrapper').hide();
+            $('form').hide();
+
+            let getType = $(this).val();
+            let formId = getType.replace(" ", "") + 'Form';
+            let generateButton = $('#generateButton');
+            generateButton.attr('form', formId);
+
+            // Get Type of Report from Selection
+            $('#'+formId).find('.report-type').val(getType);
+
+            // Show the form
+            $('#'+formId).show();
+            
+            switch(getType) {
+                case 'Patient Roster':
+                    patientRosterTable();
+                    // $("#PatientRosterTable").dataTable().destroy();
+                    break;
+
+                case 'Employee Roster':
+                    employeeRosterTable();
+                    break;
+
+                default:
+                    table.draw();
+            }
+
         });
 
         $(document).on('click', '.print-selected-items', function (e) {

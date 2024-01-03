@@ -378,9 +378,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('relationship', RelationshipController::class);
     Route::resource('physician', PhysicianController::class);
     Route::resource('pharmacy', PharmacyController::class);
+
+    Route::get('/employees/ajax/pull', [EmployeeController::class, 'EmployeesAjax'])->name('employees.pull.ajax');
     Route::resource('employees', EmployeeController::class);
-
-
 
     // QA
     Route::get('/patients-qa', [QaController::class, 'index'])->name('patients.qa');
@@ -389,7 +389,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     //Reporting
 
     Route::get('/patients-reports', [ReportController::class, 'index'])->name('patients.reports');
-    Route::post('/patients-reports/print', [PDFController::class, 'PatientsReports'])->name('patients.reports.print');
+    Route::post('/patient-roster/print', [PDFController::class, 'PatientRoster'])->name('patient.roster.print');
+    Route::post('/employee-roster/print', [PDFController::class, 'EmployeeRoster'])->name('employee.roster.print');
 
     Route::get('/patients/ajax/pull', [PatientController::class, 'PatientsAjax'])->name('patients.pull.ajax');
 
