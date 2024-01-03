@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('qa_lists', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('patient_id');
+            $table->unsignedBigInteger('schedule_id');
             $table->unsignedTinyInteger('status')->default(0);
             $table->timestamps();
         });

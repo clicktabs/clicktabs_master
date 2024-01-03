@@ -44,7 +44,7 @@
 
 <div class="row row-flex align-items-center mt-2">
 
-	
+
 		<div class="border border-2 rounded bg-white p-2 mt-2 vt">
 			<div class="col-lg-auto">
 					<div class="col-lg-auto pt-2"><h4>TYPE OF VISIT:</h4></div>
@@ -913,7 +913,7 @@
 								</div>
 							</td>
 						</tr>
-					</table> 
+					</table>
 
 					<h4 class="mb-0 mt-3">Urinary Catheter</h4>
 					<table class="table table-borderless align-middle mb-0">
@@ -1351,12 +1351,13 @@
 						</div>
 
 						<div class="p-4">
-                            @if(request()->route()->getName() === 'skilled-agency.saveNursing')
+                        @if(request()->route()->getName() === 'skilled-agency.saveNursing')
                             <input type="hidden" name="patient_id" value="{{$patient_id}}">
-                            @else
-                            <input type="hidden" name="patient_id" value="{{$patient->id}}">
-                            @endif
-                            
+                            <input type="hidden" name="schedule_id" value="{{$schedule_id}}">
+                        @else
+                            <input type="hidden" name="patient_id" value="{{$schedule->patient_id}}">
+                            <input type="hidden" name="schedule_id" value="{{$schedule->id}}">
+                        @endif
 							<button type="submit" name="next" class=" btn btn-primary btn-block active"  value="Next Page!">Save & Continue</button>
 						</div>
 					</div>
@@ -1388,7 +1389,12 @@
                     </div>
                 </div>
                 <div class="row">
-                    <input type="hidden" name="p_id" value="{{$patient->id}}">
+                    {{-- <input type="hidden" name="p_id" value="{{$patient->id}}"> --}}
+                    @if(request()->route()->getName() === 'skilled-agency.saveNursing')
+                            <input type="hidden" name="p_id" value="{{$patient_id}}">
+                            @else
+                            <input type="hidden" name="p_id" value="{{$patient->id}}">
+                            @endif
                     <div class="col-md-6">
                         <label for="conStartDate" class="py-1">Start Date
                             <span class="text-red">*</span></label>

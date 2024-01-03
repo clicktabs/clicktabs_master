@@ -687,7 +687,7 @@ class OasisERecertificationController extends Controller
 
         // Section J: Health Conditions
         $oasisJ = new OasisERecertificationSectionJ();
-        
+
         $oasisJ->historyof_falls = $request->historyof_falls;
         $oasisJ->Unintentional = $request->Unintentional;
         $oasisJ->Multiple = $request->Multiple;
@@ -1739,12 +1739,12 @@ class OasisERecertificationController extends Controller
         $oasisJ->save();
         $oasisM->save();
 
-        $qaList = new QaList();
-        $qaList->patient_id = $request->patient_id;
-
-        $qaList->save();
+        $qaList = QaList::updateOrInsert(
+            ['schedule_id' => $request->patient_id],
+            ['status' => 0]
+        );
 
         return redirect(route('patients.qa'));
-        
+
     }
 }

@@ -15,4 +15,9 @@ class QaList extends Model
     public function patient() {
         return $this->belongsTo(Patient::class);
     }
+
+    public function schedule()
+    {
+        return $this->hasOne(Schedule::class, 'id','schedule_id');
+    }
 }
