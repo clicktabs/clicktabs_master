@@ -15,6 +15,8 @@ use App\Models\JobTitle;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+use DataTables;
+
 class EmployeeController extends Controller
 {
     public $organization_id;
@@ -181,6 +183,40 @@ class EmployeeController extends Controller
             return redirect()->route('employees.index')->with('success', 'Employee was deleted successfully. ');
         } else {
             return redirect()->route('employees.index')->with('error', 'Employee was not deleted successfully. ');
+        }
+    }
+
+
+    public function EmployeesAjax(Request $request) {
+        if($request->ajax())
+        {
+            $data= Employee::all();
+            // dd($data);
+            // $data = Patient::select('first_name', 'middle_name', 'last_name', 'patient_code')->where()->;
+
+            /* if($request->filled('from_date') && $request->filled('to_date'))
+            {
+                $data = $data->whereBetween('created_at', [$request->from_date, $request->to_date]);
+            } */
+
+            return DataTables::of($data)->addIndexColumn()
+            ->addColumn('id', function ($employee) {
+                return '<input type="checkbox" name="employee_ids[]" value="'.$employee->id.'">';
+             })
+             ->addColumn('name', function ($employee) {
+                return $employee->first_name . ' ' . $employee->last_name;
+             })
+             ->addColumn('employee_id', function ($employee) {
+                return $employee->employee_id;
+             })
+             ->addColumn('dob', function ($employee) {
+                return $employee->dob;
+             })
+             ->addColumn('address', function ($employee) {
+                return $employee->address_line_1;
+             })
+             ->rawColumns(['id', 'name', 'employee_id', 'dob', 'address'])
+            ->make(true);
         }
     }
 }
