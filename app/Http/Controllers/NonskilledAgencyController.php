@@ -49,6 +49,7 @@ use App\Models\Hhavisitnote2;
 use App\Models\PhysicianOrder;
 use App\Models\NursingAssessment2;
 use App\Models\NursingAssessment3;
+use App\Models\QaList;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\NursingAssessmentRequest;
 
@@ -699,6 +700,11 @@ class NonskilledAgencyController extends Controller
             'patient_date' => $req->patient_date
 
         ]);
+
+        $qaList = QaList::updateOrInsert(
+            ['schedule_id' => $req->schedule_id],
+            ['status' => 0]
+        );
         return redirect()->back()->with('success', ' HHA visit Record Updated Successfully');
 
     }

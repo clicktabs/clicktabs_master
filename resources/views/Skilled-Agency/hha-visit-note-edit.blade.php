@@ -15,6 +15,7 @@
          <form action="{{route('nonskilled.hhaVisitNoteUpdate')}}"  method="POST">
             @csrf
             <input type="hidden" value="{{ $hhhaData['visitnote']->id ?? '' }}" name="id">
+            <input type="hidden" name="schedule_id" id="" value="{{$data}}">
             <div class="row vt row-flex flex-md-row-reverse align-items-center">
                <div class="col-lg-4">
                   <h1 class="text-lg-end fw-bolder text-uppercase">HOME CARE AIDE VISIT RECORD</h1>

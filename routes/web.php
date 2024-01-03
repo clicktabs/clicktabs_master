@@ -385,6 +385,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     // QA
     Route::get('/patients-qa', [QaController::class, 'index'])->name('patients.qa');
     Route::get('/patients/pending/qa', [QaController::class, 'pendingList'])->name('patients.pending.qa');
+    Route::post('/update-status', [QaController::class, 'updateStatus'])->name('update-status');
+
 
     //Reporting
 

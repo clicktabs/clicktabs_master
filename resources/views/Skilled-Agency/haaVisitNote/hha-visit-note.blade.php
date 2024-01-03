@@ -569,6 +569,7 @@ body * {
                  <td><small>PATIENT NAME- Last, First, Middle Initial</small></td>
                  <td>ID#</td>
               </tr>
+              <input type="hidden" name="schedule_id" id="" value="{{$data}}">
            </table>
         </div>
         <div class=" mt-4">
