@@ -421,7 +421,7 @@
                             @endif
                         </td>
 
-                    @if ($employees->count() > 3)
+                    @if ($employees->count() > 4)
                     </tr><tr>
                     @endif
 
