@@ -38,8 +38,8 @@
                                         <option value="Patient Emergency Contact List">Patient Emergency Contact List</option>
                                         <option value="Patient physician List">Patient physician List</option>
                                         <option value="Patient Start of Care List">Patient Start of Care List</option>
-                                        <option value="Patient Internal Case Manager List">Patient Internal Case Manager List</option>
-                                        <option value="Patient External Case Manager List">Patient External Case Manager List</option>
+                                        <option value="Patient Internal Case Manager">Patient Internal Case Manager</option>
+                                        <option value="Patient External Case Manager">Patient External Case Manager</option>
                                         <option value="Patient Authorisation">Patient Authorisation</option>
                                         <option value="Survey Census">Survey Census</option>
                                         <option value="Drug Interaction">Drug Interaction</option>
@@ -207,10 +207,10 @@
                 <input type="hidden" class="report-type" name="reportType" value="">
             </form>
             {{--Patient Internal Case Manager List  --}}
-            <form action="" method="POST" id="InternalCaseManagerListList" style="display: none;" target="_blank">
+            <form action="" method="POST" id="InternalCaseManager" style="display: none;" target="_blank">
                 @csrf
             
-                <table id="InternalCaseManagerListListTable" class="table table-striped" style="width:100%;">
+                <table id="InternalCaseManagerTable" class="table table-striped" style="width:100%;">
                     <thead>
                         <tr>
                             <th>Patient Name</th>
@@ -227,10 +227,10 @@
                 <input type="hidden" class="report-type" name="reportType" value="">
             </form>
             {{--Patient External Case Manager List  --}}
-            <form action="" method="POST" id="ExternalCaseManagerListList" style="display: none;" target="_blank">
+            <form action="" method="POST" id="ExternalCaseManager" style="display: none;" target="_blank">
                 @csrf
             
-                <table id="ExternalCaseManagerListListTable" class="table table-striped" style="width:100%;">
+                <table id="ExternalCaseManagerTable" class="table table-striped" style="width:100%;">
                     <thead>
                         <tr>
                             <th>Patient Name</th>
