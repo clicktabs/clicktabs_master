@@ -107,7 +107,7 @@ class Patient extends Model
     }
     public function physician()
     {
-        return $this->belongsTo(PhysicianOrders::class, 'id','patient_history_id');
+        return $this->belongsTo(PhysicianOrders::class, 'id', 'patient_history_id');
     }
 
     public function functionalAbilitie()

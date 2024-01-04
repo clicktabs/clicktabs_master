@@ -156,28 +156,28 @@
                     <div class="row mt-2">
                         <div class="col">
                             <span for="emergency_preparedness">1. Life-threaten and requires ongoing medical treatment (i.e., oxygen dependent). A backup oxygen tank should be requested from supplier. Proceed to hospital (with supplies) if not able to manage your care.</span>
-                            <input type="checkbox" name="emergency_preparedness[]" value="emergency_preparedness" id="emergency_preparedness"
+                            <input type="checkbox" name="emergency_preparedness[]" value="1" id="emergency_preparedness"
                                    class="form-control">
                         </div>
                     </div>
                     <div class="row mt-2">
                         <div class="col">
                             <span for="emergency_life_threatening">2. Not Life-threatening but would suffer severe adverse effects from interruption of services (i.e., daily insulin, IV medications, Sterile wound care of a wound with large amount of drainage).</span>
-                            <input type="checkbox" name="emergency_preparedness[]" value="emergency_life_threatening" id="emergency_life_threatening"
+                            <input type="checkbox" name="emergency_preparedness[]" value="2" id="emergency_life_threatening"
                                    class="form-control">
                         </div>
                     </div>
                     <div class="row mt-2">
                         <div class="col">
                             <span for="emergency_proponed_24_hours">3. Visits could be proponed 24-48 hours without adverse effect (i.e., new insulin dependent diabetic able to self-inject, sterile wound care with a minimal amount to no drainage).</span>
-                            <input type="checkbox" name="emergency_preparedness[]" value="emergency_proponed_24_hours" id="emergency_proponed_24_hours"
+                            <input type="checkbox" name="emergency_preparedness[]" value="3" id="emergency_proponed_24_hours"
                                    class="form-control">
                         </div>
                     </div>
                     <div class="row mt-2">
                         <div class="col">
                             <span for="emergency_proponed_72_hours">4. Visit could postpone 72-96 hours without adverse effects (i.e., post-op with no open wound, anticipated discharge within the next 10-14 days, routine catheter changes).</span>
-                            <input type="checkbox" name="emergency_preparedness[]" value="emergency_proponed_72_hours" id="emergency_proponed_72_hours"
+                            <input type="checkbox" name="emergency_preparedness[]" value="4" id="emergency_proponed_72_hours"
                                    class="form-control">
                         </div>
                     </div>
@@ -185,20 +185,20 @@
                     <div class="row mt-2">
                         <div class="col">
                             <span for="emergency_transportation">Has transportation & assistance of family </span>
-                            <input type="checkbox" name="emergency_preparedness[]" value="emergency_transportation" id="emergency_transportation"
+                            <input type="checkbox" name="emergency_preparedness[]" value="5" id="emergency_transportation"
                                    class="form-control">
                         </div>
                     </div>
                     <div class="row mt-2">
                         <div class="col">
                             <span for="emergency_neighbor">Neighbor.</span>
-                            <input type="checkbox" name="emergency_preparedness[]" value="emergency_neighbor" id="emergency_neighbor" class="form-control">
+                            <input type="checkbox" name="emergency_preparedness[]" value="6" id="emergency_neighbor" class="form-control">
                         </div>
                     </div>
                     <div class="row mt-2 mb-5">
                         <div class="col">
                             <span for="emergency_caregiver">Caregiver.</span>
-                            <input type="checkbox" name="emergency_preparedness[]" value="emergency_caregiver" id="emergency_caregiver" class="form-control">
+                            <input type="checkbox" name="emergency_preparedness[]" value="7" id="emergency_caregiver" class="form-control">
                         </div>
                     </div>
                 </div>
