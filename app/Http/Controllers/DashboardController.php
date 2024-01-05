@@ -160,3 +160,4 @@ class DashboardController extends Controller
         return redirect()->back()->with('success', 'Success!!! Call log Saved Successfully');
     }
 }
+
