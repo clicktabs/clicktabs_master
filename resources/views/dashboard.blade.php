@@ -311,7 +311,7 @@ border-bottom: 3px double;
 </div>
 <div class="container-full">
     <div class="row">
-        <div class="col-lg-12">  
+        <div class="col-lg-12">
             @if($user->hasRole('super-admin'))
             @else
             @can('employee-dashboard')
@@ -753,7 +753,7 @@ border-bottom: 3px double;
                 </div>
                 <div class="mt-[20px]">
                     <textarea name="p_communication_text" class="py-[10px] px-[10px] border-[1px] border-[#dfdede] w-full h-[250px]">{{ old('p_communication_text') }}</textarea>
-                </div>                                          
+                </div>
                         <button class="btn btn-primary" type="submit">Save</button>
             </form>
         </div> --}}
@@ -894,7 +894,7 @@ $('.week_lists').css("display", "flex").fadeIn();
 $('#schedulingList').DataTable({
     scrollX: true,
     ajax: {
-        url: "/schedule/get-schedule",
+        url: "/schedule/employee-wise/get-schedule",
     },
     columns: [
         { data: 'patient_first_name', title: 'Patient Name' },
