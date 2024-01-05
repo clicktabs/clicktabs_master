@@ -21,7 +21,7 @@ class QaController extends Controller
     {
         if($request->ajax())
         {
-            $data= QaList::all();
+            $data= QaList::where('status', '!=', 1)->get();
             // $data = Patient::select('first_name', 'middle_name', 'last_name', 'patient_code')->where()->;
 
             if($request->filled('from_date') && $request->filled('to_date'))
@@ -34,8 +34,10 @@ class QaController extends Controller
                 return '<input type="checkbox" name="id" value="'.$row->id.'">';
              })
              ->addColumn('name', function ($row) {
-                return '<a href="/task-form/'.$row->schedule_id.'" target="_blank"><b>'.$row->schedule->patient->first_name.' ' .$row->schedule->patient->last_name.'</b></a>';
-             })
+                $uniqueId = 'qid_'.$row->id;
+                return '<a href="/task-form/'.$row->schedule_id.'" data-custom-value="'.$row->schedule_id.'" target="_blank"><b>'.$row->schedule->patient->first_name.' ' .$row->schedule->patient->last_name.'</b></a>
+                ';
+            })
              ->addColumn('mrn', function ($row) {
                 return $row->schedule->patient->patient_code;
              })
@@ -55,6 +57,8 @@ class QaController extends Controller
                     return 'Completed';
                 }elseif ($row->status == 0) {
                     return 'Submitted (Pending QA Review)';
+                }elseif ($row->status == 2) {
+                    return 'Rejected';
                 }else {
                     return 'Pending';
                 }
@@ -79,5 +83,25 @@ class QaController extends Controller
         }
 
         return view('patients.qa');
+    }
+
+    public function updateStatus(Request $request)
+    {
+        $status = $request->input('status');
+        $qa_id = $request->input('qa_id');
+
+        $qaList = QaList::updateOrInsert(
+            ['schedule_id' => $qa_id],
+            ['status' => $status]
+        );
+        if ($status == 1) {
+            return response()->json(['success' => 'Approve Successfully!']);
+        } elseif($status == 2) {
+            return response()->json(['warning' => 'Rejected!']);
+        }else {
+            return response()->json(['danger' => 'Something went wrong!']);
+        }
+
+
     }
 }

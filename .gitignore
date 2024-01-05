@@ -17,3 +17,6 @@ yarn-error.log
 /.vscode
 public/Signatures/1701154854.png
 public/Signatures/1701167180.png
+
+#composer.lock
+#package-lock.json

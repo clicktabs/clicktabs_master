@@ -90,93 +90,129 @@
     <script src="{{ asset('assets/js/daterangepicker.min.js') }}"></script>
 
     <script type="text/javascript">
-    $(function () {
+        $(document).ready(function () {
 
-        var start_date = moment().subtract(1, 'M');
-        var end_date = moment();
-        var dateRange = start_date.format('MM/DD/YYYY') + ' - ' + end_date.format('MM/DD/YYYY');
+            var start_date = moment().subtract(1, 'M');
+            var end_date = moment();
+            var dateRange = start_date.format('MM/DD/YYYY') + ' - ' + end_date.format('MM/DD/YYYY');
 
-        let startDate = '', endDate = '';
-        $('#daterange span').html(dateRange);
-
-        $('#daterange').daterangepicker(function(start_date, end_date){
+            let startDate = '', endDate = '';
             $('#daterange span').html(dateRange);
-        });
-        $('#daterange').on('apply.daterangepicker', function(ev, picker) {
-            startDate = picker.startDate.format('MM/DD/YYYY')
-            endDate = picker.endDate.format('MM/DD/YYYY')
 
-            table.draw();
-        });
-
-        // task
-        var taskName = '';
-        $("#task").change(function(){
-            taskName = $(this).children("option:selected").val();
-            table.draw();
-        });
-
-        var table = $('#daterange_table').DataTable({
-            processing : true,
-            serverSide : true,
-            ajax : {
-                url : "{{ route('patients.qa') }}",
-                data : function(data){
-                    if( startDate && endDate ) {
-                        data.from_date = $('#daterange').data('daterangepicker').startDate.format('MM/DD/YYYY');
-                        data.to_date = $('#daterange').data('daterangepicker').endDate.format('MM/DD/YYYY');
-                    }
-                    if( taskName ) {
-                        data.search['value'] = taskName;
-                    }
+            $('#daterange').daterangepicker({
+                startDate: start_date,
+                endDate: end_date,
+                ranges: {
+                    'Last 30 Days': [moment().subtract(30, 'days'), moment()],
+                    'This Month': [moment().startOf('month'), moment().endOf('month')],
+                    // Add more ranges as needed
                 }
-            },
-            columns : [
-                {data : 'id', name : 'id'},
-                {data : 'name', name : 'first_name', className: "details-control"},
-                {data : 'mrn', name : 'mrn'},
-                {data : 'event_date', name : 'event_date'},
-                {data : 'type', name : 'type'},
-                {data : 'task', name : 'task'},
-                {data : 'status', name : 'status'},
-                {data : 'notes', name : 'notes'},
-                {data : 'assigned_to', name : 'assigned_to'},
-            ]
+            }, function (start, end) {
+                startDate = start.format('MM/DD/YYYY');
+                endDate = end.format('MM/DD/YYYY');
+                table.draw();
+            });
+
+            // task
+            var taskName = '';
+            $("#task").on("input", function () {
+                taskName = $(this).children("option:selected").val();
+                table.draw();
+            });
+
+            var table = $('#daterange_table').DataTable({
+                processing: true,
+                serverSide: true,
+                ajax: {
+                    url: "{{ route('patients.qa') }}",
+                    data: function (data) {
+                        if (startDate && endDate) {
+                            data.from_date = startDate;
+                            data.to_date = endDate;
+                        }
+                        if (taskName) {
+                            data.search['value'] = taskName;
+                        }
+                    }
+                },
+                columns: [
+                    { data: 'id', name: 'id' },
+                    { data: 'name', name: 'first_name', className: "details-control" },
+                    { data: 'mrn', name: 'mrn' },
+                    { data: 'event_date', name: 'event_date' },
+                    { data: 'type', name: 'type' },
+                    { data: 'task', name: 'task' },
+                    { data: 'status', name: 'status' },
+                    { data: 'notes', name: 'notes' },
+                    { data: 'assigned_to', name: 'assigned_to' },
+                ]
+            });
+
+            function format(d) {
+                return $(`<tr>
+                                <td colspan="9">
+                                    <input type="checkbox" class="approval-checkbox" data-qa-id="${d.schedule_id}" value="1">
+                                    <label for="approve">Approve</label>
+                                    <input type="checkbox" class="approval-checkbox" data-qa-id="${d.schedule_id}" value="2">
+                                    <label for="reject">Reject</label>
+                                </td>
+                                <td style="display: none;"></td>
+                            </tr>`).toArray();
+            }
+
+            $('#daterange_table tbody').on('click', 'td.details-control', function () {
+                var tr = $(this).parents('tr');
+                var row = table.row(tr);
+
+                console.log(row.child);
+
+                if (row.child.isShown()) {
+                    // This row is already open - close it
+                    row.child.hide();
+                    tr.removeClass('shown');
+                } else {
+                    // Open this row (the format() function would return the data to be shown)
+                    row.child(format(row.data())).show();
+                    tr.addClass('shown');
+                }
+            });
+
+            $('#daterange_table tbody').on('change', '.approval-checkbox', function () {
+                var status = $(this).val();
+                var qaId = $(this).data('qa-id');
+
+                $.ajax({
+                    url: '{{ route("update-status") }}',
+                    type: 'POST',
+                    data: {
+                        '_token': '{{ csrf_token() }}',
+                        'status': status,
+                        'qa_id': qaId
+                    },
+                    success: function (response) {
+                        if (response.success) {
+                            console.log('Status updated successfully!');
+                            toastr.success(response.success);
+                            table.draw();
+                        } else if (response.warning) {
+                            console.log('Warning: ' + response.warning);
+                            toastr.warning(response.warning);
+                            table.draw();
+                        } else {
+                            console.log('Error: ' + response.danger);
+                            toastr.error(response.danger);
+                        }
+                    },
+                    error: function (error) {
+                        console.log('Error:', error);
+                        toastr.error('Error updating status.');
+                    }
+                });
+            });
+
         });
-
-        function format ( d ) {
-            return $(`<tr>
-                            <td colspan="9">Patient: <b>DALTON, ANDY</b></td>
-                            <td style="display: none;"></td>
-                            <td style="display: none;"></td>
-                            <td style="display: none;"></td>
-                            <td style="display: none;"></td>
-                            <td style="display: none;"></td>
-                            <td style="display: none;"></td>
-                            <td style="display: none;"></td>
-                            <td style="display: none;"></td>
-                        </tr>`).toArray();
-}
-
-
-        $('#daterange_table tbody').on('click', 'td.details-control', function () {
-            var tr = $(this).parents('tr');
-            var row = table.row( tr );
-
-            console.log(row.child);
-
-            if ( row.child.isShown() ) {
-                // This row is already open - close it
-                row.child.hide();
-                tr.removeClass('shown');
-            }
-            else {
-                // Open this row (the format() function would return the data to be shown)
-                row.child( format(row.data()) ).show();
-                tr.addClass('shown');
-            }
-        } );
-
-    });
     </script>
+
+
+
 @endsection
