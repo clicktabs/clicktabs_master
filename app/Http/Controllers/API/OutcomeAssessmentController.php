@@ -1215,6 +1215,7 @@ class OutcomeAssessmentController extends Controller
             'midLine' => $request->midLine,
             'central' => $request->central,
             'noa' => $request->noa,
+            'discontinued' => $request->discontinued,
             'treatmentsChemotherapy' => $request->treatmentsChemotherapy,
             'treatmentsIv' => $request->treatmentsIv,
             'cancerTreatmentsIral' => $request->cancerTreatmentsIral,

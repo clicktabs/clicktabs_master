@@ -494,7 +494,7 @@ class SkilledAgencyController extends Controller
             $nss->save();
 
             $qaList = QaList::updateOrInsert(
-                ['schedule_id' => $request->schedule_id],
+                ['patient_id' => $request->schedule_id],
                 ['status' => 0]
             );
 

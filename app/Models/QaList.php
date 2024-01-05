@@ -18,6 +18,6 @@ class QaList extends Model
 
     public function schedule()
     {
-        return $this->hasOne(Schedule::class, 'id','schedule_id');
+        return $this->hasOne(Schedule::class, 'patient_id', 'patient_id');
     }
 }

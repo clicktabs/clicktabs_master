@@ -70,6 +70,7 @@ class PDFController extends Controller
         $dompdf->render();
         $filename = 'pdf_' . time() . '.pdf';
         $filePath = 'pdfs/' . $filename;
+
         Storage::put($filePath, $dompdf->output());
 
         // $all_pdf = pdf::get()->count();

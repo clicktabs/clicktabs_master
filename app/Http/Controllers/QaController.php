@@ -34,7 +34,7 @@ class QaController extends Controller
                 return '<input type="checkbox" name="id" value="'.$row->id.'">';
              })
              ->addColumn('name', function ($row) {
-                return '<a href="/task-form/'.$row->schedule_id.'" target="_blank"><b>'.$row->schedule->patient->first_name.' ' .$row->schedule->patient->last_name.'</b></a>';
+                return '<a href="/task-form/'.$row->patient_id.'" target="_blank"><b>'.$row->schedule->patient->first_name.' ' .$row->schedule->patient->last_name.'</b></a>';
              })
              ->addColumn('mrn', function ($row) {
                 return $row->schedule->patient->patient_code;

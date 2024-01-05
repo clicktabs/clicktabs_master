@@ -653,7 +653,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     */
     Route::get('/pdf/home-care/aide-supervisory', [PDFController::class, 'generatePDF'])->name('pdf.home-care.aide-supervisory');
     Route::get('/pdf/home-care/hha-visit-note', [PDFController::class, 'generatePDF'])->name('pdf.home-care.hha-visit-note');
-    Route::get('/pdf/home-care/oasis-e-start-of-care', [PDFController::class, 'generatePDF'])->name('pdf.home-care.oasis-e-start-of-care');
+    Route::get('/pdf/home-care/oasis-e-start-of-care/{id}', [PDFController::class, 'generatePDF'])->name('pdf.home-care.oasis-e-start-of-care');
     Route::get('/pdf/home-care/oasis-e-death-at-home', [PDFController::class, 'generatePDF'])->name('pdf.home-care.oasis-e-death-at-home');
     Route::get('/pdf/home-care/oasis-e-discharge.', [PDFController::class, 'generatePDF'])->name('pdf.home-care.oasis-e-discharge.');
     Route::get('/pdf/home-care/oasis-e-recertification', [PDFController::class, 'generatePDF'])->name('pdf.home-care.oasis-e-recertification');

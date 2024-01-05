@@ -250,7 +250,7 @@ class ScheduleCalendar extends Controller
                 $physicians = Physician::where('active_status', 1)->where('org_id', $organization_id)->get();
                 $pharmacies = Pharmacy::where('org_id', $organization_id)->get();
                 $patient = Patient::where('id', $schedule->patient_id)->first();
-                return view('Skilled-Agency.nurse-visit-note.index', compact('patient', 'physicians', 'pharmacies'));
+                return view('Skilled-Agency.nurse-visit-note.index', compact('patient', 'physicians', 'pharmacies','schedule'));
 
             case '60-day-summary':
                 return view('Skilled-Agency.60-day-summary');
@@ -278,42 +278,42 @@ class ScheduleCalendar extends Controller
                 $physicians = Physician::where('active_status', 1)->where('org_id', $organization_id)->get();
                 $pharmacies = Pharmacy::where('org_id', $organization_id)->get();
                 $patient = Patient::where('id', $schedule->patient_id)->first();
-                return view('Skilled-Agency.nurse-visit-note.index', compact('patient', 'physicians', 'pharmacies'));
+                return view('Skilled-Agency.nurse-visit-note.index', compact('patient', 'physicians', 'pharmacies','schedule'));
 
             case 'Skilled Nurse Visit AM (Billable)':
                 $organization_id = Auth::user()->organization_id;
                 $physicians = Physician::where('active_status', 1)->where('org_id', $organization_id)->get();
                 $pharmacies = Pharmacy::where('org_id', $organization_id)->get();
                 $patient = Patient::where('id', $schedule->patient_id)->first();
-                return view('Skilled-Agency.nurse-visit-note.index', compact('patient', 'physicians', 'pharmacies'));
+                return view('Skilled-Agency.nurse-visit-note.index', compact('patient', 'physicians', 'pharmacies','schedule'));
 
             case 'Skilled Nurse Visit PM (Billable)':
                 $organization_id = Auth::user()->organization_id;
                 $physicians = Physician::where('active_status', 1)->where('org_id', $organization_id)->get();
                 $pharmacies = Pharmacy::where('org_id', $organization_id)->get();
                 $patient = Patient::where('id', $schedule->patient_id)->first();
-                return view('Skilled-Agency.nurse-visit-note.index', compact('patient', 'physicians', 'pharmacies'));
+                return view('Skilled-Agency.nurse-visit-note.index', compact('patient', 'physicians', 'pharmacies','schedule'));
 
             case 'Skilled Nurse Evaluation':
                 $organization_id = Auth::user()->organization_id;
                 $physicians = Physician::where('active_status', 1)->where('org_id', $organization_id)->get();
                 $pharmacies = Pharmacy::where('org_id', $organization_id)->get();
                 $patient = Patient::where('id', $schedule->patient_id)->first();
-                return view('Skilled-Agency.nurse-visit-note.index', compact('patient', 'physicians', 'pharmacies'));
+                return view('Skilled-Agency.nurse-visit-note.index', compact('patient', 'physicians', 'pharmacies','schedule'));
 
             case 'SN Injection':
                 $organization_id = Auth::user()->organization_id;
                 $physicians = Physician::where('active_status', 1)->where('org_id', $organization_id)->get();
                 $pharmacies = Pharmacy::where('org_id', $organization_id)->get();
                 $patient = Patient::where('id', $schedule->patient_id)->first();
-                return view('Skilled-Agency.nurse-visit-note.index', compact('patient', 'physicians', 'pharmacies'));
+                return view('Skilled-Agency.nurse-visit-note.index', compact('patient', 'physicians', 'pharmacies','schedule'));
 
             case 'SNV W/ Discharge Summary':
                 $organization_id = Auth::user()->organization_id;
                 $physicians = Physician::where('active_status', 1)->where('org_id', $organization_id)->get();
                 $pharmacies = Pharmacy::where('org_id', $organization_id)->get();
                 $patient = Patient::where('id', $schedule->patient_id)->first();
-                return view('Skilled-Agency.nurse-visit-note.index', compact('patient', 'physicians', 'pharmacies'));
+                return view('Skilled-Agency.nurse-visit-note.index', compact('patient', 'physicians', 'pharmacies','schedule'));
 
             case 'HHA Visit (Billable)':
                 $hhhaData = [];
