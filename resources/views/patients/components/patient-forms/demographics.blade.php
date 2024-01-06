@@ -49,7 +49,7 @@
                                 <span class="text-green">(M0104)</span>
                                 Referral Date: <span class="text-red">*</span></label>
                                 <input id="referral_date" type="date" class="form-control s ou" name="referral_date"
-                                value="{{ old('referral_date') }}">
+                                value="{{ !empty($referral->date_of_request) ? $referral->date_of_request : old('referral_date') }}">
                             </div>
                         </div>
                         <div class="row">
@@ -58,8 +58,8 @@
                                     class="text-red">*</span></label>
                                     <select name="gender" id="gender" class="form-control s ou">
                                         <option value="">Select</option>
-                                        <option value="male">Male</option>
-                                        <option value="female">Female</option>
+                                        <option {{ !empty($referral->gender) && $referral->gender=='male' ? 'selected' : '' }} value="male">Male</option>
+                                        <option {{ !empty($referral->gender) && $referral->gender=='female' ? 'selected' : '' }} value="female">Female</option>
                                     </select>
                                 </div>
                                 <div class="col">
@@ -77,7 +77,7 @@
                                     <label for="date_of_birth"><span class="text-green">(M0066)</span>Date of Birth: <span
                                         class="text-red">*</span></label>
                                         <input id="date_of_birth" type="date" class="form-control s ou" name="date_of_birth"
-                                        value="{{ old('date_of_birth') }}">
+                                        value="{{ !empty($referral->patient_dob) ? $referral->patient_dob : old('date_of_birth') }}">
                                     </div>
                                 </div>
                                 <div class="row mt-2">
@@ -123,7 +123,7 @@
                                                     </div>
                                                     <div class="col-md-8 relative">
                                                         <input id="p_h_address_line_1" type="text" class="form-control s ou"
-                                                        name="p_h_address_line_1" value="{{ old('p_h_address_line_1') }}">
+                                                        name="p_h_address_line_1" value="{{ !empty($referral->patient_full_address) ? $referral->patient_full_address : old('p_h_address_line_1') }}">
                                                         <input id="p_h_lat" type="hidden" name="p_h_lat"/>
                                                         <input id="p_h_lon" type="hidden" name="p_h_lon"/>
 
@@ -170,7 +170,7 @@
                                                     <div class="form-group col">
                                                         <label for="p_h_phone">Phone: <span class="text-red">*</span></label>
                                                         <input id="p_h_phone" type="text" placeholder="Enter Phone" class="form-control s ou"
-                                                        name="p_h_phone" value="{{ old('p_h_phone') }}">
+                                                        name="p_h_phone" value="{{ !empty($referral->telephone_no) ? $referral->telephone_no : old('p_h_phone') }}">
                                                     </div>
                                                     <div class="form-group col">
                                                         <label for="p_h_alternate_phone">Alternate Phone: </label>
@@ -194,7 +194,7 @@
                                                     </div>
                                                     <div class="col-md-8 relative">
                                                         <input id="p_s_address_line_1" type="text" class="form-control s ou"
-                                                        name="p_s_address_line_1" value="{{ old('p_s_address_line_1') }}">
+                                                        name="p_s_address_line_1" value="{{ !empty($referral->patient_visite_address) ? $referral->patient_visite_address : old('p_s_address_line_1') }}">
                                                         <input id="p_s_lat" type="hidden" name="p_s_lat"/>
                                                         <input id="p_s_lon" type="hidden" name="p_s_lon"/>
 
@@ -241,7 +241,7 @@
                                                     <div class="form-group col">
                                                         <label for="p_s_phone">Phone: <span class="text-red">*</span></label>
                                                         <input id="p_s_phone" type="text" placeholder="Enter Phone number" class="form-control s ou"
-                                                        name="p_s_phone" value="{{ old('p_s_phone') }}">
+                                                        name="p_s_phone" value="{{ !empty($referral->patient_visite_phone) ? $referral->patient_visite_phone : old('p_s_phone') }}">
                                                     </div>
                                                     <div class="form-group col">
                                                         <label for="p_s_alternate_phone">Alternate Phone: </label>
@@ -593,7 +593,7 @@
                                                 <div class="row mt-2">
                                                     <div class="col">
                                                         <label for="patient_admission_history_other">Other</label>
-                                                        <input type="text" name="patient_admission_history[]" id="patient_admission_history_other" value="patient_admission_history_other" class="form-control">
+                                                        <input type="text" name="patient_admission_history[]" id="patient_admission_history_other" value="" class="form-control">
                                                     </div>
                                                 </div>
                                                 <div class="row mt-2">

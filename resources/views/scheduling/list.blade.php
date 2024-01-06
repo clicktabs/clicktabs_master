@@ -124,8 +124,8 @@
                                     </select>
                                 </td>
                                 <td>{{$schedule->patient_first_name . ' ' . $schedule->patient_last_name}}</td>
-                                <td>{{$schedule->kt_calendar_datepicker_start_date}}</td>
-                                <td>{{$schedule->kt_calendar_datepicker_end_date}}</td>
+                                <td>{{ \Carbon\Carbon::parse($schedule->kt_calendar_datepicker_start_date)->format('m-j-Y') }}</td>
+                                <td>{{ \Carbon\Carbon::parse($schedule->kt_calendar_datepicker_end_date)->format('m-j-Y') }}</td>
                                 <td>{{$schedule->start_time}}</td>
                                 <td>{{$schedule->end_time}}</td>
                                 <td>

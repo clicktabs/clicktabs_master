@@ -35,27 +35,22 @@
                                     <select class="form-select" aria-label="Location select" id="switch_table_data">
                                         <option value="">Select Report Item</option>
                                         <option value="Patient Roster">Patient Roster</option>
-                                        <option value="">Patient Emergency Contact List</option>
-                                        <option value="">Patient Address</option>
-                                        <option value="">Patient Birthday</option>
-                                        <option value="">Patient physician List</option>
-                                        <option value="">Patient Start of Care List</option>
-                                        <option value="">Patient to Employee List</option>
-                                        <option value="">Patient to Case Manager List</option>
-                                        <option value="">Patient Authorisation</option>
-                                        <option value="">Survey Census</option>
-                                        <option value="">Drug Interaction</option>
-                                        <option value="">Plan of Care History</option>
-                                        <option value="">Patient 60 day Summary</option>
-                                        <option value="">Patient Orders History</option> 
-                                        <option value="">Patient Discharge List</option> 
-                                        <option value="">Patient Infection List</option> 
-                                        <option value="">Physician Order History by Patient</option> 
+                                        <option value="Patient Emergency Contact List">Patient Emergency Contact List</option>
+                                        <option value="Patient physician List">Patient physician List</option>
+                                        <option value="Patient Start of Care List">Patient Start of Care List</option>
+                                        <option value="Patient Internal Case Manager">Patient Internal Case Manager</option>
+                                        <option value="Patient External Case Manager">Patient External Case Manager</option>
+                                        <option value="Patient Authorisation">Patient Authorisation</option>
+                                        <option value="Survey Census">Survey Census</option>
+                                        <option value="Drug Interaction">Drug Interaction</option>
+                                        <option value="Plan of Care History">Plan of Care History</option>
+                                        <option value="Patient Discharge List">Patient Discharge List</option> 
+                                        <option value="Patient Infection List">Patient Infection List</option> 
+                                        <option value="hysician Order History by Patient">Physician Order History by Patient</option> 
                                         <option value="Employee Roster">Employee Roster</option>
-                                        <option value="">Employee License</option>  
-                                        <option value="">Expiring Documents</option>  
-                                        <option value="">Employee Visits</option>  
-                                        <option value="">Employee Birthday</option>                      
+                                        <option value="Expiring Documents">Expiring Documents</option>  
+                                        <option value=""></option>  
+                                        <option value=""></option>                      
                                     </select>
                                 </td>
                                 <td><button type="submit" class="btn btn-success hd xu ye print-selected-items" id="generateButton" form="">Generate</button></td>
@@ -148,8 +143,312 @@
                     <input type="hidden" class="report-type" name="reportType" value="">
                 </form>
             </div>
-        </div>
-    </main>
+
+              {{-- Patient Emergency Contact List --}}
+              <form action="" method="POST" id="PatientEmergencyContact" style="display: none;" target="_blank">
+                @csrf
+            
+                <table id="PatientEmergencyContactTable" class="table table-striped" style="width:100%;">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Employee Name</th>
+                            <th>Employee ID</th>
+                            <th>Date of Birth</th>
+                            <th>Address</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+                <input type="hidden" class="report-type" name="reportType" value="">
+            </form>
+            {{-- Patient physician List --}}
+            <form action="" method="POST" id="PatientphysicianList" style="display: none;" target="_blank">
+                @csrf
+            
+                <table id="PatientphysicianListTable" class="table table-striped" style="width:100%;">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Patient Name</th>
+                            <th>Patient Physician Name</th>
+                            <th>Physician NPI</th>
+                            <th>Physician Address</th>
+                            <th>Physician Phone Number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+                <input type="hidden" class="report-type" name="reportType" value="">
+            </form>
+            {{--Patient Start of Care List  --}}
+            <form action="" method="POST" id="PatientStartofCareList" style="display: none;" target="_blank">
+                @csrf
+            
+                <table id="PatientStartofCareListTable" class="table table-striped" style="width:100%;">
+                    <thead>
+                        <tr>
+                            <th>Patient Name</th>
+                            <th>MRN#</th>
+                            <th>SSN</th>
+                            <th>DOB</th>
+                            <th>SOC Date</th>
+                            <th>EOC Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+                <input type="hidden" class="report-type" name="reportType" value="">
+            </form>
+            {{--Patient Internal Case Manager List  --}}
+            <form action="" method="POST" id="InternalCaseManager" style="display: none;" target="_blank">
+                @csrf
+            
+                <table id="InternalCaseManagerTable" class="table table-striped" style="width:100%;">
+                    <thead>
+                        <tr>
+                            <th>Patient Name</th>
+                            <th>MRN#</th>
+                            <th>Internal Case Manager</th>
+                            <th>Phone Number</th>
+                            <th>Fax Number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+                <input type="hidden" class="report-type" name="reportType" value="">
+            </form>
+            {{--Patient External Case Manager List  --}}
+            <form action="" method="POST" id="ExternalCaseManager" style="display: none;" target="_blank">
+                @csrf
+            
+                <table id="ExternalCaseManagerTable" class="table table-striped" style="width:100%;">
+                    <thead>
+                        <tr>
+                            <th>Patient Name</th>
+                            <th>MRN#</th>
+                            <th>External Case Manager</th>
+                            <th>Phone Number</th>
+                            <th>Fax Number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+                <input type="hidden" class="report-type" name="reportType" value="">
+            </form>
+            {{--Patient Authorisation --}}
+            <form action="" method="POST" id="PatientAuthorisation" style="display: none;" target="_blank">
+                @csrf
+            
+                <table id="PatientAuthorisationTable" class="table table-striped" style="width:100%;">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Patient Name</th>
+                            <th>MRN</th>
+                            <th>Date of Birth</th>
+                            <th>Address</th>
+                            <th>Physician</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+                <input type="hidden" class="report-type" name="reportType" value="">
+            </form>
+                 {{--Patient Authorisation --}}
+                 <form action="" method="POST" id="SurveyCensus" style="display: none;" target="_blank">
+                    @csrf
+                
+                    <table id="SurveyCensusTable" class="table table-striped" style="width:100%;">
+                        <thead>
+                            <tr>
+                                <th>Patient Name</th>
+                                <th>MRN#</th>
+                                <th>Authorisation Number</th>
+                                <th>From Date</th>
+                                <th>To Date</th>
+                                <th>Units Used</th>
+                                <th>Units Remaining</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                    <input type="hidden" class="report-type" name="reportType" value="">
+                </form>
+        {{--Drug Interaction --}}
+        <form action="" method="POST" id="DrugInteraction" style="display: none;" target="_blank">
+            @csrf
+        
+            <table id="DrugInteractionTable" class="table table-striped" style="width:100%;">
+                <thead>
+                    <tr>
+                        <th>Patient Name</th>
+                        <th>MRN#</th>
+                        <th>DOB</th>
+                        <th>Drug Name</th>
+                        <th>Drug Interaction</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            <input type="hidden" class="report-type" name="reportType" value="">
+        </form>
+        {{--Plan of Care History --}}
+        <form action="" method="POST" id="PlanofCareHistory" style="display: none;" target="_blank">
+            @csrf
+        
+            <table id="PlanofCareHistoryTable" class="table table-striped" style="width:100%;">
+                <thead>
+                    <tr>
+                        <th>Patient Name</th>
+                        <th>MRN#</th>
+                        <th>DOB</th>
+                        <th>Plan of Care Date</th>
+                        <th>Physician Name</th>
+                        <th>Physician NPI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            <input type="hidden" class="report-type" name="reportType" value="">
+        </form>
+        {{--Patient 60 day Summary--}}
+        <form action="" method="POST" id="PatientSummary" style="display: none;" target="_blank">
+            @csrf
+        
+            <table id="PatientSummaryTable" class="table table-striped" style="width:100%;">
+                <thead>
+                    <tr>
+                        <th>Patient Name</th>
+                        <th>MRN#</th>
+                        <th>DOB</th>
+                        <th>60 day Summary</th>
+                        <th>Physician Name</th>
+                        <th>Physician NPI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            <input type="hidden" class="report-type" name="reportType" value="">
+        </form>
+
+         {{--Patient Orders History --}}
+         <form action="" method="POST" id="PatientOrdersHistory " style="display: none;" target="_blank">
+            @csrf
+        
+            <table id="PatientOrdersHistoryTable" class="table table-striped" style="width:100%;">
+                <thead>
+                    <tr>
+                        <th>Patient Name</th>
+                        <th>MRN#</th>
+                        <th>DOB</th>
+                        <th>Orders</th>
+                        <th>Physician Name</th>
+                        <th>Physician NPI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            <input type="hidden" class="report-type" name="reportType" value="">
+        </form>
+
+         {{--Patient Discharge List  --}}
+         <form action="" method="POST" id="DischargeList " style="display: none;" target="_blank">
+            @csrf
+        
+            <table id="DischargeListTable" class="table table-striped" style="width:100%;">
+                <thead>
+                    <tr>
+                        <th>Patient Name</th>
+                        <th>MRN#</th>
+                        <th>DOB</th>
+                        <th>Insurance</th>
+                        <th>Address</th>
+                        <th>Phone Number</th>
+                        <th>Discharge Date</th>
+                        <th>Physician NPI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            <input type="hidden" class="report-type" name="reportType" value="">
+        </form>
+
+        {{--Patient Infection List   --}}
+        <form action="" method="POST" id="PatientInfectionList" style="display: none;" target="_blank">
+        @csrf
+    
+        <table id="PatientInfectionTable" class="table table-striped" style="width:100%;">
+            <thead>
+                <tr>
+                    <th>Patient Name</th>
+                    <th>MRN#</th>
+                    <th>DOB</th>
+                    <th>Insurance</th>
+                    <th>Address</th>
+                    <th>Phone Number</th>
+                    <th>Discharge Date</th>
+                    <th>Physician NPI</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+        <input type="hidden" class="report-type" name="reportType" value="">
+    </form>
+
+    {{--Expiring Documents --}}
+    <form action="" method="POST" id="ExpiringDocuments" style="display: none;" target="_blank">
+        @csrf
+
+        <table id="ExpiringDocumentsTable" class="table table-striped" style="width:100%;">
+            <thead>
+                <tr>
+                    <th>Patient Name</th>
+                    <th>MRN#</th>
+                    <th>DOB</th>
+                    <th>Insurance</th>
+                    <th>Address</th>
+                    <th>Phone Number</th>
+                    <th>Discharge Date</th>
+                    <th>Physician NPI</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+        <input type="hidden" class="report-type" name="reportType" value="">
+    </form>
+        
+</div>
+</main>
 @endsection
 
 @section('extra_js')

@@ -385,6 +385,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     // QA
     Route::get('/patients-qa', [QaController::class, 'index'])->name('patients.qa');
     Route::get('/patients/pending/qa', [QaController::class, 'pendingList'])->name('patients.pending.qa');
+    Route::post('/update-status', [QaController::class, 'updateStatus'])->name('update-status');
+
 
     //Reporting
 
@@ -548,6 +550,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/schedule/save', [ScheduleCalendar::class, 'store'])->name('schedule.save');
     Route::get('/get-dates/{patientId}', [ScheduleCalendar::class, 'getEpisodeDates'])->name('getScheduleDate');
     Route::get('/schedule/get-schedule', [ScheduleCalendar::class, 'getAllSchedule']);
+    Route::get('/complete/get-schedule', [ScheduleCalendar::class, 'getCompleteSchedule']);
     Route::get('/schedule/employee-wise/get-schedule', [ScheduleCalendar::class, 'getEmployeeWiseSchedule']);
     Route::get('/schedule/user/get-schedule', [ScheduleCalendar::class, 'getUserSchedule']);
     Route::get('/task-form/{data}', [ScheduleCalendar::class, 'formOpen'])->name('skilled-agency.task-form');

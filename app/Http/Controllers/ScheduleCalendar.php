@@ -186,12 +186,11 @@ class ScheduleCalendar extends Controller
         ]);
     }
     public function getUserSchedule(){
-
         $organization_id = Auth::user()->organization_id;
         $u_id = Employee::where('employee_id', Auth::user()->user_code)->first();
-
         $schedules = Schedule::leftJoin('employees', 'schedule.employee_id', '=', 'employees.id')
             ->leftJoin('patients', 'schedule.patient_id', '=', 'patients.id')
+            ->leftJoin('qa_lists', 'schedule.id', '=', 'qa_lists.schedule_id')
             ->select([
                 'employees.first_name',
                 'employees.last_name',
@@ -199,9 +198,36 @@ class ScheduleCalendar extends Controller
                 'patients.last_name as patient_last_name',
                 'schedule.*'
             ])
-            ->where('schedule.employee_id', '=', $u_id->id)
-            ->where('scheduling_status', '!=', 'completed')
+            ->where('schedule.employee_id', $u_id->id)
+            ->where('schedule.scheduling_status', '!=', 'completed')
+            ->where(function($query) {
+                $query->orWhereNull('qa_lists.id')->orWhere('qa_lists.status', '!=', 1);
+            })
             ->get();
+
+        return response()->json([
+            'status' => 200,
+            'data' => $schedules,
+        ]);
+    }
+    public function getCompleteSchedule(){
+        $organization_id = Auth::user()->organization_id;
+        $u_id = Employee::where('employee_id', Auth::user()->user_code)->first();
+        $schedules = Schedule::leftJoin('employees', 'schedule.employee_id', '=', 'employees.id')
+        ->leftJoin('patients', 'schedule.patient_id', '=', 'patients.id')
+        ->leftJoin('qa_lists', 'schedule.id', '=', 'qa_lists.schedule_id')
+        ->select([
+            'employees.first_name',
+            'employees.last_name',
+            'patients.first_name as patient_first_name',
+            'patients.last_name as patient_last_name',
+            'schedule.*'
+        ])
+        ->where('schedule.employee_id', $u_id->id)
+        ->where('schedule.scheduling_status', '!=', 'completed')
+        ->where('qa_lists.status', '=', 1)
+        ->get();
+
         return response()->json([
             'status' => 200,
             'data' => $schedules,

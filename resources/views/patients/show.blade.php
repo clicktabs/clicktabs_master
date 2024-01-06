@@ -1675,7 +1675,7 @@
     </script>
 <script>
     $(document).ready(function() {
-        var dataForSchedulingList2 = [];
+        // var dataForSchedulingList2 = [];
         var dataForSchedulingList3 = [];
 
         // Fetch the schedule data from the server
@@ -1687,45 +1687,10 @@
                     if (item.task === 'HHA Visit (Billable)' || item.task === 'DSP (Billable)') {
                         dataForSchedulingList3.push(item);
                     } else {
-                        dataForSchedulingList2.push(item);
+                        // dataForSchedulingList2.push(item);
                     }
                 });
 
-                // Initialize schedulingList2 DataTable
-                $('#schedulingList2').DataTable({
-                    scrollX: true,
-                    data: dataForSchedulingList2,
-                    searching: false,
-                    columns: [
-                        { data: 'patient_first_name', title: 'Patient First Name' },
-                        { data: 'task', title: 'Task' },
-                        { data: 'kt_calendar_datepicker_start_date', title: 'Schedule Date' },
-                        { data: 'first_name', title: 'Assigned To' },
-                        {
-                            data: 'scheduling_status',
-                            title: 'Scheduling Status',
-                            orderable: false,
-                            render: function (data, type, row) {
-                                return `<div class="rounded-[5px] ${data === 'scheduled' ? 'scheduled' : data === 'started' ? 'started' : data === 'open_shift' ? 'open_shift' : data === 'no_show' ? 'no_show' : data === 'on_hold' ? 'on_hold' : data === 'hospitalization' ? 'hospitalization' : 'completed'}">
-                                    <span class="text-white block text-center py-[5px] px-[10px] border-none">${data === 'scheduled' ? 'Scheduled' : data === 'started' ? 'Started' : data === 'open_shift' ? 'Open Shift' : data === 'no_show' ? 'No Show' : data === 'on_hold' ? 'On Hold' : data === 'hospitalization' ? 'Hospitalization' : 'Completed'}</span>
-                                </div>`;
-                            }
-                        },
-                        {
-                            data: 'id',
-                            title: 'Actions',
-                            className: "dt-center editor-delete",
-                            orderable: false,
-                            render: function (data, type, row) {
-                                let subscriptionPlanType = 1 || "DefaultPlan";
-                                let buttonsHtml = '';
-                                buttonsHtml += `<a href="/task-form/${data}" class="btn btn-primary" target="_blank">Open</a>`;
-                                return buttonsHtml;
-                            }
-                        },
-                    ],
-
-                });
 
                 // Initialize schedulingList3 DataTable
                 $('#schedulingList3').DataTable({
@@ -1772,6 +1737,58 @@
                             }
                         },
                     ]
+                });
+            }
+        });
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        var dataForSchedulingList2 = [];
+
+        // Fetch the schedule data from the server
+        $.ajax({
+            url: "/complete/get-schedule",
+            success: function (result) {
+                // Filter the data based on the 'task'
+                result.data.forEach(function(item) {
+                        dataForSchedulingList2.push(item);
+                });
+
+                // Initialize schedulingList2 DataTable
+                $('#schedulingList2').DataTable({
+                    scrollX: true,
+                    data: dataForSchedulingList2,
+                    searching: false,
+                    columns: [
+                        { data: 'patient_first_name', title: 'Patient First Name' },
+                        { data: 'task', title: 'Task' },
+                        { data: 'kt_calendar_datepicker_start_date', title: 'Schedule Date' },
+                        { data: 'first_name', title: 'Assigned To' },
+                        {
+                            data: 'scheduling_status',
+                            title: 'Scheduling Status',
+                            orderable: false,
+                            render: function (data, type, row) {
+                                return `<div class="rounded-[5px] ${data === 'scheduled' ? 'scheduled' : data === 'started' ? 'started' : data === 'open_shift' ? 'open_shift' : data === 'no_show' ? 'no_show' : data === 'on_hold' ? 'on_hold' : data === 'hospitalization' ? 'hospitalization' : 'completed'}">
+                                    <span class="text-white block text-center py-[5px] px-[10px] border-none">${data === 'scheduled' ? 'Scheduled' : data === 'started' ? 'Started' : data === 'open_shift' ? 'Open Shift' : data === 'no_show' ? 'No Show' : data === 'on_hold' ? 'On Hold' : data === 'hospitalization' ? 'Hospitalization' : 'Completed'}</span>
+                                </div>`;
+                            }
+                        },
+                        {
+                            data: 'id',
+                            title: 'Actions',
+                            className: "dt-center editor-delete",
+                            orderable: false,
+                            render: function (data, type, row) {
+                                let subscriptionPlanType = 1 || "DefaultPlan";
+                                let buttonsHtml = '';
+                                buttonsHtml += `<a href="/task-form/${data}" class="btn btn-primary" target="_blank">Open</a>`;
+                                return buttonsHtml;
+                            }
+                        },
+                    ],
+
                 });
             }
         });

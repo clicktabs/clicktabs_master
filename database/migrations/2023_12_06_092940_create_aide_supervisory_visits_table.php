@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('aide_supervisory_visits', function (Blueprint $table) {
             $table->id();
             $table->date('SupervisionDate')->nullable();
+            $table->integer('schedule_id')->nullable();
             $table->string('Start')->nullable();
             $table->string('End')->nullable();
             $table->string('SupervisorName')->nullable();
