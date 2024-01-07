@@ -19,6 +19,10 @@ jobs:
         echo "${{ secrets.SSH_PEM_KEY }}" | base64 -d > $HOME/ssh_key.pem
         chmod 400 $HOME/ssh_key.pem
         cat $HOME/ssh_key.pem
+    - name: List environment variables
+      run: |
+        printenv | sort
+
 
     - name: Push code to EC2
       run: |
