@@ -46,11 +46,34 @@
                                         <option value="Plan of Care History">Plan of Care History</option>
                                         <option value="Patient Discharge List">Patient Discharge List</option> 
                                         <option value="Patient Infection List">Patient Infection List</option> 
-                                        <option value="hysician Order History by Patient">Physician Order History by Patient</option> 
+                                        <option value="Physician Order History by Patient">Physician Order History by Patient</option> 
                                         <option value="Employee Roster">Employee Roster</option>
                                         <option value="Expiring Documents">Expiring Documents</option>  
+                                        <option value="Scheduled">Scheduled</option>  
+                                        <option value="Started">Started</option> 
+                                        <option value="Open Shift">Open Shift</option>  
+                                        <option value="Missed Visit">Missed Visit</option>    
+                                        <option value="On Hold">On Hold</option>  
+                                        <option value="Hospitalized">Hospitalized</option>  
+                                        <option value="Completed">Completed</option>  
+                                        <option value="HHA Supervisory Visit">HHA Supervisory Visit</option>    
+                                        <option value="LPN/LVN Supervisory Visit">LPN/LVN Supervisory Visit</option>  
+                                        <option value="Oasis-E-Recertification">Oasis-E-Recertification</option>    
+                                        <option value=""></option>    
+                                       {{--  <option value=""></option>  
+                                        <option value=""></option> 
+                                        <option value=""></option>    
                                         <option value=""></option>  
-                                        <option value=""></option>                      
+                                        <option value=""></option> 
+                                        <option value=""></option>    
+                                        <option value=""></option>  
+                                        <option value=""></option> 
+                                        <option value=""></option>    
+                                        <option value=""></option>  
+                                        <option value=""></option> 
+                                        <option value=""></option>    
+                                        <option value=""></option>  
+                                        <option value=""></option>                         --}}
                                     </select>
                                 </td>
                                 <td><button type="submit" class="btn btn-success hd xu ye print-selected-items" id="generateButton" form="">Generate</button></td>
@@ -446,7 +469,249 @@
         </table>
         <input type="hidden" class="report-type" name="reportType" value="">
     </form>
-        
+    
+    {{--Scheduled --}}
+    <form action="" method="POST" id="scheduled" style="display: none;" target="_blank">
+        @csrf
+
+        <table id="scheduledTable" class="table table-striped" style="width:100%;">
+            <thead>
+                <tr>
+                    <th>Patient Name</th>
+                    <th>MRN#</th>
+                    <th>DOB</th>
+                    <th>Insurance</th>
+                    <th>Address</th>
+                    <th>Phone Number</th>
+                    <th>Employee Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+        <input type="hidden" class="report-type" name="reportType" value="">
+    </form>
+        {{--Started --}}
+        <form action="" method="POST" id="started" style="display: none;" target="_blank">
+            @csrf
+    
+            <table id="startedTable" class="table table-striped" style="width:100%;">
+                <thead>
+                    <tr>
+                        <th>Patient Name</th>
+                        <th>MRN#</th>
+                        <th>DOB</th>
+                        <th>Insurance</th>
+                        <th>Address</th>
+                        <th>Phone Number</th>
+                        <th>Employee Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            <input type="hidden" class="report-type" name="reportType" value="">
+        </form>
+    {{--Open Shift --}}
+    <form action="" method="POST" id="openshift" style="display: none;" target="_blank">
+        @csrf
+
+        <table id="openshiftTable" class="table table-striped" style="width:100%;">
+            <thead>
+                <tr>
+                    <th>Patient Name</th>
+                    <th>MRN#</th>
+                    <th>DOB</th>
+                    <th>Insurance</th>
+                    <th>Address</th>
+                    <th>Phone Number</th>
+                    <th>Employee Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+        <input type="hidden" class="report-type" name="reportType" value="">
+    </form>
+     {{--Missed Visit --}}
+     <form action="" method="POST" id="missedvisit" style="display: none;" target="_blank">
+        @csrf
+        <table id="missedvisitTable" class="table table-striped" style="width:100%;">
+            <thead>
+                <tr>
+                    <th>Patient Name</th>
+                    <th>MRN#</th>
+                    <th>DOB</th>
+                    <th>Insurance</th>
+                    <th>Address</th>
+                    <th>Phone Number</th>
+                    <th>Employee Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+        <input type="hidden" class="report-type" name="reportType" value="">
+    </form>   
+         {{--On Hold --}}
+         <form action="" method="POST" id="onhold" style="display: none;" target="_blank">
+            @csrf
+            <table id="onholdTable" class="table table-striped" style="width:100%;">
+                <thead>
+                    <tr>
+                        <th>Patient Name</th>
+                        <th>MRN#</th>
+                        <th>DOB</th>
+                        <th>Insurance</th>
+                        <th>Address</th>
+                        <th>Phone Number</th>
+                        <th>Employee Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            <input type="hidden" class="report-type" name="reportType" value="">
+        </form>
+{{--On Hold --}}
+<form action="" method="POST" id="onhold" style="display: none;" target="_blank">
+    @csrf
+    <table id="onholdTable" class="table table-striped" style="width:100%;">
+        <thead>
+            <tr>
+                <th>Patient Name</th>
+                <th>MRN#</th>
+                <th>DOB</th>
+                <th>Insurance</th>
+                <th>Address</th>
+                <th>Phone Number</th>
+                <th>Employee Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+    <input type="hidden" class="report-type" name="reportType" value="">
+</form>     
+{{--Hospitalized --}}
+<form action="" method="POST" id="hospitalized " style="display: none;" target="_blank">
+    @csrf
+    <table id="hospitalizedTable" class="table table-striped" style="width:100%;">
+        <thead>
+            <tr>
+                <th>Patient Name</th>
+                <th>MRN#</th>
+                <th>DOB</th>
+                <th>Insurance</th>
+                <th>Address</th>
+                <th>Phone Number</th>
+                <th>Employee Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+    <input type="hidden" class="report-type" name="reportType" value="">
+</form> 
+{{--Hospitalized --}}
+<form action="" method="POST" id="completed" style="display: none;" target="_blank">
+    @csrf
+    <table id="completedTable" class="table table-striped" style="width:100%;">
+        <thead>
+            <tr>
+                <th>Patient Name</th>
+                <th>MRN#</th>
+                <th>DOB</th>
+                <th>Insurance</th>
+                <th>Address</th>
+                <th>Phone Number</th>
+                <th>Employee Name</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <input type="hidden" class="report-type" name="reportType" value="">
+</form>
+{{--HHA Supervisory Visit --}}
+<form action="" method="POST" id="hhasupervisoryvisit" style="display: none;" target="_blank">
+    @csrf
+    <table id="hhasupervisoryvisitTable" class="table table-striped" style="width:100%;">
+        <thead>
+            <tr>
+                <th>Patient Name</th>
+                <th>MRN#</th>
+                <th>DOB</th>
+                <th>Insurance</th>
+                <th>Address</th>
+                <th>Phone Number</th>
+                <th>Employee Name</th>
+                <th>Start of Care Date</th>
+                <th>End of Care Date</th>
+                <th>Status</th>
+            </tr>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <input type="hidden" class="report-type" name="reportType" value="">
+</form>
+
+{{--Oasis-E-Recertification --}}
+<form action="" method="POST" id="oasiserecertification" style="display: none;" target="_blank">
+    @csrf
+    <table id="oasiserecertificationTable" class="table table-striped" style="width:100%;">
+        <thead>
+            <tr>
+                <th>Patient Name</th>
+                <th>MRN#</th>
+                <th>DOB</th>
+                <th>Insurance</th>
+                <th>Address</th>
+                <th>Phone Number</th>
+                <th>Start of Care Date</th>
+                <th>End of Care Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <input type="hidden" class="report-type" name="reportType" value="">
+</form>
+{{--LPN/LPN Supervisory Visit --}}
+<form action="" method="POST" id="lpnsupervisoryvisit" style="display: none;" target="_blank">
+    @csrf
+    <table id="lpnsupervisoryvisitTable" class="table table-striped" style="width:100%;">
+        <thead>
+            <tr>
+                <th>Patient Name</th>
+                <th>MRN#</th>
+                <th>DOB</th>
+                <th>Insurance</th>
+                <th>Address</th>
+                <th>Phone Number</th>
+                <th>Employee Name</th>
+                <th>Start of Care Date</th>
+                <th>End of Care Date</th>
+                <th>Status</th>
+
+            </tr>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <input type="hidden" class="report-type" name="reportType" value="">
+</form>
 </div>
 </main>
 @endsection
