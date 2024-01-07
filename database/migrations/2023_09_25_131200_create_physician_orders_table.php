@@ -29,10 +29,10 @@ class CreatePhysicianOrdersTable extends Migration
             $table->text('physicianSsn')->nullable();
             $table->text('physicianCurrentDate')->nullable();
             $table->string('physicianGender')->nullable();
-            $table->boolean('phsicianSkilled')->nullable();
-            $table->boolean('phsicianHealthAide')->nullable();
-            $table->boolean('phsicianTherapy')->nullable();
-            $table->boolean('phsicianOther')->nullable();
+            $table->integer('phsicianSkilled')->nullable();
+            $table->integer('phsicianHealthAide')->nullable();
+            $table->integer('phsicianTherapy')->nullable();
+            $table->integer('phsicianOther')->nullable();
             $table->text('primaryDiagnosis')->nullable();
             $table->text('icd9')->nullable();
 

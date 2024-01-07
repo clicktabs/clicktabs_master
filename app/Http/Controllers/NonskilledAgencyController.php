@@ -705,6 +705,7 @@ class NonskilledAgencyController extends Controller
             ['schedule_id' => $req->schedule_id],
             ['status' => 0]
         );
+
         return redirect()->back()->with('success', ' HHA visit Record Updated Successfully');
 
     }

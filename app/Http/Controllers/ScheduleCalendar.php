@@ -268,6 +268,9 @@ class ScheduleCalendar extends Controller
                 $inventions = get_sub_addons($invention_addons, $companyId);
                 $new_goals_addons = Addon::where('name', 'like', 'New Goals%')->where('status', '1')->first();
                 $new_goals = get_sub_addons($new_goals_addons, $companyId);
+
+                setcookie('schedule_id', $data, time() + (86400 * 30), "/");
+
                 return view('Skilled-Agency.oasis-e-start-of-care', compact('patient','race_enc','ethnicities','source_of_add','patientInsurance','patientAddressInfo',
                 'patientEpisodeTiming','patientTransportation', 'episodeDaterange','medications','schedule','account','inventions','new_goals'))->with('active', 'phistory');
 
@@ -351,10 +354,10 @@ class ScheduleCalendar extends Controller
                 } else {
                     return view('Skilled-Agency.hha-visit-note', compact('data'));
                 }
-            case 'HHA Supervisory Visit(Non-Billable)':
+            /* case 'HHA Supervisory Visit(Non-Billable)':
                 $schedule_id = $schedule->id;
                 $supervisory = AideSupervisoryVisit::where('schedule_id',$schedule_id)->first();
-                return view('Skilled-Agency.aide-supervisory-visit', compact('supervisory', 'schedule_id'));
+                return view('Skilled-Agency.aide-supervisory-visit', compact('supervisory', 'schedule_id')); */
             default:
                 return redirect()->back()->with('danger', 'Something Went Wrong!!');
         }

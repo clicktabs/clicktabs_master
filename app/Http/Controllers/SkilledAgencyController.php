@@ -494,7 +494,7 @@ class SkilledAgencyController extends Controller
             $nss->save();
 
             $qaList = QaList::updateOrInsert(
-                ['patient_id' => $request->schedule_id],
+                ['schedule_id' => $request->schedule_id],
                 ['status' => 0]
             );
 
@@ -1312,7 +1312,7 @@ class SkilledAgencyController extends Controller
 
         $oed->save();
 
-        // return redirect()->with('success', 'Oasis E Death Record Created Successfully');
+        return redirect()->back();
     }
 
     /**
