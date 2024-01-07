@@ -98,17 +98,17 @@
                                                 @endif
                                             </select>
                                         </div>
-                                        <div class="col hidden">
-                                            <label for="patient_admission_status">Status: <span class="text-red">*</span></label>
+                                        {{-- <div class="col-sm-3">
+                                            <label for="patient_admission_status">Location: <span class="text-red">*</span></label>
                                             <select name="patient_admission_status" id="patient_admission_status" class="form-control s ou">
-                                                <option value="">Select</option>
-                                                <option value="admit">Admit</option>
-                                                <option value="non-admit">Non-Admit</option>
-                                                <option value="pending">Pending</option>
-                                                <option value="discharge">Discharge</option>
+                                                <option value=""></option>
+                                                <option value="admit"></option>
+                                                <option value="non-admit"></option>
+                                                <option value="pending"></option>
+                                                <option value="discharge"></option>
 
                                             </select>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                     <hr class="hr-st"/>
                                     <div class="row">
