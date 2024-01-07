@@ -5,6 +5,7 @@ access.txt
 /vendor
 .env
 .env.backup
+.env.save
 .env.production
 .phpunit.result.cache
 Homestead.json
@@ -18,5 +19,5 @@ yarn-error.log
 public/Signatures/1701154854.png
 public/Signatures/1701167180.png
 
-composer.lock
-package-lock.json
+#composer.lock
+#package-lock.json
