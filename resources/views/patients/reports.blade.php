@@ -25,10 +25,10 @@
                                 <td>
                                     <select class="form-select" aria-label="Location select">
                                         <option value="">Select Location</option>
-                                        <option value="">Location 1</option>
+                                        {{-- <option value="">Location 1</option>
                                         <option value="">Location 2</option>
                                         <option value="" selected>Location 3</option>
-                                        <option value="">Location 4</option>
+                                        <option value="">Location 4</option> --}}
                                     </select>
                                 </td> 
                                 <td style="max-width: 200px">

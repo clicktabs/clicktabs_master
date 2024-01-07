@@ -53,6 +53,7 @@ class PermissionSeeder extends Seeder
             'skilled-agency.getSign', 'printoasispdf', 'patients.skilled-nursing-dashboard', 'skilled-agency.physicianorder', 'skilled-agency.plan-of-care', 'skilled-agency.oasis-e-start-of-care',
             'skilled-agency.get-oasis-e-start-of-care', 'skilled-agency.oasis-e-dealth','patients.nurse-visit-note.index', 'skilled-agency.hha-care-plan', 'skilled-agency.60-day-summary',
             'skilled-agency.aide-supervisory-visit', 'skilled-agency.hha-visit-note', 'skilled-agency.saveNursing',
+
         ];
 
         foreach ($permissions as $permission) {
@@ -63,7 +64,6 @@ class PermissionSeeder extends Seeder
             'super-admin',
             'Administrator',
             'Employee',
-            'Nursing',
             'RN Nursing',
             'LPN/LVN Nursing',
             'Occupational Therapist',

@@ -528,8 +528,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/patient-reports/discontinue-medication', [DiscontinueMedicationController::class, 'index'])->name('patient-reports.discontinue-medication');
 
 
-
-
     // Cookies
     Route::get('cookie-consent-preferences', [CookiesController::class, 'index'])->name('CookiesController');
 
@@ -607,9 +605,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     // Vitals
     Route::resource('vitals', VitalsController::class);
 
- // Vitals Signs
- Route::get('/vital-signs', [VitalsController::class, 'index'])->name('vital-signs');
-
+    // Vitals Signs
+    Route::get('/vital-signs', [VitalsController::class, 'index'])->name('vital-signs');
 
     // Authorizations
     Route::resource('authorizations', AuthorizationController::class);
