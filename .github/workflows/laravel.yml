@@ -16,7 +16,7 @@ jobs:
 
     - name: Decode SSH PEM Key
       run: |
-        echo "${{ secrets.SSH_PEM_KEY }}" | base64 -d > $HOME/ssh_key.pem
+        echo "${{ secrets.PRIVATE_KEY }}" | base64 -d > $HOME/ssh_key.pem
         chmod 400 $HOME/ssh_key.pem
         cat $HOME/ssh_key.pem
     - name: List environment variables
@@ -33,7 +33,7 @@ jobs:
       with:
         host: ${{ secrets.EC2_HOST }}
         username: ubuntu
-        key: ${{ secrets.SSH_PEM_KEY }}
+        key: ${{ secrets.PRIVATE_KEY }}
         script: |
           sudo cp -r /home/ubuntu/clicktabs_master/* /var/www/clicktabs_master/
           sudo chown -R www-data:www-data /var/www/clicktabs_master
