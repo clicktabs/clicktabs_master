@@ -5,6 +5,7 @@ access.txt
 /vendor
 .env
 .env.backup
+.env.save
 .env.production
 .phpunit.result.cache
 Homestead.json
