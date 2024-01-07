@@ -1312,7 +1312,7 @@ class SkilledAgencyController extends Controller
 
         $oed->save();
 
-        // return redirect()->with('success', 'Oasis E Death Record Created Successfully');
+        return redirect()->back();
     }
 
     /**
