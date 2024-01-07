@@ -153,10 +153,6 @@ background: #f5f5f5;
 display: none;
 }
 
-th {
-color: white;
-}
-
 @media print {
 .no-print {
 display: none;
@@ -341,10 +337,6 @@ background: #f5f5f5;
 
 .overlay {
 display: none;
-}
-
-th {
-color: white;
 }
 
 @media print {
