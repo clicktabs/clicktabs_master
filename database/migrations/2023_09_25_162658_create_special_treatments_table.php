@@ -245,8 +245,7 @@ class CreateSpecialTreatmentsTable  extends Migration
             $table->time('personCompletingTime')->nullable();
             $table->text('agencyName')->nullable();
             $table->text('agencyPhone')->nullable();
-            $table->text('discontinued')->nullable();
-
+    
             $table->integer('modified_by')->nullable();
             $table->integer('created_by')->nullable();
             $table->timestamps();
