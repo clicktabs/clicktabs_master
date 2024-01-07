@@ -210,76 +210,60 @@ class="form-check-input"> Motivated</label>
                 <table class="table table-bordered align-middle m-0">
                 <thead>
                 <tr>
-                <th></th>
-                <th>#1</th>
-                <th>#2</th>
-                <th>#3</th>
-                <th>#4</th>
+                <th style="width: 130px">WOUND</th>
+                <th class="text-center">#1</th>
+                <th class="text-center">#2</th>
+                <th class="text-center">#3</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
+                <td>Location</td>
+                <td style="padding: 4px"><input type="text" name="wound_location_1" class="form-control"></td>
+                <td style="padding: 4px"><input type="text" name="wound_location_2" class="form-control"></td>
+                <td style="padding: 4px"><input type="text" name="wound_location_2" class="form-control"></td>
+                </tr>
+                <tr>
                 <td>Length</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td style="padding: 4px"><input type="text" name="wound_length_1" class="form-control"></td>
+                <td style="padding: 4px"><input type="text" name="wound_length_2" class="form-control"></td>
+                <td style="padding: 4px"><input type="text" name="wound_length_2" class="form-control"></td>
                 </tr>
                 <tr>
                 <td>Width</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td style="padding: 4px"><input type="text" name="wound_width_1" class="form-control"></td>
+                <td style="padding: 4px"><input type="text" name="wound_width_2" class="form-control"></td>
+                <td style="padding: 4px"><input type="text" name="wound_width_2" class="form-control"></td>
                 </tr>
                 <tr>
                 <td>Depth</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td style="padding: 4px"><input type="text" name="wound_depth_1" class="form-control"></td>
+                <td style="padding: 4px"><input type="text" name="wound_depth_2" class="form-control"></td>
+                <td style="padding: 4px"><input type="text" name="wound_depth_2" class="form-control"></td>
                 </tr>
                 <tr>
                 <td>Drainage</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td style="padding: 4px"><input type="text" name="wound_drainage_1" class="form-control"></td>
+                <td style="padding: 4px"><input type="text" name="wound_drainage_2" class="form-control"></td>
+                <td style="padding: 4px"><input type="text" name="wound_drainage_2" class="form-control"></td>
                 </tr>
                 <tr>
                 <td>Tunneling</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td style="padding: 4px"><input type="text" name="wound_tunneling_1" class="form-control"></td>
+                <td style="padding: 4px"><input type="text" name="wound_tunneling_2" class="form-control"></td>
+                <td style="padding: 4px"><input type="text" name="wound_tunneling_2" class="form-control"></td>
                 </tr>
                 <tr>
                 <td>Odor</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                </tr>
-                <tr>
-                <td>Sur. Tissue</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                </tr>
-                <tr>
-                <td>Edema</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td style="padding: 4px"><input type="text" name="wound_odor_1" class="form-control"></td>
+                <td style="padding: 4px"><input type="text" name="wound_odor_2" class="form-control"></td>
+                <td style="padding: 4px"><input type="text" name="wound_odor_2" class="form-control"></td>
                 </tr>
                 <tr>
                 <td>Stoma</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td style="padding: 4px"><input type="text" name="wound_stoma_1" class="form-control"></td>
+                <td style="padding: 4px"><input type="text" name="wound_stoma_2" class="form-control"></td>
+                <td style="padding: 4px"><input type="text" name="wound_stoma_2" class="form-control"></td>
                 </tr>
                 </tbody>
                 </table>
