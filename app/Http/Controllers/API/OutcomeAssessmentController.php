@@ -1596,8 +1596,8 @@ class OutcomeAssessmentController extends Controller
             $conditions = ['patient_history_id' => $request->patient_history_id];
             CMS::updateOrInsert($conditions, $attributes);
 
-            $patientId = ['patient_id' => $request->patient_history_id];
-            $attributes = ['status' => 1];
+            $patientId = ['schedule_id' => $request->patient_history_id];
+            $attributes = ['status' => 0];
             QaList::updateOrInsert($patientId, $attributes);
 
             $schedule = Schedule::where('id', $request->task_schedule_id)->first();
