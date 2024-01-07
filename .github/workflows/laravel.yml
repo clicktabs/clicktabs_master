@@ -17,12 +17,12 @@ jobs:
     - name: Decode SSH PEM Key
       run: |
         echo "${{ secrets.SSH_PEM_KEY }}" | base64 -d > $HOME/ssh_key.pem
-        chmod 600 $HOME/ssh_key.pem
+        chmod 400 $HOME/ssh_key.pem
 
     - name: Push code to EC2
       run: |
         rsync -avz --exclude='.env' --exclude='storage/*' --exclude='node_modules' --exclude='vendor' -e "ssh -o StrictHostKeyChecking=no -i $HOME/ssh_key.pem" ./ ubuntu@ec2-18-216-174-182.us-east-2.compute.amazonaws.com:/home/ubuntu/clicktabs_master/
-    
+
     - name: SSH and Composer commands on EC2
       uses: appleboy/ssh-action@master
       with:
