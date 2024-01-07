@@ -76,7 +76,6 @@ class OutcomeAssessmentController extends Controller
     public function store(Request $request)
     {
         // patinet history save
-       // dd($request);
 
         if(isset($request->patientHistory)){
             $patient_id = $request->patient_id;
