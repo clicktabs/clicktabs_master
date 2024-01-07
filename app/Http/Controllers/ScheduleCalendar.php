@@ -354,10 +354,10 @@ class ScheduleCalendar extends Controller
                 } else {
                     return view('Skilled-Agency.hha-visit-note', compact('data'));
                 }
-            /* case 'HHA Supervisory Visit(Non-Billable)':
+            case 'HHA Supervisory Visit(Non-Billable)':
                 $schedule_id = $schedule->id;
                 $supervisory = AideSupervisoryVisit::where('schedule_id',$schedule_id)->first();
-                return view('Skilled-Agency.aide-supervisory-visit', compact('supervisory', 'schedule_id')); */
+                return view('Skilled-Agency.aide-supervisory-visit', compact('supervisory', 'schedule_id'));
             default:
                 return redirect()->back()->with('danger', 'Something Went Wrong!!');
         }
