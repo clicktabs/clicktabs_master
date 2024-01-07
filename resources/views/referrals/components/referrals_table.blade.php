@@ -62,7 +62,7 @@
 
                 <td class="dx">
                     <div class="gn">
-                        <a href="#" class="btn ho xi ye edit">Convert</a>
+                        <a href="{{ route('patients.create', ['ref_id' => $referral->id]) }}" class="btn ho xi ye edit">Convert</a>
                         <a href="{{ route('referrals.edit', $referral->id) }}" class="btn ho xi ye edit">Edit</a>
                         <form action="{{ route('referrals.destroy', $referral->id) }}" method="POST" style="display: inline;">
                             @csrf

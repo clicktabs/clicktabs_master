@@ -49,6 +49,7 @@ class CreateSpecialTreatmentsTable  extends Migration
             $table->boolean('midLine')->nullable();
             $table->boolean('central')->nullable();
             $table->boolean('noa')->nullable();
+            $table->text('discontinued')->nullable();
             $table->boolean('treatmentsChemotherapy')->nullable();
             $table->boolean('treatmentsIv')->nullable();
             $table->boolean('cancerTreatmentsIral')->nullable();

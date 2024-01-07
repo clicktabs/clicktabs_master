@@ -2,6 +2,7 @@
 @php
     $account = company_info();
 @endphp
+@if ($account)
 <div class="col-md-12">
     <form action="create">
             <div class="">
@@ -22,6 +23,7 @@
             </div>
     </form>
 </div>
+@endif
 
 
 

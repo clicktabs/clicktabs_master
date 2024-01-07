@@ -1740,7 +1740,7 @@ class OasisERecertificationController extends Controller
         $oasisM->save();
 
         $qaList = QaList::updateOrInsert(
-            ['schedule_id' => $request->patient_id],
+            ['schedule_id' => $request->schedule_id],
             ['status' => 0]
         );
 

@@ -46,7 +46,7 @@ use App\Models\CMS;
 use App\Models\PatientCaseManager;
 use App\Models\PatientServiceAddress;
 use App\Models\PatientEpisodeManager;
-
+use App\Models\Referral;
 use DataTables;
 
 class PatientController extends Controller
@@ -70,7 +70,7 @@ class PatientController extends Controller
         return view('patients.index', compact('patients'));
     }
 
-    public function create()
+    public function create(Request $request)
     {
         $companyId = Auth::user()->organization_id;
 
@@ -86,7 +86,10 @@ class PatientController extends Controller
         $patient_severity = Addon::where('name', 'like', 'Severity%')->where('status', '1')->first();
         $patient_severity_sub_addons = get_sub_addons($patient_severity, $companyId);
 
-        return view('patients.create', compact('pharmacies','physicians', 'payors_sub_addons','insurance_type_sub_addons', 'patient_severity_sub_addons'));
+        $ref_id = $request->ref_id;
+        $referral = $ref_id ? Referral::findOrFail($ref_id)->first() : null;
+
+        return view('patients.create', compact('pharmacies','physicians', 'payors_sub_addons','insurance_type_sub_addons', 'patient_severity_sub_addons', 'referral'));
     }
 
     public function store(PatientRequest $req)

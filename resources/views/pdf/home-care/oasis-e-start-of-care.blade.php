@@ -190,6 +190,7 @@
         .table td,
         .table th {
             padding: .5rem .5rem;
+            line-height: normal;
             color: initial;
             background-color: #fff;
             border-bottom-width: 1px;
@@ -355,10 +356,33 @@
             }
         }
 
+        @media print {
+            .no-print {
+                display: none;
+            }
+        }
+
         @page {
             margin: 0 0 0 0;
+            @bottom-right {
+                content: counter(page) " of " counter(pages);
+            }
         }
-        
+
+        /* Count pages */
+        body {
+            counter-reset: page;
+        }
+        #pageCounter {
+            position: fixed;
+            left: 20px;
+            bottom: 0;
+            text-align: center;
+        }
+        #pageCounter .count:after {
+            content: counter(page) " of " counter(pages);
+            /* content: counter(page) " of " counter(pages); */
+        }
     </style>
 
 </head>
@@ -374,6 +398,7 @@
     </table>
 
     {{-- Administrative --}}
+    @if ($administrative)
     <table class="table table-bordered align-middle m-0">
         <tr>
             <td class="bg-black">
@@ -524,8 +549,10 @@
             </td>
         </tr>
     </table>
+    @endif
 
     {{-- Demographics --}}
+    @if ($demographic)
     <div class="mt-0" style="border: 1px solid #000;padding-right:0.5pt;">
         <table class="table table-borderless align-middle m-0">
             <tr>
@@ -1088,8 +1115,10 @@
             </tr> --}}
         </table>
     </div>
+    @endif
 
     {{-- Hearing, Speech, and Vision --}}
+    @if ($hearingVision)
     <div class="mt-0" style="border: 1px solid #000;padding-right:0.5pt;">
         <table class="table table-borderless align-middle m-0">
             <tr>
@@ -1162,8 +1191,10 @@
             </tr>
         </table>
     </div>
+    @endif
 
     {{-- Cognitive, Mood, and Behavior --}}
+    @if ($cognitiveMoodBehavior)
     <div class="mt-0" style="border: 1px solid #000;padding-right:0.5pt;">
         <table class="table table-borderless align-middle m-0">
             <tr>
@@ -1624,6 +1655,7 @@
             </tr>
         </table>
     </div>
+    @endif
 
     {{-- NEUROLOGICAL STATUS --}}
     {{-- <div class="mt-0" style="border: 1px solid #000;padding-right:0.5pt;">
@@ -1660,6 +1692,7 @@
     </div> --}}
 
     {{-- Preferences for Customary Routine Activities --}}
+    @if ($preference)
     <div class="mt-0" style="border: 1px solid #000;padding-right:0.5pt;">
         <table class="table table-borderless align-middle m-0">
             <tr>
@@ -2151,8 +2184,10 @@
             </tr>
         </table>
     </div>
+    @endif
 
     {{-- Functional Status (ACTIVITIES PERMITTED) --}}
+    @if ($functionalSts)
     <div class="mt-0" style="border: 1px solid #000;padding-right:0.5pt;">
         <table class="table table-borderless align-middle m-0">
             <tr>
@@ -3524,8 +3559,10 @@
             </td>
         </tr>
     </table>
+    @endif
 
     {{-- Functional Abilities and Goals --}}
+    @if ($functionalAbl)
     <div class="mt-0" style="border: 1px solid #000;padding-right:0.5pt;">
         <table class="table table-borderless m-0">
             <tr>
@@ -4095,6 +4132,7 @@
             </tr>
         </table>
     </div>
+    @endif
 
     {{-- FALL RISK ASSESSMENT --}}
     <div class="mt-0" style="border: 1px solid #000;padding-right:0.5pt;padding-bottom:0.5pt;">
@@ -5341,6 +5379,14 @@
                     <label class="form-check-label"><input {{$specialTrmnt->noa===1 ? 'checked': ''}}  type="checkbox" class="form-check-input"> <b>Z1. None of the Above</b></label>
                 </td>
             </tr>
+            <tr>
+                <td colspan="2">
+                    <div>Orders for Discipline and Treatments (Specify Amount/Frequency/Duration)</div>
+                    @if ($specialTrmnt->discontinued )
+                        {!! $specialTrmnt->discontinued !!}
+                    @endif
+                </td>
+            </tr>
 
             {{-- Discharge --}}
             <tr>
@@ -5886,8 +5932,11 @@
   {{-- Physician-ordered --}}
  
 
-    @include('pdf.home-care.pagecounter')
-    
+    {{-- @include('pdf.home-care.pagecounter') --}}
+
+    <div id="pageCounter">
+        <p class="count">Page </p>
+    </div>
 </body>
 </html>
   
