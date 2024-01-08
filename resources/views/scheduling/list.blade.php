@@ -445,51 +445,6 @@
                 });
             });
 
-            /* $('#schedulingList').DataTable({
-                scrollX: true,
-                ajax: {
-                    url: "/schedule/get-schedule",
-                },
-                columns: [
-                    {
-                        data: null,
-                        orderable: true,
-                        render: function (data, type, row) {
-                            return row.first_name + ' ' + row.last_name;
-                        }
-                    },
-                    {
-                        data: null,
-                        orderable: true,
-                        render: function (data, type, row) {
-                            return row.patient_first_name + ' ' + row.patient_last_name;
-                        }
-                    },
-                    { data: 'kt_calendar_datepicker_start_date'},
-                    { data: 'kt_calendar_datepicker_end_date'},
-                    { data: 'start_time'},
-                    { data: 'end_time'},
-                    { data: 'scheduling_status',
-                        orderable: false,
-                        "mRender" : function ( data, type, row ) {
-                            return `<div class="rounded-[5px] ${data === 'scheduled' ? 'scheduled' : data === 'started' ? 'started' : data === 'open_shift' ? 'open_shift' : data === 'missed_visit' ? 'missed_visit' : data === 'on_hold' ? 'on_hold' : data === 'hospitalization' ? 'hospitalization' : 'completed'}">
-    <p class="text-white text-center py-[5px] px-[10px] border-none">${data === 'scheduled' ? 'Scheduled' : data === 'started' ? 'Started' : data === 'open_shift' ? 'Open Shift' : data === 'missed_visit' ? 'Missed Visit' : data === 'on_hold' ? 'On Hold' : data === 'hospitalization' ? 'Hospitalization' : 'Completed'}</p>
-</div>`
-                        }
-                    },
-                    {
-                        data: 'id',
-                        className: "dt-center editor-delete",
-                        orderable: false,
-                        "mRender" : function ( data, type, row ) {
-                            return `
-                            <button class="btn btn-primary edit" data-eventId="${data}">Edit</button>
-                            <button class="btn btn-danger delete" data-eventId="${data}">Delete</button>`
-                        }
-                    }
-                ],
-            }); */
-
             jQuery(document).on('submit', '#scheduleForm', function(e) {
                     e.preventDefault();
                 jQuery('.loader_wrap').fadeIn();

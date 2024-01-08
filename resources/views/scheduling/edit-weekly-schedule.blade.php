@@ -1,7 +1,7 @@
 <div id="tabs-1">
     <form class="form" action="{{ url("/schedule/edit-weekly-schedule") }}" method="post" id="kt_modal_add_event_form">
         @csrf
-{{--        <input type="hidden" name="schedule_id" value="{{$schedule->id}}">--}}
+{{-- <input type="hidden" name="schedule_id" value="{{$schedule->id}}">--}}
         <!--begin::Modal header-->
         <div class="modal-header">
             <!--begin::Modal title-->
@@ -54,36 +54,6 @@
                                 </div>
                             </div>
                         </div>
-                        {{--                        <div class="week_lists flex-wrap">--}}
-                        {{--                            <div>--}}
-                        {{--                                <input type="checkbox" value="sun" name="sun" id="sun" />--}}
-                        {{--                                <label for="sun">Sun</label>--}}
-                        {{--                            </div>--}}
-                        {{--                            <div>--}}
-                        {{--                                <input id="mon" type="checkbox" value="mon" name="mon" />--}}
-                        {{--                                <label for="mon">Mon</label>--}}
-                        {{--                            </div>--}}
-                        {{--                            <div>--}}
-                        {{--                                <input id="tue" type="checkbox" value="tue" name="tue" />--}}
-                        {{--                                <label for="tue">Tue</label>--}}
-                        {{--                            </div>--}}
-                        {{--                            <div>--}}
-                        {{--                                <input id="wed" type="checkbox" value="wed" name="wed" />--}}
-                        {{--                                <label for="wed">Wed</label>--}}
-                        {{--                            </div>--}}
-                        {{--                            <div>--}}
-                        {{--                                <input id="thu" type="checkbox" value="thu" name="thu" />--}}
-                        {{--                                <label for="thu" >Thu</label>--}}
-                        {{--                            </div>--}}
-                        {{--                            <div>--}}
-                        {{--                                <input id="fri" type="checkbox" value="fri" name="fri" />--}}
-                        {{--                                <label for="fri" >Fri</label>--}}
-                        {{--                            </div>--}}
-                        {{--                            <div>--}}
-                        {{--                                <input id="sat" type="checkbox" value="sat" name="sat" />--}}
-                        {{--                                <label for="sat">Sat</label>--}}
-                        {{--                            </div>--}}
-                        {{--                        </div>--}}
                     </div>
                     <div class="select_wrapper">
                         <div>
