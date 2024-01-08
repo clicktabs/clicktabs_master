@@ -8,7 +8,6 @@
 @endsection
 @section('content')
     <style>
-
         .table-top-content-item a {
             background-color: #56aaaf;
             color: #fff;
@@ -73,7 +72,7 @@
     <main>
         <div class="">
             <div class="post d-flex flex-column-fluid" id="kt_post">
-                <!--begin::Container-->
+                <!--begin::Container End-->
                 <div id="kt_content_container" class="container-xxl">
                     <!--begin::Card-->
                     <div class="card">
