@@ -46,7 +46,7 @@
                                         <option value="Plan of Care History">Plan of Care History</option>
                                         <option value="Patient Discharge List">Patient Discharge List</option> 
                                         <option value="Patient Infection List">Patient Infection List</option> 
-                                        <option value="hysician Order History by Patient">Physician Order History by Patient</option> 
+                                        <option value="Physician Order History by Patient">Physician Order History by Patient</option> 
                                         <option value="Employee Roster">Employee Roster</option>
                                         <option value="Expiring Documents">Expiring Documents</option>  
                                         <option value="Scheduled">Scheduled</option>  
@@ -59,8 +59,8 @@
                                         <option value="HHA Supervisory Visit">HHA Supervisory Visit</option>    
                                         <option value="LPN/LVN Supervisory Visit">LPN/LVN Supervisory Visit</option>  
                                         <option value="Oasis-E-Recertification">Oasis-E-Recertification</option>    
-                                        {{-- <option value=""></option>    
-                                        <option value=""></option>  
+                                        <option value=""></option>    
+                                       {{--  <option value=""></option>  
                                         <option value=""></option> 
                                         <option value=""></option>    
                                         <option value=""></option>  

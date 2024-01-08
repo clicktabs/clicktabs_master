@@ -10,10 +10,10 @@
     <div class="form-group">
         <label for="type">Type</label>
         <select id="type" name="type" class="form-control" required>
-            <option value="DOODD and home healthcare" {{ $subscriptionPlan->type === 'DOODD and home healthcare' ? 'selected' : '' }}>DODD</option>
-            <option value="Private Care" {{ $subscriptionPlan->type === 'Private Care' ? 'selected' : '' }}>Home Care/Private Pay</option>
+            {{-- <option value="DOODD and home healthcare" {{ $subscriptionPlan->type === 'DOODD and home healthcare' ? 'selected' : '' }}>DODD</option> --}}
+            {{-- <option value="Private Care" {{ $subscriptionPlan->type === 'Private Care' ? 'selected' : '' }}>Home Care/Private Pay</option> --}}
             <option value="Home healthcare" {{ $subscriptionPlan->type === 'Home healthcare' ? 'selected' : '' }}>Home Health Care</option>
-            <option value="Combo" {{ $subscriptionPlan->type === 'Combo' ? 'selected' : '' }}>Combo</option>
+            {{-- <option value="Combo" {{ $subscriptionPlan->type === 'Combo' ? 'selected' : '' }}>Combo</option> --}}
         </select>
     </div>
 

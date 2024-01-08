@@ -1376,7 +1376,7 @@
                         <div class="">
                             <div class="row">
                                 <div class="container p-5">
-                                    <div class="table-responsive2">
+                                    {{-- <div class="table-responsive2">
 
                                         <table class="table table-bordered table-striped tableDesign">
                                                 <div class="col !bg-[#4133BF] p-2">
@@ -1415,9 +1415,9 @@
                                                 @endforeach
                                             </tbody>
                                         </table>
-                                    </div><!-----/End of DODD---->
-                                    <br>
-                                    <div class="table-responsive2">
+                                    </div>
+                                    <br> --}}
+                                    {{-- <div class="table-responsive2">
                                             <div class="col !bg-[#4133BF] p-2">
                                                 <h2 class="text-center text-white" style="font-weight: bold; font-size:2em;">Home Care/Private Pay Subsciption Plan</h2>
                                         </div>
@@ -1455,8 +1455,8 @@
                                                 @endforeach
                                             </tbody>
                                         </table>
-                                    </div><!-----/End of Home Care/Private Pay---->
-                                    <br>
+                                    </div>
+                                    <br> --}}
                                     <div class="table-responsive2">
                                             <div class="col !bg-[#4133BF] p-2">
                                                 <h2 class="text-center text-white" style="font-weight: bold; font-size:2em;">Home Health Care Subsciption Plan</h2>
@@ -1495,9 +1495,9 @@
                                                 @endforeach
                                             </tbody>
                                         </table>
-                                    </div><!-----/End of Home Care/Private Pay---->
+                                    </div>
                                     <br>
-                                    <div class="table-responsive2">
+                                    {{-- <div class="table-responsive2">
                                             <div class="col !bg-[#4133BF]">
                                                 <h2 class="text-center text-white" style="font-weight: bold; font-size: 2em;">Combo Subscription Plan</h2>
                                             </div>
@@ -1535,8 +1535,8 @@
                                                 @endforeach
                                             </tbody>
                                         </table>
-                                    </div>
-                                    <!-----/End of Home Care/Private Pay---->
+                                    </div> --}}
+
 
                                 </div>
                             </div>

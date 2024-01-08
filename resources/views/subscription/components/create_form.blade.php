@@ -9,10 +9,10 @@
     <div class="form-group">
         <label for="type">Type</label>
         <select id="type" name="type" class="form-control" required>
-            <option value="DOODD and home healthcare">DODD</option>
-            <option value="Home healthcare">Home Health Care</option>
+            {{-- <option value="DOODD and home healthcare">DODD</option> --}}
+            {{-- <option value="Home healthcare">Home Health Care</option> --}}
             <option value="Private Care">Home Care/Private Pay</option>
-            <option value="Combo">Combo</option>
+            {{-- <option value="Combo">Combo</option> --}}
         </select>
     </div>
 
