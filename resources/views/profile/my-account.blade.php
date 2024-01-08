@@ -131,7 +131,7 @@
                         @if($user->hasRole('super-admin') || $user->hasRole('admin') || $user->hasRole('Administrator'))
                             <li><a href="#tabs-account">My account</a></li>
                             <li><a href="#tabs-evv-setup">EVV Setup</a></li>
-                            <li><a href="#tabs-signature">Signature</a></li>
+                            {{-- <li><a href="#tabs-signature">Signature</a></li> --}}
                             <li><a href="#tabs-agreement">Agreement</a></li>
                             @if ($user->hasRole('admin') || $user->hasRole('Administrator'))
                                 <li><a href="#tabs-subscription">Subscription</a></li>
