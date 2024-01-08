@@ -383,6 +383,17 @@ z-index: 999;
 }
 }
 }
+.input-pd-4 input[type="text"], .input-pd-4 input[type="number"] {
+    padding: 4px;
+}
+.form-check-input[type=checkbox] {
+    position: relative;
+    top: -3px;
+}
+.form-check-input[type=radio] {
+    position: relative;
+    top: -1px;
+}
 </style>
 
 <style>

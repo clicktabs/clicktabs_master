@@ -8,7 +8,7 @@
 <div class="border border-2 rounded bg-white">
 <table class="table table-borderless m-0">
 <tr>
-<td class="p-0 border-lg-end-2 pb-3">
+<td class="p-0 border-lg-end-2 pb-3" style="max-width: 450px">
 <h3 class="bg-dark-subtle text-center p-2">EMOTIONAL STATUS</h3>
 <div class="ps-1 pe-1">
 <table class="table table-borderless align-middle m-0 stack-padding">
@@ -54,6 +54,71 @@ class="form-check-input"> Motivated</label>
 </td>
 </tr>
 </table>
+</div>
+<div class="px-3" style="margin: 0 -3px">
+    <h3 class="bg-dark-subtle text-center p-2 mt-3"><b>VITALS</b></h3>
+    <div class="flex justify-content-between gap-3 mt-2">
+        <div class="input-group">
+            <label class="input-group-text" for="Drainage_volume">T</label>
+            <input type="text" name="drainageVolume" id="Drainage_volume" value="" class="form-control">
+        </div>
+        <div class="input-group">
+            <label class="input-group-text" for="Drainage_volume">Wt.</label>
+            <input type="text" name="drainageVolume" id="Drainage_volume" value="" class="form-control">
+        </div>
+    </div>
+
+    <div class="flex justify-content-between gap-3 align-items-center mt-3">
+        <div class="input-group">
+            <label class="input-group-text" for="Drainage_volume">Resp.</label>
+            <input type="text" name="drainageVolume" id="Drainage_volume" value="" class="form-control">
+        </div>
+        <div class="input-group">
+            <label class="form-check-label"><input type="checkbox" name="woundcareCaregiver" id="Woundcare_caregiver" value="Regular" class="form-check-input"> Reg.</label>
+        &nbsp; &nbsp; <label class="form-check-label"><input type="checkbox" name="woundcareCaregiver" id="Woundcare_caregiver" value="Irregular" class="form-check-input"> Irreg.</label>
+        </div>
+    </div>
+
+    <div class="flex justify-content-between gap-3 align-items-center mt-3">
+        <b>Pulse:</b>
+        <div class="input-group">
+            <label class="input-group-text" for="Drainage_volume">A</label>
+            <input type="text" name="drainageVolume" id="Drainage_volume" value="" class="form-control">
+        </div>
+        <div class="input-group">
+            <label class="input-group-text" for="Drainage_volume">R</label>
+            <input type="text" name="drainageVolume" id="Drainage_volume" value="" class="form-control">
+        </div>
+    </div>
+    <div class="mt-2" style="margin-left: 64px;">
+        <label class="form-check-label"><input type="checkbox" name="woundcareCaregiver" id="Woundcare_caregiver" value="Regular" class="form-check-input"> Regular</label>
+        &nbsp; <label class="form-check-label"><input type="checkbox" name="woundcareCaregiver" id="Woundcare_caregiver" value="Irregular" class="form-check-input"> Irregular</label>
+    </div>
+
+    <table class="table table-bordered align-middle m-0 input-pd-4 mt-3">
+        <thead>
+        <tr>
+        <th style="width: 130px" class="bg-light">B/P</th>
+        <th class="text-center bg-light">LYING</th>
+        <th class="text-center bg-light">SITTING</th>
+        <th class="text-center bg-light">STANDING</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>Right</b></td>
+                <td><input type="text" class="form-control"></td>
+                <td><input type="text" class="form-control"></td>
+                <td><input type="text" class="form-control"></td>
+            </tr>
+            <tr>
+                <td><b>Left</b></td>
+                <td><input type="text" class="form-control"></td>
+                <td><input type="text" class="form-control"></td>
+                <td><input type="text" class="form-control"></td>
+            </tr>
+        </tbody>
+        </table>
 </div>
                 </div>
                 </td>
@@ -207,7 +272,7 @@ class="form-check-input"> Motivated</label>
                 <div class="p-2"><img src="{{asset('assets/images/Legs.png')}}" alt="Denote Location Legs"></div>
                 </table>
 
-                <table class="table table-bordered align-middle m-0">
+                <table class="table table-bordered align-middle m-0 input-pd-4">
                 <thead>
                 <tr>
                 <th style="width: 130px">WOUND</th>
