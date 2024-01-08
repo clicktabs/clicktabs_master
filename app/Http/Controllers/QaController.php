@@ -7,6 +7,9 @@ use App\Models\Patient;
 use Illuminate\Http\Request;
 use App\Models\QaList;
 use App\Models\Schedule;
+use App\Models\Addon;
+use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
 
 use DataTables;
 
@@ -61,7 +64,6 @@ class QaController extends Controller
                     return 'Pending';
                 }
 
-
              })
              ->addColumn('notes', function ($row) {
                 return '<button class="me-2"><i class="fa-regular fa-file" style="color: #bbb"></i></button>
@@ -80,7 +82,11 @@ class QaController extends Controller
             ->make(true);
         }
 
-        return view('patients.qa');
+        $organization_id = Auth::user()->organization_id;
+        $adon = Addon::where('name', 'like', 'Tasks%')->where('status', '1')->first();
+        $tasks = get_sub_addons($adon, $organization_id);
+
+        return view('patients.qa', compact('tasks'));
     }
 
     public function updateStatus(Request $request)

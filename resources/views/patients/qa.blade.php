@@ -39,25 +39,16 @@
                                 <td style="max-width: 200px">
                                     <select id="task" class="form-select" aria-label="All Tasks select">
                                         <option value="">All Tasks</option>
-                                        {{-- <option value="PT Plan of Care">Plan of Care</option> --}}
-                                        <option value="Skilled Nurse Visit">Skilled Nurse Visit</option>
-                                        <option value="Skilled Nurse Visit">HHA Visit Note</option>
-                                        <option value="Plan Of Care">Plan Of Care (485)</option>
-                                        <option value="Orders Not Sent">Orders Not Sent</option>
-                                        <option value="Pending Orders Signature">Pending Orders Signature</option>
-                                        <option value="Assessment">Oasis-E-SOC-Assessment</option>
-                                        <option value="Recertification">Oasis-E-Recertification-Assessment</option>
-                                        <option value="Supervisor Visit<">HHA Supervisor Visit</option>
+                                        @if($tasks)
+                                            @foreach($tasks as $task)
+                                                @php
+                                                    var_dump($task);
+                                                @endphp
+                                                <option value="{{ $task->name }}">{{ $task->name }}</option>
+                                            @endforeach
+                                        @endif
                                     </select>
                                 </td>
-                                {{-- <td style="max-width: 200px">
-                                    <select class="form-select" aria-label="All Tasks select">
-                                        <option value="">Select Status</option>
-                                        <option value="Pending">Pending</option>
-                                        <option value="Review">Review</option>
-                                        <option value="Submitted">Submitted</option>
-                                    </select>
-                                </td> --}}
                             </tr>
                         </tbody>
                     </table>
@@ -124,17 +115,17 @@
                 processing: true,
                 serverSide: true,
                 ajax: {
-                    url: "{{ route('patients.qa') }}",
-                    data: function (data) {
-                        if (startDate && endDate) {
-                            data.from_date = startDate;
-                            data.to_date = endDate;
-                        }
-                        if (taskName) {
-                            data.search['value'] = taskName;
-                        }
+                url: "{{ route('patients.qa') }}",
+                data: function (data) {
+                    if (startDate && endDate) {
+                        data.from_date = startDate;
+                        data.to_date = endDate;
                     }
-                },
+                    if (taskName) {
+                        data.search['value'] = taskName;
+                    }
+                }
+            },
                 columns: [
                     { data: 'id', name: 'id' },
                     { data: 'name', name: 'first_name', className: "details-control" },
