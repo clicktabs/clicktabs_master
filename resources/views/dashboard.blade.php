@@ -473,6 +473,9 @@ border-bottom: 3px double;
             <li class="flex-shrink-0">
                 <a href="#updatePassword">Update password</a>
             </li>
+            <li class="flex-shrink-0">
+                <a href="#signature">Signature</a>
+            </li>
         </ul>
 
               <div id="employee_patient">
@@ -706,6 +709,10 @@ border-bottom: 3px double;
                     </table>
                 </div>
             </div>
+        </div>
+
+        <div id="signature">
+            @include('addSignature')
         </div>
 
         <div id="updatePassword">
